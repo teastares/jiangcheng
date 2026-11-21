@@ -62,7 +62,7 @@ def read_topology(problem):
         if key.startswith(("belt", "tunnel")) or key in ("split", "merge"):
             x, y, w, h = r.x, r.y, 1, 1
             transport[point] = key
-            if key == "split":
+            if key == "split":  # 旧手工文件在此字段保存规划流向，重导出时才转换游戏编号。
                 accepts[point] = (r.direction,)
                 sends[point] = tuple(d for d in OFFSETS if d != OPPOSITE[r.direction])
             elif key == "merge":

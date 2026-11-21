@@ -2,4 +2,4 @@
 .venv/
 __pycache__/
 /dist/*
-!/dist/JiangCityBlueprint-capsule-report.exe
+!/dist/JiangCityBlueprint-logistics-fix.exe

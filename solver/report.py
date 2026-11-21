@@ -1,20 +1,21 @@
 import json
 from base64 import b64encode
-from collections import defaultdict
+from collections import Counter, defaultdict
 from dataclasses import asdict
+from fractions import Fraction
 from html import escape
 from math import gcd, lcm
 from pathlib import Path
 
-from .blueprint import FORMAT, export
+from .blueprint import FORMAT, IDS, export, record_facing
 from .geometry import DIRECTION_NAMES, OFFSETS
 from .layout import distance, score_layout
-from .model import DAY
+from .model import DAY, belt_options
 
 
 MODE_NAMES = {"shared": "共用上游", "separate": "独立供料"}
 OBJECTIVE_NAMES = {"area": "占地面积", "buildings": "建筑数", "lines": "走线格数", "materials": "建材总件数",
-                   "power": "额定功耗", "inlets": "进货口数量", "machines": "加工设备数"}
+                   "power": "额定功耗", "inlets": "进货口数量", "machines": "加工设备数", "transport_time": "输送在途量"}
 COLORS = ("#187467", "#8c5231", "#375d99", "#8b4672", "#5c59a1", "#846007", "#166b85", "#536634", "#a34839")
 
 
@@ -31,6 +32,31 @@ def ratio(raw):
     integers = [int(v * multiplier) for v in raw.values()]
     common = gcd(*integers)
     return " ∶ ".join(raw) + " = " + " ∶ ".join(str(v // common) for v in integers)
+
+
+def direction_counts(problem, layout, buildings, wires):
+    groups = defaultdict(Counter)
+    outlets = {p.anchor for p in outlet_rows(layout)}
+    facility_names = {ident: problem.buildings[key]["name"] for key, ident in IDS.items() if key in problem.buildings}
+    for record in buildings:
+        if (record.x, record.y) in outlets:
+            group = "成品接出带"
+        elif record.id == IDS["inlet"]:
+            group = "进货箱"
+        elif record.id == IDS["split"]:
+            group = "分流器主进料"
+        elif record.id == IDS["merge"]:
+            group = "合并器主出料"
+        elif 20 <= record.id <= 24:
+            group = "地面弯带" if record.shape >= 4 else "地面直带"
+        elif 30 <= record.id <= 34:
+            group = "地下带入口" if record.direction < 4 else "地下带出口"
+        else:
+            group = facility_names[record.id]
+        groups[group][DIRECTION_NAMES[record_facing(record)]] += 1
+    if wires:
+        groups["电线"]["无"] = len(wires)
+    return {name: dict(counts) for name, counts in groups.items()}
 
 
 def render_svg(problem, layout, mode, game_records=None):
@@ -99,9 +125,13 @@ def render_svg(problem, layout, mode, game_records=None):
             label += {"2": "Ⅱ", "3": "Ⅲ", "4": "Ⅳ", "5": "Ⅴ"}[tier]
         svg_type = ' class="transport"'
         tooltip = f'{problem.buildings[kind]["name"]}｜{point}'
+        record = buildings.get(point)
+        if record is not None:
+            role = {"split": "主进料", "merge": "主出料"}.get(kind, "物流")
+            tooltip += f"｜{role}向{DIRECTION_NAMES[record_facing(record)]}"
         if span is not None:
             tooltip += f"｜跨度 {span} 格"
-        parts.append(f'<g{svg_type} data-x="{point[0]}" data-y="{point[1]}" data-kind="{kind}"{attrs(buildings.get(point))}><title>{escape(tooltip)}</title>')
+        parts.append(f'<g{svg_type} data-x="{point[0]}" data-y="{point[1]}" data-kind="{kind}"{attrs(record)}><title>{escape(tooltip)}</title>')
         if label:
             half = 9 if len(label) > 1 else 6.6
             parts.append(f'<rect x="{cx-half}" y="{cy-6.6}" width="{half*2}" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/>'
@@ -164,7 +194,7 @@ def data_for(problem, layout, mode):
                "per_minute": p.rate, "per_day": p.rate * DAY}
               for i, p in enumerate(inlet_rows(layout), 1)]
     outputs = [{"id": f"出{i}", "position": p.anchor, "item": p.item, "per_minute": p.rate, "direction": DIRECTION_NAMES[p.direction],
-                "belt": next(b["level"] for b in problem.belts if b["capacity"] >= p.rate)}
+                "belt": belt_options(problem, p.rate)[0]["level"]}
                for i, p in enumerate(outlet_rows(layout), 1)]
     directions = defaultdict(lambda: {"incoming": [], "outgoing": []})
     for segment in layout.segments:
@@ -178,6 +208,10 @@ def data_for(problem, layout, mode):
             "target_per_minute": problem.rate, "theoretical_per_day": problem.rate * DAY, "raw_ratio": ratio(problem.raw),
             "inlets": inputs, "outlets": outputs, "power_entry": layout.power_entry if layout.wires else None,
             "platform": problem.catalog.get("platform"), "profile": layout.profile, "rows_optimal_before_compaction": layout.row_optimal,
+            "requested_belt_levels": problem.case.get("requested_belt_levels", problem.case.get("belt_levels")),
+            "allowed_belt_levels": [belt["level"] for belt in problem.belts],
+            "search_belt_levels": layout.search_belt_levels or tuple(belt["level"] for belt in problem.belts),
+            "solve_seconds": problem.case.get("solve_seconds"),
             "statistics": layout.statistics, "placements": buildings,
             "transport": [{"position": pos, "kind": kind, **directions[pos]} for pos, kind in sorted(layout.transport.items())],
             "segments": [asdict(s) for s in layout.segments], "wires": sorted(layout.wires)}
@@ -210,6 +244,29 @@ def render_html(data, svg, title, filename, text, checks=""):
         instructions = "导出并复制整段文本，在 Steam 游戏蓝图界面粘贴导入。自动建造还需备齐下方建材。"
     sim = stats.get("simulation")
     simulation = "" if sim is None else f"<p>空线仿真在前 16 分钟产出 {sim['first_day']} 件，末 4 分钟平均 {sim['last_four_per_minute']:g} 件/分钟。</p>"
+    logistics = ""
+    if "belt_counts" in stats:
+        actual = {kind: "、".join(f"{level} 级 {count} 格" for level, count in counts.items()) or "无"
+                  for kind, counts in stats["belt_counts"].items()}
+        allowed = "、".join(map(str, data["allowed_belt_levels"]))
+        searched = "、".join(map(str, data["search_belt_levels"]))
+        requested = data["requested_belt_levels"]
+        request_label = "存档已解锁等级" if requested is None else "、".join(map(str, requested)) + " 级"
+        elapsed = data.get("solve_seconds")
+        elapsed_text = f"求解用时 {elapsed:.1f} 秒。" if elapsed is not None else ""
+        logistics = (f"<section><h2>物流规格</h2><p>配置允许 {request_label}。本轮允许 {allowed} 级，入选方案来自 {searched} 级搜索。{elapsed_text}</p>"
+                     f"<p>实际地面带 {actual['building']}，地下带端点 {actual['underground']}。</p>"
+                     f"<p>额定输送在途量 {float(Fraction(stats['transport_time'])):.2f} 件，按各段吞吐与通过时间估算。</p></section>")
+    audit = ""
+    if data.get("direction_counts"):
+        directions = ("东", "西", "南", "北", "无")
+        headings = "".join(f"<th>{direction}</th>" for direction in directions)
+        audit_rows = []
+        for kind, counts in data["direction_counts"].items():
+            cells = "".join(f"<td>{counts.get(direction, 0)}</td>" for direction in directions)
+            audit_rows.append(f"<tr><td>{escape(kind)}</td>{cells}</tr>")
+        audit = (f"<section><h2>设施方向核对</h2><p>以下记录已与导入文本回读核对。分流按货物进入时的方向统计，合并和地面带按出货方向统计。</p>"
+                 f"<table><thead><tr><th>设施</th>{headings}</tr></thead><tbody>{''.join(audit_rows)}</tbody></table></section>")
     return f'''<!doctype html>
 <html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{escape(title)}</title><style>
@@ -220,7 +277,7 @@ body{{margin:0;background:#f5f7f2;color:#19362e;font:15px/1.6 "Microsoft YaHei",
 <section><h2>进货口与日配额</h2><p>每日有效生产 16 分钟。{escape(data['raw_ratio'])}。</p>
 <table><thead><tr><th>口</th><th>定位格</th><th>物料</th><th>朝向</th><th>件/分钟</th><th>日配额</th></tr></thead><tbody>{rows}</tbody></table></section>
 <section><h2>摆放图</h2><div class="drawing">{svg}</div></section>
-<section><h2>建材</h2><ul>{materials}</ul></section>{checks}{simulation}<footer>已离线检查。游戏内导入、放置与持续生产待实测。</footer></main></html>'''
+<section><h2>建材</h2><ul>{materials}</ul></section>{logistics}{audit}{checks}{simulation}<footer>已离线检查。游戏内导入、放置与持续生产待实测。</footer></main></html>'''
 
 
 def write_layout(directory, name, problem, layout, mode, checks=""):
@@ -232,6 +289,7 @@ def write_layout(directory, name, problem, layout, mode, checks=""):
         description = f"{problem.rate} 件/分钟，16 分钟理论产量 {problem.rate * DAY}，额定功耗 {layout.statistics['power']} kW。"
         text, buildings, wires = export(problem, layout, title, description)
         game_records = buildings, wires
+        data["direction_counts"] = direction_counts(problem, layout, buildings, wires)
         (directory / f"{name}.txt").write_text(text, encoding="ascii")
     svg = render_svg(problem, layout, mode, game_records)
     (directory / f"{name}.svg").write_text(svg, encoding="utf-8")

@@ -5,6 +5,8 @@ from base64 import b64decode
 from dataclasses import replace
 from pathlib import Path
 from struct import pack
+from types import SimpleNamespace
+from unittest.mock import patch
 
 from solver.blueprint import Record, decode, encode_record, string
 from solver.layout import solve
@@ -87,6 +89,18 @@ class WorkshopTests(unittest.TestCase):
             with self.assertRaises(SaveError):
                 parse(invalid)
 
+    def test_read_save_retries_if_source_changes_during_read(self):
+        data = fixture(inventory=False)
+        before = SimpleNamespace(st_size=len(data), st_mtime_ns=1)
+        after = SimpleNamespace(st_size=len(data), st_mtime_ns=2)
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder, "save_synthetic.savns")
+            path.write_bytes(data)
+            with patch("solver.save.fstat", side_effect=(before, after, after, after)) as stat:
+                self.assertEqual(read_save(path).version, 117)
+            self.assertEqual(stat.call_count, 4)
+            self.assertEqual(path.read_bytes(), data)
+
     def test_unlock_constraints_and_html_without_inventory(self):
         config = {"target": "石材", "machines": 2, "plot": [24, 16], "power_limit_kw": 20, "objective": ["inlets", "area"]}
         with tempfile.TemporaryDirectory() as folder:
@@ -116,6 +130,8 @@ class WorkshopTests(unittest.TestCase):
             _, _, _, size, buildings, _ = decode(text)
             self.assertEqual(size, (layout.width, layout.height))
             self.assertEqual(len(buildings), layout.statistics["components"])
+            self.assertIn("设施方向核对", html)
+            self.assertIn("额定输送在途量", html)
             self.assertEqual(save.read_bytes(), original)
             self.assertEqual(json.loads(report.with_suffix(".json").read_text(encoding="utf-8"))["target"], "石材")
         state = parse(fixture(inventory=False))

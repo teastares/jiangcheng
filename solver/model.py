@@ -6,7 +6,7 @@ from math import ceil, isfinite
 
 DAY = 16
 DEFAULT_OBJECTIVE = ("area", "buildings", "lines", "materials", "power")
-OBJECTIVES = {"area", "buildings", "lines", "materials", "power", "inlets", "machines"}
+OBJECTIVES = {"area", "buildings", "lines", "materials", "power", "inlets", "machines", "transport_time"}
 
 
 class Infeasible(ValueError):
@@ -52,6 +52,46 @@ def positive(value, name):
     return number
 
 
+def belt_options(problem, rate, *, span=None):
+    """按等级列出能持续承载流量的带，提供跨度时筛选地下带。"""
+    options = (belt for belt in problem.belts if belt["capacity"] >= rate and
+               (span is None or problem.underground_spans.get(belt.get("underground"), 0) >= span))
+    return sorted(options, key=belt_order)
+
+
+def belt_order(belt):
+    return belt.get("level", belt["capacity"]), belt["capacity"]
+
+
+def belt_seconds(belt):
+    if "seconds_per_cell" in belt:
+        return Fraction(str(belt["seconds_per_cell"]))
+    return Fraction(60) / Fraction(str(belt["capacity"]))
+
+
+def transport_time(problem, layout):
+    """按额定流量和通过时间估算输送中的件数，忽略排队和加工。"""
+    durations = {kind: belt_seconds(belt) for belt in problem.belts
+                 for kind in (belt["building"], belt.get("underground")) if kind}
+    junction_seconds = Fraction(str(problem.catalog.get("junction_seconds", 0.5)))
+    durations.update(split=junction_seconds, merge=junction_seconds)
+    outlet_seconds = {}
+    for placement in layout.placements:
+        if placement.building == "outlet":
+            options = belt_options(problem, placement.rate)
+            if not options:
+                raise Infeasible("成品接出口超出传送带容量")
+            outlet_seconds[placement.anchor] = belt_seconds(options[0])
+    total = Fraction(0)
+    for edge in layout.segments:
+        seconds = durations.get(layout.transport.get(edge.end), outlet_seconds.get(edge.end, 0))
+        if seconds:
+            span = abs(edge.start[0] - edge.end[0]) + abs(edge.start[1] - edge.end[1])
+            # 地下跳段直接移到出口中心，出口只剩半格，跨度不增加运输时间。
+            total += edge.rate * seconds / (120 if span > 1 else 60)
+    return total
+
+
 class Problem:
     def __init__(self, catalog, case):
         self.case = case
@@ -81,7 +121,7 @@ class Problem:
             raise ValueError("目标产物不能设为外供")
         self.recipes = catalog["recipes"]
         self.buildings = catalog["buildings"]
-        self.belts = sorted(catalog["belts"], key=lambda level: level["capacity"])
+        self.belts = sorted(catalog["belts"], key=belt_order)
         if "belt_levels" in case:
             self.belts = [belt for belt in self.belts if belt["level"] in case["belt_levels"]]
         if not self.belts:
@@ -93,7 +133,7 @@ class Problem:
                 if type(span) is not int or span < 2:
                     raise ValueError("地下带最大跨度应为至少 2 格的整数")
                 self.underground_spans[belt["underground"]] = span
-        self.capacity = positive(self.belts[-1]["capacity"], "传送带容量")
+        self.capacity = max(positive(belt["capacity"], "传送带容量") for belt in self.belts)
         self.junction_capacity = positive(case.get("junction_capacity", catalog["junction_capacity"]), "分合流容量")
         self.junction_ports = catalog.get("junction_ports", 2)
         if type(self.junction_ports) is not int or self.junction_ports not in (2, 3):

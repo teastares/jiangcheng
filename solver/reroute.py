@@ -5,7 +5,9 @@ from dataclasses import dataclass, replace
 from heapq import heappop, heappush
 from itertools import count
 
-from .geometry import OFFSETS, placement_ports
+from .blueprint import tunnel_directions
+from .geometry import OFFSETS, OPPOSITE, offset, placement_ports
+from .model import belt_options, belt_seconds
 
 
 STEPS = ((1, 0), (0, 1), (-1, 0), (0, -1))
@@ -63,41 +65,122 @@ def connections(layout):
 
 
 def tunnel_segments(edges, transport):
-    return [(edge.start, edge.end, transport[edge.start]) for edge in edges if distance(edge.start, edge.end) > 1]
+    return [(edge.start, edge.end, transport.get(edge.start)) for edge in edges if distance(edge.start, edge.end) > 1]
 
 
-def compatible_tunnel(start, end, kind, existing, span):
-    horizontal = start[1] == end[1]
-    axis = 0 if horizontal else 1
-    other = 1 - axis
-    first, last = sorted((start[axis], end[axis]))
-    direction = 1 if start[axis] < end[axis] else -1
-    for a, b, old_kind in existing:
-        if kind != old_kind or not a[other] == b[other] == start[other]:
-            continue
-        low, high = sorted((a[axis], b[axis]))
-        if max(first, low) <= min(last, high):
+def tunnel_pairing_valid(pairs, spans):
+    """检查安装版以方向找最近端点的规则是否得到全部预期配对。"""
+    endpoints = {}
+    for start, end, kind in pairs:
+        length = distance(start, end)
+        limit = spans.get(kind, 0)
+        if not 1 <= length <= limit or (start[0] != end[0] and start[1] != end[1]):
             return False
-        if (b[axis] - a[axis]) * direction > 0:
-            if (2 <= (b[axis] - start[axis]) * direction <= span or
-                    2 <= (end[axis] - a[axis]) * direction <= span):
-                return False
+        if start in endpoints or end in endpoints:
+            return False
+        entrance, exit = tunnel_directions(start, end)
+        endpoints[start] = entrance % 4, limit, end
+        endpoints[end] = exit % 4, limit, start
+    for point, (raw, limit, expected) in endpoints.items():
+        facing = OPPOSITE[raw]
+        for length in range(1, limit + 1):
+            match = offset(point, facing, length)
+            if match in endpoints and endpoints[match][0] == facing:
+                if match != expected:
+                    return False
+                break
+        else:
+            return False
     return True
 
 
+def compatible_tunnel(start, end, kind, existing, spans):
+    other = 1 if start[1] == end[1] else 0
+    relevant = [(start, end, kind)]
+    for a, b, old_kind in existing:
+        if start in (a, b) or end in (a, b):
+            return False
+        if a[other] == b[other] == start[other]:
+            relevant.append((a, b, old_kind))
+    return tunnel_pairing_valid(relevant, spans)
+
+
+def select_grade(options, kind, key, keep_suitable):
+    if keep_suitable and any(option[key] == kind for option in options):
+        return kind
+    return options[0][key] if options else None
+
+
+def regrade_transport(problem, layout, *, keep_suitable):
+    transport = layout.transport.copy()
+    # 参考布局可能含有当前名单之外的带，仍需按原来的地面和地下类别分别适配。
+    known = [*problem.belts, *problem.catalog.get("belts", ())]
+    surface = {belt["building"] for belt in known}
+    underground = {belt["underground"] for belt in known if belt.get("underground")}
+    loads = defaultdict(int)
+    for edge in layout.segments:
+        loads[edge.end] += edge.rate
+    old_tunnels = tunnel_segments(layout.segments, transport)
+    endpoints = {point for start, end, _ in old_tunnels for point in (start, end)}
+
+    for point, kind in transport.items():
+        if kind in surface or kind.startswith("belt"):
+            replacement = select_grade(belt_options(problem, loads[point]), kind, "building", keep_suitable)
+            if replacement is None:
+                return None
+            transport[point] = replacement
+        if (kind in underground or kind.startswith("tunnel")) and point not in endpoints:
+            return None
+
+    updated_tunnels = []
+    for start, end, kind in old_tunnels:
+        if kind is None or transport.get(end) != kind or (kind not in underground and not kind.startswith("tunnel")):
+            return None
+        options = belt_options(problem, loads[end], span=distance(start, end))
+        replacement = select_grade(options, kind, "underground", keep_suitable)
+        if replacement is None:
+            return None
+        transport[start] = transport[end] = replacement
+        updated_tunnels.append((start, end, replacement))
+    return transport if tunnel_pairing_valid(updated_tunnels, problem.underground_spans) else None
+
+
+def fit_belt_grades(problem, layout):
+    """给结构参考中不可用的带换上最低足用的等级，无法适配时返回 None。"""
+    transport = regrade_transport(problem, layout, keep_suitable=True)
+    if transport is None:
+        return None
+    if transport != layout.transport:
+        return replace(layout, transport=transport, statistics={}, profile=f"{layout.profile}／带级适配", baseline=False)
+    return layout
+
+
+def retier_layout(problem, layout):
+    """在不改变设备和路线的情况下，把足够的低级带用于各物流格及地下对。"""
+    transport = regrade_transport(problem, layout, keep_suitable=False)
+    if transport is not None and transport != layout.transport:
+        return replace(layout, transport=transport, statistics={}, profile=f"{layout.profile}／低级带替换", baseline=False)
+    return None
+
+
 def route_costs(problem, objective):
-    names = {belt[key] for belt in problem.belts for key in ("building", "underground") if belt.get(key)}
     prices = {}
-    for name in names:
-        building = problem.buildings[name]
-        materials = sum(building.get("materials", {}).values())
-        metrics = {"buildings": 1, "lines": 1, "materials": materials, "power": building.get("power", 0)}
-        prices[name] = tuple(metrics[key] for key in objective if key in metrics) + (1, materials)
+    for belt in problem.belts:
+        for name in (belt["building"], belt.get("underground")):
+            if name:
+                building = problem.buildings[name]
+                materials = sum(building.get("materials", {}).values())
+                metrics = {"buildings": 1, "lines": 1, "materials": materials, "power": building.get("power", 0)}
+                prices[name] = tuple(metrics[key] for key in objective if key in metrics) + (1, materials, belt_seconds(belt))
     return prices
 
 
 def add_cost(left, right):
     return tuple(a + b for a, b in zip(left, right))
+
+
+def travel_cost(price, *, tunnel_exit):
+    return (*price[:-1], price[-1] / 2) if tunnel_exit else price
 
 
 def search_route(problem, layout, connection, blocked, existing, prices, ceiling=None):
@@ -110,12 +193,13 @@ def search_route(problem, layout, connection, blocked, existing, prices, ceiling
         return [replace(connection.edges[0], start=source, end=sink)], {}
 
     load = connection.edges[0].rate
-    options = [belt for belt in problem.belts if belt["capacity"] >= load]
+    options = belt_options(problem, load)
     if not options:
         return None
-    belt = min((level["building"] for level in options), key=lambda key: (prices[key], key))
-    tunnels = [(level["underground"], problem.underground_spans[level["underground"]]) for level in options
-               if level.get("underground") in problem.underground_spans]
+    belt = options[0]["building"]
+    max_span = min(max(layout.width, layout.height) - 1, max(problem.underground_spans.values(), default=1))
+    tunnels = {span: levels[0]["underground"] for span in range(2, max_span + 1)
+               if (levels := belt_options(problem, load, span=span))}
 
     def allowed(point):
         x, y = point
@@ -123,7 +207,7 @@ def search_route(problem, layout, connection, blocked, existing, prices, ceiling
 
     if not allowed(first) or not allowed(last):
         return None
-    unit = min([prices[belt][0], *(prices[key][0] / length for key, length in tunnels)])
+    unit = min([prices[belt][0], *(prices[kind][0] / span for span, kind in tunnels.items())])
     zero = (0,) * len(prices[belt])
     initial = (first, connection.incoming, "")
     scores, previous = {initial: zero}, {initial: None}
@@ -140,7 +224,7 @@ def search_route(problem, layout, connection, blocked, existing, prices, ceiling
         point, entered, landing = state
         reverse = step((0, 0), entered, -1)
         if point == last and connection.outgoing != reverse and (not landing or connection.outgoing == entered):
-            total = add_cost(score, prices[landing or belt])
+            total = add_cost(score, travel_cost(prices[landing or belt], tunnel_exit=bool(landing)))
             if best_score is None or total < best_score:
                 best_score, best_end = total, state
             continue
@@ -156,16 +240,15 @@ def search_route(problem, layout, connection, blocked, existing, prices, ceiling
         moves = [(step(point, direction), direction, "", landing or belt) for direction in STEPS
                  if direction != reverse and (not landing or direction == entered)]
         if not landing:
-            for key, max_span in tunnels:
-                for length in range(2, max_span + 1):
-                    destination = step(point, entered, length)
-                    if (allowed(destination) and compatible_tunnel(point, destination, key, existing, max_span) and
-                            compatible_tunnel(point, destination, key, previous_tunnels, max_span)):
-                        moves.append((destination, entered, key, key))
+            all_jumps = (*existing, *previous_tunnels)
+            for length, key in tunnels.items():
+                destination = step(point, entered, length)
+                if allowed(destination) and compatible_tunnel(point, destination, key, all_jumps, problem.underground_spans):
+                    moves.append((destination, entered, key, key))
         for destination, direction, arrives_by_tunnel, kind in moves:
             if destination in history or not allowed(destination):
                 continue
-            cost = add_cost(score, prices[kind])
+            cost = add_cost(score, travel_cost(prices[kind], tunnel_exit=bool(landing)))
             successor = (destination, direction, arrives_by_tunnel)
             if successor in scores and cost >= scores[successor]:
                 continue
@@ -253,7 +336,9 @@ def rerouted_layouts(problem, layout, *, placements=None, max_routes=24, objecti
             old_types = route_types.get(i, {})
             ceiling = None
             if i not in remapped:
-                ceiling = tuple(map(sum, zip(*(prices[kind] for kind in old_types.values()))))
+                costs = [travel_cost(prices[old_types[edge.end]], tunnel_exit=distance(edge.start, edge.end) > 1)
+                         for edge in route.edges[:-1]]
+                ceiling = tuple(map(sum, zip(*costs)))
                 for point in old_types:
                     del transport[point]
             jumps = [jump for j, segments in edges.items() if j != i for jump in tunnel_segments(segments, transport)]

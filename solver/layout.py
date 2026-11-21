@@ -11,11 +11,11 @@ from scipy.sparse import coo_matrix
 
 from .blueprint import EAST
 from .compact import seam_compactions
-from .model import Infeasible, make_network
+from .model import Infeasible, Problem, belt_options, make_network, transport_time
 from .orient import placement_trials
 from .power import refine_power_grid
 from .reference import reference_candidates
-from .reroute import rerouted_layouts
+from .reroute import rerouted_layouts, retier_layout, tunnel_pairing_valid
 
 
 Point = tuple[int, int]
@@ -63,6 +63,7 @@ class Layout:
     statistics: dict = field(default_factory=dict)
     baseline: bool = False
     extended: bool = False
+    search_belt_levels: tuple[int, ...] = ()
 
 
 def aisle_positions(problem, network, tracks):
@@ -361,19 +362,21 @@ def route(problem, network, tracks, y, profile, optimal):
             raise Infeasible("物流件没有配平")
         spans = [s for s in ins + outs if distance(s.start, s.end) > 1]
         if spans:
-            level = next((b for b in problem.belts if b.get("underground") and b["capacity"] >= load), None)
-            if len(spans) != 1 or len(ins + outs) != 2 or level is None:
+            if len(spans) != 1 or len(ins + outs) != 2:
                 raise Infeasible("地下带容量不足或端点冲突")
-            transport[point] = level["underground"]
+            options = belt_options(problem, load, span=distance(spans[0].start, spans[0].end))
+            if not options:
+                raise Infeasible("没有足够吞吐或跨度的地下带")
+            transport[point] = options[0]["underground"]
         elif len(ins) > 1 or len(outs) > 1:
             if load > problem.junction_capacity:
                 raise Infeasible("分合流容量不足")
             transport[point] = "merge" if len(ins) > 1 else "split"
         else:
-            level = next((b for b in problem.belts if b["capacity"] >= load), None)
-            if level is None:
+            options = belt_options(problem, load)
+            if not options:
                 raise Infeasible("传送带容量不足")
-            transport[point] = level["building"]
+            transport[point] = options[0]["building"]
     return Layout(width, height, placements, transport, list(edges.values()), set(), (0, 0), machines, profile, optimal)
 
 
@@ -421,15 +424,18 @@ def assess(problem, layout):
     counts.update(layout.transport.values())
     for p in layout.placements:
         if p.building == "outlet":
-            counts[next(b["building"] for b in problem.belts if b["capacity"] >= p.rate)] += 1
+            counts[belt_options(problem, p.rate)[0]["building"]] += 1
     power = sum(count * problem.buildings[key].get("power", 0) for key, count in counts.items())
     materials = Counter()
     for key, count in (counts | Counter({"wire": len(layout.wires)})).items():
         for material, amount in problem.buildings[key].get("materials", {}).items():
             materials[material] += amount * count
+    belt_counts = {form: {b["level"]: counts[b[form]] for b in problem.belts if b.get(form) and counts[b[form]]}
+                   for form in ("building", "underground")}
     layout.statistics = {"buildings": dict(sorted(counts.items())), "materials": dict(sorted(materials.items())),
                          "components": sum(counts.values()), "transport": len(layout.transport) + sum(p.building == "outlet" for p in layout.placements), "power": power,
-                         "wires": len(layout.wires), "machines": len(layout.machines)}
+                         "wires": len(layout.wires), "machines": len(layout.machines), "belt_counts": belt_counts,
+                         "transport_time": transport_time(problem, layout)}
     return score_layout(problem, layout)
 
 
@@ -437,8 +443,10 @@ def score_layout(problem, layout):
     s = layout.statistics
     values = {"area": layout.width * layout.height, "buildings": s["components"], "lines": s["transport"] + s["wires"],
               "materials": sum(s["materials"].values()), "power": s["power"], "inlets": s["buildings"].get("inlet", 0),
-              "machines": s["machines"]}
-    return tuple(values[key] for key in problem.objective)
+              "machines": s["machines"], "transport_time": s["transport_time"]}
+    levels = sorted((belt["level"] for belt in problem.belts), reverse=True)
+    tier_counts = tuple(sum(counts.get(level, 0) for counts in s["belt_counts"].values()) for level in levels)
+    return tuple(values[key] for key in problem.objective) + tier_counts + (s["transport_time"],)
 
 
 def placement_networks(network):
@@ -550,7 +558,8 @@ def routed_layouts(problem, network, tracks, candidates, profile):
 def layout_candidates(problem, count, time_limit):
     tried, layouts_seen = set(), {}
     wiring = lru_cache(maxsize=256)(power_grid)
-    limits = sorted({problem.capacity, *(min(problem.capacity, Fraction(rate)) for rate in (60, 36, 24))}, reverse=True)
+    limits = sorted({*(Fraction(belt["capacity"]) for belt in problem.belts),
+                     *(min(problem.capacity, Fraction(rate)) for rate in (60, 36, 24))}, reverse=True)
     profiles = [(limit, strategy, reverse) for limit in limits
                 for strategy, reverse in (("balanced", False), ("balanced", True), ("local", False))]
     profiles.extend((problem.capacity, strategy, False) for strategy in ("direct", "distributed"))
@@ -650,7 +659,7 @@ def simulation_indices(ranked, limit):
     return sorted(indices.union(original[:limit]))
 
 
-def solve(problem, time_limit, simulation=None, accept=None):
+def _solve_belt_scope(problem, time_limit, simulation, accept):
     width, height = problem.plot_limits
     power = problem.power_limit
 
@@ -770,11 +779,45 @@ def solve(problem, time_limit, simulation=None, accept=None):
                     if metrics is not None:
                         consider(((metrics, candidate),))
                         consider(reductions(candidate))
+        lower = retier_layout(problem, winner)
+        if lower is not None and check(lower) is not None:
+            validated_count += 1
+            if simulation:
+                lower.statistics["simulation"] = simulation(problem, lower)
+            if finish(lower):
+                winner = lower
+        winner.search_belt_levels = tuple(belt["level"] for belt in problem.belts)
         return winner, validated_count
 
     modes = problem.case.get("modes", ("shared", "separate"))
     shapes = {"shared": (problem.count, 1), "separate": (1, problem.count)}
     return {mode: find(*shapes[mode], mode) if mode in modes else (None, 0) for mode in shapes}
+
+
+def solve(problem, time_limit, simulation=None, accept=None):
+    """从低到高保留各档候选，以同一组目标选出达产布局。"""
+    levels = tuple(belt["level"] for belt in problem.belts)
+    results = {"shared": (None, 0), "separate": (None, 0)}
+
+    def rank(layout):
+        simulated = layout.statistics.get("simulation")
+        below = simulated is not None and simulated["last_four_per_minute"] < float(problem.rate) - 1e-8
+        return below, score_layout(problem, layout)
+
+    for stop in range(1, len(levels) + 1):
+        if stop == len(levels):
+            scope = problem
+        else:
+            try:
+                scope = Problem(problem.catalog, {**problem.case, "belt_levels": levels[:stop]})
+            except Infeasible:
+                continue
+        for mode, (candidate, count) in _solve_belt_scope(scope, time_limit, simulation, accept).items():
+            incumbent, searched = results[mode]
+            if candidate is not None and (incumbent is None or rank(candidate) < rank(incumbent)):
+                incumbent = candidate
+            results[mode] = incumbent, searched + count
+    return results
 
 
 def verify(problem, layout):
@@ -785,7 +828,7 @@ def verify(problem, layout):
     belt_capacity.update((b["underground"], b["capacity"]) for b in problem.belts
                          if b.get("underground") in problem.underground_spans)
     occupied = set(layout.transport)
-    tunnel_ranges = defaultdict(list)
+    tunnel_pairs = []
 
     def require(condition, message):
         if not condition:
@@ -805,22 +848,19 @@ def verify(problem, layout):
             kind = layout.transport.get(start)
             require(kind == layout.transport.get(end) and jump <= problem.underground_spans.get(kind, 0) and
                     (start[0] == end[0] or start[1] == end[1]), "地下带配对或跨度错误")
-            axis = int(start[0] == end[0])
-            lo, hi = sorted((start[axis], end[axis]))
-            tunnel_ranges[kind, axis, start[1 - axis]].append((lo, hi))
+            tunnel_pairs.append((start, end, kind))
         if layout.transport.get(s.start) in ("split", "merge") and layout.transport.get(s.end) in ("split", "merge"):
             raise Infeasible("分流器与合并器必须用带段隔开")
         outgoing[s.start].append(s)
         incoming[s.end].append(s)
-    for spans in tunnel_ranges.values():
-        ordered = sorted(spans)
-        require(all(a[1] < b[0] for a, b in zip(ordered, ordered[1:])), "同级地下带在同一轴线上跨越重叠")
+    require(tunnel_pairing_valid(tunnel_pairs, problem.underground_spans), "地下带最近端点会发生误配")
 
     def heading(a, b):
         return next((d for d, (dx, dy) in OFFSETS.items()
                      if (b[0] - a[0], b[1] - a[1]) == (dx * distance(a, b), dy * distance(a, b))), None)
 
     accepts, sends = {}, {}
+    physical = layout.extended or bool(problem.catalog.get("blueprint_format"))
     for point, kind in layout.transport.items():
         ins, outs = incoming[point], outgoing[point]
         if kind == "split":
@@ -834,10 +874,11 @@ def verify(problem, layout):
         load = sum(s.rate for s in ins)
         require(len({s.item for s in ins + outs}) == 1 and load == sum(s.rate for s in outs), f"{point}流量或物料不守恒")
         require(load <= belt_capacity.get(kind, problem.junction_capacity), f"{point}超出物流容量")
-        if kind.startswith("tunnel") or layout.extended:
+        if kind.startswith("tunnel") or physical:
             in_heading = heading(ins[0].start, point)
             out_heading = heading(point, outs[0].end)
             require(in_heading is not None and out_heading is not None, "物流方向错误")
+            require(in_heading != OPPOSITE[out_heading], "传送带不能原路反向送出")
             if kind.startswith("tunnel"):
                 underground_in = distance(ins[0].start, point) > 1
                 underground_out = distance(point, outs[0].end) > 1
@@ -856,6 +897,7 @@ def verify(problem, layout):
                 accepts[point], sends[point] = (in_heading,), (out_heading,)
 
     consumed = Counter()
+    inlet_cells = set()
     for p in layout.placements:
         geo = problem.buildings[p.building]
         try:
@@ -868,6 +910,7 @@ def verify(problem, layout):
         expected_in, expected_out = {}, {}
         if p.building == "inlet":
             expected_out[output_cell] = (p.item, p.rate)
+            inlet_cells.add(output_cell)
             require(p.rate <= problem.box_capacity, "进货口超出供料速率")
             consumed[p.item] += p.rate
         elif p.building == "outlet":
@@ -881,7 +924,7 @@ def verify(problem, layout):
                 expected_in[cell] = (material, p.rate * amount / recipe["quantity"])
             if not recipe.get("virtual"):
                 expected_out[output_cell] = (p.item, p.rate)
-        if layout.extended:
+        if physical:
             accepts.update((point, (p.direction,)) for point in expected_in)
             sends.update((point, (p.direction,)) for point in expected_out)
         for point in p.cells():
@@ -892,7 +935,10 @@ def verify(problem, layout):
                     f"{p.item}的进料端口或流量错误")
             require([(s.item, s.rate) for s in outs] == output_spec and all(s.end == offset(point, p.direction) for s in outs),
                     f"{p.item}的出料端口或流量错误")
-    if layout.extended:
+    if physical:
+        for point, kind in layout.transport.items():
+            if kind in ("split", "merge"):
+                require(sum(edge.start in inlet_cells for edge in incoming[point]) <= 1, "同一分合流件只能直接接入一个进货箱")
         declared = {(s.start, s.end) for s in layout.segments if distance(s.start, s.end) == 1}
         for point, directions in sends.items():
             for direction in directions:

@@ -5,8 +5,8 @@ from types import SimpleNamespace
 
 from solver.geometry import WEST
 from solver.layout import Layout, Placement, Segment, verify
-from solver.model import Problem
-from solver.reroute import Connection, compatible_tunnel, rerouted_layouts, route_costs, search_route, step
+from solver.model import Infeasible, Problem
+from solver.reroute import Connection, compatible_tunnel, rerouted_layouts, route_costs, search_route, step, tunnel_pairing_valid
 
 
 class RerouteTests(unittest.TestCase):
@@ -35,10 +35,63 @@ class RerouteTests(unittest.TestCase):
                 self.problem.underground_spans["tunnel1"] = 5
 
     def test_crossing_tunnels_keep_unambiguous_pairs(self):
+        spans = {"tunnel1": 5, "tunnel2": 6}
         existing = [((1, 0), (1, 4), "tunnel1")]
-        self.assertTrue(compatible_tunnel((0, 2), (5, 2), "tunnel1", existing, 5))
-        self.assertFalse(compatible_tunnel((1, 2), (1, 6), "tunnel1", existing, 5))
-        self.assertFalse(compatible_tunnel((1, 5), (1, 7), "tunnel1", [((1, 2), (1, 4), "tunnel1")], 5))
+        self.assertTrue(compatible_tunnel((0, 2), (5, 2), "tunnel1", existing, spans))
+        self.assertFalse(compatible_tunnel((1, 2), (1, 6), "tunnel2", existing, spans))
+        self.assertTrue(compatible_tunnel((1, 5), (1, 7), "tunnel2", existing, spans))
+        self.assertTrue(compatible_tunnel((1, 5), (1, 7), "tunnel1", [((1, 2), (1, 4), "tunnel1")], spans))
+
+    def test_game_pairing_scans_adjacent_endpoint_and_ignores_tier_and_role(self):
+        spans = {"tunnel1": 5, "tunnel2": 6, "tunnel3": 7, "tunnel4": 8, "tunnel5": 8}
+        for tier, limit in spans.items():
+            self.assertTrue(tunnel_pairing_valid([((0, 0), (limit, 0), tier)], spans))
+            self.assertFalse(tunnel_pairing_valid([((0, 0), (limit + 1, 0), tier)], spans))
+        pairs = [((2, 0), (7, 0), "tunnel1"), ((3, 0), (1, 0), "tunnel2")]
+        self.assertTrue(all(tunnel_pairing_valid([pair], spans) for pair in pairs))
+        self.assertFalse(tunnel_pairing_valid(pairs, spans))
+
+    def test_higher_tier_cannot_bypass_endpoint_pairing(self):
+        self.problem.belts.append({"building": "belt2", "underground": "tunnel2", "capacity": 120})
+        self.problem.buildings.update({"belt2": {"materials": {"铁板": 4}}, "tunnel2": {"materials": {"铁板": 6}}})
+        self.problem.underground_spans["tunnel2"] = 6
+        source, sink, direction = (0, 0), (6, 0), (1, 0)
+        blocked = {(x, 0) for x in (0, 2, 3, 4, 6)}
+        layout = Layout(7, 1, [], {}, [], set(), (0, 0), [])
+        connection = Connection((Segment(source, sink, "原木", Fraction(30), 0),), source, direction, sink, direction)
+        existing = [((2, 0), (4, 0), "tunnel1")]
+        prices = route_costs(self.problem, self.problem.objective)
+        self.assertIsNone(search_route(self.problem, layout, connection, blocked, existing, prices))
+
+    def test_layout_verifier_rejects_cross_tier_pairing_before_export(self):
+        belts = [{**self.problem.belts[0], "underground_span": 5},
+                 {"building": "belt2", "underground": "tunnel2", "capacity": 120, "underground_span": 6}]
+        catalog = {"belts": belts, "junction_capacity": 120,
+                   "buildings": {**self.problem.buildings, "belt2": {}, "tunnel2": {},
+                                 "inlet": {"size": (2, 1), "anchor": (0, 0), "output": 0},
+                                 "maker": {"size": (2, 1), "anchor": (0, 0), "inputs": (0,)}},
+                   "recipes": {"木材": {"machine": "maker", "inputs": {"原木": 1}, "quantity": 1,
+                                        "seconds": 1, "virtual": True}}}
+        problem = Problem(catalog, {"target": "木材", "machines": 2, "external": ["原木"], "rate": 48})
+        rate = Fraction(24)
+
+        def test_layout(row):
+            placements = [Placement("inlet", 0, row, 2, 1, (0, row), "原木", rate, 0),
+                          Placement("inlet", 1, 0, 2, 1, (1, 0), "原木", rate, 1),
+                          Placement("maker", 9, row, 2, 1, (9, row), "木材", rate, 2),
+                          Placement("maker", 9, 3, 2, 1, (9, 3), "木材", rate, 3)]
+            long = [(x, row) for x in (1, 2, 8, 9)]
+            short = [(2, 0), (3, 0), (3, 1), (3, 2), (4, 2), (6, 2), (7, 2), (7, 3), (8, 3), (9, 3)]
+            transport = dict.fromkeys(short[1:-1], "belt1")
+            transport.update({(4, 2): "tunnel1", (6, 2): "tunnel1", (2, row): "tunnel2", (8, row): "tunnel2"})
+            segments = [Segment(a, b, "原木", rate, bus) for bus, path in enumerate((long, short))
+                        for a, b in zip(path, path[1:])]
+            machines = [(p.item, p.rate, p) for p in placements[2:]]
+            return Layout(11, 4, placements, transport, segments, set(), (0, 0), machines, extended=True)
+
+        verify(problem, test_layout(1))
+        with self.assertRaisesRegex(Infeasible, "地下带最近端点"):
+            verify(problem, test_layout(2))
 
     def test_cheaper_tunnel_is_excluded_when_capacity_is_insufficient(self):
         self.problem.belts.append({"building": "belt2", "underground": "tunnel2", "capacity": 120})

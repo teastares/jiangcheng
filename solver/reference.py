@@ -14,6 +14,7 @@ def read_references():
 
 def reference_candidates(problem):
     from .layout import Layout, Placement, Segment
+    from .reroute import fit_belt_grades
 
     if not problem.case.get("reference_start", True) or not problem.catalog.get("blueprint_format"):
         return
@@ -28,13 +29,13 @@ def reference_candidates(problem):
                problem.recipes[p["item"]]["machine"] != p["building"] for p in machines):
             continue
         transport = {tuple(row["position"]): row["kind"] for row in data["transport"]}
-        permitted = {belt["building"] for belt in problem.belts} | set(problem.underground_spans) | {"split", "merge"}
-        if not set(transport.values()) <= permitted:
-            continue
         placements = [Placement(p["building"], p["x"], p["y"], p["width"], p["height"], tuple(p["anchor"]), p["item"],
                                 Fraction(p["rate"]), p["node"], p["direction"]) for p in data["placements"]]
         segments = [Segment(tuple(s["start"]), tuple(s["end"]), s["item"], Fraction(s["rate"]), s["bus"])
                     for s in data["segments"]]
         devices = [(p.item, p.rate, p) for p in placements if p.building not in ("inlet", "outlet")]
-        yield Layout(*data["size"], placements, transport, segments, {tuple(p) for p in data["wires"]},
-                     tuple(data["power_entry"]), devices, profile=data["profile"], extended=True)
+        layout = Layout(*data["size"], placements, transport, segments, {tuple(p) for p in data["wires"]},
+                        tuple(data["power_entry"]), devices, profile=data["profile"], extended=True)
+        compatible = fit_belt_grades(problem, layout)
+        if compatible is not None:
+            yield compatible

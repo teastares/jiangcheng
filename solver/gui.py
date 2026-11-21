@@ -26,8 +26,40 @@ OBJECTIVE_PRESETS = {
     "少胶囊优先": ("buildings", "materials", "lines", "area", "power"),
     "建材优先": ("materials", "buildings", "area", "lines", "power"),
     "省电优先": ("power", "machines", "area", "materials", "buildings"),
+    "输送优先": ("transport_time", "lines", "buildings", "area", "materials", "power"),
 }
 MODE_PRESETS = {"自动比较两种方案": ("shared", "separate"), "只搜索共用上游": ("shared",), "只搜索独立供料": ("separate",)}
+
+
+def documents_directory():
+    if os.name == "nt":
+        import winreg
+
+        try:
+            with winreg.OpenKey(winreg.HKEY_CURRENT_USER, r"Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders") as key:
+                value, _ = winreg.QueryValueEx(key, "Personal")
+            path = Path(os.path.expandvars(value))
+            if path.is_absolute():
+                return path
+        except OSError:
+            pass
+    return Path.home() / "Documents"
+
+
+def open_native_directory(folder):
+    if os.name != "nt":
+        webbrowser.open(folder.as_uri())
+        return
+
+    from ctypes import c_void_p, c_wchar_p, windll
+
+    explorer = Path(os.environ.get("WINDIR", r"C:\Windows")) / "explorer.exe"
+    execute = windll.shell32.ShellExecuteW
+    execute.restype = c_void_p
+    # 让资源管理器导航到完整路径。只选中文件夹会停在其父目录。
+    result = execute(None, c_wchar_p("open"), c_wchar_p(str(explorer)), c_wchar_p(f'"{folder}"'), None, 1)
+    if not result or result <= 32:
+        raise OSError(f"无法启动 Windows 资源管理器（{result or 0}）")
 
 
 class BlueprintWindow:
@@ -40,13 +72,13 @@ class BlueprintWindow:
         self.jobs = queue.Queue()
         self.busy = False
         self.current_config = None
-        self.output_folder = Path.home() / "Documents" / "江城蓝图"
+        self.output_folder = documents_directory() / "江城蓝图"
         self.presets = {self.db["items"][str(row["item"])]["name"]: row for row in self.db["presets"] if row["item"] is not None}
         self.objective = list(OBJECTIVE_PRESETS["占地优先"])
         self.fields = {key: tk.StringVar(root, value=value) for key, value in {
             "target": "绿色晶能", "machines": "2", "device": "自动选择", "rate": "", "width": "", "height": "", "power": "",
             "mode": "自动比较两种方案", "preset": "占地优先", "belts": "", "technology": "尚未读取存档备份",
-            "backup": "未选择存档备份", "output": str(self.output_folder), "status": "选取存档备份后，可在右上角开始求解。"}.items()}
+            "backup": "未选择存档", "output": str(self.output_folder), "status": "选取存档后，可在右上角开始求解。"}.items()}
 
         root.title("江城蓝图生成器")
         root.geometry("1160x800")
@@ -76,11 +108,11 @@ class BlueprintWindow:
         ttk.Label(outer, textvariable=self.fields["technology"], style="Subtitle.TLabel").pack(anchor="w", pady=(3, 12))
         toolbar = ttk.Frame(outer)
         toolbar.pack(fill="x", pady=(0, 6))
-        ttk.Button(toolbar, text="选择存档备份", command=self.select_backup).pack(side="left")
+        ttk.Button(toolbar, text="选择存档（只读）", command=self.select_backup).pack(side="left")
         ttk.Label(toolbar, textvariable=self.fields["backup"], width=38, anchor="w").pack(side="left", padx=8)
         ttk.Button(toolbar, text="载入配置", command=self.load_configuration).pack(side="right")
         ttk.Button(toolbar, text="保存配置", command=self.save_configuration).pack(side="right", padx=8)
-        ttk.Button(toolbar, text="输出目录", command=self.select_output).pack(side="right")
+        ttk.Button(toolbar, text="选择输出目录", command=self.select_output).pack(side="right")
         ttk.Label(outer, textvariable=self.fields["output"], style="Subtitle.TLabel").pack(anchor="w")
         ttk.Label(outer, textvariable=self.fields["status"], wraplength=790).pack(anchor="w", pady=(4, 8))
 
@@ -129,7 +161,7 @@ class BlueprintWindow:
         field(5, "可建净空高（格）", "height")
         field(6, "电网可用余量（kW）", "power")
         field(7, "允许传送带等级", "belts")
-        ttk.Label(left, text="产速留空按额定满产。宽、高和电力可分别留空，留空项不设上限。带级留空使用存档解锁等级，填写 1,2 等列表可指定允许等级。",
+        ttk.Label(left, text="产速留空按额定满产。宽、高和电力留空各自不限。带级留空使用存档解锁等级。填 1,2,3 可混用，填 3 则只允许三级。",
                   wraplength=370, style="Subtitle.TLabel").grid(row=8, column=0, columnspan=2, sticky="w", pady=(12, 4))
         self.target_detail = ttk.Label(left, wraplength=370, justify="left")
         self.target_detail.grid(row=9, column=0, columnspan=2, sticky="w", pady=8)
@@ -145,6 +177,9 @@ class BlueprintWindow:
         self.objective_view = tk.Listbox(controls, height=7, activestyle="none", exportselection=False, bg="#fffefa", fg="#193b30",
                                          font=("Microsoft YaHei UI", 10), relief="flat", selectbackground="#247859")
         self.objective_view.pack(side="left", expand=True, fill="x")
+        scrollbar = ttk.Scrollbar(controls, command=self.objective_view.yview)
+        scrollbar.pack(side="left", fill="y")
+        self.objective_view.configure(yscrollcommand=scrollbar.set)
         buttons = ttk.Frame(controls)
         buttons.pack(side="left", padx=(8, 0), anchor="n")
         ttk.Button(buttons, text="上移", command=lambda: self.move_objective(-1)).pack(fill="x", pady=(0, 5))
@@ -198,7 +233,7 @@ class BlueprintWindow:
         self.open_report = ttk.Button(actions, text="打开完整 HTML", command=lambda: webbrowser.open(self.report.as_uri()))
         self.open_report.pack(side="left")
         self.open_report.state(["disabled"])
-        self.open_folder = ttk.Button(actions, text="打开导出目录", command=lambda: os.startfile(self.report.parent))
+        self.open_folder = ttk.Button(actions, text="打开导出目录", command=self.open_output_directory)
         self.open_folder.pack(side="left", padx=8)
         self.open_folder.state(["disabled"])
 
@@ -250,17 +285,17 @@ class BlueprintWindow:
             self.objective_view.selection_set(b)
 
     def select_backup(self):
-        name = filedialog.askopenfilename(title="选择已复制出来的单个 Steam 存档备份", filetypes=[("存档备份", "save_*"), ("全部文件", "*.*")])
+        name = filedialog.askopenfilename(parent=self.root, title="选择 Steam 存档（只读）",
+                                         initialdir=str(self.backup_path.parent) if self.backup_path else None,
+                                         filetypes=[("Steam 存档", "save_*"), ("全部文件", "*.*")])
         if name:
             try:
                 self.load_backup(Path(name))
             except (OSError, SaveError, ValueError) as error:
-                messagebox.showerror("无法读取备份", str(error), parent=self.root)
+                messagebox.showerror("无法读取存档", str(error), parent=self.root)
 
     def load_backup(self, path):
         resolved = path.resolve()
-        if resolved.parent.name.casefold() == "save" and (resolved.parent.parent / "jcGame.exe").is_file():
-            raise SaveError("请先复制一份到游戏安装目录之外，再选取该备份。")
         profile = read_save(resolved)
         self.backup_path = resolved
         self.workshop = Workshop(profile, self.db)
@@ -282,7 +317,7 @@ class BlueprintWindow:
             self.buildings.insert("", "end", values=(ident, self.workshop.building_name(ident)))
         self.apply_loaded_device()
         self.refresh_library()
-        self.fields["status"].set("已读取存档的解锁进度。可在右上角开始求解。")
+        self.fields["status"].set("已只读加载存档的解锁进度。可在右上角开始求解。")
         if not self.busy:
             self.generate.state(["!disabled"])
 
@@ -301,10 +336,21 @@ class BlueprintWindow:
         self.fields["device"].set(name)
 
     def select_output(self):
-        folder = filedialog.askdirectory(title="选择蓝图交付目录")
+        initial = next((path for path in (self.output_folder, *self.output_folder.parents) if path.is_dir()), Path.home())
+        folder = filedialog.askdirectory(parent=self.root, title="选择蓝图交付目录", initialdir=str(initial), mustexist=True)
         if folder:
-            self.output_folder = Path(folder)
-            self.fields["output"].set(folder)
+            self.output_folder = Path(folder).resolve()
+            self.fields["output"].set(str(self.output_folder))
+
+    def open_output_directory(self):
+        directory = self.report.parent if self.report is not None else self.output_folder
+        try:
+            folder = directory.resolve(strict=True)
+            if not folder.is_dir():
+                raise NotADirectoryError(str(directory))
+            open_native_directory(folder)
+        except OSError:
+            messagebox.showerror("无法打开导出目录", f"请检查目录是否存在并可访问。\n{directory}", parent=self.root)
 
     def config(self):
         def get(key):

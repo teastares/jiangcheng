@@ -1,8 +1,10 @@
 """只读提取 Steam 格式 117 的科技、配方、建筑与节点解锁。"""
 
 from dataclasses import dataclass
+from os import fstat
 from pathlib import Path
 from struct import unpack_from
+from time import sleep
 
 
 class SaveError(ValueError):
@@ -297,8 +299,19 @@ def parse(data):
 
 
 def read_save(path: Path):
-    with path.open("rb") as stream:
-        data = stream.read(128 * 1024 * 1024 + 1)
-    if len(data) > 128 * 1024 * 1024:
-        raise SaveError("存档超过 128 MiB 读取上限")
-    return parse(data)
+    limit = 128 * 1024 * 1024
+    for attempt in range(3):
+        if attempt:
+            sleep(0.025)
+        with path.open("rb") as stream:
+            before = fstat(stream.fileno())
+            if before.st_size > limit:
+                raise SaveError("存档超过 128 MiB 读取上限")
+            data = stream.read(limit + 1)
+            after = fstat(stream.fileno())
+        if len(data) > limit:
+            raise SaveError("存档超过 128 MiB 读取上限")
+        # 只解析本次读取的内存快照，若游戏在读取途中改写则重试。
+        if len(data) == before.st_size == after.st_size and before.st_mtime_ns == after.st_mtime_ns:
+            return parse(data)
+    raise SaveError("读取期间存档持续变化，请在游戏保存完成后重新选择。")

@@ -6,6 +6,7 @@ from fractions import Fraction
 from html import escape
 from math import ceil
 from pathlib import Path
+from time import perf_counter
 
 from .blueprint import FORMAT, IDS
 from .layout import solve
@@ -28,6 +29,7 @@ GEOMETRY = {
 }
 DEVICES = {IDS[k]: k for k in GEOMETRY if k not in ("inlet", "outlet")}
 BELT_SPEEDS = (1, 2, 4, 8, 12)
+UNDERGROUND_SPANS = (5, 6, 7, 8, 8)
 BLUEPRINT_NODE = 15
 DATABASE = Path(__file__).with_name("steam_database.json")
 
@@ -110,8 +112,7 @@ class Workshop:
                 spec = {"level": tier, "capacity": speed * 60, "seconds_per_cell": str(Fraction(1, speed)), "building": key}
                 if IDS[underground] in self.profile.buildings:
                     spec["underground"] = underground
-                    if tier == 1:
-                        spec["underground_span"] = 5
+                    spec["underground_span"] = UNDERGROUND_SPANS[tier - 1]
                 belts.append(spec)
         recipes = {}
         for item in self.variants:
@@ -126,7 +127,8 @@ class Workshop:
                 formula, ident = option
                 geometry = GEOMETRY[DEVICES[ident]][0]
                 definition = buildings[DEVICES[ident]]
-                return geometry[0] * geometry[1], definition["power"], formula["ticks"], formula["id"]
+                return (len(definition["inputs"]), geometry[0] * geometry[1],
+                        definition["power"], formula["ticks"], formula["id"])
 
             formula, ident = min(candidates, key=key)
             recipes[name] = {"id": formula["id"], "machine": DEVICES[ident], "seconds": str(Fraction(formula["ticks"], 60)),
@@ -184,7 +186,10 @@ class Workshop:
         return Problem(catalog, case)
 
     def run(self, configuration, row_seconds=0.10):
+        started = perf_counter()
         problem = self.configure(configuration)
+        problem.case["requested_belt_levels"] = configuration.get("belt_levels")
+        full = problem
         closest_locked = None
         below_target = False
 
@@ -202,13 +207,14 @@ class Workshop:
         for index in range(len(tiers)):
             if index:
                 try:
-                    problem = self.configure({**configuration, "belt_levels": tiers[index:]})
+                    problem = Problem(full.catalog, {**full.case, "belt_levels": tiers[index:]})
                 except Infeasible:
                     continue
             results = solve(problem, row_seconds, simulate, accept)
             winner = choose(problem, results)
             if winner is not None:
                 if results[winner][0].statistics["simulation"]["last_four_per_minute"] >= float(problem.rate):
+                    problem.case["solve_seconds"] = perf_counter() - started
                     return problem, results, winner
                 below_target = True
         if below_target:

@@ -1,13 +1,18 @@
 # 变更记录
 
+## 2026-11-22｜校正设施方向、物流选级和 Windows 路径
+
+- **原因与变更**　导出按钮直接打开本次报告目录，可从原始位置只读加载所选存档。修正东西向分流器的导入编号，逐项回读蓝图组件并在 HTML 列出方向。按实际带速、流量和跨度选择可用带级，比较低级与混用方案，按实际线路模拟首件和达产。更新 Windows x64 程序。 [最新版 Windows 程序](../dist/JiangCityBlueprint-logistics-fix.exe)
+- **范围与验证**　38 项自动测试通过。以合成 Steam 117 存档验证原位置读取后内容和修改时间不变，并由 Windows 资源管理器打开带中文、空格和逗号的导出目录。双绿瓶在 200 kW 下达到每分钟 12 件，混用和仅三级均为 38 × 17 格、204 个胶囊。EXE 主窗口响应正常，14 个内置模块和两份数据与源码一致。新版 EXE 的 SHA-256 为 `8d04ed408adc5219f018ab6ed65b0ae4e5656063906ccce68060bdb4a93566b3`。游戏内放置与持续运行待实测。 [双绿瓶带级对照](../blueprints/optimized/green-crystal-logistics/README.md) · [研究记录](../docs/research.md)
+
 ## 2026-11-22｜首次公开发布到 GitHub
 
-- **原因与范围**　同步蓝图生成器源码、文档、测试和离线蓝图到 GitHub。`dist/` 提供最新 Windows x64 程序，项目首页提供下载入口。 [最新版 Windows 程序](../dist/JiangCityBlueprint-capsule-report.exe)
+- **原因与范围**　同步蓝图生成器源码、文档、测试和离线蓝图到 GitHub。`dist/` 提供 Windows x64 程序，项目首页提供下载入口。 [首次发布的 Windows 程序](https://github.com/teastares/jiangcheng/blob/d31a58385a41b9ebc283e4f63cf9a9117fc3a4e1/dist/JiangCityBlueprint-capsule-report.exe)
 - **验证**　25 项自动测试通过。核对 EXE 内置数据和报告的「所需建造胶囊」标题，文件的 SHA-256 为 `fc88bfa4e16bd4e658754a8abcab0c4a1cd47c640f518feb876ed577bb3d2c87`。
 
 ## 2026-11-22｜在 HTML 页首标明所需建造胶囊
 
-- **原因与变更**　将每份离线报告的建造胶囊数量移到页首单独显示，方便备料。 [新版 Windows 程序](../dist/JiangCityBlueprint-capsule-report.exe)
+- **原因与变更**　将每份离线报告的建造胶囊数量移到页首单独显示，方便备料。 [当时的 Windows 程序](https://github.com/teastares/jiangcheng/blob/d31a58385a41b9ebc283e4f63cf9a9117fc3a4e1/dist/JiangCityBlueprint-capsule-report.exe)
 - **范围与验证**　两份双绿瓶 HTML 已更新，经 TXT、JSON 回读和离线渲染确认分别显示 204、213 个。25 项自动测试通过，Windows EXE 启动及包内报告验证通过。 [双绿瓶方案对照](../blueprints/optimized/green-crystal-rotation/README.md) · [研究记录](../docs/research.md)
 
 ## 2026-11-22｜支持设备换向与四向地下重布
