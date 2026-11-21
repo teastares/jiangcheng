@@ -1,0 +1,278 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="773" height="465" viewBox="0 0 773 465" role="img" aria-labelledby="title description">
+<title id="title">加固铁板 · 共用上游</title><desc id="description">17列、5行。左上角为(0,0)。上图为物流，下图为电网。</desc>
+<defs><pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M25 0H0V25" fill="none" stroke="#d9e0d9"/></pattern></defs>
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC","PingFang SC",sans-serif;fill:#19362e}.tick{font-size:9px;fill:#4c665d}.meta{font-size:13px;fill:#3e5b51}.machine{font-size:11px;font-weight:650}.legend{font-size:12px}.title{font-size:28px;font-weight:750}.section{font-size:16px;font-weight:700}</style>
+<rect width="773" height="465" fill="#f5f7f2"/>
+<text x="46" y="43" class="title">加固铁板 · 共用上游</text>
+<text x="46" y="68" class="meta">17 × 5 格　·　7 台加工设备　·　56 kW　·　稳态理论日产 320</text>
+<rect x="46" y="105" width="425" height="125" fill="#fffef9" stroke="#c4d0c6"/>
+<rect x="46" y="105" width="425" height="125" fill="url(#grid)"/>
+<text x="58.5" y="100" text-anchor="middle" class="tick">0</text>
+<text x="83.5" y="100" text-anchor="middle" class="tick">1</text>
+<text x="108.5" y="100" text-anchor="middle" class="tick">2</text>
+<text x="133.5" y="100" text-anchor="middle" class="tick">3</text>
+<text x="158.5" y="100" text-anchor="middle" class="tick">4</text>
+<text x="183.5" y="100" text-anchor="middle" class="tick">5</text>
+<text x="208.5" y="100" text-anchor="middle" class="tick">6</text>
+<text x="233.5" y="100" text-anchor="middle" class="tick">7</text>
+<text x="258.5" y="100" text-anchor="middle" class="tick">8</text>
+<text x="283.5" y="100" text-anchor="middle" class="tick">9</text>
+<text x="308.5" y="100" text-anchor="middle" class="tick">10</text>
+<text x="333.5" y="100" text-anchor="middle" class="tick">11</text>
+<text x="358.5" y="100" text-anchor="middle" class="tick">12</text>
+<text x="383.5" y="100" text-anchor="middle" class="tick">13</text>
+<text x="408.5" y="100" text-anchor="middle" class="tick">14</text>
+<text x="433.5" y="100" text-anchor="middle" class="tick">15</text>
+<text x="458.5" y="100" text-anchor="middle" class="tick">16</text>
+<text x="39" y="120.5" text-anchor="end" class="tick">0</text>
+<text x="39" y="145.5" text-anchor="end" class="tick">1</text>
+<text x="39" y="170.5" text-anchor="end" class="tick">2</text>
+<text x="39" y="195.5" text-anchor="end" class="tick">3</text>
+<text x="39" y="220.5" text-anchor="end" class="tick">4</text>
+<g class="route"><title>铁板：20 件/分钟；(5, 2) → (7, 2)</title><path d="M183.5 167.5L233.5 167.5" fill="none" stroke="#375d99" stroke-width="2.2" stroke-dasharray="4 3"/><polygon points="212.5,167.5 206.5,164.5 206.5,170.5" fill="#375d99"/></g>
+<g class="route"><title>加固铁板：10 件/分钟；(15, 0) → (15, 1)</title><path d="M433.5 117.5L433.5 142.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="433.5,134.0 436.5,128.0 430.5,128.0" fill="#187467"/></g>
+<g class="route"><title>加固铁板：10 件/分钟；(15, 1) → (15, 2)</title><path d="M433.5 142.5L433.5 167.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="433.5,159.0 436.5,153.0 430.5,153.0" fill="#187467"/></g>
+<g class="route"><title>加固铁板：20 件/分钟；(15, 2) → (15, 3)</title><path d="M433.5 167.5L433.5 192.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="433.5,184.0 436.5,178.0 430.5,178.0" fill="#187467"/></g>
+<g class="route"><title>铁棒：40/3 件/分钟；(6, 2) → (6, 1)</title><path d="M208.5 167.5L208.5 142.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="208.5,151.0 205.5,157.0 211.5,157.0" fill="#8b4672"/></g>
+<g class="route"><title>铁棒：40/3 件/分钟；(6, 3) → (6, 2)</title><path d="M208.5 192.5L208.5 167.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="208.5,176.0 205.5,182.0 211.5,182.0" fill="#8b4672"/></g>
+<g class="route"><title>铁锭：20 件/分钟；(2, 1) → (2, 2)</title><path d="M108.5 142.5L108.5 167.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="108.5,159.0 111.5,153.0 105.5,153.0" fill="#5c59a1"/></g>
+<g class="route"><title>加固铁板：10 件/分钟；(13, 0) → (14, 0)</title><path d="M383.5 117.5L408.5 117.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="400.0,117.5 394.0,114.5 394.0,120.5" fill="#187467"/></g>
+<g class="route"><title>加固铁板：10 件/分钟；(14, 0) → (15, 0)</title><path d="M408.5 117.5L433.5 117.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="425.0,117.5 419.0,114.5 419.0,120.5" fill="#187467"/></g>
+<g class="route"><title>加固铁板：10 件/分钟；(13, 2) → (14, 2)</title><path d="M383.5 167.5L408.5 167.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="400.0,167.5 394.0,164.5 394.0,170.5" fill="#187467"/></g>
+<g class="route"><title>加固铁板：10 件/分钟；(14, 2) → (15, 2)</title><path d="M408.5 167.5L433.5 167.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="425.0,167.5 419.0,164.5 419.0,170.5" fill="#187467"/></g>
+<g class="route"><title>螺丝：40 件/分钟；(9, 4) → (10, 4)</title><path d="M283.5 217.5L308.5 217.5" fill="none" stroke="#8c5231" stroke-width="2.2"/><polygon points="300.0,217.5 294.0,214.5 294.0,220.5" fill="#8c5231"/></g>
+<g class="route"><title>螺丝：40 件/分钟；(10, 3) → (11, 3)</title><path d="M308.5 192.5L333.5 192.5" fill="none" stroke="#8c5231" stroke-width="2.2"/><polygon points="325.0,192.5 319.0,189.5 319.0,195.5" fill="#8c5231"/></g>
+<g class="route"><title>螺丝：40 件/分钟；(9, 1) → (10, 1)</title><path d="M283.5 142.5L308.5 142.5" fill="none" stroke="#8c5231" stroke-width="2.2"/><polygon points="300.0,142.5 294.0,139.5 294.0,145.5" fill="#8c5231"/></g>
+<g class="route"><title>螺丝：40 件/分钟；(10, 1) → (11, 1)</title><path d="M308.5 142.5L333.5 142.5" fill="none" stroke="#8c5231" stroke-width="2.2"/><polygon points="325.0,142.5 319.0,139.5 319.0,145.5" fill="#8c5231"/></g>
+<g class="route"><title>铁板：20 件/分钟；(4, 2) → (5, 2)</title><path d="M158.5 167.5L183.5 167.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="175.0,167.5 169.0,164.5 169.0,170.5" fill="#375d99"/></g>
+<g class="route"><title>铁板：20 件/分钟；(7, 2) → (8, 2)</title><path d="M233.5 167.5L258.5 167.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="250.0,167.5 244.0,164.5 244.0,170.5" fill="#375d99"/></g>
+<g class="route"><title>铁板：20 件/分钟；(8, 2) → (9, 2)</title><path d="M258.5 167.5L283.5 167.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="275.0,167.5 269.0,164.5 269.0,170.5" fill="#375d99"/></g>
+<g class="route"><title>铁板：20 件/分钟；(9, 2) → (10, 2)</title><path d="M283.5 167.5L308.5 167.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="300.0,167.5 294.0,164.5 294.0,170.5" fill="#375d99"/></g>
+<g class="route"><title>铁板：20 件/分钟；(10, 2) → (11, 2)</title><path d="M308.5 167.5L333.5 167.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="325.0,167.5 319.0,164.5 319.0,170.5" fill="#375d99"/></g>
+<g class="route"><title>铁板：20 件/分钟；(4, 0) → (5, 0)</title><path d="M158.5 117.5L183.5 117.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="175.0,117.5 169.0,114.5 169.0,120.5" fill="#375d99"/></g>
+<g class="route"><title>铁板：20 件/分钟；(5, 0) → (6, 0)</title><path d="M183.5 117.5L208.5 117.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="200.0,117.5 194.0,114.5 194.0,120.5" fill="#375d99"/></g>
+<g class="route"><title>铁板：20 件/分钟；(6, 0) → (7, 0)</title><path d="M208.5 117.5L233.5 117.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="225.0,117.5 219.0,114.5 219.0,120.5" fill="#375d99"/></g>
+<g class="route"><title>铁板：20 件/分钟；(7, 0) → (8, 0)</title><path d="M233.5 117.5L258.5 117.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="250.0,117.5 244.0,114.5 244.0,120.5" fill="#375d99"/></g>
+<g class="route"><title>铁板：20 件/分钟；(8, 0) → (9, 0)</title><path d="M258.5 117.5L283.5 117.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="275.0,117.5 269.0,114.5 269.0,120.5" fill="#375d99"/></g>
+<g class="route"><title>铁板：20 件/分钟；(9, 0) → (10, 0)</title><path d="M283.5 117.5L308.5 117.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="300.0,117.5 294.0,114.5 294.0,120.5" fill="#375d99"/></g>
+<g class="route"><title>铁板：20 件/分钟；(10, 0) → (11, 0)</title><path d="M308.5 117.5L333.5 117.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="325.0,117.5 319.0,114.5 319.0,120.5" fill="#375d99"/></g>
+<g class="route"><title>铁棒：80/3 件/分钟；(4, 3) → (5, 3)</title><path d="M158.5 192.5L183.5 192.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="175.0,192.5 169.0,189.5 169.0,195.5" fill="#8b4672"/></g>
+<g class="route"><title>铁棒：80/3 件/分钟；(5, 3) → (6, 3)</title><path d="M183.5 192.5L208.5 192.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="200.0,192.5 194.0,189.5 194.0,195.5" fill="#8b4672"/></g>
+<g class="route"><title>铁棒：40/3 件/分钟；(6, 1) → (7, 1)</title><path d="M208.5 142.5L233.5 142.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="225.0,142.5 219.0,139.5 219.0,145.5" fill="#8b4672"/></g>
+<g class="route"><title>铁棒：40/3 件/分钟；(7, 1) → (8, 1)</title><path d="M233.5 142.5L258.5 142.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="250.0,142.5 244.0,139.5 244.0,145.5" fill="#8b4672"/></g>
+<g class="route"><title>铁棒：40/3 件/分钟；(6, 4) → (7, 4)</title><path d="M208.5 217.5L233.5 217.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="225.0,217.5 219.0,214.5 219.0,220.5" fill="#8b4672"/></g>
+<g class="route"><title>铁棒：40/3 件/分钟；(7, 4) → (8, 4)</title><path d="M233.5 217.5L258.5 217.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="250.0,217.5 244.0,214.5 244.0,220.5" fill="#8b4672"/></g>
+<g class="route"><title>铁锭：160/9 件/分钟；(1, 4) → (2, 4)</title><path d="M83.5 217.5L108.5 217.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="100.0,217.5 94.0,214.5 94.0,220.5" fill="#5c59a1"/></g>
+<g class="route"><title>铁锭：160/9 件/分钟；(2, 3) → (3, 3)</title><path d="M108.5 192.5L133.5 192.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="125.0,192.5 119.0,189.5 119.0,195.5" fill="#5c59a1"/></g>
+<g class="route"><title>铁锭：20 件/分钟；(1, 0) → (2, 0)</title><path d="M83.5 117.5L108.5 117.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="100.0,117.5 94.0,114.5 94.0,120.5" fill="#5c59a1"/></g>
+<g class="route"><title>铁锭：20 件/分钟；(2, 0) → (3, 0)</title><path d="M108.5 117.5L133.5 117.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="125.0,117.5 119.0,114.5 119.0,120.5" fill="#5c59a1"/></g>
+<g class="route"><title>铁锭：20 件/分钟；(1, 1) → (2, 1)</title><path d="M83.5 142.5L108.5 142.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="100.0,142.5 94.0,139.5 94.0,145.5" fill="#5c59a1"/></g>
+<g class="route"><title>铁锭：20 件/分钟；(2, 2) → (3, 2)</title><path d="M108.5 167.5L133.5 167.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="125.0,167.5 119.0,164.5 119.0,170.5" fill="#5c59a1"/></g>
+<g class="route"><title>加固铁板：20 件/分钟；(15, 4) → (16, 4)</title><path d="M433.5 217.5L458.5 217.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="450.0,217.5 444.0,214.5 444.0,220.5" fill="#187467"/></g>
+<g class="route"><title>铁锭：160/9 件/分钟；(2, 4) → (2, 3)</title><path d="M108.5 217.5L108.5 192.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="108.5,201.0 105.5,207.0 111.5,207.0" fill="#5c59a1"/></g>
+<g class="route"><title>铁棒：40/3 件/分钟；(6, 3) → (6, 4)</title><path d="M208.5 192.5L208.5 217.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="208.5,209.0 211.5,203.0 205.5,203.0" fill="#8b4672"/></g>
+<g class="route"><title>螺丝：40 件/分钟；(10, 4) → (10, 3)</title><path d="M308.5 217.5L308.5 192.5" fill="none" stroke="#8c5231" stroke-width="2.2"/><polygon points="308.5,201.0 305.5,207.0 311.5,207.0" fill="#8c5231"/></g>
+<g class="route"><title>加固铁板：20 件/分钟；(15, 3) → (15, 4)</title><path d="M433.5 192.5L433.5 217.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="433.5,209.0 436.5,203.0 430.5,203.0" fill="#187467"/></g>
+<g class="transport" data-x="2" data-y="0" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(2, 0)</title>
+<circle cx="108.5" cy="117.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="2" data-y="1" data-kind="belt1" data-id="20" data-dir="0" data-shape="4" data-recipe="-1"><title>一级带｜(2, 1)</title>
+<circle cx="108.5" cy="142.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="2" data-y="2" data-kind="belt1" data-id="20" data-dir="2" data-shape="8" data-recipe="-1"><title>一级带｜(2, 2)</title>
+<circle cx="108.5" cy="167.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="2" data-y="3" data-kind="belt1" data-id="20" data-dir="2" data-shape="10" data-recipe="-1"><title>一级带｜(2, 3)</title>
+<circle cx="108.5" cy="192.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="2" data-y="4" data-kind="belt1" data-id="20" data-dir="3" data-shape="6" data-recipe="-1"><title>一级带｜(2, 4)</title>
+<circle cx="108.5" cy="217.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="5" data-y="0" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(5, 0)</title>
+<circle cx="183.5" cy="117.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="5" data-y="2" data-kind="tunnel1" data-id="30" data-dir="1" data-shape="1" data-recipe="-1"><title>一级地下带端点｜(5, 2)</title>
+<rect x="176.9" y="160.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="183.5" y="170.9" font-size="8.5" text-anchor="middle">入</text>
+</g>
+<g class="transport" data-x="5" data-y="3" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(5, 3)</title>
+<circle cx="183.5" cy="192.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="6" data-y="0" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(6, 0)</title>
+<circle cx="208.5" cy="117.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="6" data-y="1" data-kind="belt1" data-id="20" data-dir="2" data-shape="10" data-recipe="-1"><title>一级带｜(6, 1)</title>
+<circle cx="208.5" cy="142.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="6" data-y="2" data-kind="belt1" data-id="20" data-dir="3" data-shape="3" data-recipe="-1"><title>一级带｜(6, 2)</title>
+<circle cx="208.5" cy="167.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="6" data-y="3" data-kind="split" data-id="40" data-dir="2" data-shape="2" data-recipe="-1"><title>分流器｜(6, 3)</title>
+<rect x="201.9" y="185.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="208.5" y="195.9" font-size="8.5" text-anchor="middle">分</text>
+</g>
+<g class="transport" data-x="6" data-y="4" data-kind="belt1" data-id="20" data-dir="2" data-shape="8" data-recipe="-1"><title>一级带｜(6, 4)</title>
+<circle cx="208.5" cy="217.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="7" data-y="0" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(7, 0)</title>
+<circle cx="233.5" cy="117.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="7" data-y="1" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(7, 1)</title>
+<circle cx="233.5" cy="142.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="7" data-y="2" data-kind="tunnel1" data-id="30" data-dir="6" data-shape="6" data-recipe="-1"><title>一级地下带端点｜(7, 2)</title>
+<rect x="226.9" y="160.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="233.5" y="170.9" font-size="8.5" text-anchor="middle">出</text>
+</g>
+<g class="transport" data-x="7" data-y="4" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(7, 4)</title>
+<circle cx="233.5" cy="217.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="8" data-y="0" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(8, 0)</title>
+<circle cx="258.5" cy="117.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="8" data-y="2" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(8, 2)</title>
+<circle cx="258.5" cy="167.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="9" data-y="0" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(9, 0)</title>
+<circle cx="283.5" cy="117.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="9" data-y="2" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(9, 2)</title>
+<circle cx="283.5" cy="167.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="10" data-y="0" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(10, 0)</title>
+<circle cx="308.5" cy="117.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="10" data-y="1" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(10, 1)</title>
+<circle cx="308.5" cy="142.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="10" data-y="2" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(10, 2)</title>
+<circle cx="308.5" cy="167.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="10" data-y="3" data-kind="belt1" data-id="20" data-dir="2" data-shape="10" data-recipe="-1"><title>一级带｜(10, 3)</title>
+<circle cx="308.5" cy="192.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="10" data-y="4" data-kind="belt1" data-id="20" data-dir="3" data-shape="6" data-recipe="-1"><title>一级带｜(10, 4)</title>
+<circle cx="308.5" cy="217.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="14" data-y="0" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(14, 0)</title>
+<circle cx="408.5" cy="117.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="14" data-y="2" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(14, 2)</title>
+<circle cx="408.5" cy="167.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="15" data-y="0" data-kind="belt1" data-id="20" data-dir="0" data-shape="4" data-recipe="-1"><title>一级带｜(15, 0)</title>
+<circle cx="433.5" cy="117.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="15" data-y="1" data-kind="belt1" data-id="20" data-dir="0" data-shape="0" data-recipe="-1"><title>一级带｜(15, 1)</title>
+<circle cx="433.5" cy="142.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="15" data-y="2" data-kind="merge" data-id="41" data-dir="0" data-shape="0" data-recipe="-1"><title>合并器｜(15, 2)</title>
+<rect x="426.9" y="160.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="433.5" y="170.9" font-size="8.5" text-anchor="middle">合</text>
+</g>
+<g class="transport" data-x="15" data-y="3" data-kind="belt1" data-id="20" data-dir="0" data-shape="0" data-recipe="-1"><title>一级带｜(15, 3)</title>
+<circle cx="433.5" cy="192.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="15" data-y="4" data-kind="belt1" data-id="20" data-dir="2" data-shape="8" data-recipe="-1"><title>一级带｜(15, 4)</title>
+<circle cx="433.5" cy="217.5" r="6" fill="transparent"/>
+</g>
+<g data-kind="assembler" data-node="0" data-x="12" data-y="1" data-id="51" data-dir="1" data-shape="0" data-recipe="23"><title>加固铁板｜组装机｜定位格 (12, 1)｜10 件/分钟</title><rect x="323" y="107" width="71" height="46" rx="4" fill="#e7f0e5" stroke="#187467"/><circle cx="351.0" cy="150.25" r="2" fill="#187467"/><text x="358.5" y="133.0" text-anchor="middle" class="machine">加固铁板</text>
+</g>
+<g data-kind="assembler" data-node="1" data-x="12" data-y="3" data-id="51" data-dir="1" data-shape="0" data-recipe="23"><title>加固铁板｜组装机｜定位格 (12, 3)｜10 件/分钟</title><rect x="323" y="157" width="71" height="46" rx="4" fill="#e7f0e5" stroke="#187467"/><circle cx="351.0" cy="200.25" r="2" fill="#187467"/><text x="358.5" y="183.0" text-anchor="middle" class="machine">加固铁板</text>
+</g>
+<g data-kind="outlet" data-node="2" data-x="16" data-y="4" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>出1｜成品接出带｜定位格 (16, 4)｜20 件/分钟</title><rect x="448" y="207" width="21" height="21" rx="4" fill="#e7f0e5" stroke="#187467"/><circle cx="451.0" cy="225.25" r="2" fill="#187467"/><text x="458.5" y="220.5" text-anchor="middle" class="machine">出1</text>
+<path d="M469 211l5 6 -5 6Z" fill="#187467"/>
+</g>
+<g data-kind="maker" data-node="3" data-x="8" data-y="4" data-id="50" data-dir="1" data-shape="0" data-recipe="22"><title>螺丝｜制造机｜定位格 (8, 4)｜40 件/分钟</title><rect x="248" y="207" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#8c5231"/><circle cx="251.0" cy="225.25" r="2" fill="#8c5231"/><text x="271.0" y="220.5" text-anchor="middle" class="machine">螺丝</text>
+</g>
+<g data-kind="maker" data-node="4" data-x="8" data-y="1" data-id="50" data-dir="1" data-shape="0" data-recipe="22"><title>螺丝｜制造机｜定位格 (8, 1)｜40 件/分钟</title><rect x="248" y="132" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#8c5231"/><circle cx="251.0" cy="150.25" r="2" fill="#8c5231"/><text x="271.0" y="145.5" text-anchor="middle" class="machine">螺丝</text>
+</g>
+<g data-kind="maker" data-node="5" data-x="3" data-y="2" data-id="50" data-dir="1" data-shape="0" data-recipe="20"><title>铁板｜制造机｜定位格 (3, 2)｜20 件/分钟</title><rect x="123" y="157" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#375d99"/><circle cx="126.0" cy="175.25" r="2" fill="#375d99"/><text x="146.0" y="170.5" text-anchor="middle" class="machine">铁板</text>
+</g>
+<g data-kind="maker" data-node="6" data-x="3" data-y="0" data-id="50" data-dir="1" data-shape="0" data-recipe="20"><title>铁板｜制造机｜定位格 (3, 0)｜20 件/分钟</title><rect x="123" y="107" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#375d99"/><circle cx="126.0" cy="125.25" r="2" fill="#375d99"/><text x="146.0" y="120.5" text-anchor="middle" class="machine">铁板</text>
+</g>
+<g data-kind="maker" data-node="7" data-x="3" data-y="3" data-id="50" data-dir="1" data-shape="0" data-recipe="21"><title>铁棒｜制造机｜定位格 (3, 3)｜80/3 件/分钟</title><rect x="123" y="182" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#8b4672"/><circle cx="126.0" cy="200.25" r="2" fill="#8b4672"/><text x="146.0" y="195.5" text-anchor="middle" class="machine">铁棒</text>
+</g>
+<g data-kind="inlet" data-node="8" data-x="0" data-y="4" data-id="4" data-dir="2" data-shape="2" data-recipe="-1"><title>进3 铁锭｜自动进货箱｜定位格 (0, 4)｜160/9 件/分钟</title><rect x="48" y="207" width="46" height="21" rx="4" fill="#fff2d8" stroke="#5c59a1"/><circle cx="51.0" cy="225.25" r="2" fill="#5c59a1"/><text x="71.0" y="220.5" text-anchor="middle" class="machine">进3 铁锭</text>
+</g>
+<g data-kind="inlet" data-node="9" data-x="0" data-y="0" data-id="4" data-dir="2" data-shape="2" data-recipe="-1"><title>进1 铁锭｜自动进货箱｜定位格 (0, 0)｜20 件/分钟</title><rect x="48" y="107" width="46" height="21" rx="4" fill="#fff2d8" stroke="#5c59a1"/><circle cx="51.0" cy="125.25" r="2" fill="#5c59a1"/><text x="71.0" y="120.5" text-anchor="middle" class="machine">进1 铁锭</text>
+</g>
+<g data-kind="inlet" data-node="10" data-x="0" data-y="1" data-id="4" data-dir="2" data-shape="2" data-recipe="-1"><title>进2 铁锭｜自动进货箱｜定位格 (0, 1)｜20 件/分钟</title><rect x="48" y="132" width="46" height="21" rx="4" fill="#fff2d8" stroke="#5c59a1"/><circle cx="51.0" cy="150.25" r="2" fill="#5c59a1"/><text x="71.0" y="145.5" text-anchor="middle" class="machine">进2 铁锭</text>
+</g>
+<text x="495" y="117" class="section">物流与设备</text>
+<text x="495" y="144" class="legend">箭头　物流方向，生产设备朝右</text>
+<text x="495" y="165" class="legend">左下小点　建筑定位格</text>
+<text x="495" y="186" class="legend">罗马数字　传送带等级</text>
+<text x="495" y="207" class="legend">分 / 合　分流器 / 合并器</text>
+<text x="495" y="228" class="legend">入 / 出　地下带，虚线连接端点</text>
+<text x="495" y="249" class="legend">进 / 出　补货口 / 成品接出带</text>
+<path d="M495 276h18" stroke="#187467" stroke-width="3"/><text x="522" y="280" class="legend">加固铁板</text>
+<path d="M495 298h18" stroke="#8c5231" stroke-width="3"/><text x="522" y="302" class="legend">螺丝</text>
+<path d="M495 320h18" stroke="#375d99" stroke-width="3"/><text x="522" y="324" class="legend">铁板</text>
+<path d="M495 342h18" stroke="#8b4672" stroke-width="3"/><text x="522" y="346" class="legend">铁棒</text>
+<path d="M495 364h18" stroke="#5c59a1" stroke-width="3"/><text x="522" y="368" class="legend">铁锭</text>
+<text x="46" y="267" class="section">电网 · 同一组坐标</text>
+<rect x="46" y="305" width="425" height="125" fill="#fffef9" stroke="#c4d0c6"/>
+<rect x="46" y="305" width="425" height="125" fill="url(#grid)"/>
+<text x="58.5" y="300" text-anchor="middle" class="tick">0</text>
+<text x="83.5" y="300" text-anchor="middle" class="tick">1</text>
+<text x="108.5" y="300" text-anchor="middle" class="tick">2</text>
+<text x="133.5" y="300" text-anchor="middle" class="tick">3</text>
+<text x="158.5" y="300" text-anchor="middle" class="tick">4</text>
+<text x="183.5" y="300" text-anchor="middle" class="tick">5</text>
+<text x="208.5" y="300" text-anchor="middle" class="tick">6</text>
+<text x="233.5" y="300" text-anchor="middle" class="tick">7</text>
+<text x="258.5" y="300" text-anchor="middle" class="tick">8</text>
+<text x="283.5" y="300" text-anchor="middle" class="tick">9</text>
+<text x="308.5" y="300" text-anchor="middle" class="tick">10</text>
+<text x="333.5" y="300" text-anchor="middle" class="tick">11</text>
+<text x="358.5" y="300" text-anchor="middle" class="tick">12</text>
+<text x="383.5" y="300" text-anchor="middle" class="tick">13</text>
+<text x="408.5" y="300" text-anchor="middle" class="tick">14</text>
+<text x="433.5" y="300" text-anchor="middle" class="tick">15</text>
+<text x="458.5" y="300" text-anchor="middle" class="tick">16</text>
+<text x="39" y="320.5" text-anchor="end" class="tick">0</text>
+<text x="39" y="345.5" text-anchor="end" class="tick">1</text>
+<text x="39" y="370.5" text-anchor="end" class="tick">2</text>
+<text x="39" y="395.5" text-anchor="end" class="tick">3</text>
+<text x="39" y="420.5" text-anchor="end" class="tick">4</text>
+<rect x="323" y="307" width="71" height="46" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="323" y="357" width="71" height="46" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="248" y="407" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="248" y="332" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="123" y="357" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="123" y="307" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="123" y="382" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<path d="M133.5 317.5L133.5 342.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="3" data-y="0" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="133.5" cy="317.5" r="2.5" fill="#947234"/>
+<path d="M133.5 342.5L158.5 342.5" stroke="#947234" stroke-width="2"/>
+<path d="M133.5 342.5L133.5 367.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="3" data-y="1" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="133.5" cy="342.5" r="2.5" fill="#947234"/>
+<path d="M133.5 367.5L133.5 392.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="3" data-y="2" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="133.5" cy="367.5" r="2.5" fill="#947234"/>
+<circle class="wire" data-x="3" data-y="3" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="133.5" cy="392.5" r="2.5" fill="#947234"/>
+<path d="M158.5 342.5L183.5 342.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="4" data-y="1" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="158.5" cy="342.5" r="2.5" fill="#947234"/>
+<path d="M183.5 342.5L208.5 342.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="5" data-y="1" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="183.5" cy="342.5" r="2.5" fill="#947234"/>
+<path d="M208.5 342.5L233.5 342.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="6" data-y="1" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="208.5" cy="342.5" r="2.5" fill="#947234"/>
+<path d="M233.5 342.5L258.5 342.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="7" data-y="1" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="233.5" cy="342.5" r="2.5" fill="#947234"/>
+<path d="M258.5 342.5L283.5 342.5" stroke="#947234" stroke-width="2"/>
+<path d="M258.5 342.5L258.5 367.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="8" data-y="1" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="258.5" cy="342.5" r="2.5" fill="#947234"/>
+<path d="M258.5 367.5L258.5 392.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="8" data-y="2" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="258.5" cy="367.5" r="2.5" fill="#947234"/>
+<path d="M258.5 392.5L258.5 417.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="8" data-y="3" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="258.5" cy="392.5" r="2.5" fill="#947234"/>
+<circle class="wire" data-x="8" data-y="4" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="258.5" cy="417.5" r="2.5" fill="#947234"/>
+<path d="M283.5 342.5L308.5 342.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="9" data-y="1" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="283.5" cy="342.5" r="2.5" fill="#947234"/>
+<path d="M308.5 342.5L333.5 342.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="10" data-y="1" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="308.5" cy="342.5" r="2.5" fill="#947234"/>
+<path d="M333.5 342.5L358.5 342.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="11" data-y="1" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="333.5" cy="342.5" r="2.5" fill="#947234"/>
+<path d="M358.5 342.5L358.5 367.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="12" data-y="1" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="358.5" cy="342.5" r="2.5" fill="#947234"/>
+<path d="M358.5 367.5L358.5 392.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="12" data-y="2" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="358.5" cy="367.5" r="2.5" fill="#947234"/>
+<circle class="wire" data-x="12" data-y="3" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="358.5" cy="392.5" r="2.5" fill="#947234"/>
+<circle cx="133.5" cy="317.5" r="6" fill="#edba50" stroke="#77541c" stroke-width="2"/><text x="46" y="285" class="legend">电力接入 (3, 0) · 56 kW</text>
+</svg>

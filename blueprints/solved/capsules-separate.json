@@ -1,0 +1,2397 @@
+{
+  "target": "建造胶囊",
+  "mode": "separate",
+  "size": [
+    18,
+    8
+  ],
+  "effective_minutes": 16,
+  "target_per_minute": "24",
+  "theoretical_per_day": "384",
+  "raw_ratio": "原木 ∶ 石头 ∶ 螺丝 ∶ 钢板 = 8 ∶ 15 ∶ 18 ∶ 6",
+  "inlets": [
+    {
+      "id": "进1",
+      "position": [
+        0,
+        0
+      ],
+      "item": "原木",
+      "per_minute": "32/3",
+      "per_day": "512/3"
+    },
+    {
+      "id": "进2",
+      "position": [
+        0,
+        1
+      ],
+      "item": "螺丝",
+      "per_minute": "24",
+      "per_day": "384"
+    },
+    {
+      "id": "进3",
+      "position": [
+        0,
+        2
+      ],
+      "item": "钢板",
+      "per_minute": "8",
+      "per_day": "128"
+    },
+    {
+      "id": "进4",
+      "position": [
+        0,
+        3
+      ],
+      "item": "石头",
+      "per_minute": "20",
+      "per_day": "320"
+    },
+    {
+      "id": "进5",
+      "position": [
+        0,
+        4
+      ],
+      "item": "原木",
+      "per_minute": "32/3",
+      "per_day": "512/3"
+    },
+    {
+      "id": "进6",
+      "position": [
+        0,
+        5
+      ],
+      "item": "螺丝",
+      "per_minute": "24",
+      "per_day": "384"
+    },
+    {
+      "id": "进7",
+      "position": [
+        0,
+        6
+      ],
+      "item": "钢板",
+      "per_minute": "8",
+      "per_day": "128"
+    },
+    {
+      "id": "进8",
+      "position": [
+        0,
+        7
+      ],
+      "item": "石头",
+      "per_minute": "20",
+      "per_day": "320"
+    }
+  ],
+  "outlets": [
+    {
+      "id": "出1",
+      "position": [
+        17,
+        0
+      ],
+      "item": "建造胶囊",
+      "per_minute": "12",
+      "belt": 1
+    },
+    {
+      "id": "出2",
+      "position": [
+        17,
+        4
+      ],
+      "item": "建造胶囊",
+      "per_minute": "12",
+      "belt": 1
+    }
+  ],
+  "power_entry": [
+    3,
+    0
+  ],
+  "platform": "Steam Build 25121460",
+  "profile": "120／balanced",
+  "rows_optimal_before_compaction": false,
+  "statistics": {
+    "buildings": {
+      "assembler": 6,
+      "belt1": 48,
+      "inlet": 8,
+      "maker": 6
+    },
+    "materials": {
+      "初级工具": 30,
+      "加固铁板": 18,
+      "木材": 24,
+      "木板": 48,
+      "木棒": 96,
+      "石材": 60,
+      "石砖": 60,
+      "铁锭": 70,
+      "铜线": 76,
+      "铜锭": 30
+    },
+    "components": 68,
+    "transport": 48,
+    "power": 132,
+    "wires": 38,
+    "machines": 12,
+    "simulation": {
+      "first_seconds": 54.75,
+      "first_day": 366,
+      "last_four_per_minute": 24.0
+    }
+  },
+  "placements": [
+    {
+      "building": "assembler",
+      "x": 13,
+      "y": 0,
+      "width": 3,
+      "height": 2,
+      "anchor": [
+        14,
+        1
+      ],
+      "item": "建造胶囊",
+      "rate": "12",
+      "node": 0,
+      "direction": "右",
+      "recipe": 600
+    },
+    {
+      "building": "outlet",
+      "x": 17,
+      "y": 0,
+      "width": 1,
+      "height": 1,
+      "anchor": [
+        17,
+        0
+      ],
+      "item": "建造胶囊",
+      "rate": "12",
+      "node": 1,
+      "direction": "右",
+      "recipe": null
+    },
+    {
+      "building": "assembler",
+      "x": 9,
+      "y": 0,
+      "width": 3,
+      "height": 2,
+      "anchor": [
+        10,
+        1
+      ],
+      "item": "木质框架",
+      "rate": "4",
+      "node": 2,
+      "direction": "右",
+      "recipe": 4
+    },
+    {
+      "building": "maker",
+      "x": 6,
+      "y": 0,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        6,
+        0
+      ],
+      "item": "木棒",
+      "rate": "16",
+      "node": 3,
+      "direction": "右",
+      "recipe": 6
+    },
+    {
+      "building": "assembler",
+      "x": 6,
+      "y": 2,
+      "width": 3,
+      "height": 2,
+      "anchor": [
+        7,
+        3
+      ],
+      "item": "钢筋混凝土",
+      "rate": "4",
+      "node": 4,
+      "direction": "右",
+      "recipe": 83
+    },
+    {
+      "building": "maker",
+      "x": 3,
+      "y": 0,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        3,
+        0
+      ],
+      "item": "木材",
+      "rate": "32/3",
+      "node": 5,
+      "direction": "右",
+      "recipe": 1
+    },
+    {
+      "building": "maker",
+      "x": 3,
+      "y": 3,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        3,
+        3
+      ],
+      "item": "石材",
+      "rate": "20",
+      "node": 6,
+      "direction": "右",
+      "recipe": 9
+    },
+    {
+      "building": "inlet",
+      "x": 0,
+      "y": 0,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        0,
+        0
+      ],
+      "item": "原木",
+      "rate": "32/3",
+      "node": 7,
+      "direction": "右",
+      "recipe": null
+    },
+    {
+      "building": "inlet",
+      "x": 0,
+      "y": 3,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        0,
+        3
+      ],
+      "item": "石头",
+      "rate": "20",
+      "node": 8,
+      "direction": "右",
+      "recipe": null
+    },
+    {
+      "building": "inlet",
+      "x": 0,
+      "y": 1,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        0,
+        1
+      ],
+      "item": "螺丝",
+      "rate": "24",
+      "node": 9,
+      "direction": "右",
+      "recipe": null
+    },
+    {
+      "building": "inlet",
+      "x": 0,
+      "y": 2,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        0,
+        2
+      ],
+      "item": "钢板",
+      "rate": "8",
+      "node": 10,
+      "direction": "右",
+      "recipe": null
+    },
+    {
+      "building": "assembler",
+      "x": 13,
+      "y": 4,
+      "width": 3,
+      "height": 2,
+      "anchor": [
+        14,
+        5
+      ],
+      "item": "建造胶囊",
+      "rate": "12",
+      "node": 11,
+      "direction": "右",
+      "recipe": 600
+    },
+    {
+      "building": "outlet",
+      "x": 17,
+      "y": 4,
+      "width": 1,
+      "height": 1,
+      "anchor": [
+        17,
+        4
+      ],
+      "item": "建造胶囊",
+      "rate": "12",
+      "node": 12,
+      "direction": "右",
+      "recipe": null
+    },
+    {
+      "building": "assembler",
+      "x": 9,
+      "y": 4,
+      "width": 3,
+      "height": 2,
+      "anchor": [
+        10,
+        5
+      ],
+      "item": "木质框架",
+      "rate": "4",
+      "node": 13,
+      "direction": "右",
+      "recipe": 4
+    },
+    {
+      "building": "maker",
+      "x": 6,
+      "y": 4,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        6,
+        4
+      ],
+      "item": "木棒",
+      "rate": "16",
+      "node": 14,
+      "direction": "右",
+      "recipe": 6
+    },
+    {
+      "building": "assembler",
+      "x": 6,
+      "y": 6,
+      "width": 3,
+      "height": 2,
+      "anchor": [
+        7,
+        7
+      ],
+      "item": "钢筋混凝土",
+      "rate": "4",
+      "node": 15,
+      "direction": "右",
+      "recipe": 83
+    },
+    {
+      "building": "maker",
+      "x": 3,
+      "y": 4,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        3,
+        4
+      ],
+      "item": "木材",
+      "rate": "32/3",
+      "node": 16,
+      "direction": "右",
+      "recipe": 1
+    },
+    {
+      "building": "maker",
+      "x": 3,
+      "y": 7,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        3,
+        7
+      ],
+      "item": "石材",
+      "rate": "20",
+      "node": 17,
+      "direction": "右",
+      "recipe": 9
+    },
+    {
+      "building": "inlet",
+      "x": 0,
+      "y": 4,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        0,
+        4
+      ],
+      "item": "原木",
+      "rate": "32/3",
+      "node": 18,
+      "direction": "右",
+      "recipe": null
+    },
+    {
+      "building": "inlet",
+      "x": 0,
+      "y": 7,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        0,
+        7
+      ],
+      "item": "石头",
+      "rate": "20",
+      "node": 19,
+      "direction": "右",
+      "recipe": null
+    },
+    {
+      "building": "inlet",
+      "x": 0,
+      "y": 5,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        0,
+        5
+      ],
+      "item": "螺丝",
+      "rate": "24",
+      "node": 20,
+      "direction": "右",
+      "recipe": null
+    },
+    {
+      "building": "inlet",
+      "x": 0,
+      "y": 6,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        0,
+        6
+      ],
+      "item": "钢板",
+      "rate": "8",
+      "node": 21,
+      "direction": "右",
+      "recipe": null
+    }
+  ],
+  "transport": [
+    {
+      "position": [
+        2,
+        0
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          1,
+          0
+        ]
+      ],
+      "outgoing": [
+        [
+          3,
+          0
+        ]
+      ]
+    },
+    {
+      "position": [
+        2,
+        1
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          1,
+          1
+        ]
+      ],
+      "outgoing": [
+        [
+          3,
+          1
+        ]
+      ]
+    },
+    {
+      "position": [
+        2,
+        2
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          1,
+          2
+        ]
+      ],
+      "outgoing": [
+        [
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "position": [
+        2,
+        3
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          1,
+          3
+        ]
+      ],
+      "outgoing": [
+        [
+          3,
+          3
+        ]
+      ]
+    },
+    {
+      "position": [
+        2,
+        4
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          1,
+          4
+        ]
+      ],
+      "outgoing": [
+        [
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "position": [
+        2,
+        5
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          1,
+          5
+        ]
+      ],
+      "outgoing": [
+        [
+          3,
+          5
+        ]
+      ]
+    },
+    {
+      "position": [
+        2,
+        6
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          1,
+          6
+        ]
+      ],
+      "outgoing": [
+        [
+          3,
+          6
+        ]
+      ]
+    },
+    {
+      "position": [
+        2,
+        7
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          1,
+          7
+        ]
+      ],
+      "outgoing": [
+        [
+          3,
+          7
+        ]
+      ]
+    },
+    {
+      "position": [
+        3,
+        1
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          2,
+          1
+        ]
+      ],
+      "outgoing": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "position": [
+        3,
+        2
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          2,
+          2
+        ]
+      ],
+      "outgoing": [
+        [
+          4,
+          2
+        ]
+      ]
+    },
+    {
+      "position": [
+        3,
+        5
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          2,
+          5
+        ]
+      ],
+      "outgoing": [
+        [
+          4,
+          5
+        ]
+      ]
+    },
+    {
+      "position": [
+        3,
+        6
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          2,
+          6
+        ]
+      ],
+      "outgoing": [
+        [
+          4,
+          6
+        ]
+      ]
+    },
+    {
+      "position": [
+        4,
+        1
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          3,
+          1
+        ]
+      ],
+      "outgoing": [
+        [
+          5,
+          1
+        ]
+      ]
+    },
+    {
+      "position": [
+        4,
+        2
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          3,
+          2
+        ]
+      ],
+      "outgoing": [
+        [
+          5,
+          2
+        ]
+      ]
+    },
+    {
+      "position": [
+        4,
+        5
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          3,
+          5
+        ]
+      ],
+      "outgoing": [
+        [
+          5,
+          5
+        ]
+      ]
+    },
+    {
+      "position": [
+        4,
+        6
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          3,
+          6
+        ]
+      ],
+      "outgoing": [
+        [
+          5,
+          6
+        ]
+      ]
+    },
+    {
+      "position": [
+        5,
+        0
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          4,
+          0
+        ]
+      ],
+      "outgoing": [
+        [
+          6,
+          0
+        ]
+      ]
+    },
+    {
+      "position": [
+        5,
+        1
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          4,
+          1
+        ]
+      ],
+      "outgoing": [
+        [
+          6,
+          1
+        ]
+      ]
+    },
+    {
+      "position": [
+        5,
+        2
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          4,
+          2
+        ]
+      ],
+      "outgoing": [
+        [
+          6,
+          2
+        ]
+      ]
+    },
+    {
+      "position": [
+        5,
+        3
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          4,
+          3
+        ]
+      ],
+      "outgoing": [
+        [
+          6,
+          3
+        ]
+      ]
+    },
+    {
+      "position": [
+        5,
+        4
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          4,
+          4
+        ]
+      ],
+      "outgoing": [
+        [
+          6,
+          4
+        ]
+      ]
+    },
+    {
+      "position": [
+        5,
+        5
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          4,
+          5
+        ]
+      ],
+      "outgoing": [
+        [
+          6,
+          5
+        ]
+      ]
+    },
+    {
+      "position": [
+        5,
+        6
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          4,
+          6
+        ]
+      ],
+      "outgoing": [
+        [
+          6,
+          6
+        ]
+      ]
+    },
+    {
+      "position": [
+        5,
+        7
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          4,
+          7
+        ]
+      ],
+      "outgoing": [
+        [
+          6,
+          7
+        ]
+      ]
+    },
+    {
+      "position": [
+        6,
+        1
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          5,
+          1
+        ]
+      ],
+      "outgoing": [
+        [
+          7,
+          1
+        ]
+      ]
+    },
+    {
+      "position": [
+        6,
+        5
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          5,
+          5
+        ]
+      ],
+      "outgoing": [
+        [
+          7,
+          5
+        ]
+      ]
+    },
+    {
+      "position": [
+        7,
+        1
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          6,
+          1
+        ]
+      ],
+      "outgoing": [
+        [
+          8,
+          1
+        ]
+      ]
+    },
+    {
+      "position": [
+        7,
+        5
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          6,
+          5
+        ]
+      ],
+      "outgoing": [
+        [
+          8,
+          5
+        ]
+      ]
+    },
+    {
+      "position": [
+        8,
+        0
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          7,
+          0
+        ]
+      ],
+      "outgoing": [
+        [
+          9,
+          0
+        ]
+      ]
+    },
+    {
+      "position": [
+        8,
+        1
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          7,
+          1
+        ]
+      ],
+      "outgoing": [
+        [
+          9,
+          1
+        ]
+      ]
+    },
+    {
+      "position": [
+        8,
+        4
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          7,
+          4
+        ]
+      ],
+      "outgoing": [
+        [
+          9,
+          4
+        ]
+      ]
+    },
+    {
+      "position": [
+        8,
+        5
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          7,
+          5
+        ]
+      ],
+      "outgoing": [
+        [
+          9,
+          5
+        ]
+      ]
+    },
+    {
+      "position": [
+        9,
+        2
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          8,
+          2
+        ]
+      ],
+      "outgoing": [
+        [
+          10,
+          2
+        ]
+      ]
+    },
+    {
+      "position": [
+        9,
+        6
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          8,
+          6
+        ]
+      ],
+      "outgoing": [
+        [
+          10,
+          6
+        ]
+      ]
+    },
+    {
+      "position": [
+        10,
+        2
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          9,
+          2
+        ]
+      ],
+      "outgoing": [
+        [
+          11,
+          2
+        ]
+      ]
+    },
+    {
+      "position": [
+        10,
+        6
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          9,
+          6
+        ]
+      ],
+      "outgoing": [
+        [
+          11,
+          6
+        ]
+      ]
+    },
+    {
+      "position": [
+        11,
+        2
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          10,
+          2
+        ]
+      ],
+      "outgoing": [
+        [
+          12,
+          2
+        ]
+      ]
+    },
+    {
+      "position": [
+        11,
+        6
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          10,
+          6
+        ]
+      ],
+      "outgoing": [
+        [
+          12,
+          6
+        ]
+      ]
+    },
+    {
+      "position": [
+        12,
+        0
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          11,
+          0
+        ]
+      ],
+      "outgoing": [
+        [
+          13,
+          0
+        ]
+      ]
+    },
+    {
+      "position": [
+        12,
+        1
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          12,
+          2
+        ]
+      ],
+      "outgoing": [
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "position": [
+        12,
+        2
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          11,
+          2
+        ]
+      ],
+      "outgoing": [
+        [
+          12,
+          1
+        ]
+      ]
+    },
+    {
+      "position": [
+        12,
+        4
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          11,
+          4
+        ]
+      ],
+      "outgoing": [
+        [
+          13,
+          4
+        ]
+      ]
+    },
+    {
+      "position": [
+        12,
+        5
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          12,
+          6
+        ]
+      ],
+      "outgoing": [
+        [
+          13,
+          5
+        ]
+      ]
+    },
+    {
+      "position": [
+        12,
+        6
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          11,
+          6
+        ]
+      ],
+      "outgoing": [
+        [
+          12,
+          5
+        ]
+      ]
+    },
+    {
+      "position": [
+        16,
+        0
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          15,
+          0
+        ]
+      ],
+      "outgoing": [
+        [
+          17,
+          0
+        ]
+      ]
+    },
+    {
+      "position": [
+        16,
+        4
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          15,
+          4
+        ]
+      ],
+      "outgoing": [
+        [
+          17,
+          4
+        ]
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "start": [
+        12,
+        2
+      ],
+      "end": [
+        12,
+        1
+      ],
+      "item": "钢筋混凝土",
+      "rate": "4",
+      "bus": 3
+    },
+    {
+      "start": [
+        15,
+        0
+      ],
+      "end": [
+        16,
+        0
+      ],
+      "item": "建造胶囊",
+      "rate": "12",
+      "bus": 0
+    },
+    {
+      "start": [
+        16,
+        0
+      ],
+      "end": [
+        17,
+        0
+      ],
+      "item": "建造胶囊",
+      "rate": "12",
+      "bus": 0
+    },
+    {
+      "start": [
+        11,
+        0
+      ],
+      "end": [
+        12,
+        0
+      ],
+      "item": "木质框架",
+      "rate": "4",
+      "bus": 1
+    },
+    {
+      "start": [
+        12,
+        0
+      ],
+      "end": [
+        13,
+        0
+      ],
+      "item": "木质框架",
+      "rate": "4",
+      "bus": 1
+    },
+    {
+      "start": [
+        7,
+        0
+      ],
+      "end": [
+        8,
+        0
+      ],
+      "item": "木棒",
+      "rate": "16",
+      "bus": 2
+    },
+    {
+      "start": [
+        9,
+        2
+      ],
+      "end": [
+        10,
+        2
+      ],
+      "item": "钢筋混凝土",
+      "rate": "4",
+      "bus": 3
+    },
+    {
+      "start": [
+        10,
+        2
+      ],
+      "end": [
+        11,
+        2
+      ],
+      "item": "钢筋混凝土",
+      "rate": "4",
+      "bus": 3
+    },
+    {
+      "start": [
+        11,
+        2
+      ],
+      "end": [
+        12,
+        2
+      ],
+      "item": "钢筋混凝土",
+      "rate": "4",
+      "bus": 3
+    },
+    {
+      "start": [
+        12,
+        1
+      ],
+      "end": [
+        13,
+        1
+      ],
+      "item": "钢筋混凝土",
+      "rate": "4",
+      "bus": 3
+    },
+    {
+      "start": [
+        4,
+        0
+      ],
+      "end": [
+        5,
+        0
+      ],
+      "item": "木材",
+      "rate": "32/3",
+      "bus": 4
+    },
+    {
+      "start": [
+        5,
+        0
+      ],
+      "end": [
+        6,
+        0
+      ],
+      "item": "木材",
+      "rate": "32/3",
+      "bus": 4
+    },
+    {
+      "start": [
+        4,
+        3
+      ],
+      "end": [
+        5,
+        3
+      ],
+      "item": "石材",
+      "rate": "20",
+      "bus": 5
+    },
+    {
+      "start": [
+        5,
+        3
+      ],
+      "end": [
+        6,
+        3
+      ],
+      "item": "石材",
+      "rate": "20",
+      "bus": 5
+    },
+    {
+      "start": [
+        1,
+        0
+      ],
+      "end": [
+        2,
+        0
+      ],
+      "item": "原木",
+      "rate": "32/3",
+      "bus": 6
+    },
+    {
+      "start": [
+        2,
+        0
+      ],
+      "end": [
+        3,
+        0
+      ],
+      "item": "原木",
+      "rate": "32/3",
+      "bus": 6
+    },
+    {
+      "start": [
+        1,
+        3
+      ],
+      "end": [
+        2,
+        3
+      ],
+      "item": "石头",
+      "rate": "20",
+      "bus": 7
+    },
+    {
+      "start": [
+        2,
+        3
+      ],
+      "end": [
+        3,
+        3
+      ],
+      "item": "石头",
+      "rate": "20",
+      "bus": 7
+    },
+    {
+      "start": [
+        1,
+        1
+      ],
+      "end": [
+        2,
+        1
+      ],
+      "item": "螺丝",
+      "rate": "24",
+      "bus": 8
+    },
+    {
+      "start": [
+        2,
+        1
+      ],
+      "end": [
+        3,
+        1
+      ],
+      "item": "螺丝",
+      "rate": "24",
+      "bus": 8
+    },
+    {
+      "start": [
+        3,
+        1
+      ],
+      "end": [
+        4,
+        1
+      ],
+      "item": "螺丝",
+      "rate": "24",
+      "bus": 8
+    },
+    {
+      "start": [
+        4,
+        1
+      ],
+      "end": [
+        5,
+        1
+      ],
+      "item": "螺丝",
+      "rate": "24",
+      "bus": 8
+    },
+    {
+      "start": [
+        5,
+        1
+      ],
+      "end": [
+        6,
+        1
+      ],
+      "item": "螺丝",
+      "rate": "24",
+      "bus": 8
+    },
+    {
+      "start": [
+        6,
+        1
+      ],
+      "end": [
+        7,
+        1
+      ],
+      "item": "螺丝",
+      "rate": "24",
+      "bus": 8
+    },
+    {
+      "start": [
+        7,
+        1
+      ],
+      "end": [
+        8,
+        1
+      ],
+      "item": "螺丝",
+      "rate": "24",
+      "bus": 8
+    },
+    {
+      "start": [
+        1,
+        2
+      ],
+      "end": [
+        2,
+        2
+      ],
+      "item": "钢板",
+      "rate": "8",
+      "bus": 9
+    },
+    {
+      "start": [
+        2,
+        2
+      ],
+      "end": [
+        3,
+        2
+      ],
+      "item": "钢板",
+      "rate": "8",
+      "bus": 9
+    },
+    {
+      "start": [
+        3,
+        2
+      ],
+      "end": [
+        4,
+        2
+      ],
+      "item": "钢板",
+      "rate": "8",
+      "bus": 9
+    },
+    {
+      "start": [
+        4,
+        2
+      ],
+      "end": [
+        5,
+        2
+      ],
+      "item": "钢板",
+      "rate": "8",
+      "bus": 9
+    },
+    {
+      "start": [
+        5,
+        2
+      ],
+      "end": [
+        6,
+        2
+      ],
+      "item": "钢板",
+      "rate": "8",
+      "bus": 9
+    },
+    {
+      "start": [
+        8,
+        0
+      ],
+      "end": [
+        9,
+        0
+      ],
+      "item": "木棒",
+      "rate": "16",
+      "bus": 2
+    },
+    {
+      "start": [
+        8,
+        1
+      ],
+      "end": [
+        9,
+        1
+      ],
+      "item": "螺丝",
+      "rate": "24",
+      "bus": 8
+    },
+    {
+      "start": [
+        8,
+        2
+      ],
+      "end": [
+        9,
+        2
+      ],
+      "item": "钢筋混凝土",
+      "rate": "4",
+      "bus": 3
+    },
+    {
+      "start": [
+        12,
+        6
+      ],
+      "end": [
+        12,
+        5
+      ],
+      "item": "钢筋混凝土",
+      "rate": "4",
+      "bus": 13
+    },
+    {
+      "start": [
+        15,
+        4
+      ],
+      "end": [
+        16,
+        4
+      ],
+      "item": "建造胶囊",
+      "rate": "12",
+      "bus": 10
+    },
+    {
+      "start": [
+        16,
+        4
+      ],
+      "end": [
+        17,
+        4
+      ],
+      "item": "建造胶囊",
+      "rate": "12",
+      "bus": 10
+    },
+    {
+      "start": [
+        11,
+        4
+      ],
+      "end": [
+        12,
+        4
+      ],
+      "item": "木质框架",
+      "rate": "4",
+      "bus": 11
+    },
+    {
+      "start": [
+        12,
+        4
+      ],
+      "end": [
+        13,
+        4
+      ],
+      "item": "木质框架",
+      "rate": "4",
+      "bus": 11
+    },
+    {
+      "start": [
+        7,
+        4
+      ],
+      "end": [
+        8,
+        4
+      ],
+      "item": "木棒",
+      "rate": "16",
+      "bus": 12
+    },
+    {
+      "start": [
+        9,
+        6
+      ],
+      "end": [
+        10,
+        6
+      ],
+      "item": "钢筋混凝土",
+      "rate": "4",
+      "bus": 13
+    },
+    {
+      "start": [
+        10,
+        6
+      ],
+      "end": [
+        11,
+        6
+      ],
+      "item": "钢筋混凝土",
+      "rate": "4",
+      "bus": 13
+    },
+    {
+      "start": [
+        11,
+        6
+      ],
+      "end": [
+        12,
+        6
+      ],
+      "item": "钢筋混凝土",
+      "rate": "4",
+      "bus": 13
+    },
+    {
+      "start": [
+        12,
+        5
+      ],
+      "end": [
+        13,
+        5
+      ],
+      "item": "钢筋混凝土",
+      "rate": "4",
+      "bus": 13
+    },
+    {
+      "start": [
+        4,
+        4
+      ],
+      "end": [
+        5,
+        4
+      ],
+      "item": "木材",
+      "rate": "32/3",
+      "bus": 14
+    },
+    {
+      "start": [
+        5,
+        4
+      ],
+      "end": [
+        6,
+        4
+      ],
+      "item": "木材",
+      "rate": "32/3",
+      "bus": 14
+    },
+    {
+      "start": [
+        4,
+        7
+      ],
+      "end": [
+        5,
+        7
+      ],
+      "item": "石材",
+      "rate": "20",
+      "bus": 15
+    },
+    {
+      "start": [
+        5,
+        7
+      ],
+      "end": [
+        6,
+        7
+      ],
+      "item": "石材",
+      "rate": "20",
+      "bus": 15
+    },
+    {
+      "start": [
+        1,
+        4
+      ],
+      "end": [
+        2,
+        4
+      ],
+      "item": "原木",
+      "rate": "32/3",
+      "bus": 16
+    },
+    {
+      "start": [
+        2,
+        4
+      ],
+      "end": [
+        3,
+        4
+      ],
+      "item": "原木",
+      "rate": "32/3",
+      "bus": 16
+    },
+    {
+      "start": [
+        1,
+        7
+      ],
+      "end": [
+        2,
+        7
+      ],
+      "item": "石头",
+      "rate": "20",
+      "bus": 17
+    },
+    {
+      "start": [
+        2,
+        7
+      ],
+      "end": [
+        3,
+        7
+      ],
+      "item": "石头",
+      "rate": "20",
+      "bus": 17
+    },
+    {
+      "start": [
+        1,
+        5
+      ],
+      "end": [
+        2,
+        5
+      ],
+      "item": "螺丝",
+      "rate": "24",
+      "bus": 18
+    },
+    {
+      "start": [
+        2,
+        5
+      ],
+      "end": [
+        3,
+        5
+      ],
+      "item": "螺丝",
+      "rate": "24",
+      "bus": 18
+    },
+    {
+      "start": [
+        3,
+        5
+      ],
+      "end": [
+        4,
+        5
+      ],
+      "item": "螺丝",
+      "rate": "24",
+      "bus": 18
+    },
+    {
+      "start": [
+        4,
+        5
+      ],
+      "end": [
+        5,
+        5
+      ],
+      "item": "螺丝",
+      "rate": "24",
+      "bus": 18
+    },
+    {
+      "start": [
+        5,
+        5
+      ],
+      "end": [
+        6,
+        5
+      ],
+      "item": "螺丝",
+      "rate": "24",
+      "bus": 18
+    },
+    {
+      "start": [
+        6,
+        5
+      ],
+      "end": [
+        7,
+        5
+      ],
+      "item": "螺丝",
+      "rate": "24",
+      "bus": 18
+    },
+    {
+      "start": [
+        7,
+        5
+      ],
+      "end": [
+        8,
+        5
+      ],
+      "item": "螺丝",
+      "rate": "24",
+      "bus": 18
+    },
+    {
+      "start": [
+        1,
+        6
+      ],
+      "end": [
+        2,
+        6
+      ],
+      "item": "钢板",
+      "rate": "8",
+      "bus": 19
+    },
+    {
+      "start": [
+        2,
+        6
+      ],
+      "end": [
+        3,
+        6
+      ],
+      "item": "钢板",
+      "rate": "8",
+      "bus": 19
+    },
+    {
+      "start": [
+        3,
+        6
+      ],
+      "end": [
+        4,
+        6
+      ],
+      "item": "钢板",
+      "rate": "8",
+      "bus": 19
+    },
+    {
+      "start": [
+        4,
+        6
+      ],
+      "end": [
+        5,
+        6
+      ],
+      "item": "钢板",
+      "rate": "8",
+      "bus": 19
+    },
+    {
+      "start": [
+        5,
+        6
+      ],
+      "end": [
+        6,
+        6
+      ],
+      "item": "钢板",
+      "rate": "8",
+      "bus": 19
+    },
+    {
+      "start": [
+        8,
+        4
+      ],
+      "end": [
+        9,
+        4
+      ],
+      "item": "木棒",
+      "rate": "16",
+      "bus": 12
+    },
+    {
+      "start": [
+        8,
+        5
+      ],
+      "end": [
+        9,
+        5
+      ],
+      "item": "螺丝",
+      "rate": "24",
+      "bus": 18
+    },
+    {
+      "start": [
+        8,
+        6
+      ],
+      "end": [
+        9,
+        6
+      ],
+      "item": "钢筋混凝土",
+      "rate": "4",
+      "bus": 13
+    }
+  ],
+  "wires": [
+    [
+      3,
+      0
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      5,
+      0
+    ],
+    [
+      5,
+      4
+    ],
+    [
+      6,
+      0
+    ],
+    [
+      6,
+      4
+    ],
+    [
+      7,
+      0
+    ],
+    [
+      7,
+      1
+    ],
+    [
+      7,
+      2
+    ],
+    [
+      7,
+      3
+    ],
+    [
+      7,
+      4
+    ],
+    [
+      7,
+      5
+    ],
+    [
+      7,
+      6
+    ],
+    [
+      7,
+      7
+    ],
+    [
+      8,
+      0
+    ],
+    [
+      8,
+      4
+    ],
+    [
+      9,
+      0
+    ],
+    [
+      9,
+      4
+    ],
+    [
+      10,
+      0
+    ],
+    [
+      10,
+      1
+    ],
+    [
+      10,
+      4
+    ],
+    [
+      10,
+      5
+    ],
+    [
+      11,
+      1
+    ],
+    [
+      11,
+      5
+    ],
+    [
+      12,
+      1
+    ],
+    [
+      12,
+      5
+    ],
+    [
+      13,
+      1
+    ],
+    [
+      13,
+      5
+    ],
+    [
+      14,
+      1
+    ],
+    [
+      14,
+      5
+    ]
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "platform": "Steam Build 25121460",
+  "blueprint_format": "steam-25121460",
+  "junction_capacity": 120,
+  "junction_ports": 3,
+  "belts": [
+    {"level": 1, "capacity": 60, "seconds_per_cell": 1, "building": "belt1", "underground": "tunnel1", "underground_span": 5},
+    {"level": 2, "capacity": 120, "seconds_per_cell": 0.5, "building": "belt2", "underground": "tunnel2"}
+  ],
+  "buildings": {
+    "inlet": {"name": "自动进货箱", "size": [2, 1], "anchor": [0, 0], "output": 0, "materials": {"木材": 3, "铁锭": 5}},
+    "outlet": {"name": "成品接出带", "size": [1, 1], "anchor": [0, 0], "inputs": [0]},
+    "maker": {"name": "制造机", "size": [2, 1], "anchor": [0, 0], "inputs": [0], "output": 0, "power": 4, "materials": {"铁锭": 5, "铜锭": 5, "石材": 10}},
+    "assembler": {"name": "组装机", "size": [3, 2], "anchor": [1, 1], "inputs": [0, 1], "output": 0, "power": 18, "materials": {"加固铁板": 3, "初级工具": 5, "石砖": 10}},
+    "exchanger": {"name": "晶体置换机", "size": [3, 2], "anchor": [0, 1], "inputs": [0, 1], "power": 18, "materials": {"初级工具": 5, "加固铁板": 10}},
+    "belt1": {"name": "一级带", "materials": {"木板": 1, "木棒": 2}},
+    "belt2": {"name": "二级带", "materials": {"加固铁板": 1, "铁棒": 3}},
+    "tunnel1": {"name": "一级地下带端点", "materials": {"木板": 4, "木棒": 6}},
+    "tunnel2": {"name": "二级地下带端点", "materials": {"加固铁板": 4, "铁棒": 6}},
+    "split": {"name": "分流器", "materials": {"铁板": 3, "铜线": 4}},
+    "merge": {"name": "合并器", "materials": {"铜板": 3, "铁棒": 2}},
+    "wire": {"name": "电线", "materials": {"铜线": 2}}
+  },
+  "recipes": {
+    "木材": {"id": 1, "machine": "maker", "seconds": 3, "quantity": 1, "inputs": {"原木": 1}},
+    "木板": {"id": 2, "machine": "maker", "seconds": 3, "quantity": 1, "inputs": {"木材": 1}},
+    "加强木板": {"id": 3, "machine": "assembler", "seconds": 6, "quantity": 1, "inputs": {"木板": 2, "石材": 3}},
+    "木质框架": {"id": 4, "machine": "assembler", "seconds": 6, "quantity": 1, "inputs": {"木棒": 4, "螺丝": 6}},
+    "木棒": {"id": 6, "machine": "maker", "seconds": 6, "quantity": 3, "inputs": {"木材": 2}},
+    "石材": {"id": 9, "machine": "maker", "seconds": 3, "quantity": 1, "inputs": {"石头": 1}},
+    "石砖": {"id": 12, "machine": "maker", "seconds": 6, "quantity": 1, "inputs": {"石材": 2}},
+    "铁板": {"id": 20, "machine": "maker", "seconds": 3, "quantity": 1, "inputs": {"铁锭": 1}},
+    "铁棒": {"id": 21, "machine": "maker", "seconds": 6, "quantity": 3, "inputs": {"铁锭": 2}},
+    "螺丝": {"id": 22, "machine": "maker", "seconds": 2, "quantity": 3, "inputs": {"铁棒": 1}},
+    "加固铁板": {"id": 23, "machine": "assembler", "seconds": 6, "quantity": 1, "inputs": {"铁板": 2, "螺丝": 4}},
+    "木纤维": {"id": 50, "machine": "maker", "seconds": 6, "quantity": 3, "inputs": {"原木": 2}},
+    "线": {"id": 51, "machine": "maker", "seconds": 6, "quantity": 1, "inputs": {"木纤维": 2}},
+    "布": {"id": 52, "machine": "maker", "seconds": 6, "quantity": 1, "inputs": {"线": 2}},
+    "初级工具": {"id": 60, "machine": "assembler", "seconds": 10, "quantity": 1, "inputs": {"木棒": 2, "石材": 1}},
+    "钢筋混凝土": {"id": 83, "machine": "assembler", "seconds": 15, "quantity": 1, "inputs": {"钢板": 2, "石材": 5}},
+    "绿色晶能": {"id": 101, "machine": "exchanger", "seconds": 10, "quantity": 1, "inputs": {"布": 3, "初级工具": 2}, "virtual": true},
+    "建造胶囊": {"id": 600, "machine": "assembler", "seconds": 15, "quantity": 3, "inputs": {"木质框架": 1, "钢筋混凝土": 1}}
+  }
+}

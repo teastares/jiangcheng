@@ -1,0 +1,5 @@
+.solver-deps/
+.venv/
+__pycache__/
+/dist/*
+!/dist/JiangCityBlueprint-capsule-report.exe

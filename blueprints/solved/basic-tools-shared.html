@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>初级工具 · 共用上游</title><style>
+body{margin:0;background:#f5f7f2;color:#19362e;font:15px/1.6 "Microsoft YaHei",sans-serif}main{max-width:1340px;margin:auto;padding:32px 24px}h1{font-size:30px;margin:0}h2{font-size:20px;margin:0 0 10px}section{margin:24px 0}p{margin:8px 0}.download{display:inline-block;border-radius:6px;padding:8px 14px;background:#187467;color:white;text-decoration:none}.drawing{overflow:auto;border:1px solid #c4d0c6}.drawing svg{display:block;max-width:none}table{border-collapse:collapse;width:min(100%,720px);background:#fffef9}th,td{padding:6px 12px;text-align:left;border-bottom:1px solid #ccd8cd}ul{padding-left:1.4em;columns:3;max-width:700px}footer{color:#455f55}
+</style><main><header><h1>初级工具 · 共用上游</h1>
+<p>19 × 6 格 · 12 件/分钟 · 稳态理论日产 192 件</p><p><a class="download" download="basic-tools-shared.txt" href="data:text/plain;charset=utf-8;base64,S0FBQUFFdEZXUzA0WlRZeE9UazNOQzA0TXpObExUVTBNMkl0WW1ObE1DMWlOalpqT0dZd1lqTXpNelljQUFBQTVZaWQ1N3FuNWJlbDVZVzNJTUszSU9XRnNlZVVxT1M0aXVhNHVFRUFBQUF4TWlEa3U3WXY1WWlHNlpLZjc3eU1NVFlnNVlpRzZaS2Y1NUNHNks2NjVMcW42WWVQSURFNU11KzhqT21pbmVXdW11V0tuK2lBbHlBME9DQnJWK09BZ2hNQUFBQUdBQUFBS3dBQUFETUFBQUFPQUFBQUFRQUFBQUVBQUFBQUFBQUE3di8vLys3Ly8vOEFBQUFBQUFBQUFHUUFBQUFCQVAvLy8vLy8vLy8vQlFBQUFIQk9kV3hzQlFBQUFIZE9kV3hzLy8vLy93SUFBQUFBQUFBQUFBQUFBQUVBQUFBQUFBQUFBUUFBQUFBQUFBQUFBQUFBUEFBQUFBQUFBQUFBQUFBQU13QUFBQTRBQUFBREFBQUFBUUFBQUFBQUFBRHUvLy8vN3YvLy93QUFBQUFBQUFBQVpBQUFBQUVBLy8vLy8vLy8vLzhGQUFBQWNFNTFiR3dGQUFBQWQwNTFiR3ovLy8vL0FnQUFBQUFBQUFBQUFBQUFBUUFBQUFBQUFBQUJBQUFBQUFBQUFBQUFBQUE4QUFBQUFBQUFBQUFBQUFBVUFBQUFFZ0FBQUFRQUFBQUNBQUFBQWdBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFELy8vLy9BUUQvLy8vLy8vLy8vd1VBQUFCd1RuVnNiQVVBQUFCM1RuVnNiUC8vLy84QUFBQUFBQUFBQURJQUFBQUdBQUFBQkFBQUFBRUFBQUFBQUFBQS9QLy8vL3ovLy84QUFBQUFBQUFBQUdRQUFBQUJBUC8vLy8vLy8vLy9CUUFBQUhCT2RXeHNCUUFBQUhkT2RXeHMvLy8vL3dFQUFBQUFBQUFBQVFBQUFBQUFBQUFCQUFBQUFBQUFBQUFBQUFBR0FBQUFBQUFBQUFBQUFBQXlBQUFBQXdBQUFBUUFBQUFCQUFBQUFBQUFBUHovLy8vOC8vLy9BQUFBQUFBQUFBQmtBQUFBQVFELy8vLy8vLy8vL3dVQUFBQndUblZzYkFVQUFBQjNUblZzYlAvLy8vOEJBQUFBQUFBQUFBRUFBQUFBQUFBQUFRQUFBQUFBQUFBQUFBQUFBUUFBQUFBQUFBQUFBQUFBTWdBQUFBTUFBQUFGQUFBQUFRQUFBQUFBQUFEOC8vLy8vUC8vL3dBQUFBQUFBQUFBWkFBQUFBRUEvLy8vLy8vLy8vOEZBQUFBY0U1MWJHd0ZBQUFBZDA1MWJHei8vLy8vQVFBQUFBQUFBQUFCQUFBQUFBQUFBQUVBQUFBQUFBQUFBQUFBQUFrQUFBQUFBQUFBQUFBQUFBUUFBQUFBQUFBQUJBQUFBQUlBQUFBQ0FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFQLy8vLzhCQVAvLy8vLy8vLy8vQlFBQUFIQk9kV3hzQlFBQUFIZE9kV3hzLy8vLy96Z0FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBUEFBQUE2SWVxNVlxbzZMK2I2TFNuNTY2eEFBQUFBQUFBQUFBRUFBQUFBQUFBQUFVQUFBQUNBQUFBQWdBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFELy8vLy9BUUQvLy8vLy8vLy8vd1VBQUFCd1RuVnNiQVVBQUFCM1RuVnNiUC8vLy84NEFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBRHdBQUFPaUhxdVdLcU9pL20raTBwK2V1c1FBQUFBQUFBQUFBRkFBQUFBSUFBQUFFQUFBQUFnQUFBQUlBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBLy8vLy93RUEvLy8vLy8vLy8vOEZBQUFBY0U1MWJHd0ZBQUFBZDA1MWJHei8vLy8vQUFBQUFBQUFBQUFVQUFBQUFnQUFBQVVBQUFBQ0FBQUFBZ0FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUQvLy8vL0FRRC8vLy8vLy8vLy93VUFBQUJ3VG5Wc2JBVUFBQUIzVG5Wc2JQLy8vLzhBQUFBQUFBQUFBQlFBQUFBRkFBQUFCQUFBQUFJQUFBQUNBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBUC8vLy84QkFQLy8vLy8vLy8vL0JRQUFBSEJPZFd4c0JRQUFBSGRPZFd4cy8vLy8vd0FBQUFBQUFBQUFGQUFBQUFVQUFBQUZBQUFBQWdBQUFBSUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUEvLy8vL3dFQS8vLy8vLy8vLy84RkFBQUFjRTUxYkd3RkFBQUFkMDUxYkd6Ly8vLy9BQUFBQUFBQUFBQVVBQUFBQmdBQUFBVUFBQUFDQUFBQUFnQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBRC8vLy8vQVFELy8vLy8vLy8vL3dVQUFBQndUblZzYkFVQUFBQjNUblZzYlAvLy8vOEFBQUFBQUFBQUFCUUFBQUFIQUFBQUJRQUFBQUlBQUFBQ0FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFQLy8vLzhCQVAvLy8vLy8vLy8vQlFBQUFIQk9kV3hzQlFBQUFIZE9kV3hzLy8vLy93QUFBQUFBQUFBQUZBQUFBQWdBQUFBQUFBQUFBZ0FBQUFvQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQS8vLy8vd0VBLy8vLy8vLy8vLzhGQUFBQWNFNTFiR3dGQUFBQWQwNTFiR3ovLy8vL0FBQUFBQUFBQUFBVUFBQUFDQUFBQUFFQUFBQURBQUFBQXdBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFELy8vLy9BUUQvLy8vLy8vLy8vd1VBQUFCd1RuVnNiQVVBQUFCM1RuVnNiUC8vLy84QUFBQUFBQUFBQUNnQUFBQUlBQUFBQWdBQUFBTUFBQUFEQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQVAvLy8vOEJBUC8vLy8vLy8vLy9CUUFBQUhCT2RXeHNCUUFBQUhkT2RXeHMvLy8vL3dBQUFBQVVBQUFBQ0FBQUFBTUFBQUFEQUFBQUF3QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBRC8vLy8vQVFELy8vLy8vLy8vL3dVQUFBQndUblZzYkFVQUFBQjNUblZzYlAvLy8vOEFBQUFBQUFBQUFCUUFBQUFJQUFBQUJBQUFBQU1BQUFBR0FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFQLy8vLzhCQVAvLy8vLy8vLy8vQlFBQUFIQk9kV3hzQlFBQUFIZE9kV3hzLy8vLy93QUFBQUFBQUFBQUZBQUFBQWdBQUFBRkFBQUFBZ0FBQUFJQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQS8vLy8vd0VBLy8vLy8vLy8vLzhGQUFBQWNFNTFiR3dGQUFBQWQwNTFiR3ovLy8vL0FBQUFBQUFBQUFBVUFBQUFDUUFBQUFBQUFBQUNBQUFBQWdBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFELy8vLy9BUUQvLy8vLy8vLy8vd1VBQUFCd1RuVnNiQVVBQUFCM1RuVnNiUC8vLy84QUFBQUFBQUFBQUJRQUFBQUpBQUFBQWdBQUFBSUFBQUFDQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQVAvLy8vOEJBUC8vLy8vLy8vLy9CUUFBQUhCT2RXeHNCUUFBQUhkT2RXeHMvLy8vL3dBQUFBQUFBQUFBRkFBQUFBa0FBQUFGQUFBQUFnQUFBQUlBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBLy8vLy93RUEvLy8vLy8vLy8vOEZBQUFBY0U1MWJHd0ZBQUFBZDA1MWJHei8vLy8vQUFBQUFBQUFBQUFVQUFBQUNnQUFBQUFBQUFBQ0FBQUFBZ0FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUQvLy8vL0FRRC8vLy8vLy8vLy93VUFBQUJ3VG5Wc2JBVUFBQUIzVG5Wc2JQLy8vLzhBQUFBQUFBQUFBQjRBQUFBS0FBQUFBZ0FBQUFFQUFBQUJBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBUC8vLy84QkFQLy8vLy8vLy8vL0JRQUFBSEJPZFd4c0JRQUFBSGRPZFd4cy8vLy8vd0FBQUFBQUFBQUFBQUFBQUJRQUFBQUtBQUFBQlFBQUFBSUFBQUFDQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQVAvLy8vOEJBUC8vLy8vLy8vLy9CUUFBQUhCT2RXeHNCUUFBQUhkT2RXeHMvLy8vL3dBQUFBQUFBQUFBRkFBQUFBc0FBQUFBQUFBQUFnQUFBQUlBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBLy8vLy93RUEvLy8vLy8vLy8vOEZBQUFBY0U1MWJHd0ZBQUFBZDA1MWJHei8vLy8vQUFBQUFBQUFBQUFVQUFBQUN3QUFBQUVBQUFBQ0FBQUFDZ0FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUQvLy8vL0FRRC8vLy8vLy8vLy93VUFBQUJ3VG5Wc2JBVUFBQUIzVG5Wc2JQLy8vLzhBQUFBQUFBQUFBQlFBQUFBTEFBQUFBZ0FBQUFNQUFBQURBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBUC8vLy84QkFQLy8vLy8vLy8vL0JRQUFBSEJPZFd4c0JRQUFBSGRPZFd4cy8vLy8vd0FBQUFBQUFBQUFLQUFBQUFzQUFBQURBQUFBQXdBQUFBTUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUEvLy8vL3dFQS8vLy8vLy8vLy84RkFBQUFjRTUxYkd3RkFBQUFkMDUxYkd6Ly8vLy9BQUFBQUJRQUFBQUxBQUFBQkFBQUFBTUFBQUFEQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQVAvLy8vOEJBUC8vLy8vLy8vLy9CUUFBQUhCT2RXeHNCUUFBQUhkT2RXeHMvLy8vL3dBQUFBQUFBQUFBRkFBQUFBc0FBQUFGQUFBQUF3QUFBQVlBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBLy8vLy93RUEvLy8vLy8vLy8vOEZBQUFBY0U1MWJHd0ZBQUFBZDA1MWJHei8vLy8vQUFBQUFBQUFBQUFVQUFBQURBQUFBQUFBQUFBQ0FBQUFBZ0FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUQvLy8vL0FRRC8vLy8vLy8vLy93VUFBQUJ3VG5Wc2JBVUFBQUIzVG5Wc2JQLy8vLzhBQUFBQUFBQUFBQlFBQUFBTUFBQUFBUUFBQUFJQUFBQUNBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBUC8vLy84QkFQLy8vLy8vLy8vL0JRQUFBSEJPZFd4c0JRQUFBSGRPZFd4cy8vLy8vd0FBQUFBQUFBQUFIZ0FBQUF3QUFBQUNBQUFBQmdBQUFBWUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUEvLy8vL3dFQS8vLy8vLy8vLy84RkFBQUFjRTUxYkd3RkFBQUFkMDUxYkd6Ly8vLy9BQUFBQUFBQUFBQUFBQUFBRkFBQUFBd0FBQUFEQUFBQUFnQUFBQUlBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBLy8vLy93RUEvLy8vLy8vLy8vOEZBQUFBY0U1MWJHd0ZBQUFBZDA1MWJHei8vLy8vQUFBQUFBQUFBQUFVQUFBQUVBQUFBQUFBQUFBQ0FBQUFBZ0FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUQvLy8vL0FRRC8vLy8vLy8vLy93VUFBQUJ3VG5Wc2JBVUFBQUIzVG5Wc2JQLy8vLzhBQUFBQUFBQUFBQlFBQUFBUUFBQUFBZ0FBQUFJQUFBQUNBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBUC8vLy84QkFQLy8vLy8vLy8vL0JRQUFBSEJPZFd4c0JRQUFBSGRPZFd4cy8vLy8vd0FBQUFBQUFBQUFGQUFBQUJFQUFBQUFBQUFBQUFBQUFBUUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUEvLy8vL3dFQS8vLy8vLy8vLy84RkFBQUFjRTUxYkd3RkFBQUFkMDUxYkd6Ly8vLy9BQUFBQUFBQUFBQVVBQUFBRVFBQUFBRUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBRC8vLy8vQVFELy8vLy8vLy8vL3dVQUFBQndUblZzYkFVQUFBQjNUblZzYlAvLy8vOEFBQUFBQUFBQUFDa0FBQUFSQUFBQUFnQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFQLy8vLzhCQVAvLy8vLy8vLy8vQlFBQUFIQk9kV3hzQlFBQUFIZE9kV3hzLy8vLy93QUFBQUFVQUFBQUVRQUFBQU1BQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUQvLy8vL0FRRC8vLy8vLy8vLy93VUFBQUJ3VG5Wc2JBVUFBQUIzVG5Wc2JQLy8vLzhBQUFBQUFBQUFBQlFBQUFBUkFBQUFCQUFBQUFJQUFBQUlBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBUC8vLy84QkFQLy8vLy8vLy8vL0JRQUFBSEJPZFd4c0JRQUFBSGRPZFd4cy8vLy8vd0FBQUFBQUFBQUFFQUFBQVBvQUFBQURBQUFBQkFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQVAvLy8vOEJBUC8vLy8vLy8vLy9CUUFBQUhCT2RXeHNCUUFBQUhkT2RXeHMvLy8vL3dBQUFBQUFBQUFBK2dBQUFBTUFBQUFGQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBLy8vLy93RUEvLy8vLy8vLy8vOEZBQUFBY0U1MWJHd0ZBQUFBZDA1MWJHei8vLy8vQUFBQUFBQUFBQUQ2QUFBQUJBQUFBQVFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUQvLy8vL0FRRC8vLy8vLy8vLy93VUFBQUJ3VG5Wc2JBVUFBQUIzVG5Wc2JQLy8vLzhBQUFBQUFBQUFBUG9BQUFBRkFBQUFCQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBUC8vLy84QkFQLy8vLy8vLy8vL0JRQUFBSEJPZFd4c0JRQUFBSGRPZFd4cy8vLy8vd0FBQUFBQUFBQUErZ0FBQUFZQUFBQURBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUEvLy8vL3dFQS8vLy8vLy8vLy84RkFBQUFjRTUxYkd3RkFBQUFkMDUxYkd6Ly8vLy9BQUFBQUFBQUFBRDZBQUFBQmdBQUFBUUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBRC8vLy8vQVFELy8vLy8vLy8vL3dVQUFBQndUblZzYkFVQUFBQjNUblZzYlAvLy8vOEFBQUFBQUFBQUFQb0FBQUFIQUFBQUF3QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFQLy8vLzhCQVAvLy8vLy8vLy8vQlFBQUFIQk9kV3hzQlFBQUFIZE9kV3hzLy8vLy93QUFBQUFBQUFBQStnQUFBQWdBQUFBREFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQS8vLy8vd0VBLy8vLy8vLy8vLzhGQUFBQWNFNTFiR3dGQUFBQWQwNTFiR3ovLy8vL0FBQUFBQUFBQUFENkFBQUFDUUFBQUFNQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFELy8vLy9BUUQvLy8vLy8vLy8vd1VBQUFCd1RuVnNiQVVBQUFCM1RuVnNiUC8vLy84QUFBQUFBQUFBQVBvQUFBQUtBQUFBQXdBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQVAvLy8vOEJBUC8vLy8vLy8vLy9CUUFBQUhCT2RXeHNCUUFBQUhkT2RXeHMvLy8vL3dBQUFBQUFBQUFBK2dBQUFBc0FBQUFEQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBLy8vLy93RUEvLy8vLy8vLy8vOEZBQUFBY0U1MWJHd0ZBQUFBZDA1MWJHei8vLy8vQUFBQUFBQUFBQUQ2QUFBQURBQUFBQU1BQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUQvLy8vL0FRRC8vLy8vLy8vLy93VUFBQUJ3VG5Wc2JBVUFBQUIzVG5Wc2JQLy8vLzhBQUFBQUFBQUFBUG9BQUFBTkFBQUFBd0FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBUC8vLy84QkFQLy8vLy8vLy8vL0JRQUFBSEJPZFd4c0JRQUFBSGRPZFd4cy8vLy8vd0FBQUFBQUFBQUErZ0FBQUE0QUFBQUJBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUEvLy8vL3dFQS8vLy8vLy8vLy84RkFBQUFjRTUxYkd3RkFBQUFkMDUxYkd6Ly8vLy9BQUFBQUFBQUFBRDZBQUFBRGdBQUFBSUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBRC8vLy8vQVFELy8vLy8vLy8vL3dVQUFBQndUblZzYkFVQUFBQjNUblZzYlAvLy8vOEFBQUFBQUFBQUFQb0FBQUFPQUFBQUF3QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFQLy8vLzhCQVAvLy8vLy8vLy8vQlFBQUFIQk9kV3hzQlFBQUFIZE9kV3hzLy8vLy93QUFBQUFBQUFBQUFBQUFBQT09">导出游戏导入文本</a></p></header>
+<section><h2>建造与接入</h2><p>导出并复制整段文本，在 Steam 游戏蓝图界面粘贴导入。自动建造预留 43 个建造胶囊及下列建材。</p><p>电网接入口 (3, 5)，预留 48 kW。成品向右接出，在这些格位外接收货或转运设备。(18, 4)。</p></section>
+<section><h2>进货口与日配额</h2><p>每日有效生产 16 分钟。原木 ∶ 石头 = 4 ∶ 3。</p>
+<table><thead><tr><th>口</th><th>定位格</th><th>物料</th><th>件/分钟</th><th>日配额</th></tr></thead><tbody><tr><td>进1</td><td>(0, 4)</td><td>原木</td><td>16</td><td>256</td></tr><tr><td>进2</td><td>(0, 5)</td><td>石头</td><td>12</td><td>192</td></tr></tbody></table></section>
+<section><h2>摆放图</h2><div class="drawing"><svg xmlns="http://www.w3.org/2000/svg" width="823" height="515" viewBox="0 0 823 515" role="img" aria-labelledby="title description">
+<title id="title">初级工具 · 共用上游</title><desc id="description">19列、6行。左上角为(0,0)。上图为物流，下图为电网。</desc>
+<defs><pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M25 0H0V25" fill="none" stroke="#d9e0d9"/></pattern></defs>
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC","PingFang SC",sans-serif;fill:#19362e}.tick{font-size:9px;fill:#4c665d}.meta{font-size:13px;fill:#3e5b51}.machine{font-size:11px;font-weight:650}.legend{font-size:12px}.title{font-size:28px;font-weight:750}.section{font-size:16px;font-weight:700}</style>
+<rect width="823" height="515" fill="#f5f7f2"/>
+<text x="46" y="43" class="title">初级工具 · 共用上游</text>
+<text x="46" y="68" class="meta">19 × 6 格　·　5 台加工设备　·　48 kW　·　稳态理论日产 192</text>
+<rect x="46" y="105" width="475" height="150" fill="#fffef9" stroke="#c4d0c6"/>
+<rect x="46" y="105" width="475" height="150" fill="url(#grid)"/>
+<text x="58.5" y="100" text-anchor="middle" class="tick">0</text>
+<text x="183.5" y="100" text-anchor="middle" class="tick">5</text>
+<text x="308.5" y="100" text-anchor="middle" class="tick">10</text>
+<text x="433.5" y="100" text-anchor="middle" class="tick">15</text>
+<text x="39" y="120.5" text-anchor="end" class="tick">0</text>
+<text x="39" y="245.5" text-anchor="end" class="tick">5</text>
+<g class="route"><title>木棒：12 件/分钟；(10, 2) → (12, 2)</title><path d="M308.5 167.5L358.5 167.5" fill="none" stroke="#8b4672" stroke-width="2.2" stroke-dasharray="4 3"/><polygon points="337.5,167.5 331.5,164.5 331.5,170.5" fill="#8b4672"/></g>
+<g class="route"><title>初级工具：6 件/分钟；(17, 0) → (17, 1)</title><path d="M483.5 117.5L483.5 142.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="483.5,134.0 486.5,128.0 480.5,128.0" fill="#187467"/></g>
+<g class="route"><title>初级工具：6 件/分钟；(17, 1) → (17, 2)</title><path d="M483.5 142.5L483.5 167.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="483.5,159.0 486.5,153.0 480.5,153.0" fill="#187467"/></g>
+<g class="route"><title>初级工具：12 件/分钟；(17, 2) → (17, 3)</title><path d="M483.5 167.5L483.5 192.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="483.5,184.0 486.5,178.0 480.5,178.0" fill="#187467"/></g>
+<g class="route"><title>初级工具：12 件/分钟；(17, 3) → (17, 4)</title><path d="M483.5 192.5L483.5 217.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="483.5,209.0 486.5,203.0 480.5,203.0" fill="#187467"/></g>
+<g class="route"><title>木棒：12 件/分钟；(8, 1) → (8, 0)</title><path d="M258.5 142.5L258.5 117.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="258.5,126.0 255.5,132.0 261.5,132.0" fill="#8b4672"/></g>
+<g class="route"><title>木棒：12 件/分钟；(8, 2) → (8, 1)</title><path d="M258.5 167.5L258.5 142.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="258.5,151.0 255.5,157.0 261.5,157.0" fill="#8b4672"/></g>
+<g class="route"><title>木棒：24 件/分钟；(8, 3) → (8, 2)</title><path d="M258.5 192.5L258.5 167.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="258.5,176.0 255.5,182.0 261.5,182.0" fill="#8b4672"/></g>
+<g class="route"><title>木棒：24 件/分钟；(8, 4) → (8, 3)</title><path d="M258.5 217.5L258.5 192.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="258.5,201.0 255.5,207.0 261.5,207.0" fill="#8b4672"/></g>
+<g class="route"><title>石材：6 件/分钟；(11, 2) → (11, 1)</title><path d="M333.5 167.5L333.5 142.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="333.5,151.0 330.5,157.0 336.5,157.0" fill="#846007"/></g>
+<g class="route"><title>石材：6 件/分钟；(11, 3) → (11, 2)</title><path d="M333.5 192.5L333.5 167.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="333.5,176.0 330.5,182.0 336.5,182.0" fill="#846007"/></g>
+<g class="route"><title>石材：12 件/分钟；(11, 4) → (11, 3)</title><path d="M333.5 217.5L333.5 192.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="333.5,201.0 330.5,207.0 336.5,207.0" fill="#846007"/></g>
+<g class="route"><title>石材：12 件/分钟；(11, 5) → (11, 4)</title><path d="M333.5 242.5L333.5 217.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="333.5,226.0 330.5,232.0 336.5,232.0" fill="#846007"/></g>
+<g class="route"><title>初级工具：6 件/分钟；(15, 0) → (16, 0)</title><path d="M433.5 117.5L458.5 117.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="450.0,117.5 444.0,114.5 444.0,120.5" fill="#187467"/></g>
+<g class="route"><title>初级工具：6 件/分钟；(16, 0) → (17, 0)</title><path d="M458.5 117.5L483.5 117.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="475.0,117.5 469.0,114.5 469.0,120.5" fill="#187467"/></g>
+<g class="route"><title>初级工具：6 件/分钟；(15, 2) → (16, 2)</title><path d="M433.5 167.5L458.5 167.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="450.0,167.5 444.0,164.5 444.0,170.5" fill="#187467"/></g>
+<g class="route"><title>初级工具：6 件/分钟；(16, 2) → (17, 2)</title><path d="M458.5 167.5L483.5 167.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="475.0,167.5 469.0,164.5 469.0,170.5" fill="#187467"/></g>
+<g class="route"><title>木棒：12 件/分钟；(8, 0) → (9, 0)</title><path d="M258.5 117.5L283.5 117.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="275.0,117.5 269.0,114.5 269.0,120.5" fill="#8b4672"/></g>
+<g class="route"><title>木棒：12 件/分钟；(9, 0) → (10, 0)</title><path d="M283.5 117.5L308.5 117.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="300.0,117.5 294.0,114.5 294.0,120.5" fill="#8b4672"/></g>
+<g class="route"><title>木棒：12 件/分钟；(10, 0) → (11, 0)</title><path d="M308.5 117.5L333.5 117.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="325.0,117.5 319.0,114.5 319.0,120.5" fill="#8b4672"/></g>
+<g class="route"><title>木棒：12 件/分钟；(11, 0) → (12, 0)</title><path d="M333.5 117.5L358.5 117.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="350.0,117.5 344.0,114.5 344.0,120.5" fill="#8b4672"/></g>
+<g class="route"><title>木棒：12 件/分钟；(12, 0) → (13, 0)</title><path d="M358.5 117.5L383.5 117.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="375.0,117.5 369.0,114.5 369.0,120.5" fill="#8b4672"/></g>
+<g class="route"><title>木棒：12 件/分钟；(8, 2) → (9, 2)</title><path d="M258.5 167.5L283.5 167.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="275.0,167.5 269.0,164.5 269.0,170.5" fill="#8b4672"/></g>
+<g class="route"><title>木棒：12 件/分钟；(9, 2) → (10, 2)</title><path d="M283.5 167.5L308.5 167.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="300.0,167.5 294.0,164.5 294.0,170.5" fill="#8b4672"/></g>
+<g class="route"><title>木棒：12 件/分钟；(12, 2) → (13, 2)</title><path d="M358.5 167.5L383.5 167.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="375.0,167.5 369.0,164.5 369.0,170.5" fill="#8b4672"/></g>
+<g class="route"><title>木材：16 件/分钟；(4, 4) → (5, 4)</title><path d="M158.5 217.5L183.5 217.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="175.0,217.5 169.0,214.5 169.0,220.5" fill="#375d99"/></g>
+<g class="route"><title>木材：16 件/分钟；(5, 4) → (6, 4)</title><path d="M183.5 217.5L208.5 217.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="200.0,217.5 194.0,214.5 194.0,220.5" fill="#375d99"/></g>
+<g class="route"><title>石材：12 件/分钟；(4, 5) → (5, 5)</title><path d="M158.5 242.5L183.5 242.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="175.0,242.5 169.0,239.5 169.0,245.5" fill="#846007"/></g>
+<g class="route"><title>石材：12 件/分钟；(5, 5) → (6, 5)</title><path d="M183.5 242.5L208.5 242.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="200.0,242.5 194.0,239.5 194.0,245.5" fill="#846007"/></g>
+<g class="route"><title>石材：12 件/分钟；(6, 5) → (7, 5)</title><path d="M208.5 242.5L233.5 242.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="225.0,242.5 219.0,239.5 219.0,245.5" fill="#846007"/></g>
+<g class="route"><title>石材：12 件/分钟；(8, 5) → (9, 5)</title><path d="M258.5 242.5L283.5 242.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="275.0,242.5 269.0,239.5 269.0,245.5" fill="#846007"/></g>
+<g class="route"><title>石材：12 件/分钟；(9, 5) → (10, 5)</title><path d="M283.5 242.5L308.5 242.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="300.0,242.5 294.0,239.5 294.0,245.5" fill="#846007"/></g>
+<g class="route"><title>石材：12 件/分钟；(10, 5) → (11, 5)</title><path d="M308.5 242.5L333.5 242.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="325.0,242.5 319.0,239.5 319.0,245.5" fill="#846007"/></g>
+<g class="route"><title>石材：6 件/分钟；(11, 1) → (12, 1)</title><path d="M333.5 142.5L358.5 142.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="350.0,142.5 344.0,139.5 344.0,145.5" fill="#846007"/></g>
+<g class="route"><title>石材：6 件/分钟；(12, 1) → (13, 1)</title><path d="M358.5 142.5L383.5 142.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="375.0,142.5 369.0,139.5 369.0,145.5" fill="#846007"/></g>
+<g class="route"><title>石材：6 件/分钟；(11, 3) → (12, 3)</title><path d="M333.5 192.5L358.5 192.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="350.0,192.5 344.0,189.5 344.0,195.5" fill="#846007"/></g>
+<g class="route"><title>石材：6 件/分钟；(12, 3) → (13, 3)</title><path d="M358.5 192.5L383.5 192.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="375.0,192.5 369.0,189.5 369.0,195.5" fill="#846007"/></g>
+<g class="route"><title>原木：16 件/分钟；(1, 4) → (2, 4)</title><path d="M83.5 217.5L108.5 217.5" fill="none" stroke="#8c5231" stroke-width="2.2"/><polygon points="100.0,217.5 94.0,214.5 94.0,220.5" fill="#8c5231"/></g>
+<g class="route"><title>原木：16 件/分钟；(2, 4) → (3, 4)</title><path d="M108.5 217.5L133.5 217.5" fill="none" stroke="#8c5231" stroke-width="2.2"/><polygon points="125.0,217.5 119.0,214.5 119.0,220.5" fill="#8c5231"/></g>
+<g class="route"><title>石头：12 件/分钟；(1, 5) → (2, 5)</title><path d="M83.5 242.5L108.5 242.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="100.0,242.5 94.0,239.5 94.0,245.5" fill="#5c59a1"/></g>
+<g class="route"><title>石头：12 件/分钟；(2, 5) → (3, 5)</title><path d="M108.5 242.5L133.5 242.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="125.0,242.5 119.0,239.5 119.0,245.5" fill="#5c59a1"/></g>
+<g class="route"><title>木棒：24 件/分钟；(7, 4) → (8, 4)</title><path d="M233.5 217.5L258.5 217.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="250.0,217.5 244.0,214.5 244.0,220.5" fill="#8b4672"/></g>
+<g class="route"><title>石材：12 件/分钟；(7, 5) → (8, 5)</title><path d="M233.5 242.5L258.5 242.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="250.0,242.5 244.0,239.5 244.0,245.5" fill="#846007"/></g>
+<g class="route"><title>初级工具：12 件/分钟；(17, 4) → (18, 4)</title><path d="M483.5 217.5L508.5 217.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="500.0,217.5 494.0,214.5 494.0,220.5" fill="#187467"/></g>
+<g class="transport" data-x="2" data-y="4" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(2, 4)</title>
+<circle cx="108.5" cy="217.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="2" data-y="5" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(2, 5)</title>
+<circle cx="108.5" cy="242.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="5" data-y="4" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(5, 4)</title>
+<circle cx="183.5" cy="217.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="5" data-y="5" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(5, 5)</title>
+<circle cx="183.5" cy="242.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="6" data-y="5" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(6, 5)</title>
+<circle cx="208.5" cy="242.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="7" data-y="5" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(7, 5)</title>
+<circle cx="233.5" cy="242.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="8" data-y="0" data-kind="belt1" data-id="20" data-dir="2" data-shape="10" data-recipe="-1"><title>一级带｜(8, 0)</title>
+<circle cx="258.5" cy="117.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="8" data-y="1" data-kind="belt1" data-id="20" data-dir="3" data-shape="3" data-recipe="-1"><title>一级带｜(8, 1)</title>
+<circle cx="258.5" cy="142.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="8" data-y="2" data-kind="split" data-id="40" data-dir="3" data-shape="3" data-recipe="-1"><title>分流器｜(8, 2)</title>
+<rect x="251.9" y="160.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="258.5" y="170.9" font-size="8.5" text-anchor="middle">分</text>
+</g>
+<g class="transport" data-x="8" data-y="3" data-kind="belt1" data-id="20" data-dir="3" data-shape="3" data-recipe="-1"><title>一级带｜(8, 3)</title>
+<circle cx="258.5" cy="192.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="8" data-y="4" data-kind="belt1" data-id="20" data-dir="3" data-shape="6" data-recipe="-1"><title>一级带｜(8, 4)</title>
+<circle cx="258.5" cy="217.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="8" data-y="5" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(8, 5)</title>
+<circle cx="258.5" cy="242.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="9" data-y="0" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(9, 0)</title>
+<circle cx="283.5" cy="117.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="9" data-y="2" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(9, 2)</title>
+<circle cx="283.5" cy="167.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="9" data-y="5" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(9, 5)</title>
+<circle cx="283.5" cy="242.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="10" data-y="0" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(10, 0)</title>
+<circle cx="308.5" cy="117.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="10" data-y="2" data-kind="tunnel1" data-id="30" data-dir="1" data-shape="1" data-recipe="-1"><title>一级地下带端点｜(10, 2)</title>
+<rect x="301.9" y="160.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="308.5" y="170.9" font-size="8.5" text-anchor="middle">入</text>
+</g>
+<g class="transport" data-x="10" data-y="5" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(10, 5)</title>
+<circle cx="308.5" cy="242.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="11" data-y="0" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(11, 0)</title>
+<circle cx="333.5" cy="117.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="11" data-y="1" data-kind="belt1" data-id="20" data-dir="2" data-shape="10" data-recipe="-1"><title>一级带｜(11, 1)</title>
+<circle cx="333.5" cy="142.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="11" data-y="2" data-kind="belt1" data-id="20" data-dir="3" data-shape="3" data-recipe="-1"><title>一级带｜(11, 2)</title>
+<circle cx="333.5" cy="167.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="11" data-y="3" data-kind="split" data-id="40" data-dir="3" data-shape="3" data-recipe="-1"><title>分流器｜(11, 3)</title>
+<rect x="326.9" y="185.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="333.5" y="195.9" font-size="8.5" text-anchor="middle">分</text>
+</g>
+<g class="transport" data-x="11" data-y="4" data-kind="belt1" data-id="20" data-dir="3" data-shape="3" data-recipe="-1"><title>一级带｜(11, 4)</title>
+<circle cx="333.5" cy="217.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="11" data-y="5" data-kind="belt1" data-id="20" data-dir="3" data-shape="6" data-recipe="-1"><title>一级带｜(11, 5)</title>
+<circle cx="333.5" cy="242.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="12" data-y="0" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(12, 0)</title>
+<circle cx="358.5" cy="117.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="12" data-y="1" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(12, 1)</title>
+<circle cx="358.5" cy="142.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="12" data-y="2" data-kind="tunnel1" data-id="30" data-dir="6" data-shape="6" data-recipe="-1"><title>一级地下带端点｜(12, 2)</title>
+<rect x="351.9" y="160.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="358.5" y="170.9" font-size="8.5" text-anchor="middle">出</text>
+</g>
+<g class="transport" data-x="12" data-y="3" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(12, 3)</title>
+<circle cx="358.5" cy="192.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="16" data-y="0" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(16, 0)</title>
+<circle cx="458.5" cy="117.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="16" data-y="2" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(16, 2)</title>
+<circle cx="458.5" cy="167.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="17" data-y="0" data-kind="belt1" data-id="20" data-dir="0" data-shape="4" data-recipe="-1"><title>一级带｜(17, 0)</title>
+<circle cx="483.5" cy="117.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="17" data-y="1" data-kind="belt1" data-id="20" data-dir="0" data-shape="0" data-recipe="-1"><title>一级带｜(17, 1)</title>
+<circle cx="483.5" cy="142.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="17" data-y="2" data-kind="merge" data-id="41" data-dir="0" data-shape="0" data-recipe="-1"><title>合并器｜(17, 2)</title>
+<rect x="476.9" y="160.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="483.5" y="170.9" font-size="8.5" text-anchor="middle">合</text>
+</g>
+<g class="transport" data-x="17" data-y="3" data-kind="belt1" data-id="20" data-dir="0" data-shape="0" data-recipe="-1"><title>一级带｜(17, 3)</title>
+<circle cx="483.5" cy="192.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="17" data-y="4" data-kind="belt1" data-id="20" data-dir="2" data-shape="8" data-recipe="-1"><title>一级带｜(17, 4)</title>
+<circle cx="483.5" cy="217.5" r="6" fill="transparent"/>
+</g>
+<g data-kind="assembler" data-node="0" data-x="14" data-y="1" data-id="51" data-dir="1" data-shape="0" data-recipe="60"><title>初级工具｜组装机｜定位格 (14, 1)｜6 件/分钟</title><rect x="373" y="107" width="71" height="46" rx="4" fill="#e7f0e5" stroke="#187467"/><circle cx="401.0" cy="150.25" r="2" fill="#187467"/><text x="408.5" y="133.0" text-anchor="middle" class="machine">初级工具</text>
+</g>
+<g data-kind="assembler" data-node="1" data-x="14" data-y="3" data-id="51" data-dir="1" data-shape="0" data-recipe="60"><title>初级工具｜组装机｜定位格 (14, 3)｜6 件/分钟</title><rect x="373" y="157" width="71" height="46" rx="4" fill="#e7f0e5" stroke="#187467"/><circle cx="401.0" cy="200.25" r="2" fill="#187467"/><text x="408.5" y="183.0" text-anchor="middle" class="machine">初级工具</text>
+</g>
+<g data-kind="outlet" data-node="2" data-x="18" data-y="4" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>出1｜成品接出带｜定位格 (18, 4)｜12 件/分钟</title><rect x="498" y="207" width="21" height="21" rx="4" fill="#e7f0e5" stroke="#187467"/><circle cx="501.0" cy="225.25" r="2" fill="#187467"/><text x="508.5" y="220.5" text-anchor="middle" class="machine">出1</text>
+<path d="M519 211l5 6 -5 6Z" fill="#187467"/>
+</g>
+<g data-kind="maker" data-node="3" data-x="6" data-y="4" data-id="50" data-dir="1" data-shape="0" data-recipe="6"><title>木棒｜制造机｜定位格 (6, 4)｜24 件/分钟</title><rect x="198" y="207" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#8b4672"/><circle cx="201.0" cy="225.25" r="2" fill="#8b4672"/><text x="221.0" y="220.5" text-anchor="middle" class="machine">木棒</text>
+</g>
+<g data-kind="maker" data-node="4" data-x="3" data-y="4" data-id="50" data-dir="1" data-shape="0" data-recipe="1"><title>木材｜制造机｜定位格 (3, 4)｜16 件/分钟</title><rect x="123" y="207" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#375d99"/><circle cx="126.0" cy="225.25" r="2" fill="#375d99"/><text x="146.0" y="220.5" text-anchor="middle" class="machine">木材</text>
+</g>
+<g data-kind="maker" data-node="5" data-x="3" data-y="5" data-id="50" data-dir="1" data-shape="0" data-recipe="9"><title>石材｜制造机｜定位格 (3, 5)｜12 件/分钟</title><rect x="123" y="232" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#846007"/><circle cx="126.0" cy="250.25" r="2" fill="#846007"/><text x="146.0" y="245.5" text-anchor="middle" class="machine">石材</text>
+</g>
+<g data-kind="inlet" data-node="6" data-x="0" data-y="4" data-id="4" data-dir="2" data-shape="2" data-recipe="-1"><title>进1 原木｜自动进货箱｜定位格 (0, 4)｜16 件/分钟</title><rect x="48" y="207" width="46" height="21" rx="4" fill="#fff2d8" stroke="#8c5231"/><circle cx="51.0" cy="225.25" r="2" fill="#8c5231"/><text x="71.0" y="220.5" text-anchor="middle" class="machine">进1 原木</text>
+</g>
+<g data-kind="inlet" data-node="7" data-x="0" data-y="5" data-id="4" data-dir="2" data-shape="2" data-recipe="-1"><title>进2 石头｜自动进货箱｜定位格 (0, 5)｜12 件/分钟</title><rect x="48" y="232" width="46" height="21" rx="4" fill="#fff2d8" stroke="#5c59a1"/><circle cx="51.0" cy="250.25" r="2" fill="#5c59a1"/><text x="71.0" y="245.5" text-anchor="middle" class="machine">进2 石头</text>
+</g>
+<text x="545" y="117" class="section">物流与设备</text>
+<text x="545" y="144" class="legend">箭头　物流方向，生产设备朝右</text>
+<text x="545" y="165" class="legend">左下小点　建筑定位格</text>
+<text x="545" y="186" class="legend">罗马数字　传送带等级</text>
+<text x="545" y="207" class="legend">分 / 合　分流器 / 合并器</text>
+<text x="545" y="228" class="legend">入 / 出　地下带，虚线连接端点</text>
+<text x="545" y="249" class="legend">进 / 出　补货口 / 成品接出带</text>
+<path d="M545 276h18" stroke="#187467" stroke-width="3"/><text x="572" y="280" class="legend">初级工具</text>
+<path d="M545 298h18" stroke="#8c5231" stroke-width="3"/><text x="572" y="302" class="legend">原木</text>
+<path d="M545 320h18" stroke="#375d99" stroke-width="3"/><text x="572" y="324" class="legend">木材</text>
+<path d="M545 342h18" stroke="#8b4672" stroke-width="3"/><text x="572" y="346" class="legend">木棒</text>
+<path d="M545 364h18" stroke="#5c59a1" stroke-width="3"/><text x="572" y="368" class="legend">石头</text>
+<path d="M545 386h18" stroke="#846007" stroke-width="3"/><text x="572" y="390" class="legend">石材</text>
+<text x="46" y="292" class="section">电网 · 同一组坐标</text>
+<rect x="46" y="330" width="475" height="150" fill="#fffef9" stroke="#c4d0c6"/>
+<rect x="46" y="330" width="475" height="150" fill="url(#grid)"/>
+<text x="58.5" y="325" text-anchor="middle" class="tick">0</text>
+<text x="183.5" y="325" text-anchor="middle" class="tick">5</text>
+<text x="308.5" y="325" text-anchor="middle" class="tick">10</text>
+<text x="433.5" y="325" text-anchor="middle" class="tick">15</text>
+<text x="39" y="345.5" text-anchor="end" class="tick">0</text>
+<text x="39" y="470.5" text-anchor="end" class="tick">5</text>
+<rect x="373" y="332" width="71" height="46" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="373" y="382" width="71" height="46" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="198" y="432" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="123" y="432" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="123" y="457" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<path d="M133.5 442.5L158.5 442.5" stroke="#947234" stroke-width="2"/>
+<path d="M133.5 442.5L133.5 467.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="3" data-y="4" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="133.5" cy="442.5" r="2.5" fill="#947234"/>
+<circle class="wire" data-x="3" data-y="5" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="133.5" cy="467.5" r="2.5" fill="#947234"/>
+<path d="M158.5 442.5L183.5 442.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="4" data-y="4" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="158.5" cy="442.5" r="2.5" fill="#947234"/>
+<path d="M183.5 442.5L208.5 442.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="5" data-y="4" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="183.5" cy="442.5" r="2.5" fill="#947234"/>
+<path d="M208.5 417.5L233.5 417.5" stroke="#947234" stroke-width="2"/>
+<path d="M208.5 417.5L208.5 442.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="6" data-y="3" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="208.5" cy="417.5" r="2.5" fill="#947234"/>
+<circle class="wire" data-x="6" data-y="4" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="208.5" cy="442.5" r="2.5" fill="#947234"/>
+<path d="M233.5 417.5L258.5 417.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="7" data-y="3" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="233.5" cy="417.5" r="2.5" fill="#947234"/>
+<path d="M258.5 417.5L283.5 417.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="8" data-y="3" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="258.5" cy="417.5" r="2.5" fill="#947234"/>
+<path d="M283.5 417.5L308.5 417.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="9" data-y="3" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="283.5" cy="417.5" r="2.5" fill="#947234"/>
+<path d="M308.5 417.5L333.5 417.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="10" data-y="3" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="308.5" cy="417.5" r="2.5" fill="#947234"/>
+<path d="M333.5 417.5L358.5 417.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="11" data-y="3" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="333.5" cy="417.5" r="2.5" fill="#947234"/>
+<path d="M358.5 417.5L383.5 417.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="12" data-y="3" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="358.5" cy="417.5" r="2.5" fill="#947234"/>
+<path d="M383.5 417.5L408.5 417.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="13" data-y="3" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="383.5" cy="417.5" r="2.5" fill="#947234"/>
+<path d="M408.5 367.5L408.5 392.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="14" data-y="1" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="408.5" cy="367.5" r="2.5" fill="#947234"/>
+<path d="M408.5 392.5L408.5 417.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="14" data-y="2" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="408.5" cy="392.5" r="2.5" fill="#947234"/>
+<circle class="wire" data-x="14" data-y="3" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="408.5" cy="417.5" r="2.5" fill="#947234"/>
+<circle cx="133.5" cy="467.5" r="6" fill="#edba50" stroke="#77541c" stroke-width="2"/><text x="46" y="310" class="legend">电力接入 (3, 5) · 48 kW</text>
+</svg>
+</div></section>
+<section><h2>建材</h2><ul><li>初级工具 10</li><li>加固铁板 6</li><li>木材 6</li><li>木板 39</li><li>木棒 74</li><li>石材 30</li><li>石砖 20</li><li>铁板 6</li><li>铁棒 2</li><li>铁锭 25</li><li>铜板 3</li><li>铜线 40</li><li>铜锭 15</li></ul></section><p>空线仿真在前 16 分钟产出 184 件，末 4 分钟平均 12 件/分钟。</p><footer>已离线检查。游戏内导入、放置与持续生产待实测。</footer></main></html>

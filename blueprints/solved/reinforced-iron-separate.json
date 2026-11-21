@@ -1,0 +1,1149 @@
+{
+  "target": "加固铁板",
+  "mode": "separate",
+  "size": [
+    14,
+    4
+  ],
+  "effective_minutes": 16,
+  "target_per_minute": "20",
+  "theoretical_per_day": "320",
+  "raw_ratio": "铁锭 = 1",
+  "inlets": [
+    {
+      "id": "进1",
+      "position": [
+        0,
+        0
+      ],
+      "item": "铁锭",
+      "per_minute": "20",
+      "per_day": "320"
+    },
+    {
+      "id": "进2",
+      "position": [
+        0,
+        1
+      ],
+      "item": "铁锭",
+      "per_minute": "80/9",
+      "per_day": "1280/9"
+    },
+    {
+      "id": "进3",
+      "position": [
+        0,
+        2
+      ],
+      "item": "铁锭",
+      "per_minute": "20",
+      "per_day": "320"
+    },
+    {
+      "id": "进4",
+      "position": [
+        0,
+        3
+      ],
+      "item": "铁锭",
+      "per_minute": "80/9",
+      "per_day": "1280/9"
+    }
+  ],
+  "outlets": [
+    {
+      "id": "出1",
+      "position": [
+        13,
+        0
+      ],
+      "item": "加固铁板",
+      "per_minute": "10",
+      "belt": 1
+    },
+    {
+      "id": "出2",
+      "position": [
+        13,
+        2
+      ],
+      "item": "加固铁板",
+      "per_minute": "10",
+      "belt": 1
+    }
+  ],
+  "power_entry": [
+    3,
+    0
+  ],
+  "platform": "Steam Build 25121460",
+  "profile": "24／balanced",
+  "rows_optimal_before_compaction": true,
+  "statistics": {
+    "buildings": {
+      "assembler": 2,
+      "belt1": 20,
+      "inlet": 4,
+      "maker": 6
+    },
+    "materials": {
+      "初级工具": 10,
+      "加固铁板": 6,
+      "木材": 12,
+      "木板": 20,
+      "木棒": 40,
+      "石材": 60,
+      "石砖": 20,
+      "铁锭": 50,
+      "铜线": 36,
+      "铜锭": 30
+    },
+    "components": 32,
+    "transport": 20,
+    "power": 60,
+    "wires": 18,
+    "machines": 8,
+    "simulation": {
+      "first_seconds": 23.75,
+      "first_day": 314,
+      "last_four_per_minute": 20.0
+    }
+  },
+  "placements": [
+    {
+      "building": "assembler",
+      "x": 9,
+      "y": 0,
+      "width": 3,
+      "height": 2,
+      "anchor": [
+        10,
+        1
+      ],
+      "item": "加固铁板",
+      "rate": "10",
+      "node": 0,
+      "direction": "右",
+      "recipe": 23
+    },
+    {
+      "building": "outlet",
+      "x": 13,
+      "y": 0,
+      "width": 1,
+      "height": 1,
+      "anchor": [
+        13,
+        0
+      ],
+      "item": "加固铁板",
+      "rate": "10",
+      "node": 1,
+      "direction": "右",
+      "recipe": null
+    },
+    {
+      "building": "maker",
+      "x": 6,
+      "y": 1,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        6,
+        1
+      ],
+      "item": "螺丝",
+      "rate": "40",
+      "node": 2,
+      "direction": "右",
+      "recipe": 22
+    },
+    {
+      "building": "maker",
+      "x": 3,
+      "y": 0,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        3,
+        0
+      ],
+      "item": "铁板",
+      "rate": "20",
+      "node": 3,
+      "direction": "右",
+      "recipe": 20
+    },
+    {
+      "building": "maker",
+      "x": 3,
+      "y": 1,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        3,
+        1
+      ],
+      "item": "铁棒",
+      "rate": "40/3",
+      "node": 4,
+      "direction": "右",
+      "recipe": 21
+    },
+    {
+      "building": "inlet",
+      "x": 0,
+      "y": 0,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        0,
+        0
+      ],
+      "item": "铁锭",
+      "rate": "20",
+      "node": 5,
+      "direction": "右",
+      "recipe": null
+    },
+    {
+      "building": "inlet",
+      "x": 0,
+      "y": 1,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        0,
+        1
+      ],
+      "item": "铁锭",
+      "rate": "80/9",
+      "node": 6,
+      "direction": "右",
+      "recipe": null
+    },
+    {
+      "building": "assembler",
+      "x": 9,
+      "y": 2,
+      "width": 3,
+      "height": 2,
+      "anchor": [
+        10,
+        3
+      ],
+      "item": "加固铁板",
+      "rate": "10",
+      "node": 7,
+      "direction": "右",
+      "recipe": 23
+    },
+    {
+      "building": "outlet",
+      "x": 13,
+      "y": 2,
+      "width": 1,
+      "height": 1,
+      "anchor": [
+        13,
+        2
+      ],
+      "item": "加固铁板",
+      "rate": "10",
+      "node": 8,
+      "direction": "右",
+      "recipe": null
+    },
+    {
+      "building": "maker",
+      "x": 6,
+      "y": 3,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        6,
+        3
+      ],
+      "item": "螺丝",
+      "rate": "40",
+      "node": 9,
+      "direction": "右",
+      "recipe": 22
+    },
+    {
+      "building": "maker",
+      "x": 3,
+      "y": 2,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        3,
+        2
+      ],
+      "item": "铁板",
+      "rate": "20",
+      "node": 10,
+      "direction": "右",
+      "recipe": 20
+    },
+    {
+      "building": "maker",
+      "x": 3,
+      "y": 3,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        3,
+        3
+      ],
+      "item": "铁棒",
+      "rate": "40/3",
+      "node": 11,
+      "direction": "右",
+      "recipe": 21
+    },
+    {
+      "building": "inlet",
+      "x": 0,
+      "y": 2,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        0,
+        2
+      ],
+      "item": "铁锭",
+      "rate": "20",
+      "node": 12,
+      "direction": "右",
+      "recipe": null
+    },
+    {
+      "building": "inlet",
+      "x": 0,
+      "y": 3,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        0,
+        3
+      ],
+      "item": "铁锭",
+      "rate": "80/9",
+      "node": 13,
+      "direction": "右",
+      "recipe": null
+    }
+  ],
+  "transport": [
+    {
+      "position": [
+        2,
+        0
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          1,
+          0
+        ]
+      ],
+      "outgoing": [
+        [
+          3,
+          0
+        ]
+      ]
+    },
+    {
+      "position": [
+        2,
+        1
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          1,
+          1
+        ]
+      ],
+      "outgoing": [
+        [
+          3,
+          1
+        ]
+      ]
+    },
+    {
+      "position": [
+        2,
+        2
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          1,
+          2
+        ]
+      ],
+      "outgoing": [
+        [
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "position": [
+        2,
+        3
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          1,
+          3
+        ]
+      ],
+      "outgoing": [
+        [
+          3,
+          3
+        ]
+      ]
+    },
+    {
+      "position": [
+        5,
+        0
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          4,
+          0
+        ]
+      ],
+      "outgoing": [
+        [
+          6,
+          0
+        ]
+      ]
+    },
+    {
+      "position": [
+        5,
+        1
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          4,
+          1
+        ]
+      ],
+      "outgoing": [
+        [
+          6,
+          1
+        ]
+      ]
+    },
+    {
+      "position": [
+        5,
+        2
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          4,
+          2
+        ]
+      ],
+      "outgoing": [
+        [
+          6,
+          2
+        ]
+      ]
+    },
+    {
+      "position": [
+        5,
+        3
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          4,
+          3
+        ]
+      ],
+      "outgoing": [
+        [
+          6,
+          3
+        ]
+      ]
+    },
+    {
+      "position": [
+        6,
+        0
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          5,
+          0
+        ]
+      ],
+      "outgoing": [
+        [
+          7,
+          0
+        ]
+      ]
+    },
+    {
+      "position": [
+        6,
+        2
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          5,
+          2
+        ]
+      ],
+      "outgoing": [
+        [
+          7,
+          2
+        ]
+      ]
+    },
+    {
+      "position": [
+        7,
+        0
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          6,
+          0
+        ]
+      ],
+      "outgoing": [
+        [
+          8,
+          0
+        ]
+      ]
+    },
+    {
+      "position": [
+        7,
+        2
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          6,
+          2
+        ]
+      ],
+      "outgoing": [
+        [
+          8,
+          2
+        ]
+      ]
+    },
+    {
+      "position": [
+        8,
+        0
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          7,
+          0
+        ]
+      ],
+      "outgoing": [
+        [
+          9,
+          0
+        ]
+      ]
+    },
+    {
+      "position": [
+        8,
+        1
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          7,
+          1
+        ]
+      ],
+      "outgoing": [
+        [
+          9,
+          1
+        ]
+      ]
+    },
+    {
+      "position": [
+        8,
+        2
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          7,
+          2
+        ]
+      ],
+      "outgoing": [
+        [
+          9,
+          2
+        ]
+      ]
+    },
+    {
+      "position": [
+        8,
+        3
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          7,
+          3
+        ]
+      ],
+      "outgoing": [
+        [
+          9,
+          3
+        ]
+      ]
+    },
+    {
+      "position": [
+        12,
+        0
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          11,
+          0
+        ]
+      ],
+      "outgoing": [
+        [
+          13,
+          0
+        ]
+      ]
+    },
+    {
+      "position": [
+        12,
+        2
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          11,
+          2
+        ]
+      ],
+      "outgoing": [
+        [
+          13,
+          2
+        ]
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "start": [
+        11,
+        0
+      ],
+      "end": [
+        12,
+        0
+      ],
+      "item": "加固铁板",
+      "rate": "10",
+      "bus": 0
+    },
+    {
+      "start": [
+        12,
+        0
+      ],
+      "end": [
+        13,
+        0
+      ],
+      "item": "加固铁板",
+      "rate": "10",
+      "bus": 0
+    },
+    {
+      "start": [
+        7,
+        1
+      ],
+      "end": [
+        8,
+        1
+      ],
+      "item": "螺丝",
+      "rate": "40",
+      "bus": 1
+    },
+    {
+      "start": [
+        8,
+        1
+      ],
+      "end": [
+        9,
+        1
+      ],
+      "item": "螺丝",
+      "rate": "40",
+      "bus": 1
+    },
+    {
+      "start": [
+        4,
+        0
+      ],
+      "end": [
+        5,
+        0
+      ],
+      "item": "铁板",
+      "rate": "20",
+      "bus": 2
+    },
+    {
+      "start": [
+        5,
+        0
+      ],
+      "end": [
+        6,
+        0
+      ],
+      "item": "铁板",
+      "rate": "20",
+      "bus": 2
+    },
+    {
+      "start": [
+        6,
+        0
+      ],
+      "end": [
+        7,
+        0
+      ],
+      "item": "铁板",
+      "rate": "20",
+      "bus": 2
+    },
+    {
+      "start": [
+        7,
+        0
+      ],
+      "end": [
+        8,
+        0
+      ],
+      "item": "铁板",
+      "rate": "20",
+      "bus": 2
+    },
+    {
+      "start": [
+        8,
+        0
+      ],
+      "end": [
+        9,
+        0
+      ],
+      "item": "铁板",
+      "rate": "20",
+      "bus": 2
+    },
+    {
+      "start": [
+        4,
+        1
+      ],
+      "end": [
+        5,
+        1
+      ],
+      "item": "铁棒",
+      "rate": "40/3",
+      "bus": 3
+    },
+    {
+      "start": [
+        5,
+        1
+      ],
+      "end": [
+        6,
+        1
+      ],
+      "item": "铁棒",
+      "rate": "40/3",
+      "bus": 3
+    },
+    {
+      "start": [
+        1,
+        0
+      ],
+      "end": [
+        2,
+        0
+      ],
+      "item": "铁锭",
+      "rate": "20",
+      "bus": 4
+    },
+    {
+      "start": [
+        2,
+        0
+      ],
+      "end": [
+        3,
+        0
+      ],
+      "item": "铁锭",
+      "rate": "20",
+      "bus": 4
+    },
+    {
+      "start": [
+        1,
+        1
+      ],
+      "end": [
+        2,
+        1
+      ],
+      "item": "铁锭",
+      "rate": "80/9",
+      "bus": 5
+    },
+    {
+      "start": [
+        2,
+        1
+      ],
+      "end": [
+        3,
+        1
+      ],
+      "item": "铁锭",
+      "rate": "80/9",
+      "bus": 5
+    },
+    {
+      "start": [
+        11,
+        2
+      ],
+      "end": [
+        12,
+        2
+      ],
+      "item": "加固铁板",
+      "rate": "10",
+      "bus": 6
+    },
+    {
+      "start": [
+        12,
+        2
+      ],
+      "end": [
+        13,
+        2
+      ],
+      "item": "加固铁板",
+      "rate": "10",
+      "bus": 6
+    },
+    {
+      "start": [
+        7,
+        3
+      ],
+      "end": [
+        8,
+        3
+      ],
+      "item": "螺丝",
+      "rate": "40",
+      "bus": 7
+    },
+    {
+      "start": [
+        8,
+        3
+      ],
+      "end": [
+        9,
+        3
+      ],
+      "item": "螺丝",
+      "rate": "40",
+      "bus": 7
+    },
+    {
+      "start": [
+        4,
+        2
+      ],
+      "end": [
+        5,
+        2
+      ],
+      "item": "铁板",
+      "rate": "20",
+      "bus": 8
+    },
+    {
+      "start": [
+        5,
+        2
+      ],
+      "end": [
+        6,
+        2
+      ],
+      "item": "铁板",
+      "rate": "20",
+      "bus": 8
+    },
+    {
+      "start": [
+        6,
+        2
+      ],
+      "end": [
+        7,
+        2
+      ],
+      "item": "铁板",
+      "rate": "20",
+      "bus": 8
+    },
+    {
+      "start": [
+        7,
+        2
+      ],
+      "end": [
+        8,
+        2
+      ],
+      "item": "铁板",
+      "rate": "20",
+      "bus": 8
+    },
+    {
+      "start": [
+        8,
+        2
+      ],
+      "end": [
+        9,
+        2
+      ],
+      "item": "铁板",
+      "rate": "20",
+      "bus": 8
+    },
+    {
+      "start": [
+        4,
+        3
+      ],
+      "end": [
+        5,
+        3
+      ],
+      "item": "铁棒",
+      "rate": "40/3",
+      "bus": 9
+    },
+    {
+      "start": [
+        5,
+        3
+      ],
+      "end": [
+        6,
+        3
+      ],
+      "item": "铁棒",
+      "rate": "40/3",
+      "bus": 9
+    },
+    {
+      "start": [
+        1,
+        2
+      ],
+      "end": [
+        2,
+        2
+      ],
+      "item": "铁锭",
+      "rate": "20",
+      "bus": 10
+    },
+    {
+      "start": [
+        2,
+        2
+      ],
+      "end": [
+        3,
+        2
+      ],
+      "item": "铁锭",
+      "rate": "20",
+      "bus": 10
+    },
+    {
+      "start": [
+        1,
+        3
+      ],
+      "end": [
+        2,
+        3
+      ],
+      "item": "铁锭",
+      "rate": "80/9",
+      "bus": 11
+    },
+    {
+      "start": [
+        2,
+        3
+      ],
+      "end": [
+        3,
+        3
+      ],
+      "item": "铁锭",
+      "rate": "80/9",
+      "bus": 11
+    }
+  ],
+  "wires": [
+    [
+      3,
+      0
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      4,
+      3
+    ],
+    [
+      5,
+      1
+    ],
+    [
+      5,
+      3
+    ],
+    [
+      6,
+      1
+    ],
+    [
+      6,
+      3
+    ],
+    [
+      7,
+      1
+    ],
+    [
+      7,
+      3
+    ],
+    [
+      8,
+      1
+    ],
+    [
+      8,
+      3
+    ],
+    [
+      9,
+      1
+    ],
+    [
+      9,
+      3
+    ],
+    [
+      10,
+      1
+    ],
+    [
+      10,
+      3
+    ]
+  ]
+}

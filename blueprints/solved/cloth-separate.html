@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>布 · 独立供料</title><style>
+body{margin:0;background:#f5f7f2;color:#19362e;font:15px/1.6 "Microsoft YaHei",sans-serif}main{max-width:1340px;margin:auto;padding:32px 24px}h1{font-size:30px;margin:0}h2{font-size:20px;margin:0 0 10px}section{margin:24px 0}p{margin:8px 0}.download{display:inline-block;border-radius:6px;padding:8px 14px;background:#187467;color:white;text-decoration:none}.drawing{overflow:auto;border:1px solid #c4d0c6}.drawing svg{display:block;max-width:none}table{border-collapse:collapse;width:min(100%,720px);background:#fffef9}th,td{padding:6px 12px;text-align:left;border-bottom:1px solid #ccd8cd}ul{padding-left:1.4em;columns:3;max-width:700px}footer{color:#455f55}
+</style><main><header><h1>布 · 独立供料</h1>
+<p>14 × 6 格 · 20 件/分钟 · 稳态理论日产 320 件</p><p><a class="download" download="cloth-separate.txt" href="data:text/plain;charset=utf-8;base64,S0FBQUFFdEZXUzFsTVRVek9HTmxZaTB6T0RObExUVTRNRFl0T1RVM01TMHlZVGRsT1Rsa1ltSmpZallUQUFBQTViaURJTUszSU9lTHJPZXJpK1MrbSthV21VRUFBQUF5TUNEa3U3WXY1WWlHNlpLZjc3eU1NVFlnNVlpRzZaS2Y1NUNHNks2NjVMcW42WWVQSURNeU1PKzhqT21pbmVXdW11V0tuK2lBbHlBME1DQnJWK09BZ2c0QUFBQUdBQUFBSkFBQUFESUFBQUFLQUFBQUFBQUFBQUVBQUFBQUFBQUEvUC8vLy96Ly8vOEFBQUFBQUFBQUFHUUFBQUFCQVAvLy8vLy8vLy8vQlFBQUFIQk9kV3hzQlFBQUFIZE9kV3hzLy8vLy93RUFBQUFBQUFBQUFRQUFBQUFBQUFBQkFBQUFBQUFBQUFBQUFBQTBBQUFBQUFBQUFBQUFBQUFVQUFBQURRQUFBQUFBQUFBQ0FBQUFBZ0FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUQvLy8vL0FRRC8vLy8vLy8vLy93VUFBQUJ3VG5Wc2JBVUFBQUIzVG5Wc2JQLy8vLzhBQUFBQUFBQUFBRElBQUFBR0FBQUFBUUFBQUFFQUFBQUFBQUFBL1AvLy8vei8vLzhBQUFBQUFBQUFBR1FBQUFBQkFQLy8vLy8vLy8vL0JRQUFBSEJPZFd4c0JRQUFBSGRPZFd4cy8vLy8vd0VBQUFBQUFBQUFBUUFBQUFBQUFBQUJBQUFBQUFBQUFBQUFBQUF6QUFBQUFBQUFBQUFBQUFBeUFBQUFCZ0FBQUFJQUFBQUJBQUFBQUFBQUFQei8vLy84Ly8vL0FBQUFBQUFBQUFCa0FBQUFBUUQvLy8vLy8vLy8vd1VBQUFCd1RuVnNiQVVBQUFCM1RuVnNiUC8vLy84QkFBQUFBQUFBQUFFQUFBQUFBQUFBQVFBQUFBQUFBQUFBQUFBQU13QUFBQUFBQUFBQUFBQUFNZ0FBQUFNQUFBQUJBQUFBQVFBQUFBQUFBQUQ4Ly8vLy9QLy8vd0FBQUFBQUFBQUFaQUFBQUFFQS8vLy8vLy8vLy84RkFBQUFjRTUxYkd3RkFBQUFkMDUxYkd6Ly8vLy9BUUFBQUFBQUFBQUJBQUFBQUFBQUFBRUFBQUFBQUFBQUFBQUFBRElBQUFBQUFBQUFBQUFBQURJQUFBQURBQUFBQWdBQUFBRUFBQUFBQUFBQS9QLy8vL3ovLy84QUFBQUFBQUFBQUdRQUFBQUJBUC8vLy8vLy8vLy9CUUFBQUhCT2RXeHNCUUFBQUhkT2RXeHMvLy8vL3dFQUFBQUFBQUFBQVFBQUFBQUFBQUFCQUFBQUFBQUFBQUFBQUFBeUFBQUFBQUFBQUFBQUFBQUVBQUFBQUFBQUFBRUFBQUFDQUFBQUFnQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBRC8vLy8vQVFELy8vLy8vLy8vL3dVQUFBQndUblZzYkFVQUFBQjNUblZzYlAvLy8vODRBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUR3QUFBT2lIcXVXS3FPaS9tK2kwcCtldXNRQUFBQUFBQUFBQUJBQUFBQUFBQUFBQ0FBQUFBZ0FBQUFJQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQS8vLy8vd0VBLy8vLy8vLy8vLzhGQUFBQWNFNTFiR3dGQUFBQWQwNTFiR3ovLy8vL09BQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUE4QUFBRG9oNnJsaXFqb3Y1dm90S2ZucnJFQUFBQUFBQUFBQURJQUFBQUtBQUFBQXdBQUFBRUFBQUFBQUFBQS9QLy8vL3ovLy84QUFBQUFBQUFBQUdRQUFBQUJBUC8vLy8vLy8vLy9CUUFBQUhCT2RXeHNCUUFBQUhkT2RXeHMvLy8vL3dFQUFBQUFBQUFBQVFBQUFBQUFBQUFCQUFBQUFBQUFBQUFBQUFBMEFBQUFBQUFBQUFBQUFBQVVBQUFBRFFBQUFBTUFBQUFDQUFBQUFnQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBRC8vLy8vQVFELy8vLy8vLy8vL3dVQUFBQndUblZzYkFVQUFBQjNUblZzYlAvLy8vOEFBQUFBQUFBQUFESUFBQUFHQUFBQUJBQUFBQUVBQUFBQUFBQUEvUC8vLy96Ly8vOEFBQUFBQUFBQUFHUUFBQUFCQVAvLy8vLy8vLy8vQlFBQUFIQk9kV3hzQlFBQUFIZE9kV3hzLy8vLy93RUFBQUFBQUFBQUFRQUFBQUFBQUFBQkFBQUFBQUFBQUFBQUFBQXpBQUFBQUFBQUFBQUFBQUF5QUFBQUJnQUFBQVVBQUFBQkFBQUFBQUFBQVB6Ly8vLzgvLy8vQUFBQUFBQUFBQUJrQUFBQUFRRC8vLy8vLy8vLy93VUFBQUJ3VG5Wc2JBVUFBQUIzVG5Wc2JQLy8vLzhCQUFBQUFBQUFBQUVBQUFBQUFBQUFBUUFBQUFBQUFBQUFBQUFBTXdBQUFBQUFBQUFBQUFBQU1nQUFBQU1BQUFBRUFBQUFBUUFBQUFBQUFBRDgvLy8vL1AvLy93QUFBQUFBQUFBQVpBQUFBQUVBLy8vLy8vLy8vLzhGQUFBQWNFNTFiR3dGQUFBQWQwNTFiR3ovLy8vL0FRQUFBQUFBQUFBQkFBQUFBQUFBQUFFQUFBQUFBQUFBQUFBQUFESUFBQUFBQUFBQUFBQUFBRElBQUFBREFBQUFCUUFBQUFFQUFBQUFBQUFBL1AvLy8vei8vLzhBQUFBQUFBQUFBR1FBQUFBQkFQLy8vLy8vLy8vL0JRQUFBSEJPZFd4c0JRQUFBSGRPZFd4cy8vLy8vd0VBQUFBQUFBQUFBUUFBQUFBQUFBQUJBQUFBQUFBQUFBQUFBQUF5QUFBQUFBQUFBQUFBQUFBRUFBQUFBQUFBQUFRQUFBQUNBQUFBQWdBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFELy8vLy9BUUQvLy8vLy8vLy8vd1VBQUFCd1RuVnNiQVVBQUFCM1RuVnNiUC8vLy84NEFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBRHdBQUFPaUhxdVdLcU9pL20raTBwK2V1c1FBQUFBQUFBQUFBQkFBQUFBQUFBQUFGQUFBQUFnQUFBQUlBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBLy8vLy93RUEvLy8vLy8vLy8vOEZBQUFBY0U1MWJHd0ZBQUFBZDA1MWJHei8vLy8vT0FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQThBQUFEb2g2cmxpcWpvdjV2b3RLZm5yckVBQUFBQUFBQUFBQlFBQUFBQ0FBQUFBUUFBQUFJQUFBQUNBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBUC8vLy84QkFQLy8vLy8vLy8vL0JRQUFBSEJPZFd4c0JRQUFBSGRPZFd4cy8vLy8vd0FBQUFBQUFBQUFGQUFBQUFJQUFBQUNBQUFBQWdBQUFBSUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUEvLy8vL3dFQS8vLy8vLy8vLy84RkFBQUFjRTUxYkd3RkFBQUFkMDUxYkd6Ly8vLy9BQUFBQUFBQUFBQVVBQUFBQWdBQUFBUUFBQUFDQUFBQUFnQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBRC8vLy8vQVFELy8vLy8vLy8vL3dVQUFBQndUblZzYkFVQUFBQjNUblZzYlAvLy8vOEFBQUFBQUFBQUFCUUFBQUFDQUFBQUJRQUFBQUlBQUFBQ0FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFQLy8vLzhCQVAvLy8vLy8vLy8vQlFBQUFIQk9kV3hzQlFBQUFIZE9kV3hzLy8vLy93QUFBQUFBQUFBQUZBQUFBQVVBQUFBQkFBQUFBZ0FBQUFJQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQS8vLy8vd0VBLy8vLy8vLy8vLzhGQUFBQWNFNTFiR3dGQUFBQWQwNTFiR3ovLy8vL0FBQUFBQUFBQUFBVUFBQUFCUUFBQUFJQUFBQUNBQUFBQWdBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFELy8vLy9BUUQvLy8vLy8vLy8vd1VBQUFCd1RuVnNiQVVBQUFCM1RuVnNiUC8vLy84QUFBQUFBQUFBQUJRQUFBQUZBQUFBQkFBQUFBSUFBQUFDQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQVAvLy8vOEJBUC8vLy8vLy8vLy9CUUFBQUhCT2RXeHNCUUFBQUhkT2RXeHMvLy8vL3dBQUFBQUFBQUFBRkFBQUFBVUFBQUFGQUFBQUFnQUFBQUlBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBLy8vLy93RUEvLy8vLy8vLy8vOEZBQUFBY0U1MWJHd0ZBQUFBZDA1MWJHei8vLy8vQUFBQUFBQUFBQUFVQUFBQUNBQUFBQUVBQUFBQ0FBQUFBZ0FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUQvLy8vL0FRRC8vLy8vLy8vLy93VUFBQUJ3VG5Wc2JBVUFBQUIzVG5Wc2JQLy8vLzhBQUFBQUFBQUFBQlFBQUFBSUFBQUFBZ0FBQUFJQUFBQUNBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBUC8vLy84QkFQLy8vLy8vLy8vL0JRQUFBSEJPZFd4c0JRQUFBSGRPZFd4cy8vLy8vd0FBQUFBQUFBQUFGQUFBQUFnQUFBQUVBQUFBQWdBQUFBSUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUEvLy8vL3dFQS8vLy8vLy8vLy84RkFBQUFjRTUxYkd3RkFBQUFkMDUxYkd6Ly8vLy9BQUFBQUFBQUFBQVVBQUFBQ0FBQUFBVUFBQUFDQUFBQUFnQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBRC8vLy8vQVFELy8vLy8vLy8vL3dVQUFBQndUblZzYkFVQUFBQjNUblZzYlAvLy8vOEFBQUFBQUFBQUFCUUFBQUFKQUFBQUFBQUFBQUlBQUFBS0FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFQLy8vLzhCQVAvLy8vLy8vLy8vQlFBQUFIQk9kV3hzQlFBQUFIZE9kV3hzLy8vLy93QUFBQUFBQUFBQUtRQUFBQWtBQUFBQkFBQUFBd0FBQUFNQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQS8vLy8vd0VBLy8vLy8vLy8vLzhGQUFBQWNFNTFiR3dGQUFBQWQwNTFiR3ovLy8vL0FBQUFBQlFBQUFBSkFBQUFBZ0FBQUFNQUFBQUdBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBUC8vLy84QkFQLy8vLy8vLy8vL0JRQUFBSEJPZFd4c0JRQUFBSGRPZFd4cy8vLy8vd0FBQUFBQUFBQUFGQUFBQUFrQUFBQURBQUFBQWdBQUFBb0FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUEvLy8vL3dFQS8vLy8vLy8vLy84RkFBQUFjRTUxYkd3RkFBQUFkMDUxYkd6Ly8vLy9BQUFBQUFBQUFBQXBBQUFBQ1FBQUFBUUFBQUFEQUFBQUF3QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBRC8vLy8vQVFELy8vLy8vLy8vL3dVQUFBQndUblZzYkFVQUFBQjNUblZzYlAvLy8vOEFBQUFBRkFBQUFBa0FBQUFGQUFBQUF3QUFBQVlBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBLy8vLy93RUEvLy8vLy8vLy8vOEZBQUFBY0U1MWJHd0ZBQUFBZDA1MWJHei8vLy8vQUFBQUFBQUFBQUFVQUFBQURBQUFBQUFBQUFBQ0FBQUFBZ0FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUQvLy8vL0FRRC8vLy8vLy8vLy93VUFBQUJ3VG5Wc2JBVUFBQUIzVG5Wc2JQLy8vLzhBQUFBQUFBQUFBQlFBQUFBTUFBQUFBd0FBQUFJQUFBQUNBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBUC8vLy84QkFQLy8vLy8vLy8vL0JRQUFBSEJPZFd4c0JRQUFBSGRPZFd4cy8vLy8vd0FBQUFBQUFBQUFGd0FBQVBvQUFBQURBQUFBQVFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQVAvLy8vOEJBUC8vLy8vLy8vLy9CUUFBQUhCT2RXeHNCUUFBQUhkT2RXeHMvLy8vL3dBQUFBQUFBQUFBK2dBQUFBTUFBQUFDQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBLy8vLy93RUEvLy8vLy8vLy8vOEZBQUFBY0U1MWJHd0ZBQUFBZDA1MWJHei8vLy8vQUFBQUFBQUFBQUQ2QUFBQUF3QUFBQU1BQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUQvLy8vL0FRRC8vLy8vLy8vLy93VUFBQUJ3VG5Wc2JBVUFBQUIzVG5Wc2JQLy8vLzhBQUFBQUFBQUFBUG9BQUFBREFBQUFCQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBUC8vLy84QkFQLy8vLy8vLy8vL0JRQUFBSEJPZFd4c0JRQUFBSGRPZFd4cy8vLy8vd0FBQUFBQUFBQUErZ0FBQUFNQUFBQUZBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUEvLy8vL3dFQS8vLy8vLy8vLy84RkFBQUFjRTUxYkd3RkFBQUFkMDUxYkd6Ly8vLy9BQUFBQUFBQUFBRDZBQUFBQkFBQUFBRUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBRC8vLy8vQVFELy8vLy8vLy8vL3dVQUFBQndUblZzYkFVQUFBQjNUblZzYlAvLy8vOEFBQUFBQUFBQUFQb0FBQUFFQUFBQUJBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFQLy8vLzhCQVAvLy8vLy8vLy8vQlFBQUFIQk9kV3hzQlFBQUFIZE9kV3hzLy8vLy93QUFBQUFBQUFBQStnQUFBQVVBQUFBQkFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQS8vLy8vd0VBLy8vLy8vLy8vLzhGQUFBQWNFNTFiR3dGQUFBQWQwNTFiR3ovLy8vL0FBQUFBQUFBQUFENkFBQUFCUUFBQUFRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFELy8vLy9BUUQvLy8vLy8vLy8vd1VBQUFCd1RuVnNiQVVBQUFCM1RuVnNiUC8vLy84QUFBQUFBQUFBQVBvQUFBQUdBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQVAvLy8vOEJBUC8vLy8vLy8vLy9CUUFBQUhCT2RXeHNCUUFBQUhkT2RXeHMvLy8vL3dBQUFBQUFBQUFBK2dBQUFBWUFBQUFCQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBLy8vLy93RUEvLy8vLy8vLy8vOEZBQUFBY0U1MWJHd0ZBQUFBZDA1MWJHei8vLy8vQUFBQUFBQUFBQUQ2QUFBQUJnQUFBQUlBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUQvLy8vL0FRRC8vLy8vLy8vLy93VUFBQUJ3VG5Wc2JBVUFBQUIzVG5Wc2JQLy8vLzhBQUFBQUFBQUFBUG9BQUFBR0FBQUFBd0FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBUC8vLy84QkFQLy8vLy8vLy8vL0JRQUFBSEJPZFd4c0JRQUFBSGRPZFd4cy8vLy8vd0FBQUFBQUFBQUErZ0FBQUFZQUFBQUVBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUEvLy8vL3dFQS8vLy8vLy8vLy84RkFBQUFjRTUxYkd3RkFBQUFkMDUxYkd6Ly8vLy9BQUFBQUFBQUFBRDZBQUFBQmdBQUFBVUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBRC8vLy8vQVFELy8vLy8vLy8vL3dVQUFBQndUblZzYkFVQUFBQjNUblZzYlAvLy8vOEFBQUFBQUFBQUFQb0FBQUFIQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFQLy8vLzhCQVAvLy8vLy8vLy8vQlFBQUFIQk9kV3hzQlFBQUFIZE9kV3hzLy8vLy93QUFBQUFBQUFBQStnQUFBQWNBQUFBREFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQS8vLy8vd0VBLy8vLy8vLy8vLzhGQUFBQWNFNTFiR3dGQUFBQWQwNTFiR3ovLy8vL0FBQUFBQUFBQUFENkFBQUFDQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFELy8vLy9BUUQvLy8vLy8vLy8vd1VBQUFCd1RuVnNiQVVBQUFCM1RuVnNiUC8vLy84QUFBQUFBQUFBQVBvQUFBQUlBQUFBQXdBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQVAvLy8vOEJBUC8vLy8vLy8vLy9CUUFBQUhCT2RXeHNCUUFBQUhkT2RXeHMvLy8vL3dBQUFBQUFBQUFBK2dBQUFBa0FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBLy8vLy93RUEvLy8vLy8vLy8vOEZBQUFBY0U1MWJHd0ZBQUFBZDA1MWJHei8vLy8vQUFBQUFBQUFBQUQ2QUFBQUNRQUFBQU1BQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUQvLy8vL0FRRC8vLy8vLy8vLy93VUFBQUJ3VG5Wc2JBVUFBQUIzVG5Wc2JQLy8vLzhBQUFBQUFBQUFBUG9BQUFBS0FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBUC8vLy84QkFQLy8vLy8vLy8vL0JRQUFBSEJPZFd4c0JRQUFBSGRPZFd4cy8vLy8vd0FBQUFBQUFBQUErZ0FBQUFvQUFBQURBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUEvLy8vL3dFQS8vLy8vLy8vLy84RkFBQUFjRTUxYkd3RkFBQUFkMDUxYkd6Ly8vLy9BQUFBQUFBQUFBQUFBQUFB">导出游戏导入文本</a></p></header>
+<section><h2>建造与接入</h2><p>导出并复制整段文本，在 Steam 游戏蓝图界面粘贴导入。自动建造预留 36 个建造胶囊及下列建材。</p><p>电网接入口 (3, 5)，预留 40 kW。成品向右接出，在这些格位外接收货或转运设备。(13, 0)、(13, 3)。</p></section>
+<section><h2>进货口与日配额</h2><p>每日有效生产 16 分钟。原木 = 1。</p>
+<table><thead><tr><th>口</th><th>定位格</th><th>物料</th><th>件/分钟</th><th>日配额</th></tr></thead><tbody><tr><td>进1</td><td>(0, 1)</td><td>原木</td><td>40/3</td><td>640/3</td></tr><tr><td>进2</td><td>(0, 2)</td><td>原木</td><td>40/3</td><td>640/3</td></tr><tr><td>进3</td><td>(0, 4)</td><td>原木</td><td>40/3</td><td>640/3</td></tr><tr><td>进4</td><td>(0, 5)</td><td>原木</td><td>40/3</td><td>640/3</td></tr></tbody></table></section>
+<section><h2>摆放图</h2><div class="drawing"><svg xmlns="http://www.w3.org/2000/svg" width="698" height="515" viewBox="0 0 698 515" role="img" aria-labelledby="title description">
+<title id="title">布 · 独立供料</title><desc id="description">14列、6行。左上角为(0,0)。上图为物流，下图为电网。</desc>
+<defs><pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M25 0H0V25" fill="none" stroke="#d9e0d9"/></pattern></defs>
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC","PingFang SC",sans-serif;fill:#19362e}.tick{font-size:9px;fill:#4c665d}.meta{font-size:13px;fill:#3e5b51}.machine{font-size:11px;font-weight:650}.legend{font-size:12px}.title{font-size:28px;font-weight:750}.section{font-size:16px;font-weight:700}</style>
+<rect width="698" height="515" fill="#f5f7f2"/>
+<text x="46" y="43" class="title">布 · 独立供料</text>
+<text x="46" y="68" class="meta">14 × 6 格　·　10 台加工设备　·　40 kW　·　稳态理论日产 320</text>
+<rect x="46" y="105" width="350" height="150" fill="#fffef9" stroke="#c4d0c6"/>
+<rect x="46" y="105" width="350" height="150" fill="url(#grid)"/>
+<text x="58.5" y="100" text-anchor="middle" class="tick">0</text>
+<text x="83.5" y="100" text-anchor="middle" class="tick">1</text>
+<text x="108.5" y="100" text-anchor="middle" class="tick">2</text>
+<text x="133.5" y="100" text-anchor="middle" class="tick">3</text>
+<text x="158.5" y="100" text-anchor="middle" class="tick">4</text>
+<text x="183.5" y="100" text-anchor="middle" class="tick">5</text>
+<text x="208.5" y="100" text-anchor="middle" class="tick">6</text>
+<text x="233.5" y="100" text-anchor="middle" class="tick">7</text>
+<text x="258.5" y="100" text-anchor="middle" class="tick">8</text>
+<text x="283.5" y="100" text-anchor="middle" class="tick">9</text>
+<text x="308.5" y="100" text-anchor="middle" class="tick">10</text>
+<text x="333.5" y="100" text-anchor="middle" class="tick">11</text>
+<text x="358.5" y="100" text-anchor="middle" class="tick">12</text>
+<text x="383.5" y="100" text-anchor="middle" class="tick">13</text>
+<text x="39" y="120.5" text-anchor="end" class="tick">0</text>
+<text x="39" y="145.5" text-anchor="end" class="tick">1</text>
+<text x="39" y="170.5" text-anchor="end" class="tick">2</text>
+<text x="39" y="195.5" text-anchor="end" class="tick">3</text>
+<text x="39" y="220.5" text-anchor="end" class="tick">4</text>
+<text x="39" y="245.5" text-anchor="end" class="tick">5</text>
+<g class="route"><title>布：10 件/分钟；(11, 0) → (12, 0)</title><path d="M333.5 117.5L358.5 117.5" fill="none" stroke="#8c5231" stroke-width="2.2"/><polygon points="350.0,117.5 344.0,114.5 344.0,120.5" fill="#8c5231"/></g>
+<g class="route"><title>布：10 件/分钟；(12, 0) → (13, 0)</title><path d="M358.5 117.5L383.5 117.5" fill="none" stroke="#8c5231" stroke-width="2.2"/><polygon points="375.0,117.5 369.0,114.5 369.0,120.5" fill="#8c5231"/></g>
+<g class="route"><title>线：10 件/分钟；(7, 1) → (8, 1)</title><path d="M233.5 142.5L258.5 142.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="250.0,142.5 244.0,139.5 244.0,145.5" fill="#8b4672"/></g>
+<g class="route"><title>线：10 件/分钟；(8, 1) → (9, 1)</title><path d="M258.5 142.5L283.5 142.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="275.0,142.5 269.0,139.5 269.0,145.5" fill="#8b4672"/></g>
+<g class="route"><title>线：10 件/分钟；(7, 2) → (8, 2)</title><path d="M233.5 167.5L258.5 167.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="250.0,167.5 244.0,164.5 244.0,170.5" fill="#8b4672"/></g>
+<g class="route"><title>线：10 件/分钟；(8, 2) → (9, 2)</title><path d="M258.5 167.5L283.5 167.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="275.0,167.5 269.0,164.5 269.0,170.5" fill="#8b4672"/></g>
+<g class="route"><title>木纤维：20 件/分钟；(4, 1) → (5, 1)</title><path d="M158.5 142.5L183.5 142.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="175.0,142.5 169.0,139.5 169.0,145.5" fill="#375d99"/></g>
+<g class="route"><title>木纤维：20 件/分钟；(5, 1) → (6, 1)</title><path d="M183.5 142.5L208.5 142.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="200.0,142.5 194.0,139.5 194.0,145.5" fill="#375d99"/></g>
+<g class="route"><title>木纤维：20 件/分钟；(4, 2) → (5, 2)</title><path d="M158.5 167.5L183.5 167.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="175.0,167.5 169.0,164.5 169.0,170.5" fill="#375d99"/></g>
+<g class="route"><title>木纤维：20 件/分钟；(5, 2) → (6, 2)</title><path d="M183.5 167.5L208.5 167.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="200.0,167.5 194.0,164.5 194.0,170.5" fill="#375d99"/></g>
+<g class="route"><title>原木：40/3 件/分钟；(1, 1) → (2, 1)</title><path d="M83.5 142.5L108.5 142.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="100.0,142.5 94.0,139.5 94.0,145.5" fill="#187467"/></g>
+<g class="route"><title>原木：40/3 件/分钟；(2, 1) → (3, 1)</title><path d="M108.5 142.5L133.5 142.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="125.0,142.5 119.0,139.5 119.0,145.5" fill="#187467"/></g>
+<g class="route"><title>原木：40/3 件/分钟；(1, 2) → (2, 2)</title><path d="M83.5 167.5L108.5 167.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="100.0,167.5 94.0,164.5 94.0,170.5" fill="#187467"/></g>
+<g class="route"><title>原木：40/3 件/分钟；(2, 2) → (3, 2)</title><path d="M108.5 167.5L133.5 167.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="125.0,167.5 119.0,164.5 119.0,170.5" fill="#187467"/></g>
+<g class="route"><title>线：20 件/分钟；(9, 0) → (10, 0)</title><path d="M283.5 117.5L308.5 117.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="300.0,117.5 294.0,114.5 294.0,120.5" fill="#8b4672"/></g>
+<g class="route"><title>线：20 件/分钟；(9, 1) → (9, 0)</title><path d="M283.5 142.5L283.5 117.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="283.5,126.0 280.5,132.0 286.5,132.0" fill="#8b4672"/></g>
+<g class="route"><title>线：10 件/分钟；(9, 2) → (9, 1)</title><path d="M283.5 167.5L283.5 142.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="283.5,151.0 280.5,157.0 286.5,157.0" fill="#8b4672"/></g>
+<g class="route"><title>布：10 件/分钟；(11, 3) → (12, 3)</title><path d="M333.5 192.5L358.5 192.5" fill="none" stroke="#8c5231" stroke-width="2.2"/><polygon points="350.0,192.5 344.0,189.5 344.0,195.5" fill="#8c5231"/></g>
+<g class="route"><title>布：10 件/分钟；(12, 3) → (13, 3)</title><path d="M358.5 192.5L383.5 192.5" fill="none" stroke="#8c5231" stroke-width="2.2"/><polygon points="375.0,192.5 369.0,189.5 369.0,195.5" fill="#8c5231"/></g>
+<g class="route"><title>线：10 件/分钟；(7, 4) → (8, 4)</title><path d="M233.5 217.5L258.5 217.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="250.0,217.5 244.0,214.5 244.0,220.5" fill="#8b4672"/></g>
+<g class="route"><title>线：10 件/分钟；(8, 4) → (9, 4)</title><path d="M258.5 217.5L283.5 217.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="275.0,217.5 269.0,214.5 269.0,220.5" fill="#8b4672"/></g>
+<g class="route"><title>线：10 件/分钟；(7, 5) → (8, 5)</title><path d="M233.5 242.5L258.5 242.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="250.0,242.5 244.0,239.5 244.0,245.5" fill="#8b4672"/></g>
+<g class="route"><title>线：10 件/分钟；(8, 5) → (9, 5)</title><path d="M258.5 242.5L283.5 242.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="275.0,242.5 269.0,239.5 269.0,245.5" fill="#8b4672"/></g>
+<g class="route"><title>木纤维：20 件/分钟；(4, 4) → (5, 4)</title><path d="M158.5 217.5L183.5 217.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="175.0,217.5 169.0,214.5 169.0,220.5" fill="#375d99"/></g>
+<g class="route"><title>木纤维：20 件/分钟；(5, 4) → (6, 4)</title><path d="M183.5 217.5L208.5 217.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="200.0,217.5 194.0,214.5 194.0,220.5" fill="#375d99"/></g>
+<g class="route"><title>木纤维：20 件/分钟；(4, 5) → (5, 5)</title><path d="M158.5 242.5L183.5 242.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="175.0,242.5 169.0,239.5 169.0,245.5" fill="#375d99"/></g>
+<g class="route"><title>木纤维：20 件/分钟；(5, 5) → (6, 5)</title><path d="M183.5 242.5L208.5 242.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="200.0,242.5 194.0,239.5 194.0,245.5" fill="#375d99"/></g>
+<g class="route"><title>原木：40/3 件/分钟；(1, 4) → (2, 4)</title><path d="M83.5 217.5L108.5 217.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="100.0,217.5 94.0,214.5 94.0,220.5" fill="#187467"/></g>
+<g class="route"><title>原木：40/3 件/分钟；(2, 4) → (3, 4)</title><path d="M108.5 217.5L133.5 217.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="125.0,217.5 119.0,214.5 119.0,220.5" fill="#187467"/></g>
+<g class="route"><title>原木：40/3 件/分钟；(1, 5) → (2, 5)</title><path d="M83.5 242.5L108.5 242.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="100.0,242.5 94.0,239.5 94.0,245.5" fill="#187467"/></g>
+<g class="route"><title>原木：40/3 件/分钟；(2, 5) → (3, 5)</title><path d="M108.5 242.5L133.5 242.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="125.0,242.5 119.0,239.5 119.0,245.5" fill="#187467"/></g>
+<g class="route"><title>线：20 件/分钟；(9, 3) → (10, 3)</title><path d="M283.5 192.5L308.5 192.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="300.0,192.5 294.0,189.5 294.0,195.5" fill="#8b4672"/></g>
+<g class="route"><title>线：20 件/分钟；(9, 4) → (9, 3)</title><path d="M283.5 217.5L283.5 192.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="283.5,201.0 280.5,207.0 286.5,207.0" fill="#8b4672"/></g>
+<g class="route"><title>线：10 件/分钟；(9, 5) → (9, 4)</title><path d="M283.5 242.5L283.5 217.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="283.5,226.0 280.5,232.0 286.5,232.0" fill="#8b4672"/></g>
+<g class="transport" data-x="2" data-y="1" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(2, 1)</title>
+<circle cx="108.5" cy="142.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="2" data-y="2" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(2, 2)</title>
+<circle cx="108.5" cy="167.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="2" data-y="4" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(2, 4)</title>
+<circle cx="108.5" cy="217.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="2" data-y="5" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(2, 5)</title>
+<circle cx="108.5" cy="242.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="5" data-y="1" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(5, 1)</title>
+<circle cx="183.5" cy="142.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="5" data-y="2" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(5, 2)</title>
+<circle cx="183.5" cy="167.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="5" data-y="4" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(5, 4)</title>
+<circle cx="183.5" cy="217.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="5" data-y="5" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(5, 5)</title>
+<circle cx="183.5" cy="242.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="8" data-y="1" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(8, 1)</title>
+<circle cx="258.5" cy="142.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="8" data-y="2" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(8, 2)</title>
+<circle cx="258.5" cy="167.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="8" data-y="4" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(8, 4)</title>
+<circle cx="258.5" cy="217.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="8" data-y="5" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(8, 5)</title>
+<circle cx="258.5" cy="242.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="9" data-y="0" data-kind="belt1" data-id="20" data-dir="2" data-shape="10" data-recipe="-1"><title>一级带｜(9, 0)</title>
+<circle cx="283.5" cy="117.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="9" data-y="1" data-kind="merge" data-id="41" data-dir="3" data-shape="3" data-recipe="-1"><title>合并器｜(9, 1)</title>
+<rect x="276.9" y="135.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="283.5" y="145.9" font-size="8.5" text-anchor="middle">合</text>
+</g>
+<g class="transport" data-x="9" data-y="2" data-kind="belt1" data-id="20" data-dir="3" data-shape="6" data-recipe="-1"><title>一级带｜(9, 2)</title>
+<circle cx="283.5" cy="167.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="9" data-y="3" data-kind="belt1" data-id="20" data-dir="2" data-shape="10" data-recipe="-1"><title>一级带｜(9, 3)</title>
+<circle cx="283.5" cy="192.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="9" data-y="4" data-kind="merge" data-id="41" data-dir="3" data-shape="3" data-recipe="-1"><title>合并器｜(9, 4)</title>
+<rect x="276.9" y="210.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="283.5" y="220.9" font-size="8.5" text-anchor="middle">合</text>
+</g>
+<g class="transport" data-x="9" data-y="5" data-kind="belt1" data-id="20" data-dir="3" data-shape="6" data-recipe="-1"><title>一级带｜(9, 5)</title>
+<circle cx="283.5" cy="242.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="12" data-y="0" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(12, 0)</title>
+<circle cx="358.5" cy="117.5" r="6" fill="transparent"/>
+</g>
+<g class="transport" data-x="12" data-y="3" data-kind="belt1" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>一级带｜(12, 3)</title>
+<circle cx="358.5" cy="192.5" r="6" fill="transparent"/>
+</g>
+<g data-kind="maker" data-node="0" data-x="10" data-y="0" data-id="50" data-dir="1" data-shape="0" data-recipe="52"><title>布｜制造机｜定位格 (10, 0)｜10 件/分钟</title><rect x="298" y="107" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#8c5231"/><circle cx="301.0" cy="125.25" r="2" fill="#8c5231"/><text x="321.0" y="120.5" text-anchor="middle" class="machine">布</text>
+</g>
+<g data-kind="outlet" data-node="1" data-x="13" data-y="0" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>出1｜成品接出带｜定位格 (13, 0)｜10 件/分钟</title><rect x="373" y="107" width="21" height="21" rx="4" fill="#e7f0e5" stroke="#8c5231"/><circle cx="376.0" cy="125.25" r="2" fill="#8c5231"/><text x="383.5" y="120.5" text-anchor="middle" class="machine">出1</text>
+<path d="M394 111l5 6 -5 6Z" fill="#8c5231"/>
+</g>
+<g data-kind="maker" data-node="2" data-x="6" data-y="1" data-id="50" data-dir="1" data-shape="0" data-recipe="51"><title>线｜制造机｜定位格 (6, 1)｜10 件/分钟</title><rect x="198" y="132" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#8b4672"/><circle cx="201.0" cy="150.25" r="2" fill="#8b4672"/><text x="221.0" y="145.5" text-anchor="middle" class="machine">线</text>
+</g>
+<g data-kind="maker" data-node="3" data-x="6" data-y="2" data-id="50" data-dir="1" data-shape="0" data-recipe="51"><title>线｜制造机｜定位格 (6, 2)｜10 件/分钟</title><rect x="198" y="157" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#8b4672"/><circle cx="201.0" cy="175.25" r="2" fill="#8b4672"/><text x="221.0" y="170.5" text-anchor="middle" class="machine">线</text>
+</g>
+<g data-kind="maker" data-node="4" data-x="3" data-y="1" data-id="50" data-dir="1" data-shape="0" data-recipe="50"><title>木纤维｜制造机｜定位格 (3, 1)｜20 件/分钟</title><rect x="123" y="132" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#375d99"/><circle cx="126.0" cy="150.25" r="2" fill="#375d99"/><text x="146.0" y="145.5" text-anchor="middle" class="machine">木纤维</text>
+</g>
+<g data-kind="maker" data-node="5" data-x="3" data-y="2" data-id="50" data-dir="1" data-shape="0" data-recipe="50"><title>木纤维｜制造机｜定位格 (3, 2)｜20 件/分钟</title><rect x="123" y="157" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#375d99"/><circle cx="126.0" cy="175.25" r="2" fill="#375d99"/><text x="146.0" y="170.5" text-anchor="middle" class="machine">木纤维</text>
+</g>
+<g data-kind="inlet" data-node="6" data-x="0" data-y="1" data-id="4" data-dir="2" data-shape="2" data-recipe="-1"><title>进1 原木｜自动进货箱｜定位格 (0, 1)｜40/3 件/分钟</title><rect x="48" y="132" width="46" height="21" rx="4" fill="#fff2d8" stroke="#187467"/><circle cx="51.0" cy="150.25" r="2" fill="#187467"/><text x="71.0" y="145.5" text-anchor="middle" class="machine">进1 原木</text>
+</g>
+<g data-kind="inlet" data-node="7" data-x="0" data-y="2" data-id="4" data-dir="2" data-shape="2" data-recipe="-1"><title>进2 原木｜自动进货箱｜定位格 (0, 2)｜40/3 件/分钟</title><rect x="48" y="157" width="46" height="21" rx="4" fill="#fff2d8" stroke="#187467"/><circle cx="51.0" cy="175.25" r="2" fill="#187467"/><text x="71.0" y="170.5" text-anchor="middle" class="machine">进2 原木</text>
+</g>
+<g data-kind="maker" data-node="8" data-x="10" data-y="3" data-id="50" data-dir="1" data-shape="0" data-recipe="52"><title>布｜制造机｜定位格 (10, 3)｜10 件/分钟</title><rect x="298" y="182" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#8c5231"/><circle cx="301.0" cy="200.25" r="2" fill="#8c5231"/><text x="321.0" y="195.5" text-anchor="middle" class="machine">布</text>
+</g>
+<g data-kind="outlet" data-node="9" data-x="13" data-y="3" data-id="20" data-dir="2" data-shape="2" data-recipe="-1"><title>出2｜成品接出带｜定位格 (13, 3)｜10 件/分钟</title><rect x="373" y="182" width="21" height="21" rx="4" fill="#e7f0e5" stroke="#8c5231"/><circle cx="376.0" cy="200.25" r="2" fill="#8c5231"/><text x="383.5" y="195.5" text-anchor="middle" class="machine">出2</text>
+<path d="M394 186l5 6 -5 6Z" fill="#8c5231"/>
+</g>
+<g data-kind="maker" data-node="10" data-x="6" data-y="4" data-id="50" data-dir="1" data-shape="0" data-recipe="51"><title>线｜制造机｜定位格 (6, 4)｜10 件/分钟</title><rect x="198" y="207" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#8b4672"/><circle cx="201.0" cy="225.25" r="2" fill="#8b4672"/><text x="221.0" y="220.5" text-anchor="middle" class="machine">线</text>
+</g>
+<g data-kind="maker" data-node="11" data-x="6" data-y="5" data-id="50" data-dir="1" data-shape="0" data-recipe="51"><title>线｜制造机｜定位格 (6, 5)｜10 件/分钟</title><rect x="198" y="232" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#8b4672"/><circle cx="201.0" cy="250.25" r="2" fill="#8b4672"/><text x="221.0" y="245.5" text-anchor="middle" class="machine">线</text>
+</g>
+<g data-kind="maker" data-node="12" data-x="3" data-y="4" data-id="50" data-dir="1" data-shape="0" data-recipe="50"><title>木纤维｜制造机｜定位格 (3, 4)｜20 件/分钟</title><rect x="123" y="207" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#375d99"/><circle cx="126.0" cy="225.25" r="2" fill="#375d99"/><text x="146.0" y="220.5" text-anchor="middle" class="machine">木纤维</text>
+</g>
+<g data-kind="maker" data-node="13" data-x="3" data-y="5" data-id="50" data-dir="1" data-shape="0" data-recipe="50"><title>木纤维｜制造机｜定位格 (3, 5)｜20 件/分钟</title><rect x="123" y="232" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#375d99"/><circle cx="126.0" cy="250.25" r="2" fill="#375d99"/><text x="146.0" y="245.5" text-anchor="middle" class="machine">木纤维</text>
+</g>
+<g data-kind="inlet" data-node="14" data-x="0" data-y="4" data-id="4" data-dir="2" data-shape="2" data-recipe="-1"><title>进3 原木｜自动进货箱｜定位格 (0, 4)｜40/3 件/分钟</title><rect x="48" y="207" width="46" height="21" rx="4" fill="#fff2d8" stroke="#187467"/><circle cx="51.0" cy="225.25" r="2" fill="#187467"/><text x="71.0" y="220.5" text-anchor="middle" class="machine">进3 原木</text>
+</g>
+<g data-kind="inlet" data-node="15" data-x="0" data-y="5" data-id="4" data-dir="2" data-shape="2" data-recipe="-1"><title>进4 原木｜自动进货箱｜定位格 (0, 5)｜40/3 件/分钟</title><rect x="48" y="232" width="46" height="21" rx="4" fill="#fff2d8" stroke="#187467"/><circle cx="51.0" cy="250.25" r="2" fill="#187467"/><text x="71.0" y="245.5" text-anchor="middle" class="machine">进4 原木</text>
+</g>
+<text x="420" y="117" class="section">物流与设备</text>
+<text x="420" y="144" class="legend">箭头　物流方向，生产设备朝右</text>
+<text x="420" y="165" class="legend">左下小点　建筑定位格</text>
+<text x="420" y="186" class="legend">罗马数字　传送带等级</text>
+<text x="420" y="207" class="legend">分 / 合　分流器 / 合并器</text>
+<text x="420" y="228" class="legend">入 / 出　地下带，虚线连接端点</text>
+<text x="420" y="249" class="legend">进 / 出　补货口 / 成品接出带</text>
+<path d="M420 276h18" stroke="#187467" stroke-width="3"/><text x="447" y="280" class="legend">原木</text>
+<path d="M420 298h18" stroke="#8c5231" stroke-width="3"/><text x="447" y="302" class="legend">布</text>
+<path d="M420 320h18" stroke="#375d99" stroke-width="3"/><text x="447" y="324" class="legend">木纤维</text>
+<path d="M420 342h18" stroke="#8b4672" stroke-width="3"/><text x="447" y="346" class="legend">线</text>
+<text x="46" y="292" class="section">电网 · 同一组坐标</text>
+<rect x="46" y="330" width="350" height="150" fill="#fffef9" stroke="#c4d0c6"/>
+<rect x="46" y="330" width="350" height="150" fill="url(#grid)"/>
+<text x="58.5" y="325" text-anchor="middle" class="tick">0</text>
+<text x="83.5" y="325" text-anchor="middle" class="tick">1</text>
+<text x="108.5" y="325" text-anchor="middle" class="tick">2</text>
+<text x="133.5" y="325" text-anchor="middle" class="tick">3</text>
+<text x="158.5" y="325" text-anchor="middle" class="tick">4</text>
+<text x="183.5" y="325" text-anchor="middle" class="tick">5</text>
+<text x="208.5" y="325" text-anchor="middle" class="tick">6</text>
+<text x="233.5" y="325" text-anchor="middle" class="tick">7</text>
+<text x="258.5" y="325" text-anchor="middle" class="tick">8</text>
+<text x="283.5" y="325" text-anchor="middle" class="tick">9</text>
+<text x="308.5" y="325" text-anchor="middle" class="tick">10</text>
+<text x="333.5" y="325" text-anchor="middle" class="tick">11</text>
+<text x="358.5" y="325" text-anchor="middle" class="tick">12</text>
+<text x="383.5" y="325" text-anchor="middle" class="tick">13</text>
+<text x="39" y="345.5" text-anchor="end" class="tick">0</text>
+<text x="39" y="370.5" text-anchor="end" class="tick">1</text>
+<text x="39" y="395.5" text-anchor="end" class="tick">2</text>
+<text x="39" y="420.5" text-anchor="end" class="tick">3</text>
+<text x="39" y="445.5" text-anchor="end" class="tick">4</text>
+<text x="39" y="470.5" text-anchor="end" class="tick">5</text>
+<rect x="298" y="332" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="198" y="357" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="198" y="382" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="123" y="357" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="123" y="382" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="298" y="407" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="198" y="432" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="198" y="457" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="123" y="432" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="123" y="457" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<path d="M133.5 367.5L158.5 367.5" stroke="#947234" stroke-width="2"/>
+<path d="M133.5 367.5L133.5 392.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="3" data-y="1" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="133.5" cy="367.5" r="2.5" fill="#947234"/>
+<path d="M133.5 392.5L133.5 417.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="3" data-y="2" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="133.5" cy="392.5" r="2.5" fill="#947234"/>
+<path d="M133.5 417.5L133.5 442.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="3" data-y="3" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="133.5" cy="417.5" r="2.5" fill="#947234"/>
+<path d="M133.5 442.5L158.5 442.5" stroke="#947234" stroke-width="2"/>
+<path d="M133.5 442.5L133.5 467.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="3" data-y="4" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="133.5" cy="442.5" r="2.5" fill="#947234"/>
+<circle class="wire" data-x="3" data-y="5" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="133.5" cy="467.5" r="2.5" fill="#947234"/>
+<path d="M158.5 367.5L183.5 367.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="4" data-y="1" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="158.5" cy="367.5" r="2.5" fill="#947234"/>
+<path d="M158.5 442.5L183.5 442.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="4" data-y="4" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="158.5" cy="442.5" r="2.5" fill="#947234"/>
+<path d="M183.5 367.5L208.5 367.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="5" data-y="1" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="183.5" cy="367.5" r="2.5" fill="#947234"/>
+<path d="M183.5 442.5L208.5 442.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="5" data-y="4" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="183.5" cy="442.5" r="2.5" fill="#947234"/>
+<path d="M208.5 342.5L233.5 342.5" stroke="#947234" stroke-width="2"/>
+<path d="M208.5 342.5L208.5 367.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="6" data-y="0" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="208.5" cy="342.5" r="2.5" fill="#947234"/>
+<path d="M208.5 367.5L208.5 392.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="6" data-y="1" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="208.5" cy="367.5" r="2.5" fill="#947234"/>
+<path d="M208.5 392.5L208.5 417.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="6" data-y="2" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="208.5" cy="392.5" r="2.5" fill="#947234"/>
+<path d="M208.5 417.5L233.5 417.5" stroke="#947234" stroke-width="2"/>
+<path d="M208.5 417.5L208.5 442.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="6" data-y="3" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="208.5" cy="417.5" r="2.5" fill="#947234"/>
+<path d="M208.5 442.5L208.5 467.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="6" data-y="4" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="208.5" cy="442.5" r="2.5" fill="#947234"/>
+<circle class="wire" data-x="6" data-y="5" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="208.5" cy="467.5" r="2.5" fill="#947234"/>
+<path d="M233.5 342.5L258.5 342.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="7" data-y="0" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="233.5" cy="342.5" r="2.5" fill="#947234"/>
+<path d="M233.5 417.5L258.5 417.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="7" data-y="3" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="233.5" cy="417.5" r="2.5" fill="#947234"/>
+<path d="M258.5 342.5L283.5 342.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="8" data-y="0" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="258.5" cy="342.5" r="2.5" fill="#947234"/>
+<path d="M258.5 417.5L283.5 417.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="8" data-y="3" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="258.5" cy="417.5" r="2.5" fill="#947234"/>
+<path d="M283.5 342.5L308.5 342.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="9" data-y="0" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="283.5" cy="342.5" r="2.5" fill="#947234"/>
+<path d="M283.5 417.5L308.5 417.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="9" data-y="3" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="283.5" cy="417.5" r="2.5" fill="#947234"/>
+<circle class="wire" data-x="10" data-y="0" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="308.5" cy="342.5" r="2.5" fill="#947234"/>
+<circle class="wire" data-x="10" data-y="3" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="308.5" cy="417.5" r="2.5" fill="#947234"/>
+<circle cx="133.5" cy="467.5" r="6" fill="#edba50" stroke="#77541c" stroke-width="2"/><text x="46" y="310" class="legend">电力接入 (3, 5) · 40 kW</text>
+</svg>
+</div></section>
+<section><h2>建材</h2><ul><li>木材 12</li><li>木板 20</li><li>木棒 40</li><li>石材 100</li><li>铁棒 4</li><li>铁锭 70</li><li>铜板 6</li><li>铜线 46</li><li>铜锭 50</li></ul></section><p>空线仿真在前 16 分钟产出 312 件，末 4 分钟平均 20 件/分钟。</p><footer>已离线检查。游戏内导入、放置与持续生产待实测。</footer></main></html>

@@ -1,0 +1,30 @@
+{
+  "green-crystal": {
+    "target": "绿色晶能", "machines": 2, "external": ["原木", "石头"],
+    "enabled_recipes": ["木材", "木棒", "石材", "木纤维", "线", "布", "初级工具", "绿色晶能"]
+  },
+  "green-crystal-200kw": {
+    "target": "绿色晶能", "machines": 2, "external": ["原木", "石头"], "power_limit_kw": 200,
+    "enabled_recipes": ["木材", "木棒", "石材", "木纤维", "线", "布", "初级工具", "绿色晶能"]
+  },
+  "cloth": {
+    "target": "布", "machines": 2, "external": ["原木"],
+    "enabled_recipes": ["木纤维", "线", "布"]
+  },
+  "basic-tools": {
+    "target": "初级工具", "machines": 2, "external": ["原木", "石头"],
+    "enabled_recipes": ["木材", "木棒", "石材", "初级工具"]
+  },
+  "reinforced-wood": {
+    "target": "加强木板", "machines": 2, "external": ["原木", "石头"],
+    "enabled_recipes": ["木材", "木板", "石材", "加强木板"]
+  },
+  "reinforced-iron": {
+    "target": "加固铁板", "machines": 2, "external": ["铁锭"],
+    "enabled_recipes": ["铁板", "铁棒", "螺丝", "加固铁板"]
+  },
+  "capsules": {
+    "target": "建造胶囊", "machines": 2, "external": ["原木", "石头", "螺丝", "钢板"],
+    "enabled_recipes": ["木材", "木棒", "石材", "木质框架", "钢筋混凝土", "建造胶囊"]
+  }
+}

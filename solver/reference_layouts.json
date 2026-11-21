@@ -1,0 +1,9171 @@
+[
+  {
+    "target": "绿色晶能",
+    "platform": "Steam Build 25121460",
+    "target_per_minute": "12",
+    "size": [
+      43,
+      20
+    ],
+    "profile": "图2手工布置起点",
+    "placements": [
+      {
+        "building": "inlet",
+        "x": 0,
+        "y": 9,
+        "width": 2,
+        "height": 1,
+        "anchor": [
+          0,
+          9
+        ],
+        "item": "原木",
+        "rate": "96",
+        "node": 0,
+        "direction": 2,
+        "recipe": null
+      },
+      {
+        "building": "maker",
+        "x": 5,
+        "y": 1,
+        "width": 2,
+        "height": 1,
+        "anchor": [
+          5,
+          1
+        ],
+        "item": "木纤维",
+        "rate": "30",
+        "node": 1,
+        "direction": 2,
+        "recipe": 50
+      },
+      {
+        "building": "maker",
+        "x": 5,
+        "y": 5,
+        "width": 2,
+        "height": 1,
+        "anchor": [
+          5,
+          5
+        ],
+        "item": "木纤维",
+        "rate": "30",
+        "node": 2,
+        "direction": 2,
+        "recipe": 50
+      },
+      {
+        "building": "maker",
+        "x": 5,
+        "y": 9,
+        "width": 2,
+        "height": 1,
+        "anchor": [
+          5,
+          9
+        ],
+        "item": "木纤维",
+        "rate": "24",
+        "node": 3,
+        "direction": 2,
+        "recipe": 50
+      },
+      {
+        "building": "maker",
+        "x": 5,
+        "y": 13,
+        "width": 2,
+        "height": 1,
+        "anchor": [
+          5,
+          13
+        ],
+        "item": "木纤维",
+        "rate": "30",
+        "node": 4,
+        "direction": 2,
+        "recipe": 50
+      },
+      {
+        "building": "maker",
+        "x": 5,
+        "y": 18,
+        "width": 2,
+        "height": 1,
+        "anchor": [
+          5,
+          18
+        ],
+        "item": "木纤维",
+        "rate": "30",
+        "node": 5,
+        "direction": 2,
+        "recipe": 50
+      },
+      {
+        "building": "maker",
+        "x": 13,
+        "y": 0,
+        "width": 2,
+        "height": 1,
+        "anchor": [
+          13,
+          0
+        ],
+        "item": "线",
+        "rate": "6",
+        "node": 6,
+        "direction": 2,
+        "recipe": 51
+      },
+      {
+        "building": "maker",
+        "x": 13,
+        "y": 2,
+        "width": 2,
+        "height": 1,
+        "anchor": [
+          13,
+          2
+        ],
+        "item": "线",
+        "rate": "10",
+        "node": 7,
+        "direction": 2,
+        "recipe": 51
+      },
+      {
+        "building": "maker",
+        "x": 13,
+        "y": 6,
+        "width": 2,
+        "height": 1,
+        "anchor": [
+          13,
+          6
+        ],
+        "item": "线",
+        "rate": "10",
+        "node": 8,
+        "direction": 2,
+        "recipe": 51
+      },
+      {
+        "building": "maker",
+        "x": 13,
+        "y": 8,
+        "width": 2,
+        "height": 1,
+        "anchor": [
+          13,
+          8
+        ],
+        "item": "线",
+        "rate": "10",
+        "node": 9,
+        "direction": 2,
+        "recipe": 51
+      },
+      {
+        "building": "maker",
+        "x": 17,
+        "y": 1,
+        "width": 2,
+        "height": 1,
+        "anchor": [
+          17,
+          1
+        ],
+        "item": "布",
+        "rate": "8",
+        "node": 10,
+        "direction": 2,
+        "recipe": 52
+      },
+      {
+        "building": "maker",
+        "x": 17,
+        "y": 7,
+        "width": 2,
+        "height": 1,
+        "anchor": [
+          17,
+          7
+        ],
+        "item": "布",
+        "rate": "10",
+        "node": 11,
+        "direction": 2,
+        "recipe": 52
+      },
+      {
+        "building": "exchanger",
+        "x": 22,
+        "y": 2,
+        "width": 2,
+        "height": 2,
+        "anchor": [
+          22,
+          3
+        ],
+        "item": "绿色晶能",
+        "rate": "6",
+        "node": 12,
+        "direction": 3,
+        "recipe": 101
+      },
+      {
+        "building": "maker",
+        "x": 13,
+        "y": 11,
+        "width": 2,
+        "height": 1,
+        "anchor": [
+          13,
+          11
+        ],
+        "item": "线",
+        "rate": "6",
+        "node": 13,
+        "direction": 2,
+        "recipe": 51
+      },
+      {
+        "building": "maker",
+        "x": 13,
+        "y": 13,
+        "width": 2,
+        "height": 1,
+        "anchor": [
+          13,
+          13
+        ],
+        "item": "线",
+        "rate": "10",
+        "node": 14,
+        "direction": 2,
+        "recipe": 51
+      },
+      {
+        "building": "maker",
+        "x": 13,
+        "y": 17,
+        "width": 2,
+        "height": 1,
+        "anchor": [
+          13,
+          17
+        ],
+        "item": "线",
+        "rate": "10",
+        "node": 15,
+        "direction": 2,
+        "recipe": 51
+      },
+      {
+        "building": "maker",
+        "x": 13,
+        "y": 19,
+        "width": 2,
+        "height": 1,
+        "anchor": [
+          13,
+          19
+        ],
+        "item": "线",
+        "rate": "10",
+        "node": 16,
+        "direction": 2,
+        "recipe": 51
+      },
+      {
+        "building": "maker",
+        "x": 17,
+        "y": 12,
+        "width": 2,
+        "height": 1,
+        "anchor": [
+          17,
+          12
+        ],
+        "item": "布",
+        "rate": "8",
+        "node": 17,
+        "direction": 2,
+        "recipe": 52
+      },
+      {
+        "building": "maker",
+        "x": 17,
+        "y": 18,
+        "width": 2,
+        "height": 1,
+        "anchor": [
+          17,
+          18
+        ],
+        "item": "布",
+        "rate": "10",
+        "node": 18,
+        "direction": 2,
+        "recipe": 52
+      },
+      {
+        "building": "exchanger",
+        "x": 22,
+        "y": 13,
+        "width": 2,
+        "height": 2,
+        "anchor": [
+          22,
+          14
+        ],
+        "item": "绿色晶能",
+        "rate": "6",
+        "node": 19,
+        "direction": 3,
+        "recipe": 101
+      },
+      {
+        "building": "inlet",
+        "x": 41,
+        "y": 9,
+        "width": 2,
+        "height": 1,
+        "anchor": [
+          41,
+          9
+        ],
+        "item": "原木",
+        "rate": "32",
+        "node": 20,
+        "direction": 1,
+        "recipe": null
+      },
+      {
+        "building": "maker",
+        "x": 37,
+        "y": 4,
+        "width": 2,
+        "height": 1,
+        "anchor": [
+          37,
+          4
+        ],
+        "item": "木材",
+        "rate": "16",
+        "node": 21,
+        "direction": 1,
+        "recipe": 1
+      },
+      {
+        "building": "maker",
+        "x": 34,
+        "y": 4,
+        "width": 2,
+        "height": 1,
+        "anchor": [
+          34,
+          4
+        ],
+        "item": "木棒",
+        "rate": "24",
+        "node": 22,
+        "direction": 1,
+        "recipe": 6
+      },
+      {
+        "building": "assembler",
+        "x": 27,
+        "y": 1,
+        "width": 3,
+        "height": 2,
+        "anchor": [
+          28,
+          2
+        ],
+        "item": "初级工具",
+        "rate": "6",
+        "node": 23,
+        "direction": 1,
+        "recipe": 60
+      },
+      {
+        "building": "assembler",
+        "x": 27,
+        "y": 6,
+        "width": 3,
+        "height": 2,
+        "anchor": [
+          28,
+          7
+        ],
+        "item": "初级工具",
+        "rate": "6",
+        "node": 24,
+        "direction": 1,
+        "recipe": 60
+      },
+      {
+        "building": "maker",
+        "x": 37,
+        "y": 15,
+        "width": 2,
+        "height": 1,
+        "anchor": [
+          37,
+          15
+        ],
+        "item": "木材",
+        "rate": "16",
+        "node": 25,
+        "direction": 1,
+        "recipe": 1
+      },
+      {
+        "building": "maker",
+        "x": 34,
+        "y": 15,
+        "width": 2,
+        "height": 1,
+        "anchor": [
+          34,
+          15
+        ],
+        "item": "木棒",
+        "rate": "24",
+        "node": 26,
+        "direction": 1,
+        "recipe": 6
+      },
+      {
+        "building": "assembler",
+        "x": 27,
+        "y": 12,
+        "width": 3,
+        "height": 2,
+        "anchor": [
+          28,
+          13
+        ],
+        "item": "初级工具",
+        "rate": "6",
+        "node": 27,
+        "direction": 1,
+        "recipe": 60
+      },
+      {
+        "building": "assembler",
+        "x": 27,
+        "y": 17,
+        "width": 3,
+        "height": 2,
+        "anchor": [
+          28,
+          18
+        ],
+        "item": "初级工具",
+        "rate": "6",
+        "node": 28,
+        "direction": 1,
+        "recipe": 60
+      },
+      {
+        "building": "inlet",
+        "x": 35,
+        "y": 12,
+        "width": 1,
+        "height": 2,
+        "anchor": [
+          35,
+          13
+        ],
+        "item": "石头",
+        "rate": "24",
+        "node": 29,
+        "direction": 3,
+        "recipe": null
+      },
+      {
+        "building": "maker",
+        "x": 34,
+        "y": 8,
+        "width": 2,
+        "height": 1,
+        "anchor": [
+          34,
+          8
+        ],
+        "item": "石材",
+        "rate": "12",
+        "node": 30,
+        "direction": 1,
+        "recipe": 9
+      },
+      {
+        "building": "maker",
+        "x": 35,
+        "y": 10,
+        "width": 2,
+        "height": 1,
+        "anchor": [
+          35,
+          10
+        ],
+        "item": "石材",
+        "rate": "12",
+        "node": 31,
+        "direction": 2,
+        "recipe": 9
+      }
+    ],
+    "transport": [
+      {
+        "position": [
+          2,
+          9
+        ],
+        "kind": "belt2",
+        "incoming": [
+          [
+            1,
+            9
+          ]
+        ],
+        "outgoing": [
+          [
+            3,
+            9
+          ]
+        ]
+      },
+      {
+        "position": [
+          3,
+          1
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            3,
+            2
+          ]
+        ],
+        "outgoing": [
+          [
+            4,
+            1
+          ]
+        ]
+      },
+      {
+        "position": [
+          3,
+          2
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            3,
+            3
+          ]
+        ],
+        "outgoing": [
+          [
+            3,
+            1
+          ]
+        ]
+      },
+      {
+        "position": [
+          3,
+          3
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            3,
+            4
+          ]
+        ],
+        "outgoing": [
+          [
+            3,
+            2
+          ]
+        ]
+      },
+      {
+        "position": [
+          3,
+          4
+        ],
+        "kind": "split",
+        "incoming": [
+          [
+            3,
+            5
+          ]
+        ],
+        "outgoing": [
+          [
+            4,
+            4
+          ],
+          [
+            3,
+            3
+          ]
+        ]
+      },
+      {
+        "position": [
+          3,
+          5
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            3,
+            6
+          ]
+        ],
+        "outgoing": [
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      {
+        "position": [
+          3,
+          6
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            3,
+            7
+          ]
+        ],
+        "outgoing": [
+          [
+            3,
+            5
+          ]
+        ]
+      },
+      {
+        "position": [
+          3,
+          7
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            3,
+            8
+          ]
+        ],
+        "outgoing": [
+          [
+            3,
+            6
+          ]
+        ]
+      },
+      {
+        "position": [
+          3,
+          8
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            3,
+            9
+          ]
+        ],
+        "outgoing": [
+          [
+            3,
+            7
+          ]
+        ]
+      },
+      {
+        "position": [
+          3,
+          9
+        ],
+        "kind": "split",
+        "incoming": [
+          [
+            2,
+            9
+          ]
+        ],
+        "outgoing": [
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "position": [
+          3,
+          10
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            3,
+            9
+          ]
+        ],
+        "outgoing": [
+          [
+            3,
+            11
+          ]
+        ]
+      },
+      {
+        "position": [
+          3,
+          11
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            3,
+            10
+          ]
+        ],
+        "outgoing": [
+          [
+            3,
+            12
+          ]
+        ]
+      },
+      {
+        "position": [
+          3,
+          12
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            3,
+            11
+          ]
+        ],
+        "outgoing": [
+          [
+            3,
+            13
+          ]
+        ]
+      },
+      {
+        "position": [
+          3,
+          13
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            3,
+            12
+          ]
+        ],
+        "outgoing": [
+          [
+            3,
+            14
+          ]
+        ]
+      },
+      {
+        "position": [
+          3,
+          14
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            3,
+            13
+          ]
+        ],
+        "outgoing": [
+          [
+            3,
+            15
+          ]
+        ]
+      },
+      {
+        "position": [
+          3,
+          15
+        ],
+        "kind": "split",
+        "incoming": [
+          [
+            3,
+            14
+          ]
+        ],
+        "outgoing": [
+          [
+            3,
+            16
+          ],
+          [
+            4,
+            15
+          ]
+        ]
+      },
+      {
+        "position": [
+          3,
+          16
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            3,
+            15
+          ]
+        ],
+        "outgoing": [
+          [
+            3,
+            17
+          ]
+        ]
+      },
+      {
+        "position": [
+          3,
+          17
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            3,
+            16
+          ]
+        ],
+        "outgoing": [
+          [
+            3,
+            18
+          ]
+        ]
+      },
+      {
+        "position": [
+          3,
+          18
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            3,
+            17
+          ]
+        ],
+        "outgoing": [
+          [
+            4,
+            18
+          ]
+        ]
+      },
+      {
+        "position": [
+          4,
+          1
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            3,
+            1
+          ]
+        ],
+        "outgoing": [
+          [
+            5,
+            1
+          ]
+        ]
+      },
+      {
+        "position": [
+          4,
+          4
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            3,
+            4
+          ]
+        ],
+        "outgoing": [
+          [
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "position": [
+          4,
+          5
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            4,
+            4
+          ]
+        ],
+        "outgoing": [
+          [
+            5,
+            5
+          ]
+        ]
+      },
+      {
+        "position": [
+          4,
+          9
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            3,
+            9
+          ]
+        ],
+        "outgoing": [
+          [
+            5,
+            9
+          ]
+        ]
+      },
+      {
+        "position": [
+          4,
+          13
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            4,
+            14
+          ]
+        ],
+        "outgoing": [
+          [
+            5,
+            13
+          ]
+        ]
+      },
+      {
+        "position": [
+          4,
+          14
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            4,
+            15
+          ]
+        ],
+        "outgoing": [
+          [
+            4,
+            13
+          ]
+        ]
+      },
+      {
+        "position": [
+          4,
+          15
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            3,
+            15
+          ]
+        ],
+        "outgoing": [
+          [
+            4,
+            14
+          ]
+        ]
+      },
+      {
+        "position": [
+          4,
+          18
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            3,
+            18
+          ]
+        ],
+        "outgoing": [
+          [
+            5,
+            18
+          ]
+        ]
+      },
+      {
+        "position": [
+          7,
+          1
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            6,
+            1
+          ]
+        ],
+        "outgoing": [
+          [
+            8,
+            1
+          ]
+        ]
+      },
+      {
+        "position": [
+          7,
+          5
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            6,
+            5
+          ]
+        ],
+        "outgoing": [
+          [
+            8,
+            5
+          ]
+        ]
+      },
+      {
+        "position": [
+          7,
+          9
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            6,
+            9
+          ]
+        ],
+        "outgoing": [
+          [
+            8,
+            9
+          ]
+        ]
+      },
+      {
+        "position": [
+          7,
+          13
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            6,
+            13
+          ]
+        ],
+        "outgoing": [
+          [
+            8,
+            13
+          ]
+        ]
+      },
+      {
+        "position": [
+          7,
+          18
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            6,
+            18
+          ]
+        ],
+        "outgoing": [
+          [
+            8,
+            18
+          ]
+        ]
+      },
+      {
+        "position": [
+          8,
+          1
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            7,
+            1
+          ]
+        ],
+        "outgoing": [
+          [
+            9,
+            1
+          ]
+        ]
+      },
+      {
+        "position": [
+          8,
+          4
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            8,
+            5
+          ]
+        ],
+        "outgoing": [
+          [
+            9,
+            4
+          ]
+        ]
+      },
+      {
+        "position": [
+          8,
+          5
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            7,
+            5
+          ]
+        ],
+        "outgoing": [
+          [
+            8,
+            4
+          ]
+        ]
+      },
+      {
+        "position": [
+          8,
+          9
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            7,
+            9
+          ]
+        ],
+        "outgoing": [
+          [
+            9,
+            9
+          ]
+        ]
+      },
+      {
+        "position": [
+          8,
+          13
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            7,
+            13
+          ]
+        ],
+        "outgoing": [
+          [
+            8,
+            14
+          ]
+        ]
+      },
+      {
+        "position": [
+          8,
+          14
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            8,
+            13
+          ]
+        ],
+        "outgoing": [
+          [
+            8,
+            15
+          ]
+        ]
+      },
+      {
+        "position": [
+          8,
+          15
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            8,
+            14
+          ]
+        ],
+        "outgoing": [
+          [
+            9,
+            15
+          ]
+        ]
+      },
+      {
+        "position": [
+          8,
+          18
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            7,
+            18
+          ]
+        ],
+        "outgoing": [
+          [
+            9,
+            18
+          ]
+        ]
+      },
+      {
+        "position": [
+          9,
+          1
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            8,
+            1
+          ]
+        ],
+        "outgoing": [
+          [
+            9,
+            2
+          ]
+        ]
+      },
+      {
+        "position": [
+          9,
+          2
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            9,
+            1
+          ]
+        ],
+        "outgoing": [
+          [
+            9,
+            3
+          ]
+        ]
+      },
+      {
+        "position": [
+          9,
+          3
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            9,
+            2
+          ]
+        ],
+        "outgoing": [
+          [
+            9,
+            4
+          ]
+        ]
+      },
+      {
+        "position": [
+          9,
+          4
+        ],
+        "kind": "merge",
+        "incoming": [
+          [
+            9,
+            3
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            9,
+            5
+          ]
+        ],
+        "outgoing": [
+          [
+            10,
+            4
+          ]
+        ]
+      },
+      {
+        "position": [
+          9,
+          5
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            9,
+            6
+          ]
+        ],
+        "outgoing": [
+          [
+            9,
+            4
+          ]
+        ]
+      },
+      {
+        "position": [
+          9,
+          6
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            9,
+            7
+          ]
+        ],
+        "outgoing": [
+          [
+            9,
+            5
+          ]
+        ]
+      },
+      {
+        "position": [
+          9,
+          7
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            9,
+            8
+          ]
+        ],
+        "outgoing": [
+          [
+            9,
+            6
+          ]
+        ]
+      },
+      {
+        "position": [
+          9,
+          8
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            9,
+            9
+          ]
+        ],
+        "outgoing": [
+          [
+            9,
+            7
+          ]
+        ]
+      },
+      {
+        "position": [
+          9,
+          9
+        ],
+        "kind": "split",
+        "incoming": [
+          [
+            8,
+            9
+          ]
+        ],
+        "outgoing": [
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            8
+          ]
+        ]
+      },
+      {
+        "position": [
+          9,
+          10
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            9,
+            9
+          ]
+        ],
+        "outgoing": [
+          [
+            9,
+            11
+          ]
+        ]
+      },
+      {
+        "position": [
+          9,
+          11
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            9,
+            10
+          ]
+        ],
+        "outgoing": [
+          [
+            9,
+            12
+          ]
+        ]
+      },
+      {
+        "position": [
+          9,
+          12
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            9,
+            11
+          ]
+        ],
+        "outgoing": [
+          [
+            9,
+            13
+          ]
+        ]
+      },
+      {
+        "position": [
+          9,
+          13
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            9,
+            12
+          ]
+        ],
+        "outgoing": [
+          [
+            9,
+            14
+          ]
+        ]
+      },
+      {
+        "position": [
+          9,
+          14
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            9,
+            13
+          ]
+        ],
+        "outgoing": [
+          [
+            9,
+            15
+          ]
+        ]
+      },
+      {
+        "position": [
+          9,
+          15
+        ],
+        "kind": "merge",
+        "incoming": [
+          [
+            9,
+            14
+          ],
+          [
+            8,
+            15
+          ],
+          [
+            9,
+            16
+          ]
+        ],
+        "outgoing": [
+          [
+            10,
+            15
+          ]
+        ]
+      },
+      {
+        "position": [
+          9,
+          16
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            9,
+            17
+          ]
+        ],
+        "outgoing": [
+          [
+            9,
+            15
+          ]
+        ]
+      },
+      {
+        "position": [
+          9,
+          17
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            9,
+            18
+          ]
+        ],
+        "outgoing": [
+          [
+            9,
+            16
+          ]
+        ]
+      },
+      {
+        "position": [
+          9,
+          18
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            8,
+            18
+          ]
+        ],
+        "outgoing": [
+          [
+            9,
+            17
+          ]
+        ]
+      },
+      {
+        "position": [
+          10,
+          4
+        ],
+        "kind": "belt2",
+        "incoming": [
+          [
+            9,
+            4
+          ]
+        ],
+        "outgoing": [
+          [
+            11,
+            4
+          ]
+        ]
+      },
+      {
+        "position": [
+          10,
+          15
+        ],
+        "kind": "belt2",
+        "incoming": [
+          [
+            9,
+            15
+          ]
+        ],
+        "outgoing": [
+          [
+            11,
+            15
+          ]
+        ]
+      },
+      {
+        "position": [
+          11,
+          0
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            11,
+            1
+          ]
+        ],
+        "outgoing": [
+          [
+            12,
+            0
+          ]
+        ]
+      },
+      {
+        "position": [
+          11,
+          1
+        ],
+        "kind": "split",
+        "incoming": [
+          [
+            11,
+            2
+          ]
+        ],
+        "outgoing": [
+          [
+            12,
+            1
+          ],
+          [
+            11,
+            0
+          ]
+        ]
+      },
+      {
+        "position": [
+          11,
+          2
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            11,
+            3
+          ]
+        ],
+        "outgoing": [
+          [
+            11,
+            1
+          ]
+        ]
+      },
+      {
+        "position": [
+          11,
+          3
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            11,
+            4
+          ]
+        ],
+        "outgoing": [
+          [
+            11,
+            2
+          ]
+        ]
+      },
+      {
+        "position": [
+          11,
+          4
+        ],
+        "kind": "split",
+        "incoming": [
+          [
+            10,
+            4
+          ]
+        ],
+        "outgoing": [
+          [
+            11,
+            5
+          ],
+          [
+            11,
+            3
+          ]
+        ]
+      },
+      {
+        "position": [
+          11,
+          5
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            11,
+            4
+          ]
+        ],
+        "outgoing": [
+          [
+            11,
+            6
+          ]
+        ]
+      },
+      {
+        "position": [
+          11,
+          6
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            11,
+            5
+          ]
+        ],
+        "outgoing": [
+          [
+            11,
+            7
+          ]
+        ]
+      },
+      {
+        "position": [
+          11,
+          7
+        ],
+        "kind": "split",
+        "incoming": [
+          [
+            11,
+            6
+          ]
+        ],
+        "outgoing": [
+          [
+            11,
+            8
+          ],
+          [
+            12,
+            7
+          ]
+        ]
+      },
+      {
+        "position": [
+          11,
+          8
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            11,
+            7
+          ]
+        ],
+        "outgoing": [
+          [
+            12,
+            8
+          ]
+        ]
+      },
+      {
+        "position": [
+          11,
+          11
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            11,
+            12
+          ]
+        ],
+        "outgoing": [
+          [
+            12,
+            11
+          ]
+        ]
+      },
+      {
+        "position": [
+          11,
+          12
+        ],
+        "kind": "split",
+        "incoming": [
+          [
+            11,
+            13
+          ]
+        ],
+        "outgoing": [
+          [
+            12,
+            12
+          ],
+          [
+            11,
+            11
+          ]
+        ]
+      },
+      {
+        "position": [
+          11,
+          13
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            11,
+            14
+          ]
+        ],
+        "outgoing": [
+          [
+            11,
+            12
+          ]
+        ]
+      },
+      {
+        "position": [
+          11,
+          14
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            11,
+            15
+          ]
+        ],
+        "outgoing": [
+          [
+            11,
+            13
+          ]
+        ]
+      },
+      {
+        "position": [
+          11,
+          15
+        ],
+        "kind": "split",
+        "incoming": [
+          [
+            10,
+            15
+          ]
+        ],
+        "outgoing": [
+          [
+            11,
+            16
+          ],
+          [
+            11,
+            14
+          ]
+        ]
+      },
+      {
+        "position": [
+          11,
+          16
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            11,
+            15
+          ]
+        ],
+        "outgoing": [
+          [
+            11,
+            17
+          ]
+        ]
+      },
+      {
+        "position": [
+          11,
+          17
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            11,
+            16
+          ]
+        ],
+        "outgoing": [
+          [
+            11,
+            18
+          ]
+        ]
+      },
+      {
+        "position": [
+          11,
+          18
+        ],
+        "kind": "split",
+        "incoming": [
+          [
+            11,
+            17
+          ]
+        ],
+        "outgoing": [
+          [
+            11,
+            19
+          ],
+          [
+            12,
+            18
+          ]
+        ]
+      },
+      {
+        "position": [
+          11,
+          19
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            11,
+            18
+          ]
+        ],
+        "outgoing": [
+          [
+            12,
+            19
+          ]
+        ]
+      },
+      {
+        "position": [
+          12,
+          0
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            11,
+            0
+          ]
+        ],
+        "outgoing": [
+          [
+            13,
+            0
+          ]
+        ]
+      },
+      {
+        "position": [
+          12,
+          1
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            11,
+            1
+          ]
+        ],
+        "outgoing": [
+          [
+            12,
+            2
+          ]
+        ]
+      },
+      {
+        "position": [
+          12,
+          2
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            12,
+            1
+          ]
+        ],
+        "outgoing": [
+          [
+            13,
+            2
+          ]
+        ]
+      },
+      {
+        "position": [
+          12,
+          6
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            12,
+            7
+          ]
+        ],
+        "outgoing": [
+          [
+            13,
+            6
+          ]
+        ]
+      },
+      {
+        "position": [
+          12,
+          7
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            11,
+            7
+          ]
+        ],
+        "outgoing": [
+          [
+            12,
+            6
+          ]
+        ]
+      },
+      {
+        "position": [
+          12,
+          8
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            11,
+            8
+          ]
+        ],
+        "outgoing": [
+          [
+            13,
+            8
+          ]
+        ]
+      },
+      {
+        "position": [
+          12,
+          11
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            11,
+            11
+          ]
+        ],
+        "outgoing": [
+          [
+            13,
+            11
+          ]
+        ]
+      },
+      {
+        "position": [
+          12,
+          12
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            11,
+            12
+          ]
+        ],
+        "outgoing": [
+          [
+            12,
+            13
+          ]
+        ]
+      },
+      {
+        "position": [
+          12,
+          13
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            12,
+            12
+          ]
+        ],
+        "outgoing": [
+          [
+            13,
+            13
+          ]
+        ]
+      },
+      {
+        "position": [
+          12,
+          17
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            12,
+            18
+          ]
+        ],
+        "outgoing": [
+          [
+            13,
+            17
+          ]
+        ]
+      },
+      {
+        "position": [
+          12,
+          18
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            11,
+            18
+          ]
+        ],
+        "outgoing": [
+          [
+            12,
+            17
+          ]
+        ]
+      },
+      {
+        "position": [
+          12,
+          19
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            11,
+            19
+          ]
+        ],
+        "outgoing": [
+          [
+            13,
+            19
+          ]
+        ]
+      },
+      {
+        "position": [
+          15,
+          0
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            14,
+            0
+          ]
+        ],
+        "outgoing": [
+          [
+            15,
+            1
+          ]
+        ]
+      },
+      {
+        "position": [
+          15,
+          1
+        ],
+        "kind": "merge",
+        "incoming": [
+          [
+            15,
+            0
+          ],
+          [
+            15,
+            2
+          ]
+        ],
+        "outgoing": [
+          [
+            16,
+            1
+          ]
+        ]
+      },
+      {
+        "position": [
+          15,
+          2
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            14,
+            2
+          ]
+        ],
+        "outgoing": [
+          [
+            15,
+            1
+          ]
+        ]
+      },
+      {
+        "position": [
+          15,
+          6
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            14,
+            6
+          ]
+        ],
+        "outgoing": [
+          [
+            15,
+            7
+          ]
+        ]
+      },
+      {
+        "position": [
+          15,
+          7
+        ],
+        "kind": "merge",
+        "incoming": [
+          [
+            15,
+            6
+          ],
+          [
+            15,
+            8
+          ]
+        ],
+        "outgoing": [
+          [
+            16,
+            7
+          ]
+        ]
+      },
+      {
+        "position": [
+          15,
+          8
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            14,
+            8
+          ]
+        ],
+        "outgoing": [
+          [
+            15,
+            7
+          ]
+        ]
+      },
+      {
+        "position": [
+          15,
+          11
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            14,
+            11
+          ]
+        ],
+        "outgoing": [
+          [
+            15,
+            12
+          ]
+        ]
+      },
+      {
+        "position": [
+          15,
+          12
+        ],
+        "kind": "merge",
+        "incoming": [
+          [
+            15,
+            11
+          ],
+          [
+            15,
+            13
+          ]
+        ],
+        "outgoing": [
+          [
+            16,
+            12
+          ]
+        ]
+      },
+      {
+        "position": [
+          15,
+          13
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            14,
+            13
+          ]
+        ],
+        "outgoing": [
+          [
+            15,
+            12
+          ]
+        ]
+      },
+      {
+        "position": [
+          15,
+          17
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            14,
+            17
+          ]
+        ],
+        "outgoing": [
+          [
+            15,
+            18
+          ]
+        ]
+      },
+      {
+        "position": [
+          15,
+          18
+        ],
+        "kind": "merge",
+        "incoming": [
+          [
+            15,
+            17
+          ],
+          [
+            15,
+            19
+          ]
+        ],
+        "outgoing": [
+          [
+            16,
+            18
+          ]
+        ]
+      },
+      {
+        "position": [
+          15,
+          19
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            14,
+            19
+          ]
+        ],
+        "outgoing": [
+          [
+            15,
+            18
+          ]
+        ]
+      },
+      {
+        "position": [
+          16,
+          1
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            15,
+            1
+          ]
+        ],
+        "outgoing": [
+          [
+            17,
+            1
+          ]
+        ]
+      },
+      {
+        "position": [
+          16,
+          7
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            15,
+            7
+          ]
+        ],
+        "outgoing": [
+          [
+            17,
+            7
+          ]
+        ]
+      },
+      {
+        "position": [
+          16,
+          12
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            15,
+            12
+          ]
+        ],
+        "outgoing": [
+          [
+            17,
+            12
+          ]
+        ]
+      },
+      {
+        "position": [
+          16,
+          18
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            15,
+            18
+          ]
+        ],
+        "outgoing": [
+          [
+            17,
+            18
+          ]
+        ]
+      },
+      {
+        "position": [
+          19,
+          1
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            18,
+            1
+          ]
+        ],
+        "outgoing": [
+          [
+            20,
+            1
+          ]
+        ]
+      },
+      {
+        "position": [
+          19,
+          7
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            18,
+            7
+          ]
+        ],
+        "outgoing": [
+          [
+            20,
+            7
+          ]
+        ]
+      },
+      {
+        "position": [
+          19,
+          12
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            18,
+            12
+          ]
+        ],
+        "outgoing": [
+          [
+            20,
+            12
+          ]
+        ]
+      },
+      {
+        "position": [
+          19,
+          18
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            18,
+            18
+          ]
+        ],
+        "outgoing": [
+          [
+            20,
+            18
+          ]
+        ]
+      },
+      {
+        "position": [
+          20,
+          1
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            19,
+            1
+          ]
+        ],
+        "outgoing": [
+          [
+            20,
+            2
+          ]
+        ]
+      },
+      {
+        "position": [
+          20,
+          2
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            20,
+            1
+          ]
+        ],
+        "outgoing": [
+          [
+            20,
+            3
+          ]
+        ]
+      },
+      {
+        "position": [
+          20,
+          3
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            20,
+            2
+          ]
+        ],
+        "outgoing": [
+          [
+            20,
+            4
+          ]
+        ]
+      },
+      {
+        "position": [
+          20,
+          4
+        ],
+        "kind": "merge",
+        "incoming": [
+          [
+            20,
+            3
+          ],
+          [
+            20,
+            5
+          ]
+        ],
+        "outgoing": [
+          [
+            21,
+            4
+          ]
+        ]
+      },
+      {
+        "position": [
+          20,
+          5
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            20,
+            6
+          ]
+        ],
+        "outgoing": [
+          [
+            20,
+            4
+          ]
+        ]
+      },
+      {
+        "position": [
+          20,
+          6
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            20,
+            7
+          ]
+        ],
+        "outgoing": [
+          [
+            20,
+            5
+          ]
+        ]
+      },
+      {
+        "position": [
+          20,
+          7
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            19,
+            7
+          ]
+        ],
+        "outgoing": [
+          [
+            20,
+            6
+          ]
+        ]
+      },
+      {
+        "position": [
+          20,
+          12
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            19,
+            12
+          ]
+        ],
+        "outgoing": [
+          [
+            20,
+            13
+          ]
+        ]
+      },
+      {
+        "position": [
+          20,
+          13
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            20,
+            12
+          ]
+        ],
+        "outgoing": [
+          [
+            20,
+            14
+          ]
+        ]
+      },
+      {
+        "position": [
+          20,
+          14
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            20,
+            13
+          ]
+        ],
+        "outgoing": [
+          [
+            20,
+            15
+          ]
+        ]
+      },
+      {
+        "position": [
+          20,
+          15
+        ],
+        "kind": "merge",
+        "incoming": [
+          [
+            20,
+            14
+          ],
+          [
+            20,
+            16
+          ]
+        ],
+        "outgoing": [
+          [
+            21,
+            15
+          ]
+        ]
+      },
+      {
+        "position": [
+          20,
+          16
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            20,
+            17
+          ]
+        ],
+        "outgoing": [
+          [
+            20,
+            15
+          ]
+        ]
+      },
+      {
+        "position": [
+          20,
+          17
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            20,
+            18
+          ]
+        ],
+        "outgoing": [
+          [
+            20,
+            16
+          ]
+        ]
+      },
+      {
+        "position": [
+          20,
+          18
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            19,
+            18
+          ]
+        ],
+        "outgoing": [
+          [
+            20,
+            17
+          ]
+        ]
+      },
+      {
+        "position": [
+          21,
+          4
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            20,
+            4
+          ]
+        ],
+        "outgoing": [
+          [
+            22,
+            4
+          ]
+        ]
+      },
+      {
+        "position": [
+          21,
+          15
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            20,
+            15
+          ]
+        ],
+        "outgoing": [
+          [
+            22,
+            15
+          ]
+        ]
+      },
+      {
+        "position": [
+          22,
+          4
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            21,
+            4
+          ]
+        ],
+        "outgoing": [
+          [
+            22,
+            3
+          ]
+        ]
+      },
+      {
+        "position": [
+          22,
+          15
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            21,
+            15
+          ]
+        ],
+        "outgoing": [
+          [
+            22,
+            14
+          ]
+        ]
+      },
+      {
+        "position": [
+          23,
+          4
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            24,
+            4
+          ]
+        ],
+        "outgoing": [
+          [
+            23,
+            3
+          ]
+        ]
+      },
+      {
+        "position": [
+          23,
+          15
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            24,
+            15
+          ]
+        ],
+        "outgoing": [
+          [
+            23,
+            14
+          ]
+        ]
+      },
+      {
+        "position": [
+          24,
+          4
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            25,
+            4
+          ]
+        ],
+        "outgoing": [
+          [
+            23,
+            4
+          ]
+        ]
+      },
+      {
+        "position": [
+          24,
+          15
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            25,
+            15
+          ]
+        ],
+        "outgoing": [
+          [
+            23,
+            15
+          ]
+        ]
+      },
+      {
+        "position": [
+          25,
+          2
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            26,
+            2
+          ]
+        ],
+        "outgoing": [
+          [
+            25,
+            3
+          ]
+        ]
+      },
+      {
+        "position": [
+          25,
+          3
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            25,
+            2
+          ]
+        ],
+        "outgoing": [
+          [
+            25,
+            4
+          ]
+        ]
+      },
+      {
+        "position": [
+          25,
+          4
+        ],
+        "kind": "merge",
+        "incoming": [
+          [
+            25,
+            3
+          ],
+          [
+            25,
+            5
+          ]
+        ],
+        "outgoing": [
+          [
+            24,
+            4
+          ]
+        ]
+      },
+      {
+        "position": [
+          25,
+          5
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            25,
+            6
+          ]
+        ],
+        "outgoing": [
+          [
+            25,
+            4
+          ]
+        ]
+      },
+      {
+        "position": [
+          25,
+          6
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            25,
+            7
+          ]
+        ],
+        "outgoing": [
+          [
+            25,
+            5
+          ]
+        ]
+      },
+      {
+        "position": [
+          25,
+          7
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            26,
+            7
+          ]
+        ],
+        "outgoing": [
+          [
+            25,
+            6
+          ]
+        ]
+      },
+      {
+        "position": [
+          25,
+          13
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            26,
+            13
+          ]
+        ],
+        "outgoing": [
+          [
+            25,
+            14
+          ]
+        ]
+      },
+      {
+        "position": [
+          25,
+          14
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            25,
+            13
+          ]
+        ],
+        "outgoing": [
+          [
+            25,
+            15
+          ]
+        ]
+      },
+      {
+        "position": [
+          25,
+          15
+        ],
+        "kind": "merge",
+        "incoming": [
+          [
+            25,
+            14
+          ],
+          [
+            25,
+            16
+          ]
+        ],
+        "outgoing": [
+          [
+            24,
+            15
+          ]
+        ]
+      },
+      {
+        "position": [
+          25,
+          16
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            25,
+            17
+          ]
+        ],
+        "outgoing": [
+          [
+            25,
+            15
+          ]
+        ]
+      },
+      {
+        "position": [
+          25,
+          17
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            25,
+            18
+          ]
+        ],
+        "outgoing": [
+          [
+            25,
+            16
+          ]
+        ]
+      },
+      {
+        "position": [
+          25,
+          18
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            26,
+            18
+          ]
+        ],
+        "outgoing": [
+          [
+            25,
+            17
+          ]
+        ]
+      },
+      {
+        "position": [
+          26,
+          2
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            27,
+            2
+          ]
+        ],
+        "outgoing": [
+          [
+            25,
+            2
+          ]
+        ]
+      },
+      {
+        "position": [
+          26,
+          7
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            27,
+            7
+          ]
+        ],
+        "outgoing": [
+          [
+            25,
+            7
+          ]
+        ]
+      },
+      {
+        "position": [
+          26,
+          13
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            27,
+            13
+          ]
+        ],
+        "outgoing": [
+          [
+            25,
+            13
+          ]
+        ]
+      },
+      {
+        "position": [
+          26,
+          18
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            27,
+            18
+          ]
+        ],
+        "outgoing": [
+          [
+            25,
+            18
+          ]
+        ]
+      },
+      {
+        "position": [
+          30,
+          1
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            31,
+            1
+          ]
+        ],
+        "outgoing": [
+          [
+            29,
+            1
+          ]
+        ]
+      },
+      {
+        "position": [
+          30,
+          2
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            31,
+            2
+          ]
+        ],
+        "outgoing": [
+          [
+            29,
+            2
+          ]
+        ]
+      },
+      {
+        "position": [
+          30,
+          6
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            31,
+            6
+          ]
+        ],
+        "outgoing": [
+          [
+            29,
+            6
+          ]
+        ]
+      },
+      {
+        "position": [
+          30,
+          7
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            31,
+            7
+          ]
+        ],
+        "outgoing": [
+          [
+            29,
+            7
+          ]
+        ]
+      },
+      {
+        "position": [
+          30,
+          12
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            31,
+            12
+          ]
+        ],
+        "outgoing": [
+          [
+            29,
+            12
+          ]
+        ]
+      },
+      {
+        "position": [
+          30,
+          13
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            30,
+            14
+          ]
+        ],
+        "outgoing": [
+          [
+            29,
+            13
+          ]
+        ]
+      },
+      {
+        "position": [
+          30,
+          14
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            30,
+            15
+          ]
+        ],
+        "outgoing": [
+          [
+            30,
+            13
+          ]
+        ]
+      },
+      {
+        "position": [
+          30,
+          15
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            30,
+            16
+          ]
+        ],
+        "outgoing": [
+          [
+            30,
+            14
+          ]
+        ]
+      },
+      {
+        "position": [
+          30,
+          16
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            31,
+            16
+          ]
+        ],
+        "outgoing": [
+          [
+            30,
+            15
+          ]
+        ]
+      },
+      {
+        "position": [
+          30,
+          17
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            31,
+            17
+          ]
+        ],
+        "outgoing": [
+          [
+            29,
+            17
+          ]
+        ]
+      },
+      {
+        "position": [
+          30,
+          18
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            31,
+            18
+          ]
+        ],
+        "outgoing": [
+          [
+            29,
+            18
+          ]
+        ]
+      },
+      {
+        "position": [
+          31,
+          1
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            32,
+            1
+          ]
+        ],
+        "outgoing": [
+          [
+            30,
+            1
+          ]
+        ]
+      },
+      {
+        "position": [
+          31,
+          2
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            31,
+            3
+          ]
+        ],
+        "outgoing": [
+          [
+            30,
+            2
+          ]
+        ]
+      },
+      {
+        "position": [
+          31,
+          3
+        ],
+        "kind": "tunnel1",
+        "incoming": [
+          [
+            31,
+            8
+          ]
+        ],
+        "outgoing": [
+          [
+            31,
+            2
+          ]
+        ]
+      },
+      {
+        "position": [
+          31,
+          6
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            32,
+            6
+          ]
+        ],
+        "outgoing": [
+          [
+            30,
+            6
+          ]
+        ]
+      },
+      {
+        "position": [
+          31,
+          7
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            32,
+            7
+          ]
+        ],
+        "outgoing": [
+          [
+            30,
+            7
+          ]
+        ]
+      },
+      {
+        "position": [
+          31,
+          8
+        ],
+        "kind": "tunnel1",
+        "incoming": [
+          [
+            31,
+            9
+          ]
+        ],
+        "outgoing": [
+          [
+            31,
+            3
+          ]
+        ]
+      },
+      {
+        "position": [
+          31,
+          9
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            32,
+            9
+          ]
+        ],
+        "outgoing": [
+          [
+            31,
+            8
+          ]
+        ]
+      },
+      {
+        "position": [
+          31,
+          12
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            32,
+            12
+          ]
+        ],
+        "outgoing": [
+          [
+            30,
+            12
+          ]
+        ]
+      },
+      {
+        "position": [
+          31,
+          16
+        ],
+        "kind": "tunnel1",
+        "incoming": [
+          [
+            33,
+            16
+          ]
+        ],
+        "outgoing": [
+          [
+            30,
+            16
+          ]
+        ]
+      },
+      {
+        "position": [
+          31,
+          17
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            32,
+            17
+          ]
+        ],
+        "outgoing": [
+          [
+            30,
+            17
+          ]
+        ]
+      },
+      {
+        "position": [
+          31,
+          18
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            32,
+            18
+          ]
+        ],
+        "outgoing": [
+          [
+            30,
+            18
+          ]
+        ]
+      },
+      {
+        "position": [
+          32,
+          1
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            32,
+            2
+          ]
+        ],
+        "outgoing": [
+          [
+            31,
+            1
+          ]
+        ]
+      },
+      {
+        "position": [
+          32,
+          2
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            32,
+            3
+          ]
+        ],
+        "outgoing": [
+          [
+            32,
+            1
+          ]
+        ]
+      },
+      {
+        "position": [
+          32,
+          3
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            32,
+            4
+          ]
+        ],
+        "outgoing": [
+          [
+            32,
+            2
+          ]
+        ]
+      },
+      {
+        "position": [
+          32,
+          4
+        ],
+        "kind": "split",
+        "incoming": [
+          [
+            33,
+            4
+          ]
+        ],
+        "outgoing": [
+          [
+            32,
+            5
+          ],
+          [
+            32,
+            3
+          ]
+        ]
+      },
+      {
+        "position": [
+          32,
+          5
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            32,
+            4
+          ]
+        ],
+        "outgoing": [
+          [
+            32,
+            6
+          ]
+        ]
+      },
+      {
+        "position": [
+          32,
+          6
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            32,
+            5
+          ]
+        ],
+        "outgoing": [
+          [
+            31,
+            6
+          ]
+        ]
+      },
+      {
+        "position": [
+          32,
+          7
+        ],
+        "kind": "split",
+        "incoming": [
+          [
+            33,
+            7
+          ]
+        ],
+        "outgoing": [
+          [
+            32,
+            8
+          ],
+          [
+            31,
+            7
+          ]
+        ]
+      },
+      {
+        "position": [
+          32,
+          8
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            32,
+            7
+          ]
+        ],
+        "outgoing": [
+          [
+            32,
+            9
+          ]
+        ]
+      },
+      {
+        "position": [
+          32,
+          9
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            32,
+            8
+          ]
+        ],
+        "outgoing": [
+          [
+            31,
+            9
+          ]
+        ]
+      },
+      {
+        "position": [
+          32,
+          12
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            32,
+            13
+          ]
+        ],
+        "outgoing": [
+          [
+            31,
+            12
+          ]
+        ]
+      },
+      {
+        "position": [
+          32,
+          13
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            32,
+            14
+          ]
+        ],
+        "outgoing": [
+          [
+            32,
+            12
+          ]
+        ]
+      },
+      {
+        "position": [
+          32,
+          14
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            32,
+            15
+          ]
+        ],
+        "outgoing": [
+          [
+            32,
+            13
+          ]
+        ]
+      },
+      {
+        "position": [
+          32,
+          15
+        ],
+        "kind": "split",
+        "incoming": [
+          [
+            33,
+            15
+          ]
+        ],
+        "outgoing": [
+          [
+            32,
+            16
+          ],
+          [
+            32,
+            14
+          ]
+        ]
+      },
+      {
+        "position": [
+          32,
+          16
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            32,
+            15
+          ]
+        ],
+        "outgoing": [
+          [
+            32,
+            17
+          ]
+        ]
+      },
+      {
+        "position": [
+          32,
+          17
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            32,
+            16
+          ]
+        ],
+        "outgoing": [
+          [
+            31,
+            17
+          ]
+        ]
+      },
+      {
+        "position": [
+          32,
+          18
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            33,
+            18
+          ]
+        ],
+        "outgoing": [
+          [
+            31,
+            18
+          ]
+        ]
+      },
+      {
+        "position": [
+          33,
+          4
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            34,
+            4
+          ]
+        ],
+        "outgoing": [
+          [
+            32,
+            4
+          ]
+        ]
+      },
+      {
+        "position": [
+          33,
+          7
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            33,
+            8
+          ]
+        ],
+        "outgoing": [
+          [
+            32,
+            7
+          ]
+        ]
+      },
+      {
+        "position": [
+          33,
+          8
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            34,
+            8
+          ]
+        ],
+        "outgoing": [
+          [
+            33,
+            7
+          ]
+        ]
+      },
+      {
+        "position": [
+          33,
+          9
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            33,
+            10
+          ]
+        ],
+        "outgoing": [
+          [
+            34,
+            9
+          ]
+        ]
+      },
+      {
+        "position": [
+          33,
+          10
+        ],
+        "kind": "split",
+        "incoming": [
+          [
+            33,
+            11
+          ]
+        ],
+        "outgoing": [
+          [
+            34,
+            10
+          ],
+          [
+            33,
+            9
+          ]
+        ]
+      },
+      {
+        "position": [
+          33,
+          11
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            34,
+            11
+          ]
+        ],
+        "outgoing": [
+          [
+            33,
+            10
+          ]
+        ]
+      },
+      {
+        "position": [
+          33,
+          15
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            34,
+            15
+          ]
+        ],
+        "outgoing": [
+          [
+            32,
+            15
+          ]
+        ]
+      },
+      {
+        "position": [
+          33,
+          16
+        ],
+        "kind": "tunnel1",
+        "incoming": [
+          [
+            34,
+            16
+          ]
+        ],
+        "outgoing": [
+          [
+            31,
+            16
+          ]
+        ]
+      },
+      {
+        "position": [
+          33,
+          18
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            34,
+            18
+          ]
+        ],
+        "outgoing": [
+          [
+            32,
+            18
+          ]
+        ]
+      },
+      {
+        "position": [
+          34,
+          9
+        ],
+        "kind": "tunnel1",
+        "incoming": [
+          [
+            33,
+            9
+          ]
+        ],
+        "outgoing": [
+          [
+            37,
+            9
+          ]
+        ]
+      },
+      {
+        "position": [
+          34,
+          10
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            33,
+            10
+          ]
+        ],
+        "outgoing": [
+          [
+            35,
+            10
+          ]
+        ]
+      },
+      {
+        "position": [
+          34,
+          11
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            35,
+            11
+          ]
+        ],
+        "outgoing": [
+          [
+            33,
+            11
+          ]
+        ]
+      },
+      {
+        "position": [
+          34,
+          16
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            35,
+            16
+          ]
+        ],
+        "outgoing": [
+          [
+            33,
+            16
+          ]
+        ]
+      },
+      {
+        "position": [
+          34,
+          18
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            35,
+            18
+          ]
+        ],
+        "outgoing": [
+          [
+            33,
+            18
+          ]
+        ]
+      },
+      {
+        "position": [
+          35,
+          11
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            35,
+            12
+          ]
+        ],
+        "outgoing": [
+          [
+            34,
+            11
+          ]
+        ]
+      },
+      {
+        "position": [
+          35,
+          16
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            36,
+            16
+          ]
+        ],
+        "outgoing": [
+          [
+            34,
+            16
+          ]
+        ]
+      },
+      {
+        "position": [
+          35,
+          18
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            36,
+            18
+          ]
+        ],
+        "outgoing": [
+          [
+            34,
+            18
+          ]
+        ]
+      },
+      {
+        "position": [
+          36,
+          4
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            37,
+            4
+          ]
+        ],
+        "outgoing": [
+          [
+            35,
+            4
+          ]
+        ]
+      },
+      {
+        "position": [
+          36,
+          8
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            37,
+            8
+          ]
+        ],
+        "outgoing": [
+          [
+            35,
+            8
+          ]
+        ]
+      },
+      {
+        "position": [
+          36,
+          15
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            37,
+            15
+          ]
+        ],
+        "outgoing": [
+          [
+            35,
+            15
+          ]
+        ]
+      },
+      {
+        "position": [
+          36,
+          16
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            36,
+            17
+          ]
+        ],
+        "outgoing": [
+          [
+            35,
+            16
+          ]
+        ]
+      },
+      {
+        "position": [
+          36,
+          17
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            36,
+            18
+          ]
+        ],
+        "outgoing": [
+          [
+            36,
+            16
+          ]
+        ]
+      },
+      {
+        "position": [
+          36,
+          18
+        ],
+        "kind": "split",
+        "incoming": [
+          [
+            37,
+            18
+          ]
+        ],
+        "outgoing": [
+          [
+            35,
+            18
+          ],
+          [
+            36,
+            17
+          ]
+        ]
+      },
+      {
+        "position": [
+          37,
+          8
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            38,
+            8
+          ]
+        ],
+        "outgoing": [
+          [
+            36,
+            8
+          ]
+        ]
+      },
+      {
+        "position": [
+          37,
+          9
+        ],
+        "kind": "tunnel1",
+        "incoming": [
+          [
+            34,
+            9
+          ]
+        ],
+        "outgoing": [
+          [
+            38,
+            9
+          ]
+        ]
+      },
+      {
+        "position": [
+          37,
+          10
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            36,
+            10
+          ]
+        ],
+        "outgoing": [
+          [
+            37,
+            11
+          ]
+        ]
+      },
+      {
+        "position": [
+          37,
+          11
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            37,
+            10
+          ]
+        ],
+        "outgoing": [
+          [
+            37,
+            12
+          ]
+        ]
+      },
+      {
+        "position": [
+          37,
+          12
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            37,
+            11
+          ]
+        ],
+        "outgoing": [
+          [
+            37,
+            13
+          ]
+        ]
+      },
+      {
+        "position": [
+          37,
+          13
+        ],
+        "kind": "tunnel1",
+        "incoming": [
+          [
+            37,
+            12
+          ]
+        ],
+        "outgoing": [
+          [
+            37,
+            17
+          ]
+        ]
+      },
+      {
+        "position": [
+          37,
+          17
+        ],
+        "kind": "tunnel1",
+        "incoming": [
+          [
+            37,
+            13
+          ]
+        ],
+        "outgoing": [
+          [
+            37,
+            18
+          ]
+        ]
+      },
+      {
+        "position": [
+          37,
+          18
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            37,
+            17
+          ]
+        ],
+        "outgoing": [
+          [
+            36,
+            18
+          ]
+        ]
+      },
+      {
+        "position": [
+          38,
+          8
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            38,
+            9
+          ]
+        ],
+        "outgoing": [
+          [
+            37,
+            8
+          ]
+        ]
+      },
+      {
+        "position": [
+          38,
+          9
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            37,
+            9
+          ]
+        ],
+        "outgoing": [
+          [
+            38,
+            8
+          ]
+        ]
+      },
+      {
+        "position": [
+          39,
+          4
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            39,
+            5
+          ]
+        ],
+        "outgoing": [
+          [
+            38,
+            4
+          ]
+        ]
+      },
+      {
+        "position": [
+          39,
+          5
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            39,
+            6
+          ]
+        ],
+        "outgoing": [
+          [
+            39,
+            4
+          ]
+        ]
+      },
+      {
+        "position": [
+          39,
+          6
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            39,
+            7
+          ]
+        ],
+        "outgoing": [
+          [
+            39,
+            5
+          ]
+        ]
+      },
+      {
+        "position": [
+          39,
+          7
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            39,
+            8
+          ]
+        ],
+        "outgoing": [
+          [
+            39,
+            6
+          ]
+        ]
+      },
+      {
+        "position": [
+          39,
+          8
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            39,
+            9
+          ]
+        ],
+        "outgoing": [
+          [
+            39,
+            7
+          ]
+        ]
+      },
+      {
+        "position": [
+          39,
+          9
+        ],
+        "kind": "split",
+        "incoming": [
+          [
+            40,
+            9
+          ]
+        ],
+        "outgoing": [
+          [
+            39,
+            10
+          ],
+          [
+            39,
+            8
+          ]
+        ]
+      },
+      {
+        "position": [
+          39,
+          10
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            39,
+            9
+          ]
+        ],
+        "outgoing": [
+          [
+            39,
+            11
+          ]
+        ]
+      },
+      {
+        "position": [
+          39,
+          11
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            39,
+            10
+          ]
+        ],
+        "outgoing": [
+          [
+            39,
+            12
+          ]
+        ]
+      },
+      {
+        "position": [
+          39,
+          12
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            39,
+            11
+          ]
+        ],
+        "outgoing": [
+          [
+            39,
+            13
+          ]
+        ]
+      },
+      {
+        "position": [
+          39,
+          13
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            39,
+            12
+          ]
+        ],
+        "outgoing": [
+          [
+            39,
+            14
+          ]
+        ]
+      },
+      {
+        "position": [
+          39,
+          14
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            39,
+            13
+          ]
+        ],
+        "outgoing": [
+          [
+            39,
+            15
+          ]
+        ]
+      },
+      {
+        "position": [
+          39,
+          15
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            39,
+            14
+          ]
+        ],
+        "outgoing": [
+          [
+            38,
+            15
+          ]
+        ]
+      },
+      {
+        "position": [
+          40,
+          9
+        ],
+        "kind": "belt1",
+        "incoming": [
+          [
+            41,
+            9
+          ]
+        ],
+        "outgoing": [
+          [
+            39,
+            9
+          ]
+        ]
+      }
+    ],
+    "segments": [
+      {
+        "start": [
+          1,
+          9
+        ],
+        "end": [
+          2,
+          9
+        ],
+        "item": "原木",
+        "rate": "96",
+        "bus": 0
+      },
+      {
+        "start": [
+          3,
+          9
+        ],
+        "end": [
+          3,
+          10
+        ],
+        "item": "原木",
+        "rate": "40",
+        "bus": 0
+      },
+      {
+        "start": [
+          3,
+          9
+        ],
+        "end": [
+          4,
+          9
+        ],
+        "item": "原木",
+        "rate": "16",
+        "bus": 0
+      },
+      {
+        "start": [
+          3,
+          9
+        ],
+        "end": [
+          3,
+          8
+        ],
+        "item": "原木",
+        "rate": "40",
+        "bus": 0
+      },
+      {
+        "start": [
+          2,
+          9
+        ],
+        "end": [
+          3,
+          9
+        ],
+        "item": "原木",
+        "rate": "96",
+        "bus": 0
+      },
+      {
+        "start": [
+          3,
+          4
+        ],
+        "end": [
+          4,
+          4
+        ],
+        "item": "原木",
+        "rate": "20",
+        "bus": 0
+      },
+      {
+        "start": [
+          3,
+          4
+        ],
+        "end": [
+          3,
+          3
+        ],
+        "item": "原木",
+        "rate": "20",
+        "bus": 0
+      },
+      {
+        "start": [
+          3,
+          15
+        ],
+        "end": [
+          3,
+          16
+        ],
+        "item": "原木",
+        "rate": "20",
+        "bus": 0
+      },
+      {
+        "start": [
+          3,
+          15
+        ],
+        "end": [
+          4,
+          15
+        ],
+        "item": "原木",
+        "rate": "20",
+        "bus": 0
+      },
+      {
+        "start": [
+          3,
+          8
+        ],
+        "end": [
+          3,
+          7
+        ],
+        "item": "原木",
+        "rate": "40",
+        "bus": 0
+      },
+      {
+        "start": [
+          3,
+          7
+        ],
+        "end": [
+          3,
+          6
+        ],
+        "item": "原木",
+        "rate": "40",
+        "bus": 0
+      },
+      {
+        "start": [
+          3,
+          6
+        ],
+        "end": [
+          3,
+          5
+        ],
+        "item": "原木",
+        "rate": "40",
+        "bus": 0
+      },
+      {
+        "start": [
+          3,
+          5
+        ],
+        "end": [
+          3,
+          4
+        ],
+        "item": "原木",
+        "rate": "40",
+        "bus": 0
+      },
+      {
+        "start": [
+          3,
+          10
+        ],
+        "end": [
+          3,
+          11
+        ],
+        "item": "原木",
+        "rate": "40",
+        "bus": 0
+      },
+      {
+        "start": [
+          3,
+          11
+        ],
+        "end": [
+          3,
+          12
+        ],
+        "item": "原木",
+        "rate": "40",
+        "bus": 0
+      },
+      {
+        "start": [
+          3,
+          12
+        ],
+        "end": [
+          3,
+          13
+        ],
+        "item": "原木",
+        "rate": "40",
+        "bus": 0
+      },
+      {
+        "start": [
+          3,
+          13
+        ],
+        "end": [
+          3,
+          14
+        ],
+        "item": "原木",
+        "rate": "40",
+        "bus": 0
+      },
+      {
+        "start": [
+          3,
+          14
+        ],
+        "end": [
+          3,
+          15
+        ],
+        "item": "原木",
+        "rate": "40",
+        "bus": 0
+      },
+      {
+        "start": [
+          3,
+          3
+        ],
+        "end": [
+          3,
+          2
+        ],
+        "item": "原木",
+        "rate": "20",
+        "bus": 0
+      },
+      {
+        "start": [
+          3,
+          2
+        ],
+        "end": [
+          3,
+          1
+        ],
+        "item": "原木",
+        "rate": "20",
+        "bus": 0
+      },
+      {
+        "start": [
+          3,
+          1
+        ],
+        "end": [
+          4,
+          1
+        ],
+        "item": "原木",
+        "rate": "20",
+        "bus": 0
+      },
+      {
+        "start": [
+          4,
+          1
+        ],
+        "end": [
+          5,
+          1
+        ],
+        "item": "原木",
+        "rate": "20",
+        "bus": 0
+      },
+      {
+        "start": [
+          4,
+          4
+        ],
+        "end": [
+          4,
+          5
+        ],
+        "item": "原木",
+        "rate": "20",
+        "bus": 0
+      },
+      {
+        "start": [
+          4,
+          5
+        ],
+        "end": [
+          5,
+          5
+        ],
+        "item": "原木",
+        "rate": "20",
+        "bus": 0
+      },
+      {
+        "start": [
+          4,
+          9
+        ],
+        "end": [
+          5,
+          9
+        ],
+        "item": "原木",
+        "rate": "16",
+        "bus": 0
+      },
+      {
+        "start": [
+          4,
+          15
+        ],
+        "end": [
+          4,
+          14
+        ],
+        "item": "原木",
+        "rate": "20",
+        "bus": 0
+      },
+      {
+        "start": [
+          4,
+          14
+        ],
+        "end": [
+          4,
+          13
+        ],
+        "item": "原木",
+        "rate": "20",
+        "bus": 0
+      },
+      {
+        "start": [
+          4,
+          13
+        ],
+        "end": [
+          5,
+          13
+        ],
+        "item": "原木",
+        "rate": "20",
+        "bus": 0
+      },
+      {
+        "start": [
+          3,
+          16
+        ],
+        "end": [
+          3,
+          17
+        ],
+        "item": "原木",
+        "rate": "20",
+        "bus": 0
+      },
+      {
+        "start": [
+          3,
+          17
+        ],
+        "end": [
+          3,
+          18
+        ],
+        "item": "原木",
+        "rate": "20",
+        "bus": 0
+      },
+      {
+        "start": [
+          3,
+          18
+        ],
+        "end": [
+          4,
+          18
+        ],
+        "item": "原木",
+        "rate": "20",
+        "bus": 0
+      },
+      {
+        "start": [
+          4,
+          18
+        ],
+        "end": [
+          5,
+          18
+        ],
+        "item": "原木",
+        "rate": "20",
+        "bus": 0
+      },
+      {
+        "start": [
+          6,
+          1
+        ],
+        "end": [
+          7,
+          1
+        ],
+        "item": "木纤维",
+        "rate": "30",
+        "bus": 32
+      },
+      {
+        "start": [
+          6,
+          5
+        ],
+        "end": [
+          7,
+          5
+        ],
+        "item": "木纤维",
+        "rate": "30",
+        "bus": 32
+      },
+      {
+        "start": [
+          6,
+          9
+        ],
+        "end": [
+          7,
+          9
+        ],
+        "item": "木纤维",
+        "rate": "24",
+        "bus": 32
+      },
+      {
+        "start": [
+          6,
+          13
+        ],
+        "end": [
+          7,
+          13
+        ],
+        "item": "木纤维",
+        "rate": "30",
+        "bus": 32
+      },
+      {
+        "start": [
+          6,
+          18
+        ],
+        "end": [
+          7,
+          18
+        ],
+        "item": "木纤维",
+        "rate": "30",
+        "bus": 32
+      },
+      {
+        "start": [
+          9,
+          4
+        ],
+        "end": [
+          10,
+          4
+        ],
+        "item": "木纤维",
+        "rate": "72",
+        "bus": 32
+      },
+      {
+        "start": [
+          9,
+          15
+        ],
+        "end": [
+          10,
+          15
+        ],
+        "item": "木纤维",
+        "rate": "72",
+        "bus": 32
+      },
+      {
+        "start": [
+          9,
+          9
+        ],
+        "end": [
+          9,
+          10
+        ],
+        "item": "木纤维",
+        "rate": "12",
+        "bus": 32
+      },
+      {
+        "start": [
+          9,
+          9
+        ],
+        "end": [
+          9,
+          8
+        ],
+        "item": "木纤维",
+        "rate": "12",
+        "bus": 32
+      },
+      {
+        "start": [
+          7,
+          1
+        ],
+        "end": [
+          8,
+          1
+        ],
+        "item": "木纤维",
+        "rate": "30",
+        "bus": 32
+      },
+      {
+        "start": [
+          8,
+          1
+        ],
+        "end": [
+          9,
+          1
+        ],
+        "item": "木纤维",
+        "rate": "30",
+        "bus": 32
+      },
+      {
+        "start": [
+          9,
+          1
+        ],
+        "end": [
+          9,
+          2
+        ],
+        "item": "木纤维",
+        "rate": "30",
+        "bus": 32
+      },
+      {
+        "start": [
+          9,
+          2
+        ],
+        "end": [
+          9,
+          3
+        ],
+        "item": "木纤维",
+        "rate": "30",
+        "bus": 32
+      },
+      {
+        "start": [
+          9,
+          3
+        ],
+        "end": [
+          9,
+          4
+        ],
+        "item": "木纤维",
+        "rate": "30",
+        "bus": 32
+      },
+      {
+        "start": [
+          7,
+          5
+        ],
+        "end": [
+          8,
+          5
+        ],
+        "item": "木纤维",
+        "rate": "30",
+        "bus": 32
+      },
+      {
+        "start": [
+          8,
+          5
+        ],
+        "end": [
+          8,
+          4
+        ],
+        "item": "木纤维",
+        "rate": "30",
+        "bus": 32
+      },
+      {
+        "start": [
+          8,
+          4
+        ],
+        "end": [
+          9,
+          4
+        ],
+        "item": "木纤维",
+        "rate": "30",
+        "bus": 32
+      },
+      {
+        "start": [
+          7,
+          9
+        ],
+        "end": [
+          8,
+          9
+        ],
+        "item": "木纤维",
+        "rate": "24",
+        "bus": 32
+      },
+      {
+        "start": [
+          8,
+          9
+        ],
+        "end": [
+          9,
+          9
+        ],
+        "item": "木纤维",
+        "rate": "24",
+        "bus": 32
+      },
+      {
+        "start": [
+          9,
+          8
+        ],
+        "end": [
+          9,
+          7
+        ],
+        "item": "木纤维",
+        "rate": "12",
+        "bus": 32
+      },
+      {
+        "start": [
+          9,
+          7
+        ],
+        "end": [
+          9,
+          6
+        ],
+        "item": "木纤维",
+        "rate": "12",
+        "bus": 32
+      },
+      {
+        "start": [
+          9,
+          6
+        ],
+        "end": [
+          9,
+          5
+        ],
+        "item": "木纤维",
+        "rate": "12",
+        "bus": 32
+      },
+      {
+        "start": [
+          9,
+          5
+        ],
+        "end": [
+          9,
+          4
+        ],
+        "item": "木纤维",
+        "rate": "12",
+        "bus": 32
+      },
+      {
+        "start": [
+          9,
+          10
+        ],
+        "end": [
+          9,
+          11
+        ],
+        "item": "木纤维",
+        "rate": "12",
+        "bus": 32
+      },
+      {
+        "start": [
+          9,
+          11
+        ],
+        "end": [
+          9,
+          12
+        ],
+        "item": "木纤维",
+        "rate": "12",
+        "bus": 32
+      },
+      {
+        "start": [
+          9,
+          12
+        ],
+        "end": [
+          9,
+          13
+        ],
+        "item": "木纤维",
+        "rate": "12",
+        "bus": 32
+      },
+      {
+        "start": [
+          9,
+          13
+        ],
+        "end": [
+          9,
+          14
+        ],
+        "item": "木纤维",
+        "rate": "12",
+        "bus": 32
+      },
+      {
+        "start": [
+          9,
+          14
+        ],
+        "end": [
+          9,
+          15
+        ],
+        "item": "木纤维",
+        "rate": "12",
+        "bus": 32
+      },
+      {
+        "start": [
+          7,
+          13
+        ],
+        "end": [
+          8,
+          13
+        ],
+        "item": "木纤维",
+        "rate": "30",
+        "bus": 32
+      },
+      {
+        "start": [
+          8,
+          13
+        ],
+        "end": [
+          8,
+          14
+        ],
+        "item": "木纤维",
+        "rate": "30",
+        "bus": 32
+      },
+      {
+        "start": [
+          8,
+          14
+        ],
+        "end": [
+          8,
+          15
+        ],
+        "item": "木纤维",
+        "rate": "30",
+        "bus": 32
+      },
+      {
+        "start": [
+          8,
+          15
+        ],
+        "end": [
+          9,
+          15
+        ],
+        "item": "木纤维",
+        "rate": "30",
+        "bus": 32
+      },
+      {
+        "start": [
+          7,
+          18
+        ],
+        "end": [
+          8,
+          18
+        ],
+        "item": "木纤维",
+        "rate": "30",
+        "bus": 32
+      },
+      {
+        "start": [
+          8,
+          18
+        ],
+        "end": [
+          9,
+          18
+        ],
+        "item": "木纤维",
+        "rate": "30",
+        "bus": 32
+      },
+      {
+        "start": [
+          9,
+          18
+        ],
+        "end": [
+          9,
+          17
+        ],
+        "item": "木纤维",
+        "rate": "30",
+        "bus": 32
+      },
+      {
+        "start": [
+          9,
+          17
+        ],
+        "end": [
+          9,
+          16
+        ],
+        "item": "木纤维",
+        "rate": "30",
+        "bus": 32
+      },
+      {
+        "start": [
+          9,
+          16
+        ],
+        "end": [
+          9,
+          15
+        ],
+        "item": "木纤维",
+        "rate": "30",
+        "bus": 32
+      },
+      {
+        "start": [
+          11,
+          4
+        ],
+        "end": [
+          11,
+          5
+        ],
+        "item": "木纤维",
+        "rate": "40",
+        "bus": 32
+      },
+      {
+        "start": [
+          11,
+          4
+        ],
+        "end": [
+          11,
+          3
+        ],
+        "item": "木纤维",
+        "rate": "32",
+        "bus": 32
+      },
+      {
+        "start": [
+          10,
+          4
+        ],
+        "end": [
+          11,
+          4
+        ],
+        "item": "木纤维",
+        "rate": "72",
+        "bus": 32
+      },
+      {
+        "start": [
+          11,
+          1
+        ],
+        "end": [
+          12,
+          1
+        ],
+        "item": "木纤维",
+        "rate": "20",
+        "bus": 32
+      },
+      {
+        "start": [
+          11,
+          1
+        ],
+        "end": [
+          11,
+          0
+        ],
+        "item": "木纤维",
+        "rate": "12",
+        "bus": 32
+      },
+      {
+        "start": [
+          11,
+          7
+        ],
+        "end": [
+          11,
+          8
+        ],
+        "item": "木纤维",
+        "rate": "20",
+        "bus": 32
+      },
+      {
+        "start": [
+          11,
+          7
+        ],
+        "end": [
+          12,
+          7
+        ],
+        "item": "木纤维",
+        "rate": "20",
+        "bus": 32
+      },
+      {
+        "start": [
+          11,
+          3
+        ],
+        "end": [
+          11,
+          2
+        ],
+        "item": "木纤维",
+        "rate": "32",
+        "bus": 32
+      },
+      {
+        "start": [
+          11,
+          2
+        ],
+        "end": [
+          11,
+          1
+        ],
+        "item": "木纤维",
+        "rate": "32",
+        "bus": 32
+      },
+      {
+        "start": [
+          11,
+          5
+        ],
+        "end": [
+          11,
+          6
+        ],
+        "item": "木纤维",
+        "rate": "40",
+        "bus": 32
+      },
+      {
+        "start": [
+          11,
+          6
+        ],
+        "end": [
+          11,
+          7
+        ],
+        "item": "木纤维",
+        "rate": "40",
+        "bus": 32
+      },
+      {
+        "start": [
+          11,
+          0
+        ],
+        "end": [
+          12,
+          0
+        ],
+        "item": "木纤维",
+        "rate": "12",
+        "bus": 32
+      },
+      {
+        "start": [
+          12,
+          0
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "item": "木纤维",
+        "rate": "12",
+        "bus": 32
+      },
+      {
+        "start": [
+          12,
+          1
+        ],
+        "end": [
+          12,
+          2
+        ],
+        "item": "木纤维",
+        "rate": "20",
+        "bus": 32
+      },
+      {
+        "start": [
+          12,
+          2
+        ],
+        "end": [
+          13,
+          2
+        ],
+        "item": "木纤维",
+        "rate": "20",
+        "bus": 32
+      },
+      {
+        "start": [
+          12,
+          7
+        ],
+        "end": [
+          12,
+          6
+        ],
+        "item": "木纤维",
+        "rate": "20",
+        "bus": 32
+      },
+      {
+        "start": [
+          12,
+          6
+        ],
+        "end": [
+          13,
+          6
+        ],
+        "item": "木纤维",
+        "rate": "20",
+        "bus": 32
+      },
+      {
+        "start": [
+          11,
+          8
+        ],
+        "end": [
+          12,
+          8
+        ],
+        "item": "木纤维",
+        "rate": "20",
+        "bus": 32
+      },
+      {
+        "start": [
+          12,
+          8
+        ],
+        "end": [
+          13,
+          8
+        ],
+        "item": "木纤维",
+        "rate": "20",
+        "bus": 32
+      },
+      {
+        "start": [
+          14,
+          0
+        ],
+        "end": [
+          15,
+          0
+        ],
+        "item": "线",
+        "rate": "6",
+        "bus": 88
+      },
+      {
+        "start": [
+          14,
+          2
+        ],
+        "end": [
+          15,
+          2
+        ],
+        "item": "线",
+        "rate": "10",
+        "bus": 88
+      },
+      {
+        "start": [
+          14,
+          6
+        ],
+        "end": [
+          15,
+          6
+        ],
+        "item": "线",
+        "rate": "10",
+        "bus": 90
+      },
+      {
+        "start": [
+          14,
+          8
+        ],
+        "end": [
+          15,
+          8
+        ],
+        "item": "线",
+        "rate": "10",
+        "bus": 90
+      },
+      {
+        "start": [
+          15,
+          1
+        ],
+        "end": [
+          16,
+          1
+        ],
+        "item": "线",
+        "rate": "16",
+        "bus": 88
+      },
+      {
+        "start": [
+          18,
+          1
+        ],
+        "end": [
+          19,
+          1
+        ],
+        "item": "布",
+        "rate": "8",
+        "bus": 93
+      },
+      {
+        "start": [
+          15,
+          0
+        ],
+        "end": [
+          15,
+          1
+        ],
+        "item": "线",
+        "rate": "6",
+        "bus": 88
+      },
+      {
+        "start": [
+          15,
+          2
+        ],
+        "end": [
+          15,
+          1
+        ],
+        "item": "线",
+        "rate": "10",
+        "bus": 88
+      },
+      {
+        "start": [
+          16,
+          1
+        ],
+        "end": [
+          17,
+          1
+        ],
+        "item": "线",
+        "rate": "16",
+        "bus": 88
+      },
+      {
+        "start": [
+          15,
+          7
+        ],
+        "end": [
+          16,
+          7
+        ],
+        "item": "线",
+        "rate": "20",
+        "bus": 90
+      },
+      {
+        "start": [
+          18,
+          7
+        ],
+        "end": [
+          19,
+          7
+        ],
+        "item": "布",
+        "rate": "10",
+        "bus": 93
+      },
+      {
+        "start": [
+          15,
+          6
+        ],
+        "end": [
+          15,
+          7
+        ],
+        "item": "线",
+        "rate": "10",
+        "bus": 90
+      },
+      {
+        "start": [
+          15,
+          8
+        ],
+        "end": [
+          15,
+          7
+        ],
+        "item": "线",
+        "rate": "10",
+        "bus": 90
+      },
+      {
+        "start": [
+          16,
+          7
+        ],
+        "end": [
+          17,
+          7
+        ],
+        "item": "线",
+        "rate": "20",
+        "bus": 90
+      },
+      {
+        "start": [
+          20,
+          4
+        ],
+        "end": [
+          21,
+          4
+        ],
+        "item": "布",
+        "rate": "18",
+        "bus": 93
+      },
+      {
+        "start": [
+          19,
+          1
+        ],
+        "end": [
+          20,
+          1
+        ],
+        "item": "布",
+        "rate": "8",
+        "bus": 93
+      },
+      {
+        "start": [
+          20,
+          1
+        ],
+        "end": [
+          20,
+          2
+        ],
+        "item": "布",
+        "rate": "8",
+        "bus": 93
+      },
+      {
+        "start": [
+          20,
+          2
+        ],
+        "end": [
+          20,
+          3
+        ],
+        "item": "布",
+        "rate": "8",
+        "bus": 93
+      },
+      {
+        "start": [
+          20,
+          3
+        ],
+        "end": [
+          20,
+          4
+        ],
+        "item": "布",
+        "rate": "8",
+        "bus": 93
+      },
+      {
+        "start": [
+          19,
+          7
+        ],
+        "end": [
+          20,
+          7
+        ],
+        "item": "布",
+        "rate": "10",
+        "bus": 93
+      },
+      {
+        "start": [
+          20,
+          7
+        ],
+        "end": [
+          20,
+          6
+        ],
+        "item": "布",
+        "rate": "10",
+        "bus": 93
+      },
+      {
+        "start": [
+          20,
+          6
+        ],
+        "end": [
+          20,
+          5
+        ],
+        "item": "布",
+        "rate": "10",
+        "bus": 93
+      },
+      {
+        "start": [
+          20,
+          5
+        ],
+        "end": [
+          20,
+          4
+        ],
+        "item": "布",
+        "rate": "10",
+        "bus": 93
+      },
+      {
+        "start": [
+          21,
+          4
+        ],
+        "end": [
+          22,
+          4
+        ],
+        "item": "布",
+        "rate": "18",
+        "bus": 93
+      },
+      {
+        "start": [
+          22,
+          4
+        ],
+        "end": [
+          22,
+          3
+        ],
+        "item": "布",
+        "rate": "18",
+        "bus": 93
+      },
+      {
+        "start": [
+          11,
+          15
+        ],
+        "end": [
+          11,
+          16
+        ],
+        "item": "木纤维",
+        "rate": "40",
+        "bus": 32
+      },
+      {
+        "start": [
+          11,
+          15
+        ],
+        "end": [
+          11,
+          14
+        ],
+        "item": "木纤维",
+        "rate": "32",
+        "bus": 32
+      },
+      {
+        "start": [
+          10,
+          15
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "item": "木纤维",
+        "rate": "72",
+        "bus": 32
+      },
+      {
+        "start": [
+          11,
+          12
+        ],
+        "end": [
+          12,
+          12
+        ],
+        "item": "木纤维",
+        "rate": "20",
+        "bus": 32
+      },
+      {
+        "start": [
+          11,
+          12
+        ],
+        "end": [
+          11,
+          11
+        ],
+        "item": "木纤维",
+        "rate": "12",
+        "bus": 32
+      },
+      {
+        "start": [
+          11,
+          18
+        ],
+        "end": [
+          11,
+          19
+        ],
+        "item": "木纤维",
+        "rate": "20",
+        "bus": 32
+      },
+      {
+        "start": [
+          11,
+          18
+        ],
+        "end": [
+          12,
+          18
+        ],
+        "item": "木纤维",
+        "rate": "20",
+        "bus": 32
+      },
+      {
+        "start": [
+          11,
+          14
+        ],
+        "end": [
+          11,
+          13
+        ],
+        "item": "木纤维",
+        "rate": "32",
+        "bus": 32
+      },
+      {
+        "start": [
+          11,
+          13
+        ],
+        "end": [
+          11,
+          12
+        ],
+        "item": "木纤维",
+        "rate": "32",
+        "bus": 32
+      },
+      {
+        "start": [
+          11,
+          16
+        ],
+        "end": [
+          11,
+          17
+        ],
+        "item": "木纤维",
+        "rate": "40",
+        "bus": 32
+      },
+      {
+        "start": [
+          11,
+          17
+        ],
+        "end": [
+          11,
+          18
+        ],
+        "item": "木纤维",
+        "rate": "40",
+        "bus": 32
+      },
+      {
+        "start": [
+          11,
+          11
+        ],
+        "end": [
+          12,
+          11
+        ],
+        "item": "木纤维",
+        "rate": "12",
+        "bus": 32
+      },
+      {
+        "start": [
+          12,
+          11
+        ],
+        "end": [
+          13,
+          11
+        ],
+        "item": "木纤维",
+        "rate": "12",
+        "bus": 32
+      },
+      {
+        "start": [
+          12,
+          12
+        ],
+        "end": [
+          12,
+          13
+        ],
+        "item": "木纤维",
+        "rate": "20",
+        "bus": 32
+      },
+      {
+        "start": [
+          12,
+          13
+        ],
+        "end": [
+          13,
+          13
+        ],
+        "item": "木纤维",
+        "rate": "20",
+        "bus": 32
+      },
+      {
+        "start": [
+          12,
+          18
+        ],
+        "end": [
+          12,
+          17
+        ],
+        "item": "木纤维",
+        "rate": "20",
+        "bus": 32
+      },
+      {
+        "start": [
+          12,
+          17
+        ],
+        "end": [
+          13,
+          17
+        ],
+        "item": "木纤维",
+        "rate": "20",
+        "bus": 32
+      },
+      {
+        "start": [
+          11,
+          19
+        ],
+        "end": [
+          12,
+          19
+        ],
+        "item": "木纤维",
+        "rate": "20",
+        "bus": 32
+      },
+      {
+        "start": [
+          12,
+          19
+        ],
+        "end": [
+          13,
+          19
+        ],
+        "item": "木纤维",
+        "rate": "20",
+        "bus": 32
+      },
+      {
+        "start": [
+          14,
+          11
+        ],
+        "end": [
+          15,
+          11
+        ],
+        "item": "线",
+        "rate": "6",
+        "bus": 132
+      },
+      {
+        "start": [
+          14,
+          13
+        ],
+        "end": [
+          15,
+          13
+        ],
+        "item": "线",
+        "rate": "10",
+        "bus": 132
+      },
+      {
+        "start": [
+          14,
+          17
+        ],
+        "end": [
+          15,
+          17
+        ],
+        "item": "线",
+        "rate": "10",
+        "bus": 134
+      },
+      {
+        "start": [
+          14,
+          19
+        ],
+        "end": [
+          15,
+          19
+        ],
+        "item": "线",
+        "rate": "10",
+        "bus": 134
+      },
+      {
+        "start": [
+          15,
+          12
+        ],
+        "end": [
+          16,
+          12
+        ],
+        "item": "线",
+        "rate": "16",
+        "bus": 132
+      },
+      {
+        "start": [
+          18,
+          12
+        ],
+        "end": [
+          19,
+          12
+        ],
+        "item": "布",
+        "rate": "8",
+        "bus": 137
+      },
+      {
+        "start": [
+          15,
+          11
+        ],
+        "end": [
+          15,
+          12
+        ],
+        "item": "线",
+        "rate": "6",
+        "bus": 132
+      },
+      {
+        "start": [
+          15,
+          13
+        ],
+        "end": [
+          15,
+          12
+        ],
+        "item": "线",
+        "rate": "10",
+        "bus": 132
+      },
+      {
+        "start": [
+          16,
+          12
+        ],
+        "end": [
+          17,
+          12
+        ],
+        "item": "线",
+        "rate": "16",
+        "bus": 132
+      },
+      {
+        "start": [
+          15,
+          18
+        ],
+        "end": [
+          16,
+          18
+        ],
+        "item": "线",
+        "rate": "20",
+        "bus": 134
+      },
+      {
+        "start": [
+          18,
+          18
+        ],
+        "end": [
+          19,
+          18
+        ],
+        "item": "布",
+        "rate": "10",
+        "bus": 137
+      },
+      {
+        "start": [
+          15,
+          17
+        ],
+        "end": [
+          15,
+          18
+        ],
+        "item": "线",
+        "rate": "10",
+        "bus": 134
+      },
+      {
+        "start": [
+          15,
+          19
+        ],
+        "end": [
+          15,
+          18
+        ],
+        "item": "线",
+        "rate": "10",
+        "bus": 134
+      },
+      {
+        "start": [
+          16,
+          18
+        ],
+        "end": [
+          17,
+          18
+        ],
+        "item": "线",
+        "rate": "20",
+        "bus": 134
+      },
+      {
+        "start": [
+          20,
+          15
+        ],
+        "end": [
+          21,
+          15
+        ],
+        "item": "布",
+        "rate": "18",
+        "bus": 137
+      },
+      {
+        "start": [
+          19,
+          12
+        ],
+        "end": [
+          20,
+          12
+        ],
+        "item": "布",
+        "rate": "8",
+        "bus": 137
+      },
+      {
+        "start": [
+          20,
+          12
+        ],
+        "end": [
+          20,
+          13
+        ],
+        "item": "布",
+        "rate": "8",
+        "bus": 137
+      },
+      {
+        "start": [
+          20,
+          13
+        ],
+        "end": [
+          20,
+          14
+        ],
+        "item": "布",
+        "rate": "8",
+        "bus": 137
+      },
+      {
+        "start": [
+          20,
+          14
+        ],
+        "end": [
+          20,
+          15
+        ],
+        "item": "布",
+        "rate": "8",
+        "bus": 137
+      },
+      {
+        "start": [
+          19,
+          18
+        ],
+        "end": [
+          20,
+          18
+        ],
+        "item": "布",
+        "rate": "10",
+        "bus": 137
+      },
+      {
+        "start": [
+          20,
+          18
+        ],
+        "end": [
+          20,
+          17
+        ],
+        "item": "布",
+        "rate": "10",
+        "bus": 137
+      },
+      {
+        "start": [
+          20,
+          17
+        ],
+        "end": [
+          20,
+          16
+        ],
+        "item": "布",
+        "rate": "10",
+        "bus": 137
+      },
+      {
+        "start": [
+          20,
+          16
+        ],
+        "end": [
+          20,
+          15
+        ],
+        "item": "布",
+        "rate": "10",
+        "bus": 137
+      },
+      {
+        "start": [
+          21,
+          15
+        ],
+        "end": [
+          22,
+          15
+        ],
+        "item": "布",
+        "rate": "18",
+        "bus": 137
+      },
+      {
+        "start": [
+          22,
+          15
+        ],
+        "end": [
+          22,
+          14
+        ],
+        "item": "布",
+        "rate": "18",
+        "bus": 137
+      },
+      {
+        "start": [
+          41,
+          9
+        ],
+        "end": [
+          40,
+          9
+        ],
+        "item": "原木",
+        "rate": "32",
+        "bus": 157
+      },
+      {
+        "start": [
+          39,
+          9
+        ],
+        "end": [
+          39,
+          10
+        ],
+        "item": "原木",
+        "rate": "16",
+        "bus": 157
+      },
+      {
+        "start": [
+          39,
+          9
+        ],
+        "end": [
+          39,
+          8
+        ],
+        "item": "原木",
+        "rate": "16",
+        "bus": 157
+      },
+      {
+        "start": [
+          40,
+          9
+        ],
+        "end": [
+          39,
+          9
+        ],
+        "item": "原木",
+        "rate": "32",
+        "bus": 157
+      },
+      {
+        "start": [
+          37,
+          4
+        ],
+        "end": [
+          36,
+          4
+        ],
+        "item": "木材",
+        "rate": "16",
+        "bus": 161
+      },
+      {
+        "start": [
+          34,
+          4
+        ],
+        "end": [
+          33,
+          4
+        ],
+        "item": "木棒",
+        "rate": "24",
+        "bus": 162
+      },
+      {
+        "start": [
+          39,
+          8
+        ],
+        "end": [
+          39,
+          7
+        ],
+        "item": "原木",
+        "rate": "16",
+        "bus": 157
+      },
+      {
+        "start": [
+          39,
+          7
+        ],
+        "end": [
+          39,
+          6
+        ],
+        "item": "原木",
+        "rate": "16",
+        "bus": 157
+      },
+      {
+        "start": [
+          39,
+          6
+        ],
+        "end": [
+          39,
+          5
+        ],
+        "item": "原木",
+        "rate": "16",
+        "bus": 157
+      },
+      {
+        "start": [
+          39,
+          5
+        ],
+        "end": [
+          39,
+          4
+        ],
+        "item": "原木",
+        "rate": "16",
+        "bus": 157
+      },
+      {
+        "start": [
+          39,
+          4
+        ],
+        "end": [
+          38,
+          4
+        ],
+        "item": "原木",
+        "rate": "16",
+        "bus": 157
+      },
+      {
+        "start": [
+          36,
+          4
+        ],
+        "end": [
+          35,
+          4
+        ],
+        "item": "木材",
+        "rate": "16",
+        "bus": 161
+      },
+      {
+        "start": [
+          32,
+          4
+        ],
+        "end": [
+          32,
+          5
+        ],
+        "item": "木棒",
+        "rate": "12",
+        "bus": 162
+      },
+      {
+        "start": [
+          32,
+          4
+        ],
+        "end": [
+          32,
+          3
+        ],
+        "item": "木棒",
+        "rate": "12",
+        "bus": 162
+      },
+      {
+        "start": [
+          33,
+          4
+        ],
+        "end": [
+          32,
+          4
+        ],
+        "item": "木棒",
+        "rate": "24",
+        "bus": 162
+      },
+      {
+        "start": [
+          27,
+          2
+        ],
+        "end": [
+          26,
+          2
+        ],
+        "item": "初级工具",
+        "rate": "6",
+        "bus": 172
+      },
+      {
+        "start": [
+          27,
+          7
+        ],
+        "end": [
+          26,
+          7
+        ],
+        "item": "初级工具",
+        "rate": "6",
+        "bus": 172
+      },
+      {
+        "start": [
+          32,
+          3
+        ],
+        "end": [
+          32,
+          2
+        ],
+        "item": "木棒",
+        "rate": "12",
+        "bus": 162
+      },
+      {
+        "start": [
+          32,
+          2
+        ],
+        "end": [
+          32,
+          1
+        ],
+        "item": "木棒",
+        "rate": "12",
+        "bus": 162
+      },
+      {
+        "start": [
+          32,
+          1
+        ],
+        "end": [
+          31,
+          1
+        ],
+        "item": "木棒",
+        "rate": "12",
+        "bus": 162
+      },
+      {
+        "start": [
+          31,
+          1
+        ],
+        "end": [
+          30,
+          1
+        ],
+        "item": "木棒",
+        "rate": "12",
+        "bus": 162
+      },
+      {
+        "start": [
+          30,
+          1
+        ],
+        "end": [
+          29,
+          1
+        ],
+        "item": "木棒",
+        "rate": "12",
+        "bus": 162
+      },
+      {
+        "start": [
+          32,
+          5
+        ],
+        "end": [
+          32,
+          6
+        ],
+        "item": "木棒",
+        "rate": "12",
+        "bus": 162
+      },
+      {
+        "start": [
+          32,
+          6
+        ],
+        "end": [
+          31,
+          6
+        ],
+        "item": "木棒",
+        "rate": "12",
+        "bus": 162
+      },
+      {
+        "start": [
+          31,
+          6
+        ],
+        "end": [
+          30,
+          6
+        ],
+        "item": "木棒",
+        "rate": "12",
+        "bus": 162
+      },
+      {
+        "start": [
+          30,
+          6
+        ],
+        "end": [
+          29,
+          6
+        ],
+        "item": "木棒",
+        "rate": "12",
+        "bus": 162
+      },
+      {
+        "start": [
+          25,
+          4
+        ],
+        "end": [
+          24,
+          4
+        ],
+        "item": "初级工具",
+        "rate": "12",
+        "bus": 172
+      },
+      {
+        "start": [
+          26,
+          2
+        ],
+        "end": [
+          25,
+          2
+        ],
+        "item": "初级工具",
+        "rate": "6",
+        "bus": 172
+      },
+      {
+        "start": [
+          25,
+          2
+        ],
+        "end": [
+          25,
+          3
+        ],
+        "item": "初级工具",
+        "rate": "6",
+        "bus": 172
+      },
+      {
+        "start": [
+          25,
+          3
+        ],
+        "end": [
+          25,
+          4
+        ],
+        "item": "初级工具",
+        "rate": "6",
+        "bus": 172
+      },
+      {
+        "start": [
+          26,
+          7
+        ],
+        "end": [
+          25,
+          7
+        ],
+        "item": "初级工具",
+        "rate": "6",
+        "bus": 172
+      },
+      {
+        "start": [
+          25,
+          7
+        ],
+        "end": [
+          25,
+          6
+        ],
+        "item": "初级工具",
+        "rate": "6",
+        "bus": 172
+      },
+      {
+        "start": [
+          25,
+          6
+        ],
+        "end": [
+          25,
+          5
+        ],
+        "item": "初级工具",
+        "rate": "6",
+        "bus": 172
+      },
+      {
+        "start": [
+          25,
+          5
+        ],
+        "end": [
+          25,
+          4
+        ],
+        "item": "初级工具",
+        "rate": "6",
+        "bus": 172
+      },
+      {
+        "start": [
+          24,
+          4
+        ],
+        "end": [
+          23,
+          4
+        ],
+        "item": "初级工具",
+        "rate": "12",
+        "bus": 172
+      },
+      {
+        "start": [
+          23,
+          4
+        ],
+        "end": [
+          23,
+          3
+        ],
+        "item": "初级工具",
+        "rate": "12",
+        "bus": 172
+      },
+      {
+        "start": [
+          37,
+          15
+        ],
+        "end": [
+          36,
+          15
+        ],
+        "item": "木材",
+        "rate": "16",
+        "bus": 193
+      },
+      {
+        "start": [
+          34,
+          15
+        ],
+        "end": [
+          33,
+          15
+        ],
+        "item": "木棒",
+        "rate": "24",
+        "bus": 194
+      },
+      {
+        "start": [
+          39,
+          10
+        ],
+        "end": [
+          39,
+          11
+        ],
+        "item": "原木",
+        "rate": "16",
+        "bus": 157
+      },
+      {
+        "start": [
+          39,
+          11
+        ],
+        "end": [
+          39,
+          12
+        ],
+        "item": "原木",
+        "rate": "16",
+        "bus": 157
+      },
+      {
+        "start": [
+          39,
+          12
+        ],
+        "end": [
+          39,
+          13
+        ],
+        "item": "原木",
+        "rate": "16",
+        "bus": 157
+      },
+      {
+        "start": [
+          39,
+          13
+        ],
+        "end": [
+          39,
+          14
+        ],
+        "item": "原木",
+        "rate": "16",
+        "bus": 157
+      },
+      {
+        "start": [
+          39,
+          14
+        ],
+        "end": [
+          39,
+          15
+        ],
+        "item": "原木",
+        "rate": "16",
+        "bus": 157
+      },
+      {
+        "start": [
+          39,
+          15
+        ],
+        "end": [
+          38,
+          15
+        ],
+        "item": "原木",
+        "rate": "16",
+        "bus": 157
+      },
+      {
+        "start": [
+          36,
+          15
+        ],
+        "end": [
+          35,
+          15
+        ],
+        "item": "木材",
+        "rate": "16",
+        "bus": 193
+      },
+      {
+        "start": [
+          32,
+          15
+        ],
+        "end": [
+          32,
+          16
+        ],
+        "item": "木棒",
+        "rate": "12",
+        "bus": 194
+      },
+      {
+        "start": [
+          32,
+          15
+        ],
+        "end": [
+          32,
+          14
+        ],
+        "item": "木棒",
+        "rate": "12",
+        "bus": 194
+      },
+      {
+        "start": [
+          33,
+          15
+        ],
+        "end": [
+          32,
+          15
+        ],
+        "item": "木棒",
+        "rate": "24",
+        "bus": 194
+      },
+      {
+        "start": [
+          27,
+          13
+        ],
+        "end": [
+          26,
+          13
+        ],
+        "item": "初级工具",
+        "rate": "6",
+        "bus": 205
+      },
+      {
+        "start": [
+          27,
+          18
+        ],
+        "end": [
+          26,
+          18
+        ],
+        "item": "初级工具",
+        "rate": "6",
+        "bus": 205
+      },
+      {
+        "start": [
+          32,
+          14
+        ],
+        "end": [
+          32,
+          13
+        ],
+        "item": "木棒",
+        "rate": "12",
+        "bus": 194
+      },
+      {
+        "start": [
+          32,
+          13
+        ],
+        "end": [
+          32,
+          12
+        ],
+        "item": "木棒",
+        "rate": "12",
+        "bus": 194
+      },
+      {
+        "start": [
+          32,
+          12
+        ],
+        "end": [
+          31,
+          12
+        ],
+        "item": "木棒",
+        "rate": "12",
+        "bus": 194
+      },
+      {
+        "start": [
+          31,
+          12
+        ],
+        "end": [
+          30,
+          12
+        ],
+        "item": "木棒",
+        "rate": "12",
+        "bus": 194
+      },
+      {
+        "start": [
+          30,
+          12
+        ],
+        "end": [
+          29,
+          12
+        ],
+        "item": "木棒",
+        "rate": "12",
+        "bus": 194
+      },
+      {
+        "start": [
+          32,
+          16
+        ],
+        "end": [
+          32,
+          17
+        ],
+        "item": "木棒",
+        "rate": "12",
+        "bus": 194
+      },
+      {
+        "start": [
+          32,
+          17
+        ],
+        "end": [
+          31,
+          17
+        ],
+        "item": "木棒",
+        "rate": "12",
+        "bus": 194
+      },
+      {
+        "start": [
+          31,
+          17
+        ],
+        "end": [
+          30,
+          17
+        ],
+        "item": "木棒",
+        "rate": "12",
+        "bus": 194
+      },
+      {
+        "start": [
+          30,
+          17
+        ],
+        "end": [
+          29,
+          17
+        ],
+        "item": "木棒",
+        "rate": "12",
+        "bus": 194
+      },
+      {
+        "start": [
+          25,
+          15
+        ],
+        "end": [
+          24,
+          15
+        ],
+        "item": "初级工具",
+        "rate": "12",
+        "bus": 205
+      },
+      {
+        "start": [
+          26,
+          13
+        ],
+        "end": [
+          25,
+          13
+        ],
+        "item": "初级工具",
+        "rate": "6",
+        "bus": 205
+      },
+      {
+        "start": [
+          25,
+          13
+        ],
+        "end": [
+          25,
+          14
+        ],
+        "item": "初级工具",
+        "rate": "6",
+        "bus": 205
+      },
+      {
+        "start": [
+          25,
+          14
+        ],
+        "end": [
+          25,
+          15
+        ],
+        "item": "初级工具",
+        "rate": "6",
+        "bus": 205
+      },
+      {
+        "start": [
+          26,
+          18
+        ],
+        "end": [
+          25,
+          18
+        ],
+        "item": "初级工具",
+        "rate": "6",
+        "bus": 205
+      },
+      {
+        "start": [
+          25,
+          18
+        ],
+        "end": [
+          25,
+          17
+        ],
+        "item": "初级工具",
+        "rate": "6",
+        "bus": 205
+      },
+      {
+        "start": [
+          25,
+          17
+        ],
+        "end": [
+          25,
+          16
+        ],
+        "item": "初级工具",
+        "rate": "6",
+        "bus": 205
+      },
+      {
+        "start": [
+          25,
+          16
+        ],
+        "end": [
+          25,
+          15
+        ],
+        "item": "初级工具",
+        "rate": "6",
+        "bus": 205
+      },
+      {
+        "start": [
+          24,
+          15
+        ],
+        "end": [
+          23,
+          15
+        ],
+        "item": "初级工具",
+        "rate": "12",
+        "bus": 205
+      },
+      {
+        "start": [
+          23,
+          15
+        ],
+        "end": [
+          23,
+          14
+        ],
+        "item": "初级工具",
+        "rate": "12",
+        "bus": 205
+      },
+      {
+        "start": [
+          35,
+          12
+        ],
+        "end": [
+          35,
+          11
+        ],
+        "item": "石头",
+        "rate": "24",
+        "bus": 226
+      },
+      {
+        "start": [
+          33,
+          10
+        ],
+        "end": [
+          34,
+          10
+        ],
+        "item": "石头",
+        "rate": "12",
+        "bus": 226
+      },
+      {
+        "start": [
+          33,
+          10
+        ],
+        "end": [
+          33,
+          9
+        ],
+        "item": "石头",
+        "rate": "12",
+        "bus": 226
+      },
+      {
+        "start": [
+          34,
+          8
+        ],
+        "end": [
+          33,
+          8
+        ],
+        "item": "石材",
+        "rate": "12",
+        "bus": 229
+      },
+      {
+        "start": [
+          36,
+          10
+        ],
+        "end": [
+          37,
+          10
+        ],
+        "item": "石材",
+        "rate": "12",
+        "bus": 230
+      },
+      {
+        "start": [
+          32,
+          7
+        ],
+        "end": [
+          32,
+          8
+        ],
+        "item": "石材",
+        "rate": "6",
+        "bus": 229
+      },
+      {
+        "start": [
+          32,
+          7
+        ],
+        "end": [
+          31,
+          7
+        ],
+        "item": "石材",
+        "rate": "6",
+        "bus": 229
+      },
+      {
+        "start": [
+          36,
+          18
+        ],
+        "end": [
+          35,
+          18
+        ],
+        "item": "石材",
+        "rate": "6",
+        "bus": 230
+      },
+      {
+        "start": [
+          36,
+          18
+        ],
+        "end": [
+          36,
+          17
+        ],
+        "item": "石材",
+        "rate": "6",
+        "bus": 230
+      },
+      {
+        "start": [
+          37,
+          10
+        ],
+        "end": [
+          37,
+          11
+        ],
+        "item": "石材",
+        "rate": "12",
+        "bus": 230
+      },
+      {
+        "start": [
+          37,
+          11
+        ],
+        "end": [
+          37,
+          12
+        ],
+        "item": "石材",
+        "rate": "12",
+        "bus": 230
+      },
+      {
+        "start": [
+          37,
+          12
+        ],
+        "end": [
+          37,
+          13
+        ],
+        "item": "石材",
+        "rate": "12",
+        "bus": 230
+      },
+      {
+        "start": [
+          37,
+          17
+        ],
+        "end": [
+          37,
+          18
+        ],
+        "item": "石材",
+        "rate": "12",
+        "bus": 230
+      },
+      {
+        "start": [
+          37,
+          18
+        ],
+        "end": [
+          36,
+          18
+        ],
+        "item": "石材",
+        "rate": "12",
+        "bus": 230
+      },
+      {
+        "start": [
+          36,
+          17
+        ],
+        "end": [
+          36,
+          16
+        ],
+        "item": "石材",
+        "rate": "6",
+        "bus": 230
+      },
+      {
+        "start": [
+          36,
+          16
+        ],
+        "end": [
+          35,
+          16
+        ],
+        "item": "石材",
+        "rate": "6",
+        "bus": 230
+      },
+      {
+        "start": [
+          35,
+          16
+        ],
+        "end": [
+          34,
+          16
+        ],
+        "item": "石材",
+        "rate": "6",
+        "bus": 230
+      },
+      {
+        "start": [
+          34,
+          16
+        ],
+        "end": [
+          33,
+          16
+        ],
+        "item": "石材",
+        "rate": "6",
+        "bus": 230
+      },
+      {
+        "start": [
+          31,
+          16
+        ],
+        "end": [
+          30,
+          16
+        ],
+        "item": "石材",
+        "rate": "6",
+        "bus": 230
+      },
+      {
+        "start": [
+          30,
+          16
+        ],
+        "end": [
+          30,
+          15
+        ],
+        "item": "石材",
+        "rate": "6",
+        "bus": 230
+      },
+      {
+        "start": [
+          30,
+          15
+        ],
+        "end": [
+          30,
+          14
+        ],
+        "item": "石材",
+        "rate": "6",
+        "bus": 230
+      },
+      {
+        "start": [
+          30,
+          14
+        ],
+        "end": [
+          30,
+          13
+        ],
+        "item": "石材",
+        "rate": "6",
+        "bus": 230
+      },
+      {
+        "start": [
+          30,
+          13
+        ],
+        "end": [
+          29,
+          13
+        ],
+        "item": "石材",
+        "rate": "6",
+        "bus": 230
+      },
+      {
+        "start": [
+          33,
+          9
+        ],
+        "end": [
+          34,
+          9
+        ],
+        "item": "石头",
+        "rate": "12",
+        "bus": 226
+      },
+      {
+        "start": [
+          37,
+          9
+        ],
+        "end": [
+          38,
+          9
+        ],
+        "item": "石头",
+        "rate": "12",
+        "bus": 226
+      },
+      {
+        "start": [
+          38,
+          9
+        ],
+        "end": [
+          38,
+          8
+        ],
+        "item": "石头",
+        "rate": "12",
+        "bus": 226
+      },
+      {
+        "start": [
+          38,
+          8
+        ],
+        "end": [
+          37,
+          8
+        ],
+        "item": "石头",
+        "rate": "12",
+        "bus": 226
+      },
+      {
+        "start": [
+          37,
+          8
+        ],
+        "end": [
+          36,
+          8
+        ],
+        "item": "石头",
+        "rate": "12",
+        "bus": 226
+      },
+      {
+        "start": [
+          36,
+          8
+        ],
+        "end": [
+          35,
+          8
+        ],
+        "item": "石头",
+        "rate": "12",
+        "bus": 226
+      },
+      {
+        "start": [
+          32,
+          8
+        ],
+        "end": [
+          32,
+          9
+        ],
+        "item": "石材",
+        "rate": "6",
+        "bus": 229
+      },
+      {
+        "start": [
+          32,
+          9
+        ],
+        "end": [
+          31,
+          9
+        ],
+        "item": "石材",
+        "rate": "6",
+        "bus": 229
+      },
+      {
+        "start": [
+          31,
+          9
+        ],
+        "end": [
+          31,
+          8
+        ],
+        "item": "石材",
+        "rate": "6",
+        "bus": 229
+      },
+      {
+        "start": [
+          31,
+          3
+        ],
+        "end": [
+          31,
+          2
+        ],
+        "item": "石材",
+        "rate": "6",
+        "bus": 229
+      },
+      {
+        "start": [
+          31,
+          2
+        ],
+        "end": [
+          30,
+          2
+        ],
+        "item": "石材",
+        "rate": "6",
+        "bus": 229
+      },
+      {
+        "start": [
+          30,
+          2
+        ],
+        "end": [
+          29,
+          2
+        ],
+        "item": "石材",
+        "rate": "6",
+        "bus": 229
+      },
+      {
+        "start": [
+          35,
+          18
+        ],
+        "end": [
+          34,
+          18
+        ],
+        "item": "石材",
+        "rate": "6",
+        "bus": 230
+      },
+      {
+        "start": [
+          34,
+          18
+        ],
+        "end": [
+          33,
+          18
+        ],
+        "item": "石材",
+        "rate": "6",
+        "bus": 230
+      },
+      {
+        "start": [
+          33,
+          18
+        ],
+        "end": [
+          32,
+          18
+        ],
+        "item": "石材",
+        "rate": "6",
+        "bus": 230
+      },
+      {
+        "start": [
+          32,
+          18
+        ],
+        "end": [
+          31,
+          18
+        ],
+        "item": "石材",
+        "rate": "6",
+        "bus": 230
+      },
+      {
+        "start": [
+          31,
+          18
+        ],
+        "end": [
+          30,
+          18
+        ],
+        "item": "石材",
+        "rate": "6",
+        "bus": 230
+      },
+      {
+        "start": [
+          30,
+          18
+        ],
+        "end": [
+          29,
+          18
+        ],
+        "item": "石材",
+        "rate": "6",
+        "bus": 230
+      },
+      {
+        "start": [
+          35,
+          11
+        ],
+        "end": [
+          34,
+          11
+        ],
+        "item": "石头",
+        "rate": "24",
+        "bus": 226
+      },
+      {
+        "start": [
+          34,
+          11
+        ],
+        "end": [
+          33,
+          11
+        ],
+        "item": "石头",
+        "rate": "24",
+        "bus": 226
+      },
+      {
+        "start": [
+          33,
+          11
+        ],
+        "end": [
+          33,
+          10
+        ],
+        "item": "石头",
+        "rate": "24",
+        "bus": 226
+      },
+      {
+        "start": [
+          33,
+          8
+        ],
+        "end": [
+          33,
+          7
+        ],
+        "item": "石材",
+        "rate": "12",
+        "bus": 229
+      },
+      {
+        "start": [
+          33,
+          7
+        ],
+        "end": [
+          32,
+          7
+        ],
+        "item": "石材",
+        "rate": "12",
+        "bus": 229
+      },
+      {
+        "start": [
+          31,
+          7
+        ],
+        "end": [
+          30,
+          7
+        ],
+        "item": "石材",
+        "rate": "6",
+        "bus": 229
+      },
+      {
+        "start": [
+          30,
+          7
+        ],
+        "end": [
+          29,
+          7
+        ],
+        "item": "石材",
+        "rate": "6",
+        "bus": 229
+      },
+      {
+        "start": [
+          34,
+          10
+        ],
+        "end": [
+          35,
+          10
+        ],
+        "item": "石头",
+        "rate": "12",
+        "bus": 226
+      },
+      {
+        "start": [
+          37,
+          13
+        ],
+        "end": [
+          37,
+          17
+        ],
+        "item": "石材",
+        "rate": "12",
+        "bus": 230
+      },
+      {
+        "start": [
+          33,
+          16
+        ],
+        "end": [
+          31,
+          16
+        ],
+        "item": "石材",
+        "rate": "6",
+        "bus": 230
+      },
+      {
+        "start": [
+          34,
+          9
+        ],
+        "end": [
+          37,
+          9
+        ],
+        "item": "石头",
+        "rate": "12",
+        "bus": 226
+      },
+      {
+        "start": [
+          31,
+          8
+        ],
+        "end": [
+          31,
+          3
+        ],
+        "item": "石材",
+        "rate": "6",
+        "bus": 229
+      }
+    ],
+    "wires": [
+      [
+        5,
+        1
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        5,
+        3
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        5,
+        8
+      ],
+      [
+        5,
+        9
+      ],
+      [
+        5,
+        10
+      ],
+      [
+        5,
+        11
+      ],
+      [
+        5,
+        12
+      ],
+      [
+        5,
+        13
+      ],
+      [
+        5,
+        14
+      ],
+      [
+        5,
+        15
+      ],
+      [
+        5,
+        16
+      ],
+      [
+        5,
+        17
+      ],
+      [
+        5,
+        18
+      ],
+      [
+        6,
+        11
+      ],
+      [
+        7,
+        11
+      ],
+      [
+        8,
+        11
+      ],
+      [
+        9,
+        11
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        11,
+        11
+      ],
+      [
+        12,
+        11
+      ],
+      [
+        13,
+        0
+      ],
+      [
+        13,
+        1
+      ],
+      [
+        13,
+        2
+      ],
+      [
+        13,
+        3
+      ],
+      [
+        13,
+        4
+      ],
+      [
+        13,
+        5
+      ],
+      [
+        13,
+        6
+      ],
+      [
+        13,
+        7
+      ],
+      [
+        13,
+        8
+      ],
+      [
+        13,
+        9
+      ],
+      [
+        13,
+        10
+      ],
+      [
+        13,
+        11
+      ],
+      [
+        13,
+        12
+      ],
+      [
+        13,
+        13
+      ],
+      [
+        13,
+        14
+      ],
+      [
+        13,
+        15
+      ],
+      [
+        13,
+        16
+      ],
+      [
+        13,
+        17
+      ],
+      [
+        13,
+        18
+      ],
+      [
+        13,
+        19
+      ],
+      [
+        14,
+        1
+      ],
+      [
+        14,
+        7
+      ],
+      [
+        14,
+        12
+      ],
+      [
+        14,
+        18
+      ],
+      [
+        15,
+        1
+      ],
+      [
+        15,
+        7
+      ],
+      [
+        15,
+        12
+      ],
+      [
+        15,
+        18
+      ],
+      [
+        16,
+        1
+      ],
+      [
+        16,
+        7
+      ],
+      [
+        16,
+        12
+      ],
+      [
+        16,
+        18
+      ],
+      [
+        17,
+        1
+      ],
+      [
+        17,
+        2
+      ],
+      [
+        17,
+        3
+      ],
+      [
+        17,
+        7
+      ],
+      [
+        17,
+        12
+      ],
+      [
+        17,
+        18
+      ],
+      [
+        18,
+        3
+      ],
+      [
+        19,
+        3
+      ],
+      [
+        20,
+        3
+      ],
+      [
+        21,
+        3
+      ],
+      [
+        22,
+        3
+      ],
+      [
+        22,
+        14
+      ],
+      [
+        23,
+        3
+      ],
+      [
+        23,
+        14
+      ],
+      [
+        24,
+        3
+      ],
+      [
+        24,
+        14
+      ],
+      [
+        25,
+        3
+      ],
+      [
+        25,
+        14
+      ],
+      [
+        26,
+        3
+      ],
+      [
+        26,
+        14
+      ],
+      [
+        27,
+        3
+      ],
+      [
+        27,
+        14
+      ],
+      [
+        28,
+        2
+      ],
+      [
+        28,
+        3
+      ],
+      [
+        28,
+        4
+      ],
+      [
+        28,
+        5
+      ],
+      [
+        28,
+        6
+      ],
+      [
+        28,
+        7
+      ],
+      [
+        28,
+        8
+      ],
+      [
+        28,
+        9
+      ],
+      [
+        28,
+        10
+      ],
+      [
+        28,
+        11
+      ],
+      [
+        28,
+        12
+      ],
+      [
+        28,
+        13
+      ],
+      [
+        28,
+        14
+      ],
+      [
+        28,
+        15
+      ],
+      [
+        28,
+        16
+      ],
+      [
+        28,
+        17
+      ],
+      [
+        28,
+        18
+      ],
+      [
+        28,
+        19
+      ],
+      [
+        29,
+        4
+      ],
+      [
+        30,
+        4
+      ],
+      [
+        31,
+        4
+      ],
+      [
+        32,
+        4
+      ],
+      [
+        33,
+        4
+      ],
+      [
+        34,
+        4
+      ],
+      [
+        34,
+        5
+      ],
+      [
+        34,
+        6
+      ],
+      [
+        34,
+        7
+      ],
+      [
+        34,
+        8
+      ],
+      [
+        34,
+        15
+      ],
+      [
+        35,
+        4
+      ],
+      [
+        35,
+        8
+      ],
+      [
+        35,
+        9
+      ],
+      [
+        35,
+        10
+      ],
+      [
+        35,
+        11
+      ],
+      [
+        35,
+        12
+      ],
+      [
+        35,
+        13
+      ],
+      [
+        35,
+        14
+      ],
+      [
+        35,
+        15
+      ],
+      [
+        36,
+        4
+      ],
+      [
+        36,
+        15
+      ],
+      [
+        37,
+        4
+      ],
+      [
+        37,
+        15
+      ]
+    ],
+    "power_entry": [
+      28,
+      19
+    ]
+  }
+]
