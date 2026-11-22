@@ -236,6 +236,7 @@ class BlueprintWindow:
         self.open_folder = ttk.Button(actions, text="打开导出目录", command=self.open_output_directory)
         self.open_folder.pack(side="left", padx=8)
         self.open_folder.state(["disabled"])
+        ttk.Label(actions, text="在完整 HTML 中切换整图方向。", style="Subtitle.TLabel").pack(side="left")
 
     def refresh_target(self, reset_device=False):
         item = self.fields["target"].get()

@@ -1,5 +1,7 @@
 # 产线求解算例
 
+本页保留早期算例。历史图尚未使用当前的 Steam 像素碰撞校验。新版可重新生成各产物，已复算的蓝图见[强力石砖](../optimized/powerful-stone-brick/README.md)和[双绿瓶](../optimized/green-crystal-logistics/README.md)。
+
 按每天 16 分钟计算，入选布局取自程序搜索的候选。
 
 | 产物及配额 | 稳态理论日产 | 共用上游 | 独立供料 | 入选 |

@@ -4,6 +4,8 @@ from bisect import bisect_right
 from collections import defaultdict
 from dataclasses import replace
 
+from .geometry import direct_logistics_allowed
+
 
 def find_cut(allowed, barriers, shortcuts):
     paths = {column: (int((column, 0) in shortcuts), 0, (column,)) for column in allowed[0]}
@@ -54,6 +56,7 @@ def remove_cut(layout, axis):
         elif top == bottom and abs(left - right) > 1:
             tunnel_spans.append((top, min(left, right), max(left, right)))
 
+    kinds = {**layout.transport, **{point: p.building for p in layout.placements for point in p.cells()}}
     shortcuts = {}
     for point, kind in layout.transport.items():
         x, y = axes(point)
@@ -63,7 +66,7 @@ def remove_cut(layout, axis):
             left, top = axes(a.start)
             right, bottom = axes(b.end)
             if (top == y == bottom and {left, right} == {x - 1, x + 1} and a.bus == b.bus and a.rate == b.rate and
-                    any(layout.transport.get(end, "").startswith("belt") for end in (a.start, b.end))):
+                    direct_logistics_allowed(kinds[a.start], kinds[b.end])):
                 shortcuts[x, y] = a, b
                 continue
         allowed[y].discard(x)
@@ -94,7 +97,7 @@ def remove_cut(layout, axis):
                    row_optimal=False, statistics={}, baseline=False)
 
 
-def seam_compactions(layout):
+def seam_compactions(layout, *, can_place=None):
     """依次尝试两个方向，返回待重拉电线和验证的压紧方案。"""
     candidates = []
     for axes in ((0, 1), (1, 0)):
@@ -102,7 +105,9 @@ def seam_compactions(layout):
         while True:
             previous = candidate
             for axis in axes:
-                candidate = remove_cut(candidate, axis) or candidate
+                reduced = remove_cut(candidate, axis)
+                if reduced is not None and (can_place is None or can_place(reduced)):
+                    candidate = reduced
             if candidate is previous:
                 break
         if candidate is not layout and candidate not in candidates:

@@ -2,7 +2,7 @@ from collections import defaultdict, deque
 from fractions import Fraction
 from math import ceil, lcm
 
-from .geometry import placement_ports
+from .geometry import assigned_ports
 from .layout import distance
 from .model import DAY, belt_options, belt_seconds
 
@@ -23,9 +23,10 @@ def simulate(problem, layout, *, ports=None):
     def ticks(seconds):
         return max(1, ceil(Fraction(str(seconds)) * ticks_per_second))
 
-    outgoing = defaultdict(list)
+    incoming, outgoing = defaultdict(list), defaultdict(list)
     for segment in layout.segments:
         outgoing[segment.start].append(segment.end)
+        incoming[segment.end].append(segment)
     for targets in outgoing.values():
         targets.sort()
 
@@ -52,9 +53,13 @@ def simulate(problem, layout, *, ports=None):
 
     inlets, outlets, machines = [], {}, []
     bin_sizes, bins = {}, {}
+
+    def actual_ports(placement):
+        return ports[placement] if ports is not None else assigned_ports(problem, placement, incoming)
+
     for p in sorted(layout.placements, key=lambda placement: placement.anchor):
         if p.building == "inlet":
-            point = (ports[p] if ports is not None else placement_ports(problem, p))[1]
+            _, point = actual_ports(p)
             inlets.append((point, outgoing[point][0]))
         elif p.building == "outlet":
             belt = outlet_belts[p.anchor]
@@ -62,7 +67,7 @@ def simulate(problem, layout, *, ports=None):
         else:
             recipe = problem.recipes[p.item]
             amounts = list(recipe["inputs"].values())
-            entries, exit_cell = ports[p] if ports is not None else placement_ports(problem, p)
+            entries, exit_cell = actual_ports(p)
             for cell, amount in zip(entries, amounts):
                 bin_sizes[cell] = amount * buffer_cycles
                 bins[cell] = 0

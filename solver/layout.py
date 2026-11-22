@@ -10,12 +10,16 @@ from scipy.optimize import Bounds, LinearConstraint, milp
 from scipy.sparse import coo_matrix
 
 from .blueprint import EAST
+from .collision import belt_obstacles, collision_error, enclose_footprints, footprint_bounds, uses_steam_geometry
 from .compact import seam_compactions
+from .geometry import JUNCTIONS, STEAM_CELL_PIXELS, direct_logistics_allowed, steam_collision_rect
 from .model import Infeasible, Problem, belt_options, make_network, transport_time
-from .orient import placement_trials
+from .orient import outlet_trials, placement_trials
 from .power import refine_power_grid
+from .rearrange import neighboring_supply_swaps, reordered_inputs, short_supply_trials
 from .reference import reference_candidates
 from .reroute import rerouted_layouts, retier_layout, tunnel_pairing_valid
+from .supply import split_supply_trials
 
 
 Point = tuple[int, int]
@@ -114,6 +118,25 @@ def conflicts(problem, network, xpos, columns, align_through=False):
             gap = 2 if common else 1
             pair = (a, b, ab - bt + gap, bb - at + gap)
             rules.add(pair if a < b else (b, a, pair[3], pair[2]))
+    if uses_steam_geometry(problem):
+        bodies, lanes = [], []
+        pitch = STEAM_CELL_PIXELS
+        for node in network.nodes:
+            kind = problem.recipes[node.item]["machine"] if node.kind == "machine" else node.kind
+            ax, ay = problem.geometry(node)["anchor"]
+            rect = steam_collision_rect(kind, (xpos[node.id] + ax, ay))
+            if rect is not None:
+                bodies.append((node.id, rect))
+        for _, port, left, right in leg_intervals(problem, network, xpos, columns):
+            x1, y1, x2, y2 = steam_collision_rect("belt1", (left, port.row))
+            lanes.append((port.node, (x1, y1, x2 + (right - left) * pitch, y2)))
+        for i, (a, rect) in enumerate(bodies):
+            for b, other in (*bodies[:i], *lanes):
+                if a == b or rect[2] < other[0] or other[2] < rect[0]:
+                    continue
+                below = (rect[3] - other[1]) // pitch + 1
+                above = (other[3] - rect[1]) // pitch + 1
+                rules.add((a, b, below, above) if a < b else (b, a, above, below))
     return sorted(rules)
 
 
@@ -380,14 +403,15 @@ def route(problem, network, tracks, y, profile, optimal):
     return Layout(width, height, placements, transport, list(edges.values()), set(), (0, 0), machines, profile, optimal)
 
 
-def compact_routes(layout, axes):
+def compact_routes(layout, axes, *, allow_direct=True, can_place=None):
     for axis in axes:
         line = 0
         while line < (layout.width, layout.height)[axis]:
-            occupied = {cell[axis] for p in layout.placements for cell in p.cells()}
-            if line in occupied:
+            placements = {cell: p.building for p in layout.placements for cell in p.cells()}
+            if any(cell[axis] == line for cell in placements):
                 line += 1
                 continue
+            kinds = {**layout.transport, **placements}
             on_line = {cell for cell in layout.transport if cell[axis] == line}
             incoming = {s.end: s for s in layout.segments if s.end in on_line}
             outgoing = {s.start: s for s in layout.segments if s.start in on_line}
@@ -395,9 +419,11 @@ def compact_routes(layout, axes):
 
             def removable(point):
                 a, b = incoming[point], outgoing[point]
+                before, after = kinds[a.start], kinds[b.end]
                 return (layout.transport[point].startswith("belt") and a.bus == b.bus and a.rate == b.rate and
                         a.start[1-axis] == point[1-axis] == b.end[1-axis] and abs(a.start[axis] - b.end[axis]) == 2 and
-                        any(layout.transport.get(cell, "").startswith("belt") for cell in (a.start, b.end)))
+                        direct_logistics_allowed(before, after) and
+                        (allow_direct or any(kind.startswith("belt") for kind in (before, after))))
 
             if any(min(s.start[axis], s.end[axis]) <= line <= max(s.start[axis], s.end[axis]) for s in tunnels) or not all(map(removable, on_line)):
                 line += 1
@@ -412,10 +438,14 @@ def compact_routes(layout, axes):
             for p in layout.placements:
                 x, y = shift((p.x, p.y))
                 placed[p.node] = replace(p, x=x, y=y, anchor=shift(p.anchor))
-            layout = Layout(layout.width - (axis == 0), layout.height - (axis == 1), list(placed.values()),
-                            {shift(cell): kind for cell, kind in layout.transport.items() if cell not in on_line},
-                            [Segment(shift(s.start), shift(s.end), s.item, s.rate, s.bus) for s in edges], set(), (0, 0),
-                            [(item, rate, placed[p.node]) for item, rate, p in layout.machines], layout.profile)
+            candidate = Layout(layout.width - (axis == 0), layout.height - (axis == 1), list(placed.values()),
+                               {shift(cell): kind for cell, kind in layout.transport.items() if cell not in on_line},
+                               [Segment(shift(s.start), shift(s.end), s.item, s.rate, s.bus) for s in edges], set(), (0, 0),
+                               [(item, rate, placed[p.node]) for item, rate, p in layout.machines], layout.profile)
+            if can_place is not None and not can_place(candidate):
+                line += 1
+            else:
+                layout = candidate
     return layout
 
 
@@ -544,6 +574,9 @@ def row_placements(problem, network, tracks, time_limit, full, prefer_short, ali
 
 
 def routed_layouts(problem, network, tracks, candidates, profile):
+    def can_place(layout):
+        return collision_error(problem, layout.placements, layout.transport) is None
+
     for y, (proven, original_rows) in candidates:
         compact = combine_tracks(problem, network, tracks, y)
         for used_tracks in (compact, tracks) if compact != tracks else (tracks,):
@@ -551,8 +584,14 @@ def routed_layouts(problem, network, tracks, candidates, profile):
                 layout = route(problem, network, used_tracks, y, profile, proven)
             except Infeasible:
                 continue
+            if not can_place(layout):
+                continue
             for axes in ((0, 1), (1, 0)):
-                yield compact_routes(layout, axes), original_rows
+                conservative = compact_routes(layout, axes, allow_direct=False, can_place=can_place)
+                yield conservative, original_rows
+                direct = compact_routes(conservative, axes, can_place=can_place)
+                if direct is not conservative:
+                    yield direct, False
 
 
 def layout_candidates(problem, count, time_limit):
@@ -560,30 +599,36 @@ def layout_candidates(problem, count, time_limit):
     wiring = lru_cache(maxsize=256)(power_grid)
     limits = sorted({*(Fraction(belt["capacity"]) for belt in problem.belts),
                      *(min(problem.capacity, Fraction(rate)) for rate in (60, 36, 24))}, reverse=True)
-    profiles = [(limit, strategy, reverse) for limit in limits
+    profiles = [(limit, strategy, reverse, None) for limit in limits
                 for strategy, reverse in (("balanced", False), ("balanced", True), ("local", False))]
-    profiles.extend((problem.capacity, strategy, False) for strategy in ("direct", "distributed"))
-    for limit, strategy, reverse in profiles:
+    profiles.extend((problem.capacity, strategy, False, None) for strategy in ("direct", "distributed"))
+    if problem.catalog.get("blueprint_format") and problem.case.get("orientation_search", True):
+        profiles.extend((problem.capacity, "direct", False, ordering) for ordering in range(3))
+    for limit, strategy, reverse, ordering in profiles:
         try:
             network = make_network(problem, count, strategy, limit, reverse)
         except Infeasible:
             continue
+        if ordering is not None:
+            network = reordered_inputs(problem, network, ordering)
         signature = tuple(network.buses)
         if signature in tried:
             continue
         tried.add(signature)
         for placements, stage in placement_networks(network):
             for tracks, early, flip in track_plans(placements, include_early=not stage and limit == problem.capacity):
-                original = not stage and not early
+                original = not stage and not early and ordering is None
                 prefer_short = not flip and not early and limit == problem.capacity and not reverse
-                candidates = dict(row_placements(problem, placements, tracks, time_limit, original, prefer_short))
+                candidates = dict(row_placements(problem, placements, tracks, time_limit if ordering is None else 0,
+                                                 original, prefer_short))
                 if prefer_short and problem.junction_ports > 2 and stage != "进货靠近工序":
                     aligned = row_placements(problem, placements, tracks, time_limit, False, False, align_through=True)
                     for rows, case in aligned:
                         candidates.setdefault(rows, case)
-                labels = (str(limit), strategy, stage, "干线靠近供料" if early else "")
+                labels = (str(limit), strategy, stage, "干线靠近供料" if early else "", "交错进料口" if ordering is not None else "")
                 profile = "／".join(filter(None, labels))
                 for layout, original_rows in routed_layouts(problem, placements, tracks, candidates.items(), profile):
+                    layout = enclose_footprints(problem, layout)
                     layout.baseline = original_rows and strategy in ("balanced", "local")
                     occupied = frozenset((p.building, p.x, p.y, p.item, p.rate) for p in layout.placements)
                     routes = frozenset((s.start, s.end, s.rate, s.item) for s in layout.segments)
@@ -686,7 +731,11 @@ def _solve_belt_scope(problem, time_limit, simulation, accept):
         layout.wires, layout.power_entry = refine_power_grid(anchors, layout.width, layout.height, choice)
 
     def reductions(layout):
-        for reduced in seam_compactions(layout):
+        def can_place(candidate):
+            return collision_error(problem, candidate.placements, candidate.transport) is None
+
+        for reduced in seam_compactions(layout, can_place=can_place):
+            reduced = enclose_footprints(problem, reduced)
             if excess(reduced):
                 continue
             rewire(reduced)
@@ -705,6 +754,36 @@ def _solve_belt_scope(problem, time_limit, simulation, accept):
         for placements, label in placement_trials(problem, seed):
             for moved in rerouted_layouts(problem, seed, placements=placements, max_routes=0):
                 yield replace(moved, profile=f"{seed.profile}／{label}", wires=set(), extended=True)
+
+    def placement_neighbors(seed):
+        def edits():
+            for placements, changes, label in outlet_trials(problem, seed):
+                yield placements, changes, None, label
+            for placements, label in short_supply_trials(problem, seed):
+                yield placements, None, None, label
+            yield from split_supply_trials(problem, seed)
+            for placements, changes, label in neighboring_supply_swaps(problem, seed):
+                yield placements, changes, None, label
+                for proposed, updated, junctions, note in split_supply_trials(problem, seed, placements=placements,
+                                                                             changes=changes, limit=4):
+                    yield proposed, updated, junctions, f"{label}／{note}"
+
+        for placements, changes, junctions, label in edits():
+            for moved in rerouted_layouts(problem, seed, placements=placements, port_changes=changes,
+                                         junction_moves=junctions, max_routes=0):
+                moved.profile = f"{seed.profile}／{label}"
+                moved.wires = set()
+                moved.extended = True
+                yield moved
+
+    def verified_neighbors(seed):
+        for candidate in placement_neighbors(seed):
+            candidate = enclose_footprints(problem, candidate)
+            rewire(candidate)
+            metrics = check(candidate)
+            if metrics is not None:
+                yield metrics, candidate
+            yield from reductions(candidate)
 
     def find(count, repeat, mode):
         pending, outside = [], []
@@ -727,18 +806,23 @@ def _solve_belt_scope(problem, time_limit, simulation, accept):
         outside.sort(key=lambda option: option[0])
         for _, layout in outside[:min(12, problem.simulation_candidates)]:
             ranked.extend(reductions(layout))
-        references = []
         if mode == "shared":
-            for layout in reference_candidates(problem):
+            for original in reference_candidates(problem):
+                if collision_error(problem, original.placements, original.transport):
+                    continue
+                layout = enclose_footprints(problem, original)
+                rewire(layout)
                 if check(layout, allow_outside=True) is None:
                     continue
-                rewire(layout)
                 metrics = check(layout)
                 if metrics is not None:
                     ranked.append((metrics, layout))
                 ranked.extend(reductions(layout))
-                references.append(layout)
         ranked.sort(key=lambda option: option[0])
+        if not ranked and problem.case.get("orientation_search", True):
+            for _, seed in outside[:2]:
+                ranked.extend(verified_neighbors(seed))
+            ranked.sort(key=lambda option: option[0])
         if not ranked:
             return None, 0
         winner = ranked[0][1]
@@ -774,11 +858,18 @@ def _solve_belt_scope(problem, time_limit, simulation, accept):
 
             for seed in seeds:
                 for candidate in geometry_trials(seed, 24 if seed.extended else 12):
+                    candidate = enclose_footprints(problem, candidate)
                     rewire(candidate)
                     metrics = check(candidate)
                     if metrics is not None:
                         consider(((metrics, candidate),))
                         consider(reductions(candidate))
+            # 在新格位上继续试相邻改动，使进货、工位及出口可以合并优化。
+            for _ in range(3):
+                seed = winner
+                consider(verified_neighbors(seed))
+                if winner is seed:
+                    break
         lower = retier_layout(problem, winner)
         if lower is not None and check(lower) is not None:
             validated_count += 1
@@ -821,14 +912,16 @@ def solve(problem, time_limit, simulation=None, accept=None):
 
 
 def verify(problem, layout):
-    from .geometry import OFFSETS, OPPOSITE, offset, oriented_geometry, placement_ports
+    from .geometry import OFFSETS, OPPOSITE, assigned_ports, offset, oriented_geometry, placement_ports
 
     incoming, outgoing = defaultdict(list), defaultdict(list)
     belt_capacity = {b["building"]: b["capacity"] for b in problem.belts}
     belt_capacity.update((b["underground"], b["capacity"]) for b in problem.belts
                          if b.get("underground") in problem.underground_spans)
     occupied = set(layout.transport)
+    kinds = layout.transport.copy()
     tunnel_pairs = []
+    physical = layout.extended or bool(problem.catalog.get("blueprint_format"))
 
     def require(condition, message):
         if not condition:
@@ -838,7 +931,13 @@ def verify(problem, layout):
         cells = set(p.cells())
         require(not cells & occupied, f"{p.item}与其他组件占位冲突")
         occupied.update(cells)
+        kinds.update(dict.fromkeys(cells, p.building))
     require(all(0 <= x < layout.width and 0 <= y < layout.height for x, y in occupied | layout.wires), "组件超出外接矩形")
+    if uses_steam_geometry(problem):
+        if error := collision_error(problem, layout.placements, layout.transport):
+            raise Infeasible(error)
+        require(footprint_bounds(layout) == (0, 0, layout.width, layout.height), "实际机体超出外接矩形")
+    blocked_leads = belt_obstacles(problem, layout.placements)
     for s in layout.segments:
         require(s.start in occupied and s.end in occupied, "有物流线连接空格")
         jump = distance(s.start, s.end)
@@ -849,8 +948,9 @@ def verify(problem, layout):
             require(kind == layout.transport.get(end) and jump <= problem.underground_spans.get(kind, 0) and
                     (start[0] == end[0] or start[1] == end[1]), "地下带配对或跨度错误")
             tunnel_pairs.append((start, end, kind))
-        if layout.transport.get(s.start) in ("split", "merge") and layout.transport.get(s.end) in ("split", "merge"):
-            raise Infeasible("分流器与合并器必须用带段隔开")
+        a, b = kinds[s.start], kinds[s.end]
+        if jump == 1 and (physical or (a in JUNCTIONS and b in JUNCTIONS)):
+            require(direct_logistics_allowed(a, b), f"{s.start}与{s.end}之间需要传送带才能交接")
         outgoing[s.start].append(s)
         incoming[s.end].append(s)
     require(tunnel_pairing_valid(tunnel_pairs, problem.underground_spans), "地下带最近端点会发生误配")
@@ -860,7 +960,6 @@ def verify(problem, layout):
                      if (b[0] - a[0], b[1] - a[1]) == (dx * distance(a, b), dy * distance(a, b))), None)
 
     accepts, sends = {}, {}
-    physical = layout.extended or bool(problem.catalog.get("blueprint_format"))
     for point, kind in layout.transport.items():
         ins, outs = incoming[point], outgoing[point]
         if kind == "split":
@@ -902,7 +1001,7 @@ def verify(problem, layout):
         geo = problem.buildings[p.building]
         try:
             oriented = oriented_geometry(p.building, geo, p.direction)
-            input_cells, output_cell = placement_ports(problem, p)
+            input_cells, output_cell = assigned_ports(problem, p, incoming)
         except ValueError as error:
             raise Infeasible(str(error)) from error
         require(tuple(oriented["size"]) == (p.width, p.height) and
@@ -915,7 +1014,8 @@ def verify(problem, layout):
             consumed[p.item] += p.rate
         elif p.building == "outlet":
             expected_in[input_cells[0]] = (p.item, p.rate)
-            require(p.rate <= problem.capacity and offset(p.anchor, p.direction) not in occupied, "成品接出口被遮挡")
+            next_cell = offset(p.anchor, p.direction)
+            require(p.rate <= problem.capacity and next_cell not in occupied and next_cell not in blocked_leads, "成品接出口被遮挡")
         else:
             require(p.item in problem.ranks, f"{p.item}缺少可用配方")
             recipe = problem.recipes[p.item]
@@ -925,7 +1025,8 @@ def verify(problem, layout):
             if not recipe.get("virtual"):
                 expected_out[output_cell] = (p.item, p.rate)
         if physical:
-            accepts.update((point, (p.direction,)) for point in expected_in)
+            all_inputs = placement_ports(problem, p, all_inputs=True)[0] if problem.catalog.get("blueprint_format") else expected_in
+            accepts.update((point, (p.direction,)) for point in all_inputs)
             sends.update((point, (p.direction,)) for point in expected_out)
         for point in p.cells():
             ins, outs = incoming[point], outgoing[point]
@@ -943,7 +1044,8 @@ def verify(problem, layout):
         for point, directions in sends.items():
             for direction in directions:
                 neighbor = offset(point, direction)
-                require(direction not in accepts.get(neighbor, ()) or (point, neighbor) in declared,
+                require(direction not in accepts.get(neighbor, ()) or not direct_logistics_allowed(kinds[point], kinds[neighbor])
+                        or (point, neighbor) in declared,
                         f"{point}与{neighbor}存在未规划的物流连接")
     finals = [p for item, _, p in layout.machines if item == problem.target]
     require(len(finals) == problem.count and sum(p.rate for p in finals) == problem.rate, "末端数量或产量错误")

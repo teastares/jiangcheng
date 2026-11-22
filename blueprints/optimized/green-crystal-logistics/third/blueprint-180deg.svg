@@ -1,0 +1,1320 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1073" height="1565" viewBox="0 0 1073 1565" role="img" aria-labelledby="title description">
+<title id="title">绿色晶能 · 共用上游</title><desc id="description">29列、27行。左上角为(0,0)。上图为物流，下图为电网。机台和进货箱的浅色虚线框表示游戏像素碰撞范围。</desc>
+<defs><pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M25 0H0V25" fill="none" stroke="#d9e0d9"/></pattern></defs>
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC","PingFang SC",sans-serif;fill:#19362e}.tick{font-size:9px;fill:#4c665d}.meta{font-size:13px;fill:#3e5b51}.machine{font-size:11px;font-weight:650}.legend{font-size:12px}.title{font-size:28px;font-weight:750}.section{font-size:16px;font-weight:700}</style>
+<rect width="1073" height="1565" fill="#f5f7f2"/>
+<text x="46" y="43" class="title">绿色晶能 · 共用上游</text>
+<text x="46" y="68" class="meta">29 × 27 格　·　29 台加工设备　·　200 kW　·　稳态理论日产 192</text>
+<rect x="46" y="105" width="725" height="675" fill="#fffef9" stroke="#c4d0c6"/>
+<rect x="46" y="105" width="725" height="675" fill="url(#grid)"/>
+<text x="58.5" y="100" text-anchor="middle" class="tick">0</text>
+<text x="183.5" y="100" text-anchor="middle" class="tick">5</text>
+<text x="308.5" y="100" text-anchor="middle" class="tick">10</text>
+<text x="433.5" y="100" text-anchor="middle" class="tick">15</text>
+<text x="558.5" y="100" text-anchor="middle" class="tick">20</text>
+<text x="683.5" y="100" text-anchor="middle" class="tick">25</text>
+<text x="39" y="120.5" text-anchor="end" class="tick">0</text>
+<text x="39" y="245.5" text-anchor="end" class="tick">5</text>
+<text x="39" y="370.5" text-anchor="end" class="tick">10</text>
+<text x="39" y="495.5" text-anchor="end" class="tick">15</text>
+<text x="39" y="620.5" text-anchor="end" class="tick">20</text>
+<text x="39" y="745.5" text-anchor="end" class="tick">25</text>
+<g class="route"><title>布：36 件/分钟；(6, 17) → (6, 10)</title><path d="M208.5 542.5L208.5 367.5" fill="none" stroke="#375d99" stroke-width="2.2" stroke-dasharray="4 3"/><polygon points="208.5,451.0 205.5,457.0 211.5,457.0" fill="#375d99"/></g>
+<g class="route"><title>线：18 件/分钟；(16, 24) → (11, 24)</title><path d="M458.5 717.5L333.5 717.5" fill="none" stroke="#a34839" stroke-width="2.2" stroke-dasharray="4 3"/><polygon points="392.0,717.5 398.0,720.5 398.0,714.5" fill="#a34839"/></g>
+<g class="route"><title>石材：24 件/分钟；(12, 20) → (12, 15)</title><path d="M358.5 617.5L358.5 492.5" fill="none" stroke="#536634" stroke-width="2.2" stroke-dasharray="4 3"/><polygon points="358.5,551.0 355.5,557.0 361.5,557.0" fill="#536634"/></g>
+<g class="route"><title>线：18 件/分钟；(16, 22) → (11, 22)</title><path d="M458.5 667.5L333.5 667.5" fill="none" stroke="#a34839" stroke-width="2.2" stroke-dasharray="4 3"/><polygon points="392.0,667.5 398.0,670.5 398.0,664.5" fill="#a34839"/></g>
+<g class="route"><title>线：18 件/分钟；(16, 20) → (11, 20)</title><path d="M458.5 617.5L333.5 617.5" fill="none" stroke="#a34839" stroke-width="2.2" stroke-dasharray="4 3"/><polygon points="392.0,617.5 398.0,620.5 398.0,614.5" fill="#a34839"/></g>
+<g class="route"><title>石材：12 件/分钟；(18, 21) → (13, 21)</title><path d="M508.5 642.5L383.5 642.5" fill="none" stroke="#536634" stroke-width="2.2" stroke-dasharray="4 3"/><polygon points="442.0,642.5 448.0,645.5 448.0,639.5" fill="#536634"/></g>
+<g class="route"><title>石材：12 件/分钟；(18, 23) → (13, 23)</title><path d="M508.5 692.5L383.5 692.5" fill="none" stroke="#536634" stroke-width="2.2" stroke-dasharray="4 3"/><polygon points="442.0,692.5 448.0,695.5 448.0,689.5" fill="#536634"/></g>
+<g class="route"><title>布：36 件/分钟；(6, 9) → (6, 6)</title><path d="M208.5 342.5L208.5 267.5" fill="none" stroke="#375d99" stroke-width="2.2" stroke-dasharray="4 3"/><polygon points="208.5,301.0 205.5,307.0 211.5,307.0" fill="#375d99"/></g>
+<g class="route"><title>木棒：12 件/分钟；(14, 6) → (11, 6)</title><path d="M408.5 267.5L333.5 267.5" fill="none" stroke="#5c59a1" stroke-width="2.2" stroke-dasharray="4 3"/><polygon points="367.0,267.5 373.0,270.5 373.0,264.5" fill="#5c59a1"/></g>
+<g class="route"><title>布：18 件/分钟；(5, 2) → (3, 2)</title><path d="M183.5 167.5L133.5 167.5" fill="none" stroke="#375d99" stroke-width="2.2" stroke-dasharray="4 3"/><polygon points="154.5,167.5 160.5,170.5 160.5,164.5" fill="#375d99"/></g>
+<g class="route"><title>木纤维：18 件/分钟；(23, 1) → (21, 1)</title><path d="M633.5 142.5L583.5 142.5" fill="none" stroke="#846007" stroke-width="2.2" stroke-dasharray="4 3"/><polygon points="604.5,142.5 610.5,145.5 610.5,139.5" fill="#846007"/></g>
+<g class="route"><title>初级工具：6 件/分钟；(7, 6) → (5, 6)</title><path d="M233.5 267.5L183.5 267.5" fill="none" stroke="#187467" stroke-width="2.2" stroke-dasharray="4 3"/><polygon points="204.5,267.5 210.5,270.5 210.5,264.5" fill="#187467"/></g>
+<g class="route"><title>初级工具：6 件/分钟；(7, 9) → (5, 9)</title><path d="M233.5 342.5L183.5 342.5" fill="none" stroke="#187467" stroke-width="2.2" stroke-dasharray="4 3"/><polygon points="204.5,342.5 210.5,345.5 210.5,339.5" fill="#187467"/></g>
+<g class="route"><title>初级工具：6 件/分钟；(7, 12) → (5, 12)</title><path d="M233.5 417.5L183.5 417.5" fill="none" stroke="#187467" stroke-width="2.2" stroke-dasharray="4 3"/><polygon points="204.5,417.5 210.5,420.5 210.5,414.5" fill="#187467"/></g>
+<g class="route"><title>初级工具：6 件/分钟；(7, 15) → (5, 15)</title><path d="M233.5 492.5L183.5 492.5" fill="none" stroke="#187467" stroke-width="2.2" stroke-dasharray="4 3"/><polygon points="204.5,492.5 210.5,495.5 210.5,489.5" fill="#187467"/></g>
+<g class="route"><title>木棒：24 件/分钟；(18, 17) → (16, 17)</title><path d="M508.5 542.5L458.5 542.5" fill="none" stroke="#5c59a1" stroke-width="2.2" stroke-dasharray="4 3"/><polygon points="479.5,542.5 485.5,545.5 485.5,539.5" fill="#5c59a1"/></g>
+<g class="route"><title>木棒：24 件/分钟；(18, 19) → (16, 19)</title><path d="M508.5 592.5L458.5 592.5" fill="none" stroke="#5c59a1" stroke-width="2.2" stroke-dasharray="4 3"/><polygon points="479.5,592.5 485.5,595.5 485.5,589.5" fill="#5c59a1"/></g>
+<g class="route"><title>木棒：12 件/分钟；(13, 9) → (11, 9)</title><path d="M383.5 342.5L333.5 342.5" fill="none" stroke="#5c59a1" stroke-width="2.2" stroke-dasharray="4 3"/><polygon points="354.5,342.5 360.5,345.5 360.5,339.5" fill="#5c59a1"/></g>
+<g class="route"><title>木棒：12 件/分钟；(13, 12) → (11, 12)</title><path d="M383.5 417.5L333.5 417.5" fill="none" stroke="#5c59a1" stroke-width="2.2" stroke-dasharray="4 3"/><polygon points="354.5,417.5 360.5,420.5 360.5,414.5" fill="#5c59a1"/></g>
+<g class="route"><title>木棒：12 件/分钟；(13, 15) → (11, 15)</title><path d="M383.5 492.5L333.5 492.5" fill="none" stroke="#5c59a1" stroke-width="2.2" stroke-dasharray="4 3"/><polygon points="354.5,492.5 360.5,495.5 360.5,489.5" fill="#5c59a1"/></g>
+<g class="route"><title>线：18 件/分钟；(16, 18) → (14, 18)</title><path d="M458.5 567.5L408.5 567.5" fill="none" stroke="#a34839" stroke-width="2.2" stroke-dasharray="4 3"/><polygon points="429.5,567.5 435.5,570.5 435.5,564.5" fill="#a34839"/></g>
+<g class="route"><title>线：18 件/分钟；(13, 18) → (11, 18)</title><path d="M383.5 567.5L333.5 567.5" fill="none" stroke="#a34839" stroke-width="2.2" stroke-dasharray="4 3"/><polygon points="354.5,567.5 360.5,570.5 360.5,564.5" fill="#a34839"/></g>
+<g class="route"><title>布：18 件/分钟；(5, 5) → (3, 5)</title><path d="M183.5 242.5L133.5 242.5" fill="none" stroke="#375d99" stroke-width="2.2" stroke-dasharray="4 3"/><polygon points="154.5,242.5 160.5,245.5 160.5,239.5" fill="#375d99"/></g>
+<g class="route"><title>布：18 件/分钟；(6, 22) → (6, 21)</title><path d="M208.5 667.5L208.5 642.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="208.5,651.0 205.5,657.0 211.5,657.0" fill="#375d99"/></g>
+<g class="route"><title>布：18 件/分钟；(6, 21) → (6, 20)</title><path d="M208.5 642.5L208.5 617.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="208.5,626.0 205.5,632.0 211.5,632.0" fill="#375d99"/></g>
+<g class="route"><title>布：27 件/分钟；(6, 20) → (6, 19)</title><path d="M208.5 617.5L208.5 592.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="208.5,601.0 205.5,607.0 211.5,607.0" fill="#375d99"/></g>
+<g class="route"><title>布：27 件/分钟；(6, 19) → (6, 18)</title><path d="M208.5 592.5L208.5 567.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="208.5,576.0 205.5,582.0 211.5,582.0" fill="#375d99"/></g>
+<g class="route"><title>布：36 件/分钟；(6, 18) → (6, 17)</title><path d="M208.5 567.5L208.5 542.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="208.5,551.0 205.5,557.0 211.5,557.0" fill="#375d99"/></g>
+<g class="route"><title>布：36 件/分钟；(6, 10) → (6, 9)</title><path d="M208.5 367.5L208.5 342.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="208.5,351.0 205.5,357.0 211.5,357.0" fill="#375d99"/></g>
+<g class="route"><title>布：36 件/分钟；(6, 6) → (6, 5)</title><path d="M208.5 267.5L208.5 242.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="208.5,251.0 205.5,257.0 211.5,257.0" fill="#375d99"/></g>
+<g class="route"><title>布：18 件/分钟；(6, 5) → (6, 4)</title><path d="M208.5 242.5L208.5 217.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="208.5,226.0 205.5,232.0 211.5,232.0" fill="#375d99"/></g>
+<g class="route"><title>布：18 件/分钟；(6, 4) → (6, 3)</title><path d="M208.5 217.5L208.5 192.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="208.5,201.0 205.5,207.0 211.5,207.0" fill="#375d99"/></g>
+<g class="route"><title>布：18 件/分钟；(6, 3) → (6, 2)</title><path d="M208.5 192.5L208.5 167.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="208.5,176.0 205.5,182.0 211.5,182.0" fill="#375d99"/></g>
+<g class="route"><title>布：18 件/分钟；(6, 2) → (5, 2)</title><path d="M208.5 167.5L183.5 167.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="192.0,167.5 198.0,170.5 198.0,164.5" fill="#375d99"/></g>
+<g class="route"><title>布：18 件/分钟；(3, 2) → (2, 2)</title><path d="M133.5 167.5L108.5 167.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="117.0,167.5 123.0,170.5 123.0,164.5" fill="#375d99"/></g>
+<g class="route"><title>初级工具：12 件/分钟；(4, 12) → (4, 11)</title><path d="M158.5 417.5L158.5 392.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="158.5,401.0 155.5,407.0 161.5,407.0" fill="#187467"/></g>
+<g class="route"><title>初级工具：12 件/分钟；(4, 11) → (4, 10)</title><path d="M158.5 392.5L158.5 367.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="158.5,376.0 155.5,382.0 161.5,382.0" fill="#187467"/></g>
+<g class="route"><title>初级工具：12 件/分钟；(4, 10) → (4, 9)</title><path d="M158.5 367.5L158.5 342.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="158.5,351.0 155.5,357.0 161.5,357.0" fill="#187467"/></g>
+<g class="route"><title>初级工具：18 件/分钟；(4, 9) → (4, 8)</title><path d="M158.5 342.5L158.5 317.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="158.5,326.0 155.5,332.0 161.5,332.0" fill="#187467"/></g>
+<g class="route"><title>初级工具：18 件/分钟；(4, 8) → (4, 7)</title><path d="M158.5 317.5L158.5 292.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="158.5,301.0 155.5,307.0 161.5,307.0" fill="#187467"/></g>
+<g class="route"><title>初级工具：18 件/分钟；(4, 7) → (4, 6)</title><path d="M158.5 292.5L158.5 267.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="158.5,276.0 155.5,282.0 161.5,282.0" fill="#187467"/></g>
+<g class="route"><title>初级工具：24 件/分钟；(4, 6) → (4, 5)</title><path d="M158.5 267.5L158.5 242.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="158.5,251.0 155.5,257.0 161.5,257.0" fill="#187467"/></g>
+<g class="route"><title>初级工具：24 件/分钟；(4, 5) → (4, 4)</title><path d="M158.5 242.5L158.5 217.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="158.5,226.0 155.5,232.0 161.5,232.0" fill="#187467"/></g>
+<g class="route"><title>初级工具：12 件/分钟；(4, 4) → (4, 3)</title><path d="M158.5 217.5L158.5 192.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="158.5,201.0 155.5,207.0 161.5,207.0" fill="#187467"/></g>
+<g class="route"><title>初级工具：12 件/分钟；(4, 3) → (4, 2)</title><path d="M158.5 192.5L158.5 167.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="158.5,176.0 155.5,182.0 161.5,182.0" fill="#187467"/></g>
+<g class="route"><title>初级工具：12 件/分钟；(4, 2) → (4, 1)</title><path d="M158.5 167.5L158.5 142.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="158.5,151.0 155.5,157.0 161.5,157.0" fill="#187467"/></g>
+<g class="route"><title>初级工具：12 件/分钟；(4, 1) → (3, 1)</title><path d="M158.5 142.5L133.5 142.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="142.0,142.5 148.0,145.5 148.0,139.5" fill="#187467"/></g>
+<g class="route"><title>初级工具：12 件/分钟；(3, 1) → (2, 1)</title><path d="M133.5 142.5L108.5 142.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="117.0,142.5 123.0,145.5 123.0,139.5" fill="#187467"/></g>
+<g class="route"><title>线：18 件/分钟；(17, 22) → (17, 23)</title><path d="M483.5 667.5L483.5 692.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="483.5,684.0 486.5,678.0 480.5,678.0" fill="#a34839"/></g>
+<g class="route"><title>线：18 件/分钟；(17, 23) → (17, 24)</title><path d="M483.5 692.5L483.5 717.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="483.5,709.0 486.5,703.0 480.5,703.0" fill="#a34839"/></g>
+<g class="route"><title>线：18 件/分钟；(17, 24) → (16, 24)</title><path d="M483.5 717.5L458.5 717.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="467.0,717.5 473.0,720.5 473.0,714.5" fill="#a34839"/></g>
+<g class="route"><title>线：18 件/分钟；(11, 24) → (10, 24)</title><path d="M333.5 717.5L308.5 717.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="317.0,717.5 323.0,720.5 323.0,714.5" fill="#a34839"/></g>
+<g class="route"><title>线：36 件/分钟；(17, 20) → (17, 21)</title><path d="M483.5 617.5L483.5 642.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="483.5,634.0 486.5,628.0 480.5,628.0" fill="#a34839"/></g>
+<g class="route"><title>线：36 件/分钟；(17, 21) → (17, 22)</title><path d="M483.5 642.5L483.5 667.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="483.5,659.0 486.5,653.0 480.5,653.0" fill="#a34839"/></g>
+<g class="route"><title>线：54 件/分钟；(17, 18) → (17, 19)</title><path d="M483.5 567.5L483.5 592.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="483.5,584.0 486.5,578.0 480.5,578.0" fill="#a34839"/></g>
+<g class="route"><title>线：54 件/分钟；(17, 19) → (17, 20)</title><path d="M483.5 592.5L483.5 617.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="483.5,609.0 486.5,603.0 480.5,603.0" fill="#a34839"/></g>
+<g class="route"><title>线：72 件/分钟；(17, 15) → (17, 16)</title><path d="M483.5 492.5L483.5 517.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="483.5,509.0 486.5,503.0 480.5,503.0" fill="#a34839"/></g>
+<g class="route"><title>线：72 件/分钟；(17, 16) → (17, 17)</title><path d="M483.5 517.5L483.5 542.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="483.5,534.0 486.5,528.0 480.5,528.0" fill="#a34839"/></g>
+<g class="route"><title>线：72 件/分钟；(17, 17) → (17, 18)</title><path d="M483.5 542.5L483.5 567.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="483.5,559.0 486.5,553.0 480.5,553.0" fill="#a34839"/></g>
+<g class="route"><title>线：63 件/分钟；(17, 13) → (17, 14)</title><path d="M483.5 442.5L483.5 467.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="483.5,459.0 486.5,453.0 480.5,453.0" fill="#a34839"/></g>
+<g class="route"><title>线：63 件/分钟；(17, 14) → (17, 15)</title><path d="M483.5 467.5L483.5 492.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="483.5,484.0 486.5,478.0 480.5,478.0" fill="#a34839"/></g>
+<g class="route"><title>线：54 件/分钟；(17, 11) → (17, 12)</title><path d="M483.5 392.5L483.5 417.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="483.5,409.0 486.5,403.0 480.5,403.0" fill="#a34839"/></g>
+<g class="route"><title>线：54 件/分钟；(17, 12) → (17, 13)</title><path d="M483.5 417.5L483.5 442.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="483.5,434.0 486.5,428.0 480.5,428.0" fill="#a34839"/></g>
+<g class="route"><title>线：45 件/分钟；(17, 9) → (17, 10)</title><path d="M483.5 342.5L483.5 367.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="483.5,359.0 486.5,353.0 480.5,353.0" fill="#a34839"/></g>
+<g class="route"><title>线：45 件/分钟；(17, 10) → (17, 11)</title><path d="M483.5 367.5L483.5 392.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="483.5,384.0 486.5,378.0 480.5,378.0" fill="#a34839"/></g>
+<g class="route"><title>线：36 件/分钟；(17, 7) → (17, 8)</title><path d="M483.5 292.5L483.5 317.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="483.5,309.0 486.5,303.0 480.5,303.0" fill="#a34839"/></g>
+<g class="route"><title>线：36 件/分钟；(17, 8) → (17, 9)</title><path d="M483.5 317.5L483.5 342.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="483.5,334.0 486.5,328.0 480.5,328.0" fill="#a34839"/></g>
+<g class="route"><title>线：27 件/分钟；(17, 5) → (17, 6)</title><path d="M483.5 242.5L483.5 267.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="483.5,259.0 486.5,253.0 480.5,253.0" fill="#a34839"/></g>
+<g class="route"><title>线：27 件/分钟；(17, 6) → (17, 7)</title><path d="M483.5 267.5L483.5 292.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="483.5,284.0 486.5,278.0 480.5,278.0" fill="#a34839"/></g>
+<g class="route"><title>线：18 件/分钟；(17, 3) → (17, 4)</title><path d="M483.5 192.5L483.5 217.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="483.5,209.0 486.5,203.0 480.5,203.0" fill="#a34839"/></g>
+<g class="route"><title>线：18 件/分钟；(17, 4) → (17, 5)</title><path d="M483.5 217.5L483.5 242.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="483.5,234.0 486.5,228.0 480.5,228.0" fill="#a34839"/></g>
+<g class="route"><title>木棒：48 件/分钟；(15, 17) → (15, 16)</title><path d="M433.5 542.5L433.5 517.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="433.5,526.0 430.5,532.0 436.5,532.0" fill="#5c59a1"/></g>
+<g class="route"><title>木棒：48 件/分钟；(15, 16) → (15, 15)</title><path d="M433.5 517.5L433.5 492.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="433.5,501.0 430.5,507.0 436.5,507.0" fill="#5c59a1"/></g>
+<g class="route"><title>木棒：36 件/分钟；(15, 15) → (15, 14)</title><path d="M433.5 492.5L433.5 467.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="433.5,476.0 430.5,482.0 436.5,482.0" fill="#5c59a1"/></g>
+<g class="route"><title>木棒：36 件/分钟；(15, 14) → (15, 13)</title><path d="M433.5 467.5L433.5 442.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="433.5,451.0 430.5,457.0 436.5,457.0" fill="#5c59a1"/></g>
+<g class="route"><title>木棒：36 件/分钟；(15, 13) → (15, 12)</title><path d="M433.5 442.5L433.5 417.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="433.5,426.0 430.5,432.0 436.5,432.0" fill="#5c59a1"/></g>
+<g class="route"><title>木棒：24 件/分钟；(15, 12) → (15, 11)</title><path d="M433.5 417.5L433.5 392.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="433.5,401.0 430.5,407.0 436.5,407.0" fill="#5c59a1"/></g>
+<g class="route"><title>木棒：24 件/分钟；(15, 11) → (15, 10)</title><path d="M433.5 392.5L433.5 367.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="433.5,376.0 430.5,382.0 436.5,382.0" fill="#5c59a1"/></g>
+<g class="route"><title>木棒：24 件/分钟；(15, 10) → (15, 9)</title><path d="M433.5 367.5L433.5 342.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="433.5,351.0 430.5,357.0 436.5,357.0" fill="#5c59a1"/></g>
+<g class="route"><title>木棒：12 件/分钟；(15, 9) → (15, 8)</title><path d="M433.5 342.5L433.5 317.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="433.5,326.0 430.5,332.0 436.5,332.0" fill="#5c59a1"/></g>
+<g class="route"><title>木棒：12 件/分钟；(15, 8) → (15, 7)</title><path d="M433.5 317.5L433.5 292.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="433.5,301.0 430.5,307.0 436.5,307.0" fill="#5c59a1"/></g>
+<g class="route"><title>木棒：12 件/分钟；(15, 7) → (15, 6)</title><path d="M433.5 292.5L433.5 267.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="433.5,276.0 430.5,282.0 436.5,282.0" fill="#5c59a1"/></g>
+<g class="route"><title>木棒：12 件/分钟；(15, 6) → (14, 6)</title><path d="M433.5 267.5L408.5 267.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="417.0,267.5 423.0,270.5 423.0,264.5" fill="#5c59a1"/></g>
+<g class="route"><title>木棒：12 件/分钟；(11, 6) → (10, 6)</title><path d="M333.5 267.5L308.5 267.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="317.0,267.5 323.0,270.5 323.0,264.5" fill="#5c59a1"/></g>
+<g class="route"><title>木纤维：60 件/分钟；(24, 13) → (24, 12)</title><path d="M658.5 442.5L658.5 417.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="658.5,426.0 655.5,432.0 661.5,432.0" fill="#846007"/></g>
+<g class="route"><title>木纤维：60 件/分钟；(24, 12) → (24, 11)</title><path d="M658.5 417.5L658.5 392.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="658.5,401.0 655.5,407.0 661.5,407.0" fill="#846007"/></g>
+<g class="route"><title>木纤维：90 件/分钟；(24, 11) → (24, 10)</title><path d="M658.5 392.5L658.5 367.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="658.5,376.0 655.5,382.0 661.5,382.0" fill="#846007"/></g>
+<g class="route"><title>木纤维：90 件/分钟；(24, 10) → (24, 9)</title><path d="M658.5 367.5L658.5 342.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="658.5,351.0 655.5,357.0 661.5,357.0" fill="#846007"/></g>
+<g class="route"><title>木纤维：72 件/分钟；(24, 9) → (24, 8)</title><path d="M658.5 342.5L658.5 317.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="658.5,326.0 655.5,332.0 661.5,332.0" fill="#846007"/></g>
+<g class="route"><title>木纤维：72 件/分钟；(24, 8) → (24, 7)</title><path d="M658.5 317.5L658.5 292.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="658.5,301.0 655.5,307.0 661.5,307.0" fill="#846007"/></g>
+<g class="route"><title>木纤维：54 件/分钟；(24, 7) → (24, 6)</title><path d="M658.5 292.5L658.5 267.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="658.5,276.0 655.5,282.0 661.5,282.0" fill="#846007"/></g>
+<g class="route"><title>木纤维：54 件/分钟；(24, 6) → (24, 5)</title><path d="M658.5 267.5L658.5 242.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="658.5,251.0 655.5,257.0 661.5,257.0" fill="#846007"/></g>
+<g class="route"><title>木纤维：36 件/分钟；(24, 5) → (24, 4)</title><path d="M658.5 242.5L658.5 217.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="658.5,226.0 655.5,232.0 661.5,232.0" fill="#846007"/></g>
+<g class="route"><title>木纤维：36 件/分钟；(24, 4) → (24, 3)</title><path d="M658.5 217.5L658.5 192.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="658.5,201.0 655.5,207.0 661.5,207.0" fill="#846007"/></g>
+<g class="route"><title>木纤维：18 件/分钟；(24, 3) → (24, 2)</title><path d="M658.5 192.5L658.5 167.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="658.5,176.0 655.5,182.0 661.5,182.0" fill="#846007"/></g>
+<g class="route"><title>木纤维：18 件/分钟；(24, 2) → (24, 1)</title><path d="M658.5 167.5L658.5 142.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="658.5,151.0 655.5,157.0 661.5,157.0" fill="#846007"/></g>
+<g class="route"><title>木纤维：18 件/分钟；(24, 1) → (23, 1)</title><path d="M658.5 142.5L633.5 142.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="642.0,142.5 648.0,145.5 648.0,139.5" fill="#846007"/></g>
+<g class="route"><title>木纤维：18 件/分钟；(21, 1) → (20, 1)</title><path d="M583.5 142.5L558.5 142.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="567.0,142.5 573.0,145.5 573.0,139.5" fill="#846007"/></g>
+<g class="route"><title>木纤维：54 件/分钟；(23, 17) → (23, 16)</title><path d="M633.5 542.5L633.5 517.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="633.5,526.0 630.5,532.0 636.5,532.0" fill="#846007"/></g>
+<g class="route"><title>木纤维：54 件/分钟；(23, 16) → (23, 15)</title><path d="M633.5 517.5L633.5 492.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="633.5,501.0 630.5,507.0 636.5,507.0" fill="#846007"/></g>
+<g class="route"><title>木纤维：36 件/分钟；(23, 15) → (23, 14)</title><path d="M633.5 492.5L633.5 467.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="633.5,476.0 630.5,482.0 636.5,482.0" fill="#846007"/></g>
+<g class="route"><title>木纤维：36 件/分钟；(23, 14) → (23, 13)</title><path d="M633.5 467.5L633.5 442.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="633.5,451.0 630.5,457.0 636.5,457.0" fill="#846007"/></g>
+<g class="route"><title>木纤维：18 件/分钟；(23, 13) → (23, 12)</title><path d="M633.5 442.5L633.5 417.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="633.5,426.0 630.5,432.0 636.5,432.0" fill="#846007"/></g>
+<g class="route"><title>木纤维：18 件/分钟；(23, 12) → (23, 11)</title><path d="M633.5 417.5L633.5 392.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="633.5,401.0 630.5,407.0 636.5,407.0" fill="#846007"/></g>
+<g class="route"><title>木纤维：18 件/分钟；(23, 11) → (22, 11)</title><path d="M633.5 392.5L608.5 392.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="617.0,392.5 623.0,395.5 623.0,389.5" fill="#846007"/></g>
+<g class="route"><title>木纤维：18 件/分钟；(22, 11) → (21, 11)</title><path d="M608.5 392.5L583.5 392.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="592.0,392.5 598.0,395.5 598.0,389.5" fill="#846007"/></g>
+<g class="route"><title>木纤维：18 件/分钟；(21, 11) → (20, 11)</title><path d="M583.5 392.5L558.5 392.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="567.0,392.5 573.0,395.5 573.0,389.5" fill="#846007"/></g>
+<g class="route"><title>木材：32 件/分钟；(22, 21) → (22, 20)</title><path d="M608.5 642.5L608.5 617.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="608.5,626.0 605.5,632.0 611.5,632.0" fill="#8b4672"/></g>
+<g class="route"><title>木材：32 件/分钟；(22, 20) → (22, 19)</title><path d="M608.5 617.5L608.5 592.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="608.5,601.0 605.5,607.0 611.5,607.0" fill="#8b4672"/></g>
+<g class="route"><title>木材：16 件/分钟；(22, 19) → (22, 18)</title><path d="M608.5 592.5L608.5 567.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="608.5,576.0 605.5,582.0 611.5,582.0" fill="#8b4672"/></g>
+<g class="route"><title>木材：16 件/分钟；(22, 18) → (22, 17)</title><path d="M608.5 567.5L608.5 542.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="608.5,551.0 605.5,557.0 611.5,557.0" fill="#8b4672"/></g>
+<g class="route"><title>木材：16 件/分钟；(22, 17) → (21, 17)</title><path d="M608.5 542.5L583.5 542.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="592.0,542.5 598.0,545.5 598.0,539.5" fill="#8b4672"/></g>
+<g class="route"><title>木材：16 件/分钟；(21, 17) → (20, 17)</title><path d="M583.5 542.5L558.5 542.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="567.0,542.5 573.0,545.5 573.0,539.5" fill="#8b4672"/></g>
+<g class="route"><title>石材：24 件/分钟；(12, 21) → (12, 20)</title><path d="M358.5 642.5L358.5 617.5" fill="none" stroke="#536634" stroke-width="2.2"/><polygon points="358.5,626.0 355.5,632.0 361.5,632.0" fill="#536634"/></g>
+<g class="route"><title>石材：24 件/分钟；(12, 15) → (12, 14)</title><path d="M358.5 492.5L358.5 467.5" fill="none" stroke="#536634" stroke-width="2.2"/><polygon points="358.5,476.0 355.5,482.0 361.5,482.0" fill="#536634"/></g>
+<g class="route"><title>石材：18 件/分钟；(12, 14) → (12, 13)</title><path d="M358.5 467.5L358.5 442.5" fill="none" stroke="#536634" stroke-width="2.2"/><polygon points="358.5,451.0 355.5,457.0 361.5,457.0" fill="#536634"/></g>
+<g class="route"><title>石材：18 件/分钟；(12, 13) → (12, 12)</title><path d="M358.5 442.5L358.5 417.5" fill="none" stroke="#536634" stroke-width="2.2"/><polygon points="358.5,426.0 355.5,432.0 361.5,432.0" fill="#536634"/></g>
+<g class="route"><title>石材：18 件/分钟；(12, 12) → (12, 11)</title><path d="M358.5 417.5L358.5 392.5" fill="none" stroke="#536634" stroke-width="2.2"/><polygon points="358.5,401.0 355.5,407.0 361.5,407.0" fill="#536634"/></g>
+<g class="route"><title>石材：12 件/分钟；(12, 11) → (12, 10)</title><path d="M358.5 392.5L358.5 367.5" fill="none" stroke="#536634" stroke-width="2.2"/><polygon points="358.5,376.0 355.5,382.0 361.5,382.0" fill="#536634"/></g>
+<g class="route"><title>石材：12 件/分钟；(12, 10) → (12, 9)</title><path d="M358.5 367.5L358.5 342.5" fill="none" stroke="#536634" stroke-width="2.2"/><polygon points="358.5,351.0 355.5,357.0 361.5,357.0" fill="#536634"/></g>
+<g class="route"><title>石材：12 件/分钟；(12, 9) → (12, 8)</title><path d="M358.5 342.5L358.5 317.5" fill="none" stroke="#536634" stroke-width="2.2"/><polygon points="358.5,326.0 355.5,332.0 361.5,332.0" fill="#536634"/></g>
+<g class="route"><title>石材：6 件/分钟；(12, 8) → (12, 7)</title><path d="M358.5 317.5L358.5 292.5" fill="none" stroke="#536634" stroke-width="2.2"/><polygon points="358.5,301.0 355.5,307.0 361.5,307.0" fill="#536634"/></g>
+<g class="route"><title>石材：6 件/分钟；(12, 7) → (12, 6)</title><path d="M358.5 292.5L358.5 267.5" fill="none" stroke="#536634" stroke-width="2.2"/><polygon points="358.5,276.0 355.5,282.0 361.5,282.0" fill="#536634"/></g>
+<g class="route"><title>石材：6 件/分钟；(12, 6) → (12, 5)</title><path d="M358.5 267.5L358.5 242.5" fill="none" stroke="#536634" stroke-width="2.2"/><polygon points="358.5,251.0 355.5,257.0 361.5,257.0" fill="#536634"/></g>
+<g class="route"><title>石材：6 件/分钟；(12, 5) → (11, 5)</title><path d="M358.5 242.5L333.5 242.5" fill="none" stroke="#536634" stroke-width="2.2"/><polygon points="342.0,242.5 348.0,245.5 348.0,239.5" fill="#536634"/></g>
+<g class="route"><title>石材：6 件/分钟；(11, 5) → (10, 5)</title><path d="M333.5 242.5L308.5 242.5" fill="none" stroke="#536634" stroke-width="2.2"/><polygon points="317.0,242.5 323.0,245.5 323.0,239.5" fill="#536634"/></g>
+<g class="route"><title>原木：96 件/分钟；(26, 21) → (26, 20)</title><path d="M708.5 642.5L708.5 617.5" fill="none" stroke="#8c5231" stroke-width="2.2"/><polygon points="708.5,626.0 705.5,632.0 711.5,632.0" fill="#8c5231"/></g>
+<g class="route"><title>原木：96 件/分钟；(26, 20) → (27, 20)</title><path d="M708.5 617.5L733.5 617.5" fill="none" stroke="#8c5231" stroke-width="2.2"/><polygon points="725.0,617.5 719.0,614.5 719.0,620.5" fill="#8c5231"/></g>
+<g class="route"><title>原木：96 件/分钟；(27, 20) → (27, 19)</title><path d="M733.5 617.5L733.5 592.5" fill="none" stroke="#8c5231" stroke-width="2.2"/><polygon points="733.5,601.0 730.5,607.0 736.5,607.0" fill="#8c5231"/></g>
+<g class="route"><title>原木：78 件/分钟；(27, 19) → (27, 18)</title><path d="M733.5 592.5L733.5 567.5" fill="none" stroke="#8c5231" stroke-width="2.2"/><polygon points="733.5,576.0 730.5,582.0 736.5,582.0" fill="#8c5231"/></g>
+<g class="route"><title>原木：78 件/分钟；(27, 18) → (27, 17)</title><path d="M733.5 567.5L733.5 542.5" fill="none" stroke="#8c5231" stroke-width="2.2"/><polygon points="733.5,551.0 730.5,557.0 736.5,557.0" fill="#8c5231"/></g>
+<g class="route"><title>原木：60 件/分钟；(27, 17) → (27, 16)</title><path d="M733.5 542.5L733.5 517.5" fill="none" stroke="#8c5231" stroke-width="2.2"/><polygon points="733.5,526.0 730.5,532.0 736.5,532.0" fill="#8c5231"/></g>
+<g class="route"><title>原木：60 件/分钟；(27, 16) → (27, 15)</title><path d="M733.5 517.5L733.5 492.5" fill="none" stroke="#8c5231" stroke-width="2.2"/><polygon points="733.5,501.0 730.5,507.0 736.5,507.0" fill="#8c5231"/></g>
+<g class="route"><title>原木：40 件/分钟；(27, 15) → (27, 14)</title><path d="M733.5 492.5L733.5 467.5" fill="none" stroke="#8c5231" stroke-width="2.2"/><polygon points="733.5,476.0 730.5,482.0 736.5,482.0" fill="#8c5231"/></g>
+<g class="route"><title>原木：40 件/分钟；(27, 14) → (27, 13)</title><path d="M733.5 467.5L733.5 442.5" fill="none" stroke="#8c5231" stroke-width="2.2"/><polygon points="733.5,451.0 730.5,457.0 736.5,457.0" fill="#8c5231"/></g>
+<g class="route"><title>原木：20 件/分钟；(27, 13) → (27, 12)</title><path d="M733.5 442.5L733.5 417.5" fill="none" stroke="#8c5231" stroke-width="2.2"/><polygon points="733.5,426.0 730.5,432.0 736.5,432.0" fill="#8c5231"/></g>
+<g class="route"><title>原木：20 件/分钟；(27, 12) → (27, 11)</title><path d="M733.5 417.5L733.5 392.5" fill="none" stroke="#8c5231" stroke-width="2.2"/><polygon points="733.5,401.0 730.5,407.0 736.5,407.0" fill="#8c5231"/></g>
+<g class="route"><title>原木：20 件/分钟；(27, 11) → (26, 11)</title><path d="M733.5 392.5L708.5 392.5" fill="none" stroke="#8c5231" stroke-width="2.2"/><polygon points="717.0,392.5 723.0,395.5 723.0,389.5" fill="#8c5231"/></g>
+<g class="route"><title>石头：12 件/分钟；(21, 23) → (21, 22)</title><path d="M583.5 692.5L583.5 667.5" fill="none" stroke="#166b85" stroke-width="2.2"/><polygon points="583.5,676.0 580.5,682.0 586.5,682.0" fill="#166b85"/></g>
+<g class="route"><title>石头：12 件/分钟；(21, 22) → (21, 21)</title><path d="M583.5 667.5L583.5 642.5" fill="none" stroke="#166b85" stroke-width="2.2"/><polygon points="583.5,651.0 580.5,657.0 586.5,657.0" fill="#166b85"/></g>
+<g class="route"><title>石头：12 件/分钟；(21, 21) → (20, 21)</title><path d="M583.5 642.5L558.5 642.5" fill="none" stroke="#166b85" stroke-width="2.2"/><polygon points="567.0,642.5 573.0,645.5 573.0,639.5" fill="#166b85"/></g>
+<g class="route"><title>布：9 件/分钟；(9, 24) → (8, 24)</title><path d="M283.5 717.5L258.5 717.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="267.0,717.5 273.0,720.5 273.0,714.5" fill="#375d99"/></g>
+<g class="route"><title>布：9 件/分钟；(8, 24) → (7, 24)</title><path d="M258.5 717.5L233.5 717.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="242.0,717.5 248.0,720.5 248.0,714.5" fill="#375d99"/></g>
+<g class="route"><title>布：9 件/分钟；(7, 24) → (6, 24)</title><path d="M233.5 717.5L208.5 717.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="217.0,717.5 223.0,720.5 223.0,714.5" fill="#375d99"/></g>
+<g class="route"><title>布：9 件/分钟；(6, 24) → (6, 23)</title><path d="M208.5 717.5L208.5 692.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="208.5,701.0 205.5,707.0 211.5,707.0" fill="#375d99"/></g>
+<g class="route"><title>布：9 件/分钟；(6, 23) → (6, 22)</title><path d="M208.5 692.5L208.5 667.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="208.5,676.0 205.5,682.0 211.5,682.0" fill="#375d99"/></g>
+<g class="route"><title>布：9 件/分钟；(9, 22) → (8, 22)</title><path d="M283.5 667.5L258.5 667.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="267.0,667.5 273.0,670.5 273.0,664.5" fill="#375d99"/></g>
+<g class="route"><title>布：9 件/分钟；(8, 22) → (7, 22)</title><path d="M258.5 667.5L233.5 667.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="242.0,667.5 248.0,670.5 248.0,664.5" fill="#375d99"/></g>
+<g class="route"><title>布：9 件/分钟；(7, 22) → (6, 22)</title><path d="M233.5 667.5L208.5 667.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="217.0,667.5 223.0,670.5 223.0,664.5" fill="#375d99"/></g>
+<g class="route"><title>布：9 件/分钟；(9, 20) → (8, 20)</title><path d="M283.5 617.5L258.5 617.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="267.0,617.5 273.0,620.5 273.0,614.5" fill="#375d99"/></g>
+<g class="route"><title>布：9 件/分钟；(8, 20) → (7, 20)</title><path d="M258.5 617.5L233.5 617.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="242.0,617.5 248.0,620.5 248.0,614.5" fill="#375d99"/></g>
+<g class="route"><title>布：9 件/分钟；(7, 20) → (6, 20)</title><path d="M233.5 617.5L208.5 617.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="217.0,617.5 223.0,620.5 223.0,614.5" fill="#375d99"/></g>
+<g class="route"><title>布：9 件/分钟；(9, 18) → (8, 18)</title><path d="M283.5 567.5L258.5 567.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="267.0,567.5 273.0,570.5 273.0,564.5" fill="#375d99"/></g>
+<g class="route"><title>布：9 件/分钟；(8, 18) → (7, 18)</title><path d="M258.5 567.5L233.5 567.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="242.0,567.5 248.0,570.5 248.0,564.5" fill="#375d99"/></g>
+<g class="route"><title>布：9 件/分钟；(7, 18) → (6, 18)</title><path d="M233.5 567.5L208.5 567.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="217.0,567.5 223.0,570.5 223.0,564.5" fill="#375d99"/></g>
+<g class="route"><title>初级工具：6 件/分钟；(8, 6) → (7, 6)</title><path d="M258.5 267.5L233.5 267.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="242.0,267.5 248.0,270.5 248.0,264.5" fill="#187467"/></g>
+<g class="route"><title>初级工具：6 件/分钟；(5, 6) → (4, 6)</title><path d="M183.5 267.5L158.5 267.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="167.0,267.5 173.0,270.5 173.0,264.5" fill="#187467"/></g>
+<g class="route"><title>初级工具：6 件/分钟；(8, 9) → (7, 9)</title><path d="M258.5 342.5L233.5 342.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="242.0,342.5 248.0,345.5 248.0,339.5" fill="#187467"/></g>
+<g class="route"><title>初级工具：6 件/分钟；(5, 9) → (4, 9)</title><path d="M183.5 342.5L158.5 342.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="167.0,342.5 173.0,345.5 173.0,339.5" fill="#187467"/></g>
+<g class="route"><title>初级工具：6 件/分钟；(8, 12) → (7, 12)</title><path d="M258.5 417.5L233.5 417.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="242.0,417.5 248.0,420.5 248.0,414.5" fill="#187467"/></g>
+<g class="route"><title>初级工具：6 件/分钟；(5, 12) → (4, 12)</title><path d="M183.5 417.5L158.5 417.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="167.0,417.5 173.0,420.5 173.0,414.5" fill="#187467"/></g>
+<g class="route"><title>初级工具：6 件/分钟；(8, 15) → (7, 15)</title><path d="M258.5 492.5L233.5 492.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="242.0,492.5 248.0,495.5 248.0,489.5" fill="#187467"/></g>
+<g class="route"><title>初级工具：6 件/分钟；(5, 15) → (4, 15)</title><path d="M183.5 492.5L158.5 492.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="167.0,492.5 173.0,495.5 173.0,489.5" fill="#187467"/></g>
+<g class="route"><title>初级工具：6 件/分钟；(4, 15) → (4, 14)</title><path d="M158.5 492.5L158.5 467.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="158.5,476.0 155.5,482.0 161.5,482.0" fill="#187467"/></g>
+<g class="route"><title>初级工具：6 件/分钟；(4, 14) → (4, 13)</title><path d="M158.5 467.5L158.5 442.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="158.5,451.0 155.5,457.0 161.5,457.0" fill="#187467"/></g>
+<g class="route"><title>初级工具：6 件/分钟；(4, 13) → (4, 12)</title><path d="M158.5 442.5L158.5 417.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="158.5,426.0 155.5,432.0 161.5,432.0" fill="#187467"/></g>
+<g class="route"><title>初级工具：12 件/分钟；(4, 4) → (3, 4)</title><path d="M158.5 217.5L133.5 217.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="142.0,217.5 148.0,220.5 148.0,214.5" fill="#187467"/></g>
+<g class="route"><title>初级工具：12 件/分钟；(3, 4) → (2, 4)</title><path d="M133.5 217.5L108.5 217.5" fill="none" stroke="#187467" stroke-width="2.2"/><polygon points="117.0,217.5 123.0,220.5 123.0,214.5" fill="#187467"/></g>
+<g class="route"><title>线：9 件/分钟；(19, 1) → (18, 1)</title><path d="M533.5 142.5L508.5 142.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="517.0,142.5 523.0,145.5 523.0,139.5" fill="#a34839"/></g>
+<g class="route"><title>线：9 件/分钟；(18, 1) → (17, 1)</title><path d="M508.5 142.5L483.5 142.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="492.0,142.5 498.0,145.5 498.0,139.5" fill="#a34839"/></g>
+<g class="route"><title>线：9 件/分钟；(17, 1) → (17, 2)</title><path d="M483.5 142.5L483.5 167.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="483.5,159.0 486.5,153.0 480.5,153.0" fill="#a34839"/></g>
+<g class="route"><title>线：9 件/分钟；(17, 2) → (17, 3)</title><path d="M483.5 167.5L483.5 192.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="483.5,184.0 486.5,178.0 480.5,178.0" fill="#a34839"/></g>
+<g class="route"><title>线：9 件/分钟；(19, 3) → (18, 3)</title><path d="M533.5 192.5L508.5 192.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="517.0,192.5 523.0,195.5 523.0,189.5" fill="#a34839"/></g>
+<g class="route"><title>线：9 件/分钟；(18, 3) → (17, 3)</title><path d="M508.5 192.5L483.5 192.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="492.0,192.5 498.0,195.5 498.0,189.5" fill="#a34839"/></g>
+<g class="route"><title>线：9 件/分钟；(19, 5) → (18, 5)</title><path d="M533.5 242.5L508.5 242.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="517.0,242.5 523.0,245.5 523.0,239.5" fill="#a34839"/></g>
+<g class="route"><title>线：9 件/分钟；(18, 5) → (17, 5)</title><path d="M508.5 242.5L483.5 242.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="492.0,242.5 498.0,245.5 498.0,239.5" fill="#a34839"/></g>
+<g class="route"><title>线：9 件/分钟；(19, 7) → (18, 7)</title><path d="M533.5 292.5L508.5 292.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="517.0,292.5 523.0,295.5 523.0,289.5" fill="#a34839"/></g>
+<g class="route"><title>线：9 件/分钟；(18, 7) → (17, 7)</title><path d="M508.5 292.5L483.5 292.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="492.0,292.5 498.0,295.5 498.0,289.5" fill="#a34839"/></g>
+<g class="route"><title>线：9 件/分钟；(19, 9) → (18, 9)</title><path d="M533.5 342.5L508.5 342.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="517.0,342.5 523.0,345.5 523.0,339.5" fill="#a34839"/></g>
+<g class="route"><title>线：9 件/分钟；(18, 9) → (17, 9)</title><path d="M508.5 342.5L483.5 342.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="492.0,342.5 498.0,345.5 498.0,339.5" fill="#a34839"/></g>
+<g class="route"><title>线：9 件/分钟；(19, 11) → (18, 11)</title><path d="M533.5 392.5L508.5 392.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="517.0,392.5 523.0,395.5 523.0,389.5" fill="#a34839"/></g>
+<g class="route"><title>线：9 件/分钟；(18, 11) → (17, 11)</title><path d="M508.5 392.5L483.5 392.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="492.0,392.5 498.0,395.5 498.0,389.5" fill="#a34839"/></g>
+<g class="route"><title>线：9 件/分钟；(19, 13) → (18, 13)</title><path d="M533.5 442.5L508.5 442.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="517.0,442.5 523.0,445.5 523.0,439.5" fill="#a34839"/></g>
+<g class="route"><title>线：9 件/分钟；(18, 13) → (17, 13)</title><path d="M508.5 442.5L483.5 442.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="492.0,442.5 498.0,445.5 498.0,439.5" fill="#a34839"/></g>
+<g class="route"><title>线：9 件/分钟；(19, 15) → (18, 15)</title><path d="M533.5 492.5L508.5 492.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="517.0,492.5 523.0,495.5 523.0,489.5" fill="#a34839"/></g>
+<g class="route"><title>线：9 件/分钟；(18, 15) → (17, 15)</title><path d="M508.5 492.5L483.5 492.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="492.0,492.5 498.0,495.5 498.0,489.5" fill="#a34839"/></g>
+<g class="route"><title>线：18 件/分钟；(17, 22) → (16, 22)</title><path d="M483.5 667.5L458.5 667.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="467.0,667.5 473.0,670.5 473.0,664.5" fill="#a34839"/></g>
+<g class="route"><title>线：18 件/分钟；(11, 22) → (10, 22)</title><path d="M333.5 667.5L308.5 667.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="317.0,667.5 323.0,670.5 323.0,664.5" fill="#a34839"/></g>
+<g class="route"><title>线：18 件/分钟；(17, 20) → (16, 20)</title><path d="M483.5 617.5L458.5 617.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="467.0,617.5 473.0,620.5 473.0,614.5" fill="#a34839"/></g>
+<g class="route"><title>线：18 件/分钟；(11, 20) → (10, 20)</title><path d="M333.5 617.5L308.5 617.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="317.0,617.5 323.0,620.5 323.0,614.5" fill="#a34839"/></g>
+<g class="route"><title>木棒：24 件/分钟；(19, 17) → (18, 17)</title><path d="M533.5 542.5L508.5 542.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="517.0,542.5 523.0,545.5 523.0,539.5" fill="#5c59a1"/></g>
+<g class="route"><title>木棒：24 件/分钟；(16, 17) → (15, 17)</title><path d="M458.5 542.5L433.5 542.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="442.0,542.5 448.0,545.5 448.0,539.5" fill="#5c59a1"/></g>
+<g class="route"><title>木棒：24 件/分钟；(19, 19) → (18, 19)</title><path d="M533.5 592.5L508.5 592.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="517.0,592.5 523.0,595.5 523.0,589.5" fill="#5c59a1"/></g>
+<g class="route"><title>木棒：24 件/分钟；(16, 19) → (15, 19)</title><path d="M458.5 592.5L433.5 592.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="442.0,592.5 448.0,595.5 448.0,589.5" fill="#5c59a1"/></g>
+<g class="route"><title>木棒：24 件/分钟；(15, 19) → (15, 18)</title><path d="M433.5 592.5L433.5 567.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="433.5,576.0 430.5,582.0 436.5,582.0" fill="#5c59a1"/></g>
+<g class="route"><title>木棒：24 件/分钟；(15, 18) → (15, 17)</title><path d="M433.5 567.5L433.5 542.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="433.5,551.0 430.5,557.0 436.5,557.0" fill="#5c59a1"/></g>
+<g class="route"><title>木棒：12 件/分钟；(15, 9) → (14, 9)</title><path d="M433.5 342.5L408.5 342.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="417.0,342.5 423.0,345.5 423.0,339.5" fill="#5c59a1"/></g>
+<g class="route"><title>木棒：12 件/分钟；(14, 9) → (13, 9)</title><path d="M408.5 342.5L383.5 342.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="392.0,342.5 398.0,345.5 398.0,339.5" fill="#5c59a1"/></g>
+<g class="route"><title>木棒：12 件/分钟；(11, 9) → (10, 9)</title><path d="M333.5 342.5L308.5 342.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="317.0,342.5 323.0,345.5 323.0,339.5" fill="#5c59a1"/></g>
+<g class="route"><title>木棒：12 件/分钟；(15, 12) → (14, 12)</title><path d="M433.5 417.5L408.5 417.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="417.0,417.5 423.0,420.5 423.0,414.5" fill="#5c59a1"/></g>
+<g class="route"><title>木棒：12 件/分钟；(14, 12) → (13, 12)</title><path d="M408.5 417.5L383.5 417.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="392.0,417.5 398.0,420.5 398.0,414.5" fill="#5c59a1"/></g>
+<g class="route"><title>木棒：12 件/分钟；(11, 12) → (10, 12)</title><path d="M333.5 417.5L308.5 417.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="317.0,417.5 323.0,420.5 323.0,414.5" fill="#5c59a1"/></g>
+<g class="route"><title>木棒：12 件/分钟；(15, 15) → (14, 15)</title><path d="M433.5 492.5L408.5 492.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="417.0,492.5 423.0,495.5 423.0,489.5" fill="#5c59a1"/></g>
+<g class="route"><title>木棒：12 件/分钟；(14, 15) → (13, 15)</title><path d="M408.5 492.5L383.5 492.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="392.0,492.5 398.0,495.5 398.0,489.5" fill="#5c59a1"/></g>
+<g class="route"><title>木棒：12 件/分钟；(11, 15) → (10, 15)</title><path d="M333.5 492.5L308.5 492.5" fill="none" stroke="#5c59a1" stroke-width="2.2"/><polygon points="317.0,492.5 323.0,495.5 323.0,489.5" fill="#5c59a1"/></g>
+<g class="route"><title>石材：12 件/分钟；(19, 21) → (18, 21)</title><path d="M533.5 642.5L508.5 642.5" fill="none" stroke="#536634" stroke-width="2.2"/><polygon points="517.0,642.5 523.0,645.5 523.0,639.5" fill="#536634"/></g>
+<g class="route"><title>石材：12 件/分钟；(13, 21) → (12, 21)</title><path d="M383.5 642.5L358.5 642.5" fill="none" stroke="#536634" stroke-width="2.2"/><polygon points="367.0,642.5 373.0,645.5 373.0,639.5" fill="#536634"/></g>
+<g class="route"><title>石材：12 件/分钟；(19, 23) → (18, 23)</title><path d="M533.5 692.5L508.5 692.5" fill="none" stroke="#536634" stroke-width="2.2"/><polygon points="517.0,692.5 523.0,695.5 523.0,689.5" fill="#536634"/></g>
+<g class="route"><title>石材：12 件/分钟；(13, 23) → (12, 23)</title><path d="M383.5 692.5L358.5 692.5" fill="none" stroke="#536634" stroke-width="2.2"/><polygon points="367.0,692.5 373.0,695.5 373.0,689.5" fill="#536634"/></g>
+<g class="route"><title>石材：12 件/分钟；(12, 23) → (12, 22)</title><path d="M358.5 692.5L358.5 667.5" fill="none" stroke="#536634" stroke-width="2.2"/><polygon points="358.5,676.0 355.5,682.0 361.5,682.0" fill="#536634"/></g>
+<g class="route"><title>石材：12 件/分钟；(12, 22) → (12, 21)</title><path d="M358.5 667.5L358.5 642.5" fill="none" stroke="#536634" stroke-width="2.2"/><polygon points="358.5,651.0 355.5,657.0 361.5,657.0" fill="#536634"/></g>
+<g class="route"><title>石材：6 件/分钟；(12, 8) → (11, 8)</title><path d="M358.5 317.5L333.5 317.5" fill="none" stroke="#536634" stroke-width="2.2"/><polygon points="342.0,317.5 348.0,320.5 348.0,314.5" fill="#536634"/></g>
+<g class="route"><title>石材：6 件/分钟；(11, 8) → (10, 8)</title><path d="M333.5 317.5L308.5 317.5" fill="none" stroke="#536634" stroke-width="2.2"/><polygon points="317.0,317.5 323.0,320.5 323.0,314.5" fill="#536634"/></g>
+<g class="route"><title>石材：6 件/分钟；(12, 11) → (11, 11)</title><path d="M358.5 392.5L333.5 392.5" fill="none" stroke="#536634" stroke-width="2.2"/><polygon points="342.0,392.5 348.0,395.5 348.0,389.5" fill="#536634"/></g>
+<g class="route"><title>石材：6 件/分钟；(11, 11) → (10, 11)</title><path d="M333.5 392.5L308.5 392.5" fill="none" stroke="#536634" stroke-width="2.2"/><polygon points="317.0,392.5 323.0,395.5 323.0,389.5" fill="#536634"/></g>
+<g class="route"><title>石材：6 件/分钟；(12, 14) → (11, 14)</title><path d="M358.5 467.5L333.5 467.5" fill="none" stroke="#536634" stroke-width="2.2"/><polygon points="342.0,467.5 348.0,470.5 348.0,464.5" fill="#536634"/></g>
+<g class="route"><title>石材：6 件/分钟；(11, 14) → (10, 14)</title><path d="M333.5 467.5L308.5 467.5" fill="none" stroke="#536634" stroke-width="2.2"/><polygon points="317.0,467.5 323.0,470.5 323.0,464.5" fill="#536634"/></g>
+<g class="route"><title>原木：112 件/分钟；(27, 22) → (26, 22)</title><path d="M733.5 667.5L708.5 667.5" fill="none" stroke="#8c5231" stroke-width="2.2"/><polygon points="717.0,667.5 723.0,670.5 723.0,664.5" fill="#8c5231"/></g>
+<g class="route"><title>原木：112 件/分钟；(26, 22) → (26, 21)</title><path d="M708.5 667.5L708.5 642.5" fill="none" stroke="#8c5231" stroke-width="2.2"/><polygon points="708.5,651.0 705.5,657.0 711.5,657.0" fill="#8c5231"/></g>
+<g class="route"><title>原木：16 件/分钟；(26, 21) → (25, 21)</title><path d="M708.5 642.5L683.5 642.5" fill="none" stroke="#8c5231" stroke-width="2.2"/><polygon points="692.0,642.5 698.0,645.5 698.0,639.5" fill="#8c5231"/></g>
+<g class="route"><title>原木：18 件/分钟；(27, 19) → (26, 19)</title><path d="M733.5 592.5L708.5 592.5" fill="none" stroke="#8c5231" stroke-width="2.2"/><polygon points="717.0,592.5 723.0,595.5 723.0,589.5" fill="#8c5231"/></g>
+<g class="route"><title>原木：18 件/分钟；(26, 19) → (25, 19)</title><path d="M708.5 592.5L683.5 592.5" fill="none" stroke="#8c5231" stroke-width="2.2"/><polygon points="692.0,592.5 698.0,595.5 698.0,589.5" fill="#8c5231"/></g>
+<g class="route"><title>原木：18 件/分钟；(27, 17) → (26, 17)</title><path d="M733.5 542.5L708.5 542.5" fill="none" stroke="#8c5231" stroke-width="2.2"/><polygon points="717.0,542.5 723.0,545.5 723.0,539.5" fill="#8c5231"/></g>
+<g class="route"><title>原木：18 件/分钟；(26, 17) → (25, 17)</title><path d="M708.5 542.5L683.5 542.5" fill="none" stroke="#8c5231" stroke-width="2.2"/><polygon points="692.0,542.5 698.0,545.5 698.0,539.5" fill="#8c5231"/></g>
+<g class="route"><title>木纤维：18 件/分钟；(24, 9) → (23, 9)</title><path d="M658.5 342.5L633.5 342.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="642.0,342.5 648.0,345.5 648.0,339.5" fill="#846007"/></g>
+<g class="route"><title>木纤维：18 件/分钟；(23, 9) → (22, 9)</title><path d="M633.5 342.5L608.5 342.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="617.0,342.5 623.0,345.5 623.0,339.5" fill="#846007"/></g>
+<g class="route"><title>木纤维：18 件/分钟；(22, 9) → (21, 9)</title><path d="M608.5 342.5L583.5 342.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="592.0,342.5 598.0,345.5 598.0,339.5" fill="#846007"/></g>
+<g class="route"><title>木纤维：18 件/分钟；(21, 9) → (20, 9)</title><path d="M583.5 342.5L558.5 342.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="567.0,342.5 573.0,345.5 573.0,339.5" fill="#846007"/></g>
+<g class="route"><title>木纤维：18 件/分钟；(24, 7) → (23, 7)</title><path d="M658.5 292.5L633.5 292.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="642.0,292.5 648.0,295.5 648.0,289.5" fill="#846007"/></g>
+<g class="route"><title>木纤维：18 件/分钟；(23, 7) → (22, 7)</title><path d="M633.5 292.5L608.5 292.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="617.0,292.5 623.0,295.5 623.0,289.5" fill="#846007"/></g>
+<g class="route"><title>木纤维：18 件/分钟；(22, 7) → (21, 7)</title><path d="M608.5 292.5L583.5 292.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="592.0,292.5 598.0,295.5 598.0,289.5" fill="#846007"/></g>
+<g class="route"><title>木纤维：18 件/分钟；(21, 7) → (20, 7)</title><path d="M583.5 292.5L558.5 292.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="567.0,292.5 573.0,295.5 573.0,289.5" fill="#846007"/></g>
+<g class="route"><title>木纤维：18 件/分钟；(24, 5) → (23, 5)</title><path d="M658.5 242.5L633.5 242.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="642.0,242.5 648.0,245.5 648.0,239.5" fill="#846007"/></g>
+<g class="route"><title>木纤维：18 件/分钟；(23, 5) → (22, 5)</title><path d="M633.5 242.5L608.5 242.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="617.0,242.5 623.0,245.5 623.0,239.5" fill="#846007"/></g>
+<g class="route"><title>木纤维：18 件/分钟；(22, 5) → (21, 5)</title><path d="M608.5 242.5L583.5 242.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="592.0,242.5 598.0,245.5 598.0,239.5" fill="#846007"/></g>
+<g class="route"><title>木纤维：18 件/分钟；(21, 5) → (20, 5)</title><path d="M583.5 242.5L558.5 242.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="567.0,242.5 573.0,245.5 573.0,239.5" fill="#846007"/></g>
+<g class="route"><title>木纤维：18 件/分钟；(24, 3) → (23, 3)</title><path d="M658.5 192.5L633.5 192.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="642.0,192.5 648.0,195.5 648.0,189.5" fill="#846007"/></g>
+<g class="route"><title>木纤维：18 件/分钟；(23, 3) → (22, 3)</title><path d="M633.5 192.5L608.5 192.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="617.0,192.5 623.0,195.5 623.0,189.5" fill="#846007"/></g>
+<g class="route"><title>木纤维：18 件/分钟；(22, 3) → (21, 3)</title><path d="M608.5 192.5L583.5 192.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="592.0,192.5 598.0,195.5 598.0,189.5" fill="#846007"/></g>
+<g class="route"><title>木纤维：18 件/分钟；(21, 3) → (20, 3)</title><path d="M583.5 192.5L558.5 192.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="567.0,192.5 573.0,195.5 573.0,189.5" fill="#846007"/></g>
+<g class="route"><title>木纤维：18 件/分钟；(23, 15) → (22, 15)</title><path d="M633.5 492.5L608.5 492.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="617.0,492.5 623.0,495.5 623.0,489.5" fill="#846007"/></g>
+<g class="route"><title>木纤维：18 件/分钟；(22, 15) → (21, 15)</title><path d="M608.5 492.5L583.5 492.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="592.0,492.5 598.0,495.5 598.0,489.5" fill="#846007"/></g>
+<g class="route"><title>木纤维：18 件/分钟；(21, 15) → (20, 15)</title><path d="M583.5 492.5L558.5 492.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="567.0,492.5 573.0,495.5 573.0,489.5" fill="#846007"/></g>
+<g class="route"><title>木纤维：18 件/分钟；(23, 13) → (22, 13)</title><path d="M633.5 442.5L608.5 442.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="617.0,442.5 623.0,445.5 623.0,439.5" fill="#846007"/></g>
+<g class="route"><title>木纤维：18 件/分钟；(22, 13) → (21, 13)</title><path d="M608.5 442.5L583.5 442.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="592.0,442.5 598.0,445.5 598.0,439.5" fill="#846007"/></g>
+<g class="route"><title>木纤维：18 件/分钟；(21, 13) → (20, 13)</title><path d="M583.5 442.5L558.5 442.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="567.0,442.5 573.0,445.5 573.0,439.5" fill="#846007"/></g>
+<g class="route"><title>木材：16 件/分钟；(22, 19) → (21, 19)</title><path d="M608.5 592.5L583.5 592.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="592.0,592.5 598.0,595.5 598.0,589.5" fill="#8b4672"/></g>
+<g class="route"><title>木材：16 件/分钟；(21, 19) → (20, 19)</title><path d="M583.5 592.5L558.5 592.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="567.0,592.5 573.0,595.5 573.0,589.5" fill="#8b4672"/></g>
+<g class="route"><title>木纤维：30 件/分钟；(25, 15) → (24, 15)</title><path d="M683.5 492.5L658.5 492.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="667.0,492.5 673.0,495.5 673.0,489.5" fill="#846007"/></g>
+<g class="route"><title>木纤维：30 件/分钟；(24, 15) → (24, 14)</title><path d="M658.5 492.5L658.5 467.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="658.5,476.0 655.5,482.0 661.5,482.0" fill="#846007"/></g>
+<g class="route"><title>木纤维：30 件/分钟；(24, 14) → (24, 13)</title><path d="M658.5 467.5L658.5 442.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="658.5,451.0 655.5,457.0 661.5,457.0" fill="#846007"/></g>
+<g class="route"><title>木纤维：30 件/分钟；(25, 13) → (24, 13)</title><path d="M683.5 442.5L658.5 442.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="667.0,442.5 673.0,445.5 673.0,439.5" fill="#846007"/></g>
+<g class="route"><title>木纤维：30 件/分钟；(25, 11) → (24, 11)</title><path d="M683.5 392.5L658.5 392.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="667.0,392.5 673.0,395.5 673.0,389.5" fill="#846007"/></g>
+<g class="route"><title>石头：12 件/分钟；(21, 23) → (20, 23)</title><path d="M583.5 692.5L558.5 692.5" fill="none" stroke="#166b85" stroke-width="2.2"/><polygon points="567.0,692.5 573.0,695.5 573.0,689.5" fill="#166b85"/></g>
+<g class="route"><title>线：18 件/分钟；(17, 18) → (16, 18)</title><path d="M483.5 567.5L458.5 567.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="467.0,567.5 473.0,570.5 473.0,564.5" fill="#a34839"/></g>
+<g class="route"><title>线：18 件/分钟；(14, 18) → (13, 18)</title><path d="M408.5 567.5L383.5 567.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="392.0,567.5 398.0,570.5 398.0,564.5" fill="#a34839"/></g>
+<g class="route"><title>线：18 件/分钟；(11, 18) → (10, 18)</title><path d="M333.5 567.5L308.5 567.5" fill="none" stroke="#a34839" stroke-width="2.2"/><polygon points="317.0,567.5 323.0,570.5 323.0,564.5" fill="#a34839"/></g>
+<g class="route"><title>石头：24 件/分钟；(21, 25) → (21, 24)</title><path d="M583.5 742.5L583.5 717.5" fill="none" stroke="#166b85" stroke-width="2.2"/><polygon points="583.5,726.0 580.5,732.0 586.5,732.0" fill="#166b85"/></g>
+<g class="route"><title>石头：24 件/分钟；(21, 24) → (21, 23)</title><path d="M583.5 717.5L583.5 692.5" fill="none" stroke="#166b85" stroke-width="2.2"/><polygon points="583.5,701.0 580.5,707.0 586.5,707.0" fill="#166b85"/></g>
+<g class="route"><title>木材：16 件/分钟；(24, 23) → (23, 23)</title><path d="M658.5 692.5L633.5 692.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="642.0,692.5 648.0,695.5 648.0,689.5" fill="#8b4672"/></g>
+<g class="route"><title>木材：16 件/分钟；(23, 23) → (22, 23)</title><path d="M633.5 692.5L608.5 692.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="617.0,692.5 623.0,695.5 623.0,689.5" fill="#8b4672"/></g>
+<g class="route"><title>木材：16 件/分钟；(22, 23) → (22, 22)</title><path d="M608.5 692.5L608.5 667.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="608.5,676.0 605.5,682.0 611.5,682.0" fill="#8b4672"/></g>
+<g class="route"><title>木材：16 件/分钟；(22, 22) → (22, 21)</title><path d="M608.5 667.5L608.5 642.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="608.5,651.0 605.5,657.0 611.5,657.0" fill="#8b4672"/></g>
+<g class="route"><title>木材：16 件/分钟；(24, 21) → (23, 21)</title><path d="M658.5 642.5L633.5 642.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="642.0,642.5 648.0,645.5 648.0,639.5" fill="#8b4672"/></g>
+<g class="route"><title>木材：16 件/分钟；(23, 21) → (22, 21)</title><path d="M633.5 642.5L608.5 642.5" fill="none" stroke="#8b4672" stroke-width="2.2"/><polygon points="617.0,642.5 623.0,645.5 623.0,639.5" fill="#8b4672"/></g>
+<g class="route"><title>木纤维：27 件/分钟；(24, 19) → (23, 19)</title><path d="M658.5 592.5L633.5 592.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="642.0,592.5 648.0,595.5 648.0,589.5" fill="#846007"/></g>
+<g class="route"><title>木纤维：27 件/分钟；(23, 19) → (23, 18)</title><path d="M633.5 592.5L633.5 567.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="633.5,576.0 630.5,582.0 636.5,582.0" fill="#846007"/></g>
+<g class="route"><title>木纤维：27 件/分钟；(23, 18) → (23, 17)</title><path d="M633.5 567.5L633.5 542.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="633.5,551.0 630.5,557.0 636.5,557.0" fill="#846007"/></g>
+<g class="route"><title>木纤维：27 件/分钟；(24, 17) → (23, 17)</title><path d="M658.5 542.5L633.5 542.5" fill="none" stroke="#846007" stroke-width="2.2"/><polygon points="642.0,542.5 648.0,545.5 648.0,539.5" fill="#846007"/></g>
+<g class="route"><title>原木：20 件/分钟；(27, 15) → (26, 15)</title><path d="M733.5 492.5L708.5 492.5" fill="none" stroke="#8c5231" stroke-width="2.2"/><polygon points="717.0,492.5 723.0,495.5 723.0,489.5" fill="#8c5231"/></g>
+<g class="route"><title>原木：20 件/分钟；(27, 13) → (26, 13)</title><path d="M733.5 442.5L708.5 442.5" fill="none" stroke="#8c5231" stroke-width="2.2"/><polygon points="717.0,442.5 723.0,445.5 723.0,439.5" fill="#8c5231"/></g>
+<g class="route"><title>布：18 件/分钟；(6, 5) → (5, 5)</title><path d="M208.5 242.5L183.5 242.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="192.0,242.5 198.0,245.5 198.0,239.5" fill="#375d99"/></g>
+<g class="route"><title>布：18 件/分钟；(3, 5) → (2, 5)</title><path d="M133.5 242.5L108.5 242.5" fill="none" stroke="#375d99" stroke-width="2.2"/><polygon points="117.0,242.5 123.0,245.5 123.0,239.5" fill="#375d99"/></g>
+<g class="route"><title>原木：16 件/分钟；(26, 25) → (26, 24)</title><path d="M708.5 742.5L708.5 717.5" fill="none" stroke="#8c5231" stroke-width="2.2"/><polygon points="708.5,726.0 705.5,732.0 711.5,732.0" fill="#8c5231"/></g>
+<g class="route"><title>原木：16 件/分钟；(26, 24) → (26, 23)</title><path d="M708.5 717.5L708.5 692.5" fill="none" stroke="#8c5231" stroke-width="2.2"/><polygon points="708.5,701.0 705.5,707.0 711.5,707.0" fill="#8c5231"/></g>
+<g class="route"><title>原木：16 件/分钟；(26, 23) → (25, 23)</title><path d="M708.5 692.5L683.5 692.5" fill="none" stroke="#8c5231" stroke-width="2.2"/><polygon points="692.0,692.5 698.0,695.5 698.0,689.5" fill="#8c5231"/></g>
+<g class="transport" data-x="3" data-y="1" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(3, 1)｜物流向西</title>
+<rect x="126.9" y="135.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="133.5" y="145.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="3" data-y="2" data-kind="tunnel3" data-id="32" data-dir="5" data-shape="5" data-recipe="-1"><title>3级地下传送带｜(3, 2)｜物流向西｜跨度 2 格</title>
+<rect x="124.5" y="160.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="133.5" y="170.9" font-size="8.5" text-anchor="middle">出Ⅲ</text>
+</g>
+<g class="transport" data-x="3" data-y="4" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(3, 4)｜物流向西</title>
+<rect x="126.9" y="210.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="133.5" y="220.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="3" data-y="5" data-kind="tunnel3" data-id="32" data-dir="5" data-shape="5" data-recipe="-1"><title>3级地下传送带｜(3, 5)｜物流向西｜跨度 2 格</title>
+<rect x="124.5" y="235.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="133.5" y="245.9" font-size="8.5" text-anchor="middle">出Ⅲ</text>
+</g>
+<g class="transport" data-x="4" data-y="1" data-kind="belt3" data-id="22" data-dir="1" data-shape="5" data-recipe="-1"><title>3级传送带｜(4, 1)｜物流向西</title>
+<rect x="151.9" y="135.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="158.5" y="145.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="4" data-y="2" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(4, 2)｜物流向北</title>
+<rect x="151.9" y="160.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="158.5" y="170.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="4" data-y="3" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(4, 3)｜物流向北</title>
+<rect x="151.9" y="185.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="158.5" y="195.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="4" data-y="4" data-kind="split" data-id="40" data-dir="3" data-shape="3" data-recipe="-1"><title>分流器｜(4, 4)｜主进料向北</title>
+<rect x="151.9" y="210.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="158.5" y="220.9" font-size="8.5" text-anchor="middle">分</text>
+</g>
+<g class="transport" data-x="4" data-y="5" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(4, 5)｜物流向北</title>
+<rect x="151.9" y="235.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="158.5" y="245.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="4" data-y="6" data-kind="merge" data-id="41" data-dir="3" data-shape="3" data-recipe="-1"><title>合并器｜(4, 6)｜主出料向北</title>
+<rect x="151.9" y="260.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="158.5" y="270.9" font-size="8.5" text-anchor="middle">合</text>
+</g>
+<g class="transport" data-x="4" data-y="7" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(4, 7)｜物流向北</title>
+<rect x="151.9" y="285.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="158.5" y="295.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="4" data-y="8" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(4, 8)｜物流向北</title>
+<rect x="151.9" y="310.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="158.5" y="320.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="4" data-y="9" data-kind="merge" data-id="41" data-dir="3" data-shape="3" data-recipe="-1"><title>合并器｜(4, 9)｜主出料向北</title>
+<rect x="151.9" y="335.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="158.5" y="345.9" font-size="8.5" text-anchor="middle">合</text>
+</g>
+<g class="transport" data-x="4" data-y="10" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(4, 10)｜物流向北</title>
+<rect x="151.9" y="360.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="158.5" y="370.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="4" data-y="11" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(4, 11)｜物流向北</title>
+<rect x="151.9" y="385.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="158.5" y="395.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="4" data-y="12" data-kind="merge" data-id="41" data-dir="3" data-shape="3" data-recipe="-1"><title>合并器｜(4, 12)｜主出料向北</title>
+<rect x="151.9" y="410.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="158.5" y="420.9" font-size="8.5" text-anchor="middle">合</text>
+</g>
+<g class="transport" data-x="4" data-y="13" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(4, 13)｜物流向北</title>
+<rect x="151.9" y="435.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="158.5" y="445.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="4" data-y="14" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(4, 14)｜物流向北</title>
+<rect x="151.9" y="460.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="158.5" y="470.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="4" data-y="15" data-kind="belt3" data-id="22" data-dir="3" data-shape="9" data-recipe="-1"><title>3级传送带｜(4, 15)｜物流向北</title>
+<rect x="151.9" y="485.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="158.5" y="495.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="5" data-y="2" data-kind="tunnel3" data-id="32" data-dir="2" data-shape="2" data-recipe="-1"><title>3级地下传送带｜(5, 2)｜物流向西｜跨度 2 格</title>
+<rect x="174.5" y="160.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="183.5" y="170.9" font-size="8.5" text-anchor="middle">入Ⅲ</text>
+</g>
+<g class="transport" data-x="5" data-y="5" data-kind="tunnel3" data-id="32" data-dir="2" data-shape="2" data-recipe="-1"><title>3级地下传送带｜(5, 5)｜物流向西｜跨度 2 格</title>
+<rect x="174.5" y="235.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="183.5" y="245.9" font-size="8.5" text-anchor="middle">入Ⅲ</text>
+</g>
+<g class="transport" data-x="5" data-y="6" data-kind="tunnel3" data-id="32" data-dir="5" data-shape="5" data-recipe="-1"><title>3级地下传送带｜(5, 6)｜物流向西｜跨度 2 格</title>
+<rect x="174.5" y="260.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="183.5" y="270.9" font-size="8.5" text-anchor="middle">出Ⅲ</text>
+</g>
+<g class="transport" data-x="5" data-y="9" data-kind="tunnel3" data-id="32" data-dir="5" data-shape="5" data-recipe="-1"><title>3级地下传送带｜(5, 9)｜物流向西｜跨度 2 格</title>
+<rect x="174.5" y="335.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="183.5" y="345.9" font-size="8.5" text-anchor="middle">出Ⅲ</text>
+</g>
+<g class="transport" data-x="5" data-y="12" data-kind="tunnel3" data-id="32" data-dir="5" data-shape="5" data-recipe="-1"><title>3级地下传送带｜(5, 12)｜物流向西｜跨度 2 格</title>
+<rect x="174.5" y="410.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="183.5" y="420.9" font-size="8.5" text-anchor="middle">出Ⅲ</text>
+</g>
+<g class="transport" data-x="5" data-y="15" data-kind="tunnel3" data-id="32" data-dir="5" data-shape="5" data-recipe="-1"><title>3级地下传送带｜(5, 15)｜物流向西｜跨度 2 格</title>
+<rect x="174.5" y="485.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="183.5" y="495.9" font-size="8.5" text-anchor="middle">出Ⅲ</text>
+</g>
+<g class="transport" data-x="6" data-y="2" data-kind="belt3" data-id="22" data-dir="1" data-shape="5" data-recipe="-1"><title>3级传送带｜(6, 2)｜物流向西</title>
+<rect x="201.9" y="160.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="208.5" y="170.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="6" data-y="3" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(6, 3)｜物流向北</title>
+<rect x="201.9" y="185.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="208.5" y="195.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="6" data-y="4" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(6, 4)｜物流向北</title>
+<rect x="201.9" y="210.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="208.5" y="220.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="6" data-y="5" data-kind="split" data-id="40" data-dir="3" data-shape="3" data-recipe="-1"><title>分流器｜(6, 5)｜主进料向北</title>
+<rect x="201.9" y="235.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="208.5" y="245.9" font-size="8.5" text-anchor="middle">分</text>
+</g>
+<g class="transport" data-x="6" data-y="6" data-kind="tunnel3" data-id="32" data-dir="7" data-shape="7" data-recipe="-1"><title>3级地下传送带｜(6, 6)｜物流向北｜跨度 3 格</title>
+<rect x="199.5" y="260.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="208.5" y="270.9" font-size="8.5" text-anchor="middle">出Ⅲ</text>
+</g>
+<g class="transport" data-x="6" data-y="9" data-kind="tunnel3" data-id="32" data-dir="0" data-shape="0" data-recipe="-1"><title>3级地下传送带｜(6, 9)｜物流向北｜跨度 3 格</title>
+<rect x="199.5" y="335.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="208.5" y="345.9" font-size="8.5" text-anchor="middle">入Ⅲ</text>
+</g>
+<g class="transport" data-x="6" data-y="10" data-kind="tunnel3" data-id="32" data-dir="7" data-shape="7" data-recipe="-1"><title>3级地下传送带｜(6, 10)｜物流向北｜跨度 7 格</title>
+<rect x="199.5" y="360.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="208.5" y="370.9" font-size="8.5" text-anchor="middle">出Ⅲ</text>
+</g>
+<g class="transport" data-x="6" data-y="17" data-kind="tunnel3" data-id="32" data-dir="0" data-shape="0" data-recipe="-1"><title>3级地下传送带｜(6, 17)｜物流向北｜跨度 7 格</title>
+<rect x="199.5" y="535.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="208.5" y="545.9" font-size="8.5" text-anchor="middle">入Ⅲ</text>
+</g>
+<g class="transport" data-x="6" data-y="18" data-kind="merge" data-id="41" data-dir="3" data-shape="3" data-recipe="-1"><title>合并器｜(6, 18)｜主出料向北</title>
+<rect x="201.9" y="560.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="208.5" y="570.9" font-size="8.5" text-anchor="middle">合</text>
+</g>
+<g class="transport" data-x="6" data-y="19" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(6, 19)｜物流向北</title>
+<rect x="201.9" y="585.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="208.5" y="595.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="6" data-y="20" data-kind="merge" data-id="41" data-dir="3" data-shape="3" data-recipe="-1"><title>合并器｜(6, 20)｜主出料向北</title>
+<rect x="201.9" y="610.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="208.5" y="620.9" font-size="8.5" text-anchor="middle">合</text>
+</g>
+<g class="transport" data-x="6" data-y="21" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(6, 21)｜物流向北</title>
+<rect x="201.9" y="635.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="208.5" y="645.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="6" data-y="22" data-kind="merge" data-id="41" data-dir="3" data-shape="3" data-recipe="-1"><title>合并器｜(6, 22)｜主出料向北</title>
+<rect x="201.9" y="660.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="208.5" y="670.9" font-size="8.5" text-anchor="middle">合</text>
+</g>
+<g class="transport" data-x="6" data-y="23" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(6, 23)｜物流向北</title>
+<rect x="201.9" y="685.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="208.5" y="695.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="6" data-y="24" data-kind="belt3" data-id="22" data-dir="3" data-shape="9" data-recipe="-1"><title>3级传送带｜(6, 24)｜物流向北</title>
+<rect x="201.9" y="710.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="208.5" y="720.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="7" data-y="6" data-kind="tunnel3" data-id="32" data-dir="2" data-shape="2" data-recipe="-1"><title>3级地下传送带｜(7, 6)｜物流向西｜跨度 2 格</title>
+<rect x="224.5" y="260.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="233.5" y="270.9" font-size="8.5" text-anchor="middle">入Ⅲ</text>
+</g>
+<g class="transport" data-x="7" data-y="9" data-kind="tunnel3" data-id="32" data-dir="2" data-shape="2" data-recipe="-1"><title>3级地下传送带｜(7, 9)｜物流向西｜跨度 2 格</title>
+<rect x="224.5" y="335.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="233.5" y="345.9" font-size="8.5" text-anchor="middle">入Ⅲ</text>
+</g>
+<g class="transport" data-x="7" data-y="12" data-kind="tunnel3" data-id="32" data-dir="2" data-shape="2" data-recipe="-1"><title>3级地下传送带｜(7, 12)｜物流向西｜跨度 2 格</title>
+<rect x="224.5" y="410.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="233.5" y="420.9" font-size="8.5" text-anchor="middle">入Ⅲ</text>
+</g>
+<g class="transport" data-x="7" data-y="15" data-kind="tunnel3" data-id="32" data-dir="2" data-shape="2" data-recipe="-1"><title>3级地下传送带｜(7, 15)｜物流向西｜跨度 2 格</title>
+<rect x="224.5" y="485.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="233.5" y="495.9" font-size="8.5" text-anchor="middle">入Ⅲ</text>
+</g>
+<g class="transport" data-x="7" data-y="18" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(7, 18)｜物流向西</title>
+<rect x="226.9" y="560.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="233.5" y="570.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="7" data-y="20" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(7, 20)｜物流向西</title>
+<rect x="226.9" y="610.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="233.5" y="620.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="7" data-y="22" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(7, 22)｜物流向西</title>
+<rect x="226.9" y="660.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="233.5" y="670.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="7" data-y="24" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(7, 24)｜物流向西</title>
+<rect x="226.9" y="710.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="233.5" y="720.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="8" data-y="18" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(8, 18)｜物流向西</title>
+<rect x="251.9" y="560.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="258.5" y="570.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="8" data-y="20" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(8, 20)｜物流向西</title>
+<rect x="251.9" y="610.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="258.5" y="620.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="8" data-y="22" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(8, 22)｜物流向西</title>
+<rect x="251.9" y="660.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="258.5" y="670.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="8" data-y="24" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(8, 24)｜物流向西</title>
+<rect x="251.9" y="710.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="258.5" y="720.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="11" data-y="5" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(11, 5)｜物流向西</title>
+<rect x="326.9" y="235.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="333.5" y="245.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="11" data-y="6" data-kind="tunnel3" data-id="32" data-dir="5" data-shape="5" data-recipe="-1"><title>3级地下传送带｜(11, 6)｜物流向西｜跨度 3 格</title>
+<rect x="324.5" y="260.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="333.5" y="270.9" font-size="8.5" text-anchor="middle">出Ⅲ</text>
+</g>
+<g class="transport" data-x="11" data-y="8" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(11, 8)｜物流向西</title>
+<rect x="326.9" y="310.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="333.5" y="320.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="11" data-y="9" data-kind="tunnel3" data-id="32" data-dir="5" data-shape="5" data-recipe="-1"><title>3级地下传送带｜(11, 9)｜物流向西｜跨度 2 格</title>
+<rect x="324.5" y="335.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="333.5" y="345.9" font-size="8.5" text-anchor="middle">出Ⅲ</text>
+</g>
+<g class="transport" data-x="11" data-y="11" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(11, 11)｜物流向西</title>
+<rect x="326.9" y="385.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="333.5" y="395.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="11" data-y="12" data-kind="tunnel3" data-id="32" data-dir="5" data-shape="5" data-recipe="-1"><title>3级地下传送带｜(11, 12)｜物流向西｜跨度 2 格</title>
+<rect x="324.5" y="410.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="333.5" y="420.9" font-size="8.5" text-anchor="middle">出Ⅲ</text>
+</g>
+<g class="transport" data-x="11" data-y="14" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(11, 14)｜物流向西</title>
+<rect x="326.9" y="460.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="333.5" y="470.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="11" data-y="15" data-kind="tunnel3" data-id="32" data-dir="5" data-shape="5" data-recipe="-1"><title>3级地下传送带｜(11, 15)｜物流向西｜跨度 2 格</title>
+<rect x="324.5" y="485.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="333.5" y="495.9" font-size="8.5" text-anchor="middle">出Ⅲ</text>
+</g>
+<g class="transport" data-x="11" data-y="18" data-kind="tunnel3" data-id="32" data-dir="5" data-shape="5" data-recipe="-1"><title>3级地下传送带｜(11, 18)｜物流向西｜跨度 2 格</title>
+<rect x="324.5" y="560.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="333.5" y="570.9" font-size="8.5" text-anchor="middle">出Ⅲ</text>
+</g>
+<g class="transport" data-x="11" data-y="20" data-kind="tunnel3" data-id="32" data-dir="5" data-shape="5" data-recipe="-1"><title>3级地下传送带｜(11, 20)｜物流向西｜跨度 5 格</title>
+<rect x="324.5" y="610.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="333.5" y="620.9" font-size="8.5" text-anchor="middle">出Ⅲ</text>
+</g>
+<g class="transport" data-x="11" data-y="22" data-kind="tunnel3" data-id="32" data-dir="5" data-shape="5" data-recipe="-1"><title>3级地下传送带｜(11, 22)｜物流向西｜跨度 5 格</title>
+<rect x="324.5" y="660.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="333.5" y="670.9" font-size="8.5" text-anchor="middle">出Ⅲ</text>
+</g>
+<g class="transport" data-x="11" data-y="24" data-kind="tunnel3" data-id="32" data-dir="5" data-shape="5" data-recipe="-1"><title>3级地下传送带｜(11, 24)｜物流向西｜跨度 5 格</title>
+<rect x="324.5" y="710.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="333.5" y="720.9" font-size="8.5" text-anchor="middle">出Ⅲ</text>
+</g>
+<g class="transport" data-x="12" data-y="5" data-kind="belt3" data-id="22" data-dir="1" data-shape="5" data-recipe="-1"><title>3级传送带｜(12, 5)｜物流向西</title>
+<rect x="351.9" y="235.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="358.5" y="245.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="12" data-y="6" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(12, 6)｜物流向北</title>
+<rect x="351.9" y="260.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="358.5" y="270.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="12" data-y="7" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(12, 7)｜物流向北</title>
+<rect x="351.9" y="285.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="358.5" y="295.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="12" data-y="8" data-kind="split" data-id="40" data-dir="3" data-shape="3" data-recipe="-1"><title>分流器｜(12, 8)｜主进料向北</title>
+<rect x="351.9" y="310.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="358.5" y="320.9" font-size="8.5" text-anchor="middle">分</text>
+</g>
+<g class="transport" data-x="12" data-y="9" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(12, 9)｜物流向北</title>
+<rect x="351.9" y="335.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="358.5" y="345.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="12" data-y="10" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(12, 10)｜物流向北</title>
+<rect x="351.9" y="360.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="358.5" y="370.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="12" data-y="11" data-kind="split" data-id="40" data-dir="3" data-shape="3" data-recipe="-1"><title>分流器｜(12, 11)｜主进料向北</title>
+<rect x="351.9" y="385.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="358.5" y="395.9" font-size="8.5" text-anchor="middle">分</text>
+</g>
+<g class="transport" data-x="12" data-y="12" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(12, 12)｜物流向北</title>
+<rect x="351.9" y="410.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="358.5" y="420.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="12" data-y="13" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(12, 13)｜物流向北</title>
+<rect x="351.9" y="435.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="358.5" y="445.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="12" data-y="14" data-kind="split" data-id="40" data-dir="3" data-shape="3" data-recipe="-1"><title>分流器｜(12, 14)｜主进料向北</title>
+<rect x="351.9" y="460.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="358.5" y="470.9" font-size="8.5" text-anchor="middle">分</text>
+</g>
+<g class="transport" data-x="12" data-y="15" data-kind="tunnel3" data-id="32" data-dir="7" data-shape="7" data-recipe="-1"><title>3级地下传送带｜(12, 15)｜物流向北｜跨度 5 格</title>
+<rect x="349.5" y="485.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="358.5" y="495.9" font-size="8.5" text-anchor="middle">出Ⅲ</text>
+</g>
+<g class="transport" data-x="12" data-y="20" data-kind="tunnel3" data-id="32" data-dir="0" data-shape="0" data-recipe="-1"><title>3级地下传送带｜(12, 20)｜物流向北｜跨度 5 格</title>
+<rect x="349.5" y="610.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="358.5" y="620.9" font-size="8.5" text-anchor="middle">入Ⅲ</text>
+</g>
+<g class="transport" data-x="12" data-y="21" data-kind="merge" data-id="41" data-dir="3" data-shape="3" data-recipe="-1"><title>合并器｜(12, 21)｜主出料向北</title>
+<rect x="351.9" y="635.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="358.5" y="645.9" font-size="8.5" text-anchor="middle">合</text>
+</g>
+<g class="transport" data-x="12" data-y="22" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(12, 22)｜物流向北</title>
+<rect x="351.9" y="660.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="358.5" y="670.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="12" data-y="23" data-kind="belt3" data-id="22" data-dir="3" data-shape="9" data-recipe="-1"><title>3级传送带｜(12, 23)｜物流向北</title>
+<rect x="351.9" y="685.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="358.5" y="695.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="13" data-y="9" data-kind="tunnel3" data-id="32" data-dir="2" data-shape="2" data-recipe="-1"><title>3级地下传送带｜(13, 9)｜物流向西｜跨度 2 格</title>
+<rect x="374.5" y="335.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="383.5" y="345.9" font-size="8.5" text-anchor="middle">入Ⅲ</text>
+</g>
+<g class="transport" data-x="13" data-y="12" data-kind="tunnel3" data-id="32" data-dir="2" data-shape="2" data-recipe="-1"><title>3级地下传送带｜(13, 12)｜物流向西｜跨度 2 格</title>
+<rect x="374.5" y="410.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="383.5" y="420.9" font-size="8.5" text-anchor="middle">入Ⅲ</text>
+</g>
+<g class="transport" data-x="13" data-y="15" data-kind="tunnel3" data-id="32" data-dir="2" data-shape="2" data-recipe="-1"><title>3级地下传送带｜(13, 15)｜物流向西｜跨度 2 格</title>
+<rect x="374.5" y="485.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="383.5" y="495.9" font-size="8.5" text-anchor="middle">入Ⅲ</text>
+</g>
+<g class="transport" data-x="13" data-y="18" data-kind="tunnel3" data-id="32" data-dir="2" data-shape="2" data-recipe="-1"><title>3级地下传送带｜(13, 18)｜物流向西｜跨度 2 格</title>
+<rect x="374.5" y="560.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="383.5" y="570.9" font-size="8.5" text-anchor="middle">入Ⅲ</text>
+</g>
+<g class="transport" data-x="13" data-y="21" data-kind="tunnel3" data-id="32" data-dir="5" data-shape="5" data-recipe="-1"><title>3级地下传送带｜(13, 21)｜物流向西｜跨度 5 格</title>
+<rect x="374.5" y="635.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="383.5" y="645.9" font-size="8.5" text-anchor="middle">出Ⅲ</text>
+</g>
+<g class="transport" data-x="13" data-y="23" data-kind="tunnel3" data-id="32" data-dir="5" data-shape="5" data-recipe="-1"><title>3级地下传送带｜(13, 23)｜物流向西｜跨度 5 格</title>
+<rect x="374.5" y="685.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="383.5" y="695.9" font-size="8.5" text-anchor="middle">出Ⅲ</text>
+</g>
+<g class="transport" data-x="14" data-y="6" data-kind="tunnel3" data-id="32" data-dir="2" data-shape="2" data-recipe="-1"><title>3级地下传送带｜(14, 6)｜物流向西｜跨度 3 格</title>
+<rect x="399.5" y="260.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="408.5" y="270.9" font-size="8.5" text-anchor="middle">入Ⅲ</text>
+</g>
+<g class="transport" data-x="14" data-y="9" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(14, 9)｜物流向西</title>
+<rect x="401.9" y="335.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="408.5" y="345.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="14" data-y="12" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(14, 12)｜物流向西</title>
+<rect x="401.9" y="410.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="408.5" y="420.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="14" data-y="15" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(14, 15)｜物流向西</title>
+<rect x="401.9" y="485.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="408.5" y="495.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="14" data-y="18" data-kind="tunnel3" data-id="32" data-dir="5" data-shape="5" data-recipe="-1"><title>3级地下传送带｜(14, 18)｜物流向西｜跨度 2 格</title>
+<rect x="399.5" y="560.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="408.5" y="570.9" font-size="8.5" text-anchor="middle">出Ⅲ</text>
+</g>
+<g class="transport" data-x="15" data-y="6" data-kind="belt3" data-id="22" data-dir="1" data-shape="5" data-recipe="-1"><title>3级传送带｜(15, 6)｜物流向西</title>
+<rect x="426.9" y="260.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="433.5" y="270.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="15" data-y="7" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(15, 7)｜物流向北</title>
+<rect x="426.9" y="285.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="433.5" y="295.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="15" data-y="8" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(15, 8)｜物流向北</title>
+<rect x="426.9" y="310.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="433.5" y="320.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="15" data-y="9" data-kind="split" data-id="40" data-dir="3" data-shape="3" data-recipe="-1"><title>分流器｜(15, 9)｜主进料向北</title>
+<rect x="426.9" y="335.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="433.5" y="345.9" font-size="8.5" text-anchor="middle">分</text>
+</g>
+<g class="transport" data-x="15" data-y="10" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(15, 10)｜物流向北</title>
+<rect x="426.9" y="360.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="433.5" y="370.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="15" data-y="11" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(15, 11)｜物流向北</title>
+<rect x="426.9" y="385.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="433.5" y="395.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="15" data-y="12" data-kind="split" data-id="40" data-dir="3" data-shape="3" data-recipe="-1"><title>分流器｜(15, 12)｜主进料向北</title>
+<rect x="426.9" y="410.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="433.5" y="420.9" font-size="8.5" text-anchor="middle">分</text>
+</g>
+<g class="transport" data-x="15" data-y="13" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(15, 13)｜物流向北</title>
+<rect x="426.9" y="435.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="433.5" y="445.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="15" data-y="14" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(15, 14)｜物流向北</title>
+<rect x="426.9" y="460.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="433.5" y="470.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="15" data-y="15" data-kind="split" data-id="40" data-dir="3" data-shape="3" data-recipe="-1"><title>分流器｜(15, 15)｜主进料向北</title>
+<rect x="426.9" y="485.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="433.5" y="495.9" font-size="8.5" text-anchor="middle">分</text>
+</g>
+<g class="transport" data-x="15" data-y="16" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(15, 16)｜物流向北</title>
+<rect x="426.9" y="510.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="433.5" y="520.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="15" data-y="17" data-kind="merge" data-id="41" data-dir="3" data-shape="3" data-recipe="-1"><title>合并器｜(15, 17)｜主出料向北</title>
+<rect x="426.9" y="535.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="433.5" y="545.9" font-size="8.5" text-anchor="middle">合</text>
+</g>
+<g class="transport" data-x="15" data-y="18" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(15, 18)｜物流向北</title>
+<rect x="426.9" y="560.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="433.5" y="570.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="15" data-y="19" data-kind="belt3" data-id="22" data-dir="3" data-shape="9" data-recipe="-1"><title>3级传送带｜(15, 19)｜物流向北</title>
+<rect x="426.9" y="585.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="433.5" y="595.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="16" data-y="17" data-kind="tunnel3" data-id="32" data-dir="5" data-shape="5" data-recipe="-1"><title>3级地下传送带｜(16, 17)｜物流向西｜跨度 2 格</title>
+<rect x="449.5" y="535.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="458.5" y="545.9" font-size="8.5" text-anchor="middle">出Ⅲ</text>
+</g>
+<g class="transport" data-x="16" data-y="18" data-kind="tunnel3" data-id="32" data-dir="2" data-shape="2" data-recipe="-1"><title>3级地下传送带｜(16, 18)｜物流向西｜跨度 2 格</title>
+<rect x="449.5" y="560.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="458.5" y="570.9" font-size="8.5" text-anchor="middle">入Ⅲ</text>
+</g>
+<g class="transport" data-x="16" data-y="19" data-kind="tunnel3" data-id="32" data-dir="5" data-shape="5" data-recipe="-1"><title>3级地下传送带｜(16, 19)｜物流向西｜跨度 2 格</title>
+<rect x="449.5" y="585.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="458.5" y="595.9" font-size="8.5" text-anchor="middle">出Ⅲ</text>
+</g>
+<g class="transport" data-x="16" data-y="20" data-kind="tunnel3" data-id="32" data-dir="2" data-shape="2" data-recipe="-1"><title>3级地下传送带｜(16, 20)｜物流向西｜跨度 5 格</title>
+<rect x="449.5" y="610.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="458.5" y="620.9" font-size="8.5" text-anchor="middle">入Ⅲ</text>
+</g>
+<g class="transport" data-x="16" data-y="22" data-kind="tunnel3" data-id="32" data-dir="2" data-shape="2" data-recipe="-1"><title>3级地下传送带｜(16, 22)｜物流向西｜跨度 5 格</title>
+<rect x="449.5" y="660.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="458.5" y="670.9" font-size="8.5" text-anchor="middle">入Ⅲ</text>
+</g>
+<g class="transport" data-x="16" data-y="24" data-kind="tunnel3" data-id="32" data-dir="2" data-shape="2" data-recipe="-1"><title>3级地下传送带｜(16, 24)｜物流向西｜跨度 5 格</title>
+<rect x="449.5" y="710.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="458.5" y="720.9" font-size="8.5" text-anchor="middle">入Ⅲ</text>
+</g>
+<g class="transport" data-x="17" data-y="1" data-kind="belt3" data-id="22" data-dir="0" data-shape="11" data-recipe="-1"><title>3级传送带｜(17, 1)｜物流向南</title>
+<rect x="476.9" y="135.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="483.5" y="145.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="17" data-y="2" data-kind="belt3" data-id="22" data-dir="0" data-shape="0" data-recipe="-1"><title>3级传送带｜(17, 2)｜物流向南</title>
+<rect x="476.9" y="160.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="483.5" y="170.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="17" data-y="3" data-kind="merge" data-id="41" data-dir="0" data-shape="0" data-recipe="-1"><title>合并器｜(17, 3)｜主出料向南</title>
+<rect x="476.9" y="185.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="483.5" y="195.9" font-size="8.5" text-anchor="middle">合</text>
+</g>
+<g class="transport" data-x="17" data-y="4" data-kind="belt3" data-id="22" data-dir="0" data-shape="0" data-recipe="-1"><title>3级传送带｜(17, 4)｜物流向南</title>
+<rect x="476.9" y="210.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="483.5" y="220.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="17" data-y="5" data-kind="merge" data-id="41" data-dir="0" data-shape="0" data-recipe="-1"><title>合并器｜(17, 5)｜主出料向南</title>
+<rect x="476.9" y="235.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="483.5" y="245.9" font-size="8.5" text-anchor="middle">合</text>
+</g>
+<g class="transport" data-x="17" data-y="6" data-kind="belt3" data-id="22" data-dir="0" data-shape="0" data-recipe="-1"><title>3级传送带｜(17, 6)｜物流向南</title>
+<rect x="476.9" y="260.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="483.5" y="270.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="17" data-y="7" data-kind="merge" data-id="41" data-dir="0" data-shape="0" data-recipe="-1"><title>合并器｜(17, 7)｜主出料向南</title>
+<rect x="476.9" y="285.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="483.5" y="295.9" font-size="8.5" text-anchor="middle">合</text>
+</g>
+<g class="transport" data-x="17" data-y="8" data-kind="belt3" data-id="22" data-dir="0" data-shape="0" data-recipe="-1"><title>3级传送带｜(17, 8)｜物流向南</title>
+<rect x="476.9" y="310.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="483.5" y="320.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="17" data-y="9" data-kind="merge" data-id="41" data-dir="0" data-shape="0" data-recipe="-1"><title>合并器｜(17, 9)｜主出料向南</title>
+<rect x="476.9" y="335.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="483.5" y="345.9" font-size="8.5" text-anchor="middle">合</text>
+</g>
+<g class="transport" data-x="17" data-y="10" data-kind="belt3" data-id="22" data-dir="0" data-shape="0" data-recipe="-1"><title>3级传送带｜(17, 10)｜物流向南</title>
+<rect x="476.9" y="360.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="483.5" y="370.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="17" data-y="11" data-kind="merge" data-id="41" data-dir="0" data-shape="0" data-recipe="-1"><title>合并器｜(17, 11)｜主出料向南</title>
+<rect x="476.9" y="385.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="483.5" y="395.9" font-size="8.5" text-anchor="middle">合</text>
+</g>
+<g class="transport" data-x="17" data-y="12" data-kind="belt3" data-id="22" data-dir="0" data-shape="0" data-recipe="-1"><title>3级传送带｜(17, 12)｜物流向南</title>
+<rect x="476.9" y="410.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="483.5" y="420.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="17" data-y="13" data-kind="merge" data-id="41" data-dir="0" data-shape="0" data-recipe="-1"><title>合并器｜(17, 13)｜主出料向南</title>
+<rect x="476.9" y="435.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="483.5" y="445.9" font-size="8.5" text-anchor="middle">合</text>
+</g>
+<g class="transport" data-x="17" data-y="14" data-kind="belt3" data-id="22" data-dir="0" data-shape="0" data-recipe="-1"><title>3级传送带｜(17, 14)｜物流向南</title>
+<rect x="476.9" y="460.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="483.5" y="470.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="17" data-y="15" data-kind="merge" data-id="41" data-dir="0" data-shape="0" data-recipe="-1"><title>合并器｜(17, 15)｜主出料向南</title>
+<rect x="476.9" y="485.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="483.5" y="495.9" font-size="8.5" text-anchor="middle">合</text>
+</g>
+<g class="transport" data-x="17" data-y="16" data-kind="belt3" data-id="22" data-dir="0" data-shape="0" data-recipe="-1"><title>3级传送带｜(17, 16)｜物流向南</title>
+<rect x="476.9" y="510.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="483.5" y="520.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="17" data-y="17" data-kind="belt3" data-id="22" data-dir="0" data-shape="0" data-recipe="-1"><title>3级传送带｜(17, 17)｜物流向南</title>
+<rect x="476.9" y="535.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="483.5" y="545.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="17" data-y="18" data-kind="split" data-id="40" data-dir="0" data-shape="0" data-recipe="-1"><title>分流器｜(17, 18)｜主进料向南</title>
+<rect x="476.9" y="560.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="483.5" y="570.9" font-size="8.5" text-anchor="middle">分</text>
+</g>
+<g class="transport" data-x="17" data-y="19" data-kind="belt3" data-id="22" data-dir="0" data-shape="0" data-recipe="-1"><title>3级传送带｜(17, 19)｜物流向南</title>
+<rect x="476.9" y="585.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="483.5" y="595.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="17" data-y="20" data-kind="split" data-id="40" data-dir="0" data-shape="0" data-recipe="-1"><title>分流器｜(17, 20)｜主进料向南</title>
+<rect x="476.9" y="610.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="483.5" y="620.9" font-size="8.5" text-anchor="middle">分</text>
+</g>
+<g class="transport" data-x="17" data-y="21" data-kind="belt3" data-id="22" data-dir="0" data-shape="0" data-recipe="-1"><title>3级传送带｜(17, 21)｜物流向南</title>
+<rect x="476.9" y="635.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="483.5" y="645.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="17" data-y="22" data-kind="split" data-id="40" data-dir="0" data-shape="0" data-recipe="-1"><title>分流器｜(17, 22)｜主进料向南</title>
+<rect x="476.9" y="660.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="483.5" y="670.9" font-size="8.5" text-anchor="middle">分</text>
+</g>
+<g class="transport" data-x="17" data-y="23" data-kind="belt3" data-id="22" data-dir="0" data-shape="0" data-recipe="-1"><title>3级传送带｜(17, 23)｜物流向南</title>
+<rect x="476.9" y="685.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="483.5" y="695.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="17" data-y="24" data-kind="belt3" data-id="22" data-dir="1" data-shape="7" data-recipe="-1"><title>3级传送带｜(17, 24)｜物流向西</title>
+<rect x="476.9" y="710.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="483.5" y="720.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="18" data-y="1" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(18, 1)｜物流向西</title>
+<rect x="501.9" y="135.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="508.5" y="145.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="18" data-y="3" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(18, 3)｜物流向西</title>
+<rect x="501.9" y="185.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="508.5" y="195.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="18" data-y="5" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(18, 5)｜物流向西</title>
+<rect x="501.9" y="235.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="508.5" y="245.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="18" data-y="7" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(18, 7)｜物流向西</title>
+<rect x="501.9" y="285.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="508.5" y="295.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="18" data-y="9" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(18, 9)｜物流向西</title>
+<rect x="501.9" y="335.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="508.5" y="345.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="18" data-y="11" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(18, 11)｜物流向西</title>
+<rect x="501.9" y="385.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="508.5" y="395.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="18" data-y="13" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(18, 13)｜物流向西</title>
+<rect x="501.9" y="435.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="508.5" y="445.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="18" data-y="15" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(18, 15)｜物流向西</title>
+<rect x="501.9" y="485.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="508.5" y="495.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="18" data-y="17" data-kind="tunnel3" data-id="32" data-dir="2" data-shape="2" data-recipe="-1"><title>3级地下传送带｜(18, 17)｜物流向西｜跨度 2 格</title>
+<rect x="499.5" y="535.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="508.5" y="545.9" font-size="8.5" text-anchor="middle">入Ⅲ</text>
+</g>
+<g class="transport" data-x="18" data-y="19" data-kind="tunnel3" data-id="32" data-dir="2" data-shape="2" data-recipe="-1"><title>3级地下传送带｜(18, 19)｜物流向西｜跨度 2 格</title>
+<rect x="499.5" y="585.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="508.5" y="595.9" font-size="8.5" text-anchor="middle">入Ⅲ</text>
+</g>
+<g class="transport" data-x="18" data-y="21" data-kind="tunnel3" data-id="32" data-dir="2" data-shape="2" data-recipe="-1"><title>3级地下传送带｜(18, 21)｜物流向西｜跨度 5 格</title>
+<rect x="499.5" y="635.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="508.5" y="645.9" font-size="8.5" text-anchor="middle">入Ⅲ</text>
+</g>
+<g class="transport" data-x="18" data-y="23" data-kind="tunnel3" data-id="32" data-dir="2" data-shape="2" data-recipe="-1"><title>3级地下传送带｜(18, 23)｜物流向西｜跨度 5 格</title>
+<rect x="499.5" y="685.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="508.5" y="695.9" font-size="8.5" text-anchor="middle">入Ⅲ</text>
+</g>
+<g class="transport" data-x="21" data-y="1" data-kind="tunnel3" data-id="32" data-dir="5" data-shape="5" data-recipe="-1"><title>3级地下传送带｜(21, 1)｜物流向西｜跨度 2 格</title>
+<rect x="574.5" y="135.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="583.5" y="145.9" font-size="8.5" text-anchor="middle">出Ⅲ</text>
+</g>
+<g class="transport" data-x="21" data-y="3" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(21, 3)｜物流向西</title>
+<rect x="576.9" y="185.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="583.5" y="195.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="21" data-y="5" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(21, 5)｜物流向西</title>
+<rect x="576.9" y="235.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="583.5" y="245.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="21" data-y="7" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(21, 7)｜物流向西</title>
+<rect x="576.9" y="285.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="583.5" y="295.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="21" data-y="9" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(21, 9)｜物流向西</title>
+<rect x="576.9" y="335.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="583.5" y="345.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="21" data-y="11" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(21, 11)｜物流向西</title>
+<rect x="576.9" y="385.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="583.5" y="395.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="21" data-y="13" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(21, 13)｜物流向西</title>
+<rect x="576.9" y="435.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="583.5" y="445.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="21" data-y="15" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(21, 15)｜物流向西</title>
+<rect x="576.9" y="485.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="583.5" y="495.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="21" data-y="17" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(21, 17)｜物流向西</title>
+<rect x="576.9" y="535.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="583.5" y="545.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="21" data-y="19" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(21, 19)｜物流向西</title>
+<rect x="576.9" y="585.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="583.5" y="595.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="21" data-y="21" data-kind="belt3" data-id="22" data-dir="1" data-shape="5" data-recipe="-1"><title>3级传送带｜(21, 21)｜物流向西</title>
+<rect x="576.9" y="635.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="583.5" y="645.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="21" data-y="22" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(21, 22)｜物流向北</title>
+<rect x="576.9" y="660.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="583.5" y="670.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="21" data-y="23" data-kind="split" data-id="40" data-dir="3" data-shape="3" data-recipe="-1"><title>分流器｜(21, 23)｜主进料向北</title>
+<rect x="576.9" y="685.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="583.5" y="695.9" font-size="8.5" text-anchor="middle">分</text>
+</g>
+<g class="transport" data-x="21" data-y="24" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(21, 24)｜物流向北</title>
+<rect x="576.9" y="710.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="583.5" y="720.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="22" data-y="3" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(22, 3)｜物流向西</title>
+<rect x="601.9" y="185.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="608.5" y="195.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="22" data-y="5" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(22, 5)｜物流向西</title>
+<rect x="601.9" y="235.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="608.5" y="245.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="22" data-y="7" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(22, 7)｜物流向西</title>
+<rect x="601.9" y="285.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="608.5" y="295.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="22" data-y="9" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(22, 9)｜物流向西</title>
+<rect x="601.9" y="335.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="608.5" y="345.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="22" data-y="11" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(22, 11)｜物流向西</title>
+<rect x="601.9" y="385.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="608.5" y="395.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="22" data-y="13" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(22, 13)｜物流向西</title>
+<rect x="601.9" y="435.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="608.5" y="445.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="22" data-y="15" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(22, 15)｜物流向西</title>
+<rect x="601.9" y="485.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="608.5" y="495.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="22" data-y="17" data-kind="belt3" data-id="22" data-dir="1" data-shape="5" data-recipe="-1"><title>3级传送带｜(22, 17)｜物流向西</title>
+<rect x="601.9" y="535.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="608.5" y="545.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="22" data-y="18" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(22, 18)｜物流向北</title>
+<rect x="601.9" y="560.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="608.5" y="570.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="22" data-y="19" data-kind="split" data-id="40" data-dir="3" data-shape="3" data-recipe="-1"><title>分流器｜(22, 19)｜主进料向北</title>
+<rect x="601.9" y="585.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="608.5" y="595.9" font-size="8.5" text-anchor="middle">分</text>
+</g>
+<g class="transport" data-x="22" data-y="20" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(22, 20)｜物流向北</title>
+<rect x="601.9" y="610.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="608.5" y="620.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="22" data-y="21" data-kind="merge" data-id="41" data-dir="3" data-shape="3" data-recipe="-1"><title>合并器｜(22, 21)｜主出料向北</title>
+<rect x="601.9" y="635.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="608.5" y="645.9" font-size="8.5" text-anchor="middle">合</text>
+</g>
+<g class="transport" data-x="22" data-y="22" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(22, 22)｜物流向北</title>
+<rect x="601.9" y="660.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="608.5" y="670.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="22" data-y="23" data-kind="belt3" data-id="22" data-dir="3" data-shape="9" data-recipe="-1"><title>3级传送带｜(22, 23)｜物流向北</title>
+<rect x="601.9" y="685.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="608.5" y="695.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="23" data-y="1" data-kind="tunnel3" data-id="32" data-dir="2" data-shape="2" data-recipe="-1"><title>3级地下传送带｜(23, 1)｜物流向西｜跨度 2 格</title>
+<rect x="624.5" y="135.9" width="18" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="633.5" y="145.9" font-size="8.5" text-anchor="middle">入Ⅲ</text>
+</g>
+<g class="transport" data-x="23" data-y="3" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(23, 3)｜物流向西</title>
+<rect x="626.9" y="185.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="633.5" y="195.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="23" data-y="5" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(23, 5)｜物流向西</title>
+<rect x="626.9" y="235.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="633.5" y="245.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="23" data-y="7" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(23, 7)｜物流向西</title>
+<rect x="626.9" y="285.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="633.5" y="295.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="23" data-y="9" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(23, 9)｜物流向西</title>
+<rect x="626.9" y="335.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="633.5" y="345.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="23" data-y="11" data-kind="belt3" data-id="22" data-dir="1" data-shape="5" data-recipe="-1"><title>3级传送带｜(23, 11)｜物流向西</title>
+<rect x="626.9" y="385.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="633.5" y="395.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="23" data-y="12" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(23, 12)｜物流向北</title>
+<rect x="626.9" y="410.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="633.5" y="420.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="23" data-y="13" data-kind="split" data-id="40" data-dir="3" data-shape="3" data-recipe="-1"><title>分流器｜(23, 13)｜主进料向北</title>
+<rect x="626.9" y="435.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="633.5" y="445.9" font-size="8.5" text-anchor="middle">分</text>
+</g>
+<g class="transport" data-x="23" data-y="14" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(23, 14)｜物流向北</title>
+<rect x="626.9" y="460.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="633.5" y="470.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="23" data-y="15" data-kind="split" data-id="40" data-dir="3" data-shape="3" data-recipe="-1"><title>分流器｜(23, 15)｜主进料向北</title>
+<rect x="626.9" y="485.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="633.5" y="495.9" font-size="8.5" text-anchor="middle">分</text>
+</g>
+<g class="transport" data-x="23" data-y="16" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(23, 16)｜物流向北</title>
+<rect x="626.9" y="510.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="633.5" y="520.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="23" data-y="17" data-kind="merge" data-id="41" data-dir="3" data-shape="3" data-recipe="-1"><title>合并器｜(23, 17)｜主出料向北</title>
+<rect x="626.9" y="535.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="633.5" y="545.9" font-size="8.5" text-anchor="middle">合</text>
+</g>
+<g class="transport" data-x="23" data-y="18" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(23, 18)｜物流向北</title>
+<rect x="626.9" y="560.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="633.5" y="570.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="23" data-y="19" data-kind="belt3" data-id="22" data-dir="3" data-shape="9" data-recipe="-1"><title>3级传送带｜(23, 19)｜物流向北</title>
+<rect x="626.9" y="585.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="633.5" y="595.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="23" data-y="21" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(23, 21)｜物流向西</title>
+<rect x="626.9" y="635.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="633.5" y="645.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="23" data-y="23" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(23, 23)｜物流向西</title>
+<rect x="626.9" y="685.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="633.5" y="695.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="24" data-y="1" data-kind="belt3" data-id="22" data-dir="1" data-shape="5" data-recipe="-1"><title>3级传送带｜(24, 1)｜物流向西</title>
+<rect x="651.9" y="135.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="658.5" y="145.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="24" data-y="2" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(24, 2)｜物流向北</title>
+<rect x="651.9" y="160.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="658.5" y="170.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="24" data-y="3" data-kind="split" data-id="40" data-dir="3" data-shape="3" data-recipe="-1"><title>分流器｜(24, 3)｜主进料向北</title>
+<rect x="651.9" y="185.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="658.5" y="195.9" font-size="8.5" text-anchor="middle">分</text>
+</g>
+<g class="transport" data-x="24" data-y="4" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(24, 4)｜物流向北</title>
+<rect x="651.9" y="210.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="658.5" y="220.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="24" data-y="5" data-kind="split" data-id="40" data-dir="3" data-shape="3" data-recipe="-1"><title>分流器｜(24, 5)｜主进料向北</title>
+<rect x="651.9" y="235.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="658.5" y="245.9" font-size="8.5" text-anchor="middle">分</text>
+</g>
+<g class="transport" data-x="24" data-y="6" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(24, 6)｜物流向北</title>
+<rect x="651.9" y="260.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="658.5" y="270.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="24" data-y="7" data-kind="split" data-id="40" data-dir="3" data-shape="3" data-recipe="-1"><title>分流器｜(24, 7)｜主进料向北</title>
+<rect x="651.9" y="285.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="658.5" y="295.9" font-size="8.5" text-anchor="middle">分</text>
+</g>
+<g class="transport" data-x="24" data-y="8" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(24, 8)｜物流向北</title>
+<rect x="651.9" y="310.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="658.5" y="320.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="24" data-y="9" data-kind="split" data-id="40" data-dir="3" data-shape="3" data-recipe="-1"><title>分流器｜(24, 9)｜主进料向北</title>
+<rect x="651.9" y="335.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="658.5" y="345.9" font-size="8.5" text-anchor="middle">分</text>
+</g>
+<g class="transport" data-x="24" data-y="10" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(24, 10)｜物流向北</title>
+<rect x="651.9" y="360.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="658.5" y="370.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="24" data-y="11" data-kind="merge" data-id="41" data-dir="3" data-shape="3" data-recipe="-1"><title>合并器｜(24, 11)｜主出料向北</title>
+<rect x="651.9" y="385.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="658.5" y="395.9" font-size="8.5" text-anchor="middle">合</text>
+</g>
+<g class="transport" data-x="24" data-y="12" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(24, 12)｜物流向北</title>
+<rect x="651.9" y="410.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="658.5" y="420.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="24" data-y="13" data-kind="merge" data-id="41" data-dir="3" data-shape="3" data-recipe="-1"><title>合并器｜(24, 13)｜主出料向北</title>
+<rect x="651.9" y="435.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="658.5" y="445.9" font-size="8.5" text-anchor="middle">合</text>
+</g>
+<g class="transport" data-x="24" data-y="14" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(24, 14)｜物流向北</title>
+<rect x="651.9" y="460.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="658.5" y="470.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="24" data-y="15" data-kind="belt3" data-id="22" data-dir="3" data-shape="9" data-recipe="-1"><title>3级传送带｜(24, 15)｜物流向北</title>
+<rect x="651.9" y="485.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="658.5" y="495.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="26" data-y="17" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(26, 17)｜物流向西</title>
+<rect x="701.9" y="535.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="708.5" y="545.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="26" data-y="19" data-kind="belt3" data-id="22" data-dir="1" data-shape="1" data-recipe="-1"><title>3级传送带｜(26, 19)｜物流向西</title>
+<rect x="701.9" y="585.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="708.5" y="595.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="26" data-y="20" data-kind="belt3" data-id="22" data-dir="2" data-shape="10" data-recipe="-1"><title>3级传送带｜(26, 20)｜物流向东</title>
+<rect x="701.9" y="610.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="708.5" y="620.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="26" data-y="21" data-kind="split" data-id="40" data-dir="3" data-shape="3" data-recipe="-1"><title>分流器｜(26, 21)｜主进料向北</title>
+<rect x="701.9" y="635.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="708.5" y="645.9" font-size="8.5" text-anchor="middle">分</text>
+</g>
+<g class="transport" data-x="26" data-y="22" data-kind="belt3" data-id="22" data-dir="3" data-shape="9" data-recipe="-1"><title>3级传送带｜(26, 22)｜物流向北</title>
+<rect x="701.9" y="660.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="708.5" y="670.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="26" data-y="23" data-kind="belt3" data-id="22" data-dir="1" data-shape="5" data-recipe="-1"><title>3级传送带｜(26, 23)｜物流向西</title>
+<rect x="701.9" y="685.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="708.5" y="695.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="26" data-y="24" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(26, 24)｜物流向北</title>
+<rect x="701.9" y="710.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="708.5" y="720.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="27" data-y="11" data-kind="belt3" data-id="22" data-dir="1" data-shape="5" data-recipe="-1"><title>3级传送带｜(27, 11)｜物流向西</title>
+<rect x="726.9" y="385.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="733.5" y="395.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="27" data-y="12" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(27, 12)｜物流向北</title>
+<rect x="726.9" y="410.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="733.5" y="420.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="27" data-y="13" data-kind="split" data-id="40" data-dir="3" data-shape="3" data-recipe="-1"><title>分流器｜(27, 13)｜主进料向北</title>
+<rect x="726.9" y="435.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="733.5" y="445.9" font-size="8.5" text-anchor="middle">分</text>
+</g>
+<g class="transport" data-x="27" data-y="14" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(27, 14)｜物流向北</title>
+<rect x="726.9" y="460.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="733.5" y="470.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="27" data-y="15" data-kind="split" data-id="40" data-dir="3" data-shape="3" data-recipe="-1"><title>分流器｜(27, 15)｜主进料向北</title>
+<rect x="726.9" y="485.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="733.5" y="495.9" font-size="8.5" text-anchor="middle">分</text>
+</g>
+<g class="transport" data-x="27" data-y="16" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(27, 16)｜物流向北</title>
+<rect x="726.9" y="510.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="733.5" y="520.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="27" data-y="17" data-kind="split" data-id="40" data-dir="3" data-shape="3" data-recipe="-1"><title>分流器｜(27, 17)｜主进料向北</title>
+<rect x="726.9" y="535.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="733.5" y="545.9" font-size="8.5" text-anchor="middle">分</text>
+</g>
+<g class="transport" data-x="27" data-y="18" data-kind="belt3" data-id="22" data-dir="3" data-shape="3" data-recipe="-1"><title>3级传送带｜(27, 18)｜物流向北</title>
+<rect x="726.9" y="560.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="733.5" y="570.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g class="transport" data-x="27" data-y="19" data-kind="split" data-id="40" data-dir="3" data-shape="3" data-recipe="-1"><title>分流器｜(27, 19)｜主进料向北</title>
+<rect x="726.9" y="585.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="733.5" y="595.9" font-size="8.5" text-anchor="middle">分</text>
+</g>
+<g class="transport" data-x="27" data-y="20" data-kind="belt3" data-id="22" data-dir="3" data-shape="6" data-recipe="-1"><title>3级传送带｜(27, 20)｜物流向北</title>
+<rect x="726.9" y="610.9" width="13.2" height="13.2" rx="2.3" fill="#eef4eb" stroke="#546e62"/><text x="733.5" y="620.9" font-size="8.5" text-anchor="middle">Ⅲ</text>
+</g>
+<g data-kind="exchanger" data-node="0" data-x="0" data-y="2" data-id="61" data-dir="2" data-shape="0" data-recipe="101"><title>绿色晶能｜晶体置换机｜定位格 (0, 2)｜朝西｜6 件/分钟｜碰撞范围 38 × 35 像素</title><rect x="48" y="132" width="71" height="46" rx="4" fill="#e7f0e5" stroke="#187467"/><circle cx="51.0" cy="175.25" r="2" fill="#187467"/><text x="83.5" y="158.0" text-anchor="middle" class="machine">绿色晶能</text>
+<polygon points="50.0,155.0 55.0,158.0 55.0,152.0" fill="#187467"/>
+</g>
+<g data-kind="exchanger" data-node="1" data-x="0" data-y="5" data-id="61" data-dir="2" data-shape="0" data-recipe="101"><title>绿色晶能｜晶体置换机｜定位格 (0, 5)｜朝西｜6 件/分钟｜碰撞范围 38 × 35 像素</title><rect x="48" y="207" width="71" height="46" rx="4" fill="#e7f0e5" stroke="#187467"/><circle cx="51.0" cy="250.25" r="2" fill="#187467"/><text x="83.5" y="233.0" text-anchor="middle" class="machine">绿色晶能</text>
+<polygon points="50.0,230.0 55.0,233.0 55.0,227.0" fill="#187467"/>
+</g>
+<g data-kind="maker" data-node="2" data-x="9" data-y="24" data-id="50" data-dir="2" data-shape="0" data-recipe="52"><title>布｜制造机｜定位格 (9, 24)｜朝西｜9 件/分钟｜碰撞范围 28 × 28 像素</title><rect x="273" y="707" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#375d99"/><circle cx="276.0" cy="725.25" r="2" fill="#375d99"/><text x="296.0" y="720.5" text-anchor="middle" class="machine">布</text>
+<polygon points="275.0,717.5 280.0,720.5 280.0,714.5" fill="#375d99"/>
+</g>
+<g data-kind="maker" data-node="3" data-x="9" data-y="22" data-id="50" data-dir="2" data-shape="0" data-recipe="52"><title>布｜制造机｜定位格 (9, 22)｜朝西｜9 件/分钟｜碰撞范围 28 × 28 像素</title><rect x="273" y="657" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#375d99"/><circle cx="276.0" cy="675.25" r="2" fill="#375d99"/><text x="296.0" y="670.5" text-anchor="middle" class="machine">布</text>
+<polygon points="275.0,667.5 280.0,670.5 280.0,664.5" fill="#375d99"/>
+</g>
+<g data-kind="maker" data-node="4" data-x="9" data-y="20" data-id="50" data-dir="2" data-shape="0" data-recipe="52"><title>布｜制造机｜定位格 (9, 20)｜朝西｜9 件/分钟｜碰撞范围 28 × 28 像素</title><rect x="273" y="607" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#375d99"/><circle cx="276.0" cy="625.25" r="2" fill="#375d99"/><text x="296.0" y="620.5" text-anchor="middle" class="machine">布</text>
+<polygon points="275.0,617.5 280.0,620.5 280.0,614.5" fill="#375d99"/>
+</g>
+<g data-kind="maker" data-node="5" data-x="9" data-y="18" data-id="50" data-dir="2" data-shape="0" data-recipe="52"><title>布｜制造机｜定位格 (9, 18)｜朝西｜9 件/分钟｜碰撞范围 28 × 28 像素</title><rect x="273" y="557" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#375d99"/><circle cx="276.0" cy="575.25" r="2" fill="#375d99"/><text x="296.0" y="570.5" text-anchor="middle" class="machine">布</text>
+<polygon points="275.0,567.5 280.0,570.5 280.0,564.5" fill="#375d99"/>
+</g>
+<g data-kind="assembler" data-node="6" data-x="9" data-y="6" data-id="51" data-dir="2" data-shape="0" data-recipe="60"><title>初级工具｜组装机｜定位格 (9, 6)｜朝西｜6 件/分钟｜碰撞范围 44 × 40 像素</title><rect x="248" y="232" width="71" height="46" rx="4" fill="#e7f0e5" stroke="#187467"/><circle cx="276.0" cy="275.25" r="2" fill="#187467"/><text x="283.5" y="258.0" text-anchor="middle" class="machine">初级工具</text>
+<polygon points="250.0,255.0 255.0,258.0 255.0,252.0" fill="#187467"/>
+</g>
+<g data-kind="assembler" data-node="7" data-x="9" data-y="9" data-id="51" data-dir="2" data-shape="0" data-recipe="60"><title>初级工具｜组装机｜定位格 (9, 9)｜朝西｜6 件/分钟｜碰撞范围 44 × 40 像素</title><rect x="248" y="307" width="71" height="46" rx="4" fill="#e7f0e5" stroke="#187467"/><circle cx="276.0" cy="350.25" r="2" fill="#187467"/><text x="283.5" y="333.0" text-anchor="middle" class="machine">初级工具</text>
+<polygon points="250.0,330.0 255.0,333.0 255.0,327.0" fill="#187467"/>
+</g>
+<g data-kind="assembler" data-node="8" data-x="9" data-y="12" data-id="51" data-dir="2" data-shape="0" data-recipe="60"><title>初级工具｜组装机｜定位格 (9, 12)｜朝西｜6 件/分钟｜碰撞范围 44 × 40 像素</title><rect x="248" y="382" width="71" height="46" rx="4" fill="#e7f0e5" stroke="#187467"/><circle cx="276.0" cy="425.25" r="2" fill="#187467"/><text x="283.5" y="408.0" text-anchor="middle" class="machine">初级工具</text>
+<polygon points="250.0,405.0 255.0,408.0 255.0,402.0" fill="#187467"/>
+</g>
+<g data-kind="assembler" data-node="9" data-x="9" data-y="15" data-id="51" data-dir="2" data-shape="0" data-recipe="60"><title>初级工具｜组装机｜定位格 (9, 15)｜朝西｜6 件/分钟｜碰撞范围 44 × 40 像素</title><rect x="248" y="457" width="71" height="46" rx="4" fill="#e7f0e5" stroke="#187467"/><circle cx="276.0" cy="500.25" r="2" fill="#187467"/><text x="283.5" y="483.0" text-anchor="middle" class="machine">初级工具</text>
+<polygon points="250.0,480.0 255.0,483.0 255.0,477.0" fill="#187467"/>
+</g>
+<g data-kind="maker" data-node="10" data-x="19" data-y="1" data-id="50" data-dir="2" data-shape="0" data-recipe="51"><title>线｜制造机｜定位格 (19, 1)｜朝西｜9 件/分钟｜碰撞范围 28 × 28 像素</title><rect x="523" y="132" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#a34839"/><circle cx="526.0" cy="150.25" r="2" fill="#a34839"/><text x="546.0" y="145.5" text-anchor="middle" class="machine">线</text>
+<polygon points="525.0,142.5 530.0,145.5 530.0,139.5" fill="#a34839"/>
+</g>
+<g data-kind="maker" data-node="11" data-x="19" data-y="3" data-id="50" data-dir="2" data-shape="0" data-recipe="51"><title>线｜制造机｜定位格 (19, 3)｜朝西｜9 件/分钟｜碰撞范围 28 × 28 像素</title><rect x="523" y="182" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#a34839"/><circle cx="526.0" cy="200.25" r="2" fill="#a34839"/><text x="546.0" y="195.5" text-anchor="middle" class="machine">线</text>
+<polygon points="525.0,192.5 530.0,195.5 530.0,189.5" fill="#a34839"/>
+</g>
+<g data-kind="maker" data-node="12" data-x="19" data-y="5" data-id="50" data-dir="2" data-shape="0" data-recipe="51"><title>线｜制造机｜定位格 (19, 5)｜朝西｜9 件/分钟｜碰撞范围 28 × 28 像素</title><rect x="523" y="232" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#a34839"/><circle cx="526.0" cy="250.25" r="2" fill="#a34839"/><text x="546.0" y="245.5" text-anchor="middle" class="machine">线</text>
+<polygon points="525.0,242.5 530.0,245.5 530.0,239.5" fill="#a34839"/>
+</g>
+<g data-kind="maker" data-node="13" data-x="19" data-y="7" data-id="50" data-dir="2" data-shape="0" data-recipe="51"><title>线｜制造机｜定位格 (19, 7)｜朝西｜9 件/分钟｜碰撞范围 28 × 28 像素</title><rect x="523" y="282" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#a34839"/><circle cx="526.0" cy="300.25" r="2" fill="#a34839"/><text x="546.0" y="295.5" text-anchor="middle" class="machine">线</text>
+<polygon points="525.0,292.5 530.0,295.5 530.0,289.5" fill="#a34839"/>
+</g>
+<g data-kind="maker" data-node="14" data-x="19" data-y="9" data-id="50" data-dir="2" data-shape="0" data-recipe="51"><title>线｜制造机｜定位格 (19, 9)｜朝西｜9 件/分钟｜碰撞范围 28 × 28 像素</title><rect x="523" y="332" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#a34839"/><circle cx="526.0" cy="350.25" r="2" fill="#a34839"/><text x="546.0" y="345.5" text-anchor="middle" class="machine">线</text>
+<polygon points="525.0,342.5 530.0,345.5 530.0,339.5" fill="#a34839"/>
+</g>
+<g data-kind="maker" data-node="15" data-x="19" data-y="11" data-id="50" data-dir="2" data-shape="0" data-recipe="51"><title>线｜制造机｜定位格 (19, 11)｜朝西｜9 件/分钟｜碰撞范围 28 × 28 像素</title><rect x="523" y="382" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#a34839"/><circle cx="526.0" cy="400.25" r="2" fill="#a34839"/><text x="546.0" y="395.5" text-anchor="middle" class="machine">线</text>
+<polygon points="525.0,392.5 530.0,395.5 530.0,389.5" fill="#a34839"/>
+</g>
+<g data-kind="maker" data-node="16" data-x="19" data-y="13" data-id="50" data-dir="2" data-shape="0" data-recipe="51"><title>线｜制造机｜定位格 (19, 13)｜朝西｜9 件/分钟｜碰撞范围 28 × 28 像素</title><rect x="523" y="432" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#a34839"/><circle cx="526.0" cy="450.25" r="2" fill="#a34839"/><text x="546.0" y="445.5" text-anchor="middle" class="machine">线</text>
+<polygon points="525.0,442.5 530.0,445.5 530.0,439.5" fill="#a34839"/>
+</g>
+<g data-kind="maker" data-node="17" data-x="19" data-y="15" data-id="50" data-dir="2" data-shape="0" data-recipe="51"><title>线｜制造机｜定位格 (19, 15)｜朝西｜9 件/分钟｜碰撞范围 28 × 28 像素</title><rect x="523" y="482" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#a34839"/><circle cx="526.0" cy="500.25" r="2" fill="#a34839"/><text x="546.0" y="495.5" text-anchor="middle" class="machine">线</text>
+<polygon points="525.0,492.5 530.0,495.5 530.0,489.5" fill="#a34839"/>
+</g>
+<g data-kind="maker" data-node="18" data-x="19" data-y="17" data-id="50" data-dir="2" data-shape="0" data-recipe="6"><title>木棒｜制造机｜定位格 (19, 17)｜朝西｜24 件/分钟｜碰撞范围 28 × 28 像素</title><rect x="523" y="532" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#5c59a1"/><circle cx="526.0" cy="550.25" r="2" fill="#5c59a1"/><text x="546.0" y="545.5" text-anchor="middle" class="machine">木棒</text>
+<polygon points="525.0,542.5 530.0,545.5 530.0,539.5" fill="#5c59a1"/>
+</g>
+<g data-kind="maker" data-node="19" data-x="19" data-y="19" data-id="50" data-dir="2" data-shape="0" data-recipe="6"><title>木棒｜制造机｜定位格 (19, 19)｜朝西｜24 件/分钟｜碰撞范围 28 × 28 像素</title><rect x="523" y="582" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#5c59a1"/><circle cx="526.0" cy="600.25" r="2" fill="#5c59a1"/><text x="546.0" y="595.5" text-anchor="middle" class="machine">木棒</text>
+<polygon points="525.0,592.5 530.0,595.5 530.0,589.5" fill="#5c59a1"/>
+</g>
+<g data-kind="maker" data-node="20" data-x="25" data-y="11" data-id="50" data-dir="2" data-shape="0" data-recipe="50"><title>木纤维｜制造机｜定位格 (25, 11)｜朝西｜30 件/分钟｜碰撞范围 28 × 28 像素</title><rect x="673" y="382" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#846007"/><circle cx="676.0" cy="400.25" r="2" fill="#846007"/><text x="696.0" y="395.5" text-anchor="middle" class="machine">木纤维</text>
+<polygon points="675.0,392.5 680.0,395.5 680.0,389.5" fill="#846007"/>
+</g>
+<g data-kind="maker" data-node="21" data-x="25" data-y="13" data-id="50" data-dir="2" data-shape="0" data-recipe="50"><title>木纤维｜制造机｜定位格 (25, 13)｜朝西｜30 件/分钟｜碰撞范围 28 × 28 像素</title><rect x="673" y="432" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#846007"/><circle cx="676.0" cy="450.25" r="2" fill="#846007"/><text x="696.0" y="445.5" text-anchor="middle" class="machine">木纤维</text>
+<polygon points="675.0,442.5 680.0,445.5 680.0,439.5" fill="#846007"/>
+</g>
+<g data-kind="maker" data-node="22" data-x="25" data-y="15" data-id="50" data-dir="2" data-shape="0" data-recipe="50"><title>木纤维｜制造机｜定位格 (25, 15)｜朝西｜30 件/分钟｜碰撞范围 28 × 28 像素</title><rect x="673" y="482" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#846007"/><circle cx="676.0" cy="500.25" r="2" fill="#846007"/><text x="696.0" y="495.5" text-anchor="middle" class="machine">木纤维</text>
+<polygon points="675.0,492.5 680.0,495.5 680.0,489.5" fill="#846007"/>
+</g>
+<g data-kind="maker" data-node="23" data-x="24" data-y="17" data-id="50" data-dir="2" data-shape="0" data-recipe="50"><title>木纤维｜制造机｜定位格 (24, 17)｜朝西｜27 件/分钟｜碰撞范围 28 × 28 像素</title><rect x="648" y="532" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#846007"/><circle cx="651.0" cy="550.25" r="2" fill="#846007"/><text x="671.0" y="545.5" text-anchor="middle" class="machine">木纤维</text>
+<polygon points="650.0,542.5 655.0,545.5 655.0,539.5" fill="#846007"/>
+</g>
+<g data-kind="maker" data-node="24" data-x="24" data-y="19" data-id="50" data-dir="2" data-shape="0" data-recipe="50"><title>木纤维｜制造机｜定位格 (24, 19)｜朝西｜27 件/分钟｜碰撞范围 28 × 28 像素</title><rect x="648" y="582" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#846007"/><circle cx="651.0" cy="600.25" r="2" fill="#846007"/><text x="671.0" y="595.5" text-anchor="middle" class="machine">木纤维</text>
+<polygon points="650.0,592.5 655.0,595.5 655.0,589.5" fill="#846007"/>
+</g>
+<g data-kind="maker" data-node="25" data-x="24" data-y="21" data-id="50" data-dir="2" data-shape="0" data-recipe="1"><title>木材｜制造机｜定位格 (24, 21)｜朝西｜16 件/分钟｜碰撞范围 28 × 28 像素</title><rect x="648" y="632" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#8b4672"/><circle cx="651.0" cy="650.25" r="2" fill="#8b4672"/><text x="671.0" y="645.5" text-anchor="middle" class="machine">木材</text>
+<polygon points="650.0,642.5 655.0,645.5 655.0,639.5" fill="#8b4672"/>
+</g>
+<g data-kind="maker" data-node="26" data-x="24" data-y="23" data-id="50" data-dir="2" data-shape="0" data-recipe="1"><title>木材｜制造机｜定位格 (24, 23)｜朝西｜16 件/分钟｜碰撞范围 28 × 28 像素</title><rect x="648" y="682" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#8b4672"/><circle cx="651.0" cy="700.25" r="2" fill="#8b4672"/><text x="671.0" y="695.5" text-anchor="middle" class="machine">木材</text>
+<polygon points="650.0,692.5 655.0,695.5 655.0,689.5" fill="#8b4672"/>
+</g>
+<g data-kind="maker" data-node="27" data-x="19" data-y="21" data-id="50" data-dir="2" data-shape="0" data-recipe="9"><title>石材｜制造机｜定位格 (19, 21)｜朝西｜12 件/分钟｜碰撞范围 28 × 28 像素</title><rect x="523" y="632" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#536634"/><circle cx="526.0" cy="650.25" r="2" fill="#536634"/><text x="546.0" y="645.5" text-anchor="middle" class="machine">石材</text>
+<polygon points="525.0,642.5 530.0,645.5 530.0,639.5" fill="#536634"/>
+</g>
+<g data-kind="maker" data-node="28" data-x="19" data-y="23" data-id="50" data-dir="2" data-shape="0" data-recipe="9"><title>石材｜制造机｜定位格 (19, 23)｜朝西｜12 件/分钟｜碰撞范围 28 × 28 像素</title><rect x="523" y="682" width="46" height="21" rx="4" fill="#e7f0e5" stroke="#536634"/><circle cx="526.0" cy="700.25" r="2" fill="#536634"/><text x="546.0" y="695.5" text-anchor="middle" class="machine">石材</text>
+<polygon points="525.0,692.5 530.0,695.5 530.0,689.5" fill="#536634"/>
+</g>
+<g data-kind="inlet" data-node="29" data-x="27" data-y="22" data-id="4" data-dir="1" data-shape="1" data-recipe="-1"><title>进1 原木｜自动进货箱｜定位格 (27, 22)｜朝西｜112 件/分钟｜碰撞范围 28 × 24 像素</title><rect x="723" y="657" width="46" height="21" rx="4" fill="#fff2d8" stroke="#8c5231"/><circle cx="726.0" cy="675.25" r="2" fill="#8c5231"/><text x="746.0" y="670.5" text-anchor="middle" class="machine">进1 原木</text>
+<polygon points="725.0,667.5 730.0,670.5 730.0,664.5" fill="#8c5231"/>
+</g>
+<g data-kind="inlet" data-node="30" data-x="26" data-y="26" data-id="4" data-dir="3" data-shape="3" data-recipe="-1"><title>进3 原木｜自动进货箱｜定位格 (26, 26)｜朝北｜16 件/分钟｜碰撞范围 28 × 24 像素</title><rect x="698" y="732" width="21" height="46" rx="4" fill="#fff2d8" stroke="#8c5231"/><circle cx="701.0" cy="775.25" r="2" fill="#8c5231"/><text x="708.5" y="758.0" text-anchor="middle" class="machine">进3 原木</text>
+<polygon points="708.5,734.0 705.5,739.0 711.5,739.0" fill="#8c5231"/>
+</g>
+<g data-kind="inlet" data-node="31" data-x="21" data-y="26" data-id="4" data-dir="3" data-shape="3" data-recipe="-1"><title>进2 石头｜自动进货箱｜定位格 (21, 26)｜朝北｜24 件/分钟｜碰撞范围 28 × 24 像素</title><rect x="573" y="732" width="21" height="46" rx="4" fill="#fff2d8" stroke="#166b85"/><circle cx="576.0" cy="775.25" r="2" fill="#166b85"/><text x="583.5" y="758.0" text-anchor="middle" class="machine">进2 石头</text>
+<polygon points="583.5,734.0 580.5,739.0 586.5,739.0" fill="#166b85"/>
+</g>
+<g class="collision-outlines" aria-hidden="true" pointer-events="none" fill="none" stroke="#527384" stroke-opacity=".72" stroke-width="1.1" stroke-dasharray="3 2">
+<rect x="61.625" y="131.562" width="59.375" height="54.6875"/>
+<rect x="61.625" y="206.562" width="59.375" height="54.6875"/>
+<rect x="274.125" y="692.5" width="43.75" height="43.75"/>
+<rect x="274.125" y="642.5" width="43.75" height="43.75"/>
+<rect x="274.125" y="592.5" width="43.75" height="43.75"/>
+<rect x="274.125" y="542.5" width="43.75" height="43.75"/>
+<rect x="249.125" y="223.75" width="68.75" height="62.5"/>
+<rect x="249.125" y="298.75" width="68.75" height="62.5"/>
+<rect x="249.125" y="373.75" width="68.75" height="62.5"/>
+<rect x="249.125" y="448.75" width="68.75" height="62.5"/>
+<rect x="524.125" y="117.5" width="43.75" height="43.75"/>
+<rect x="524.125" y="167.5" width="43.75" height="43.75"/>
+<rect x="524.125" y="217.5" width="43.75" height="43.75"/>
+<rect x="524.125" y="267.5" width="43.75" height="43.75"/>
+<rect x="524.125" y="317.5" width="43.75" height="43.75"/>
+<rect x="524.125" y="367.5" width="43.75" height="43.75"/>
+<rect x="524.125" y="417.5" width="43.75" height="43.75"/>
+<rect x="524.125" y="467.5" width="43.75" height="43.75"/>
+<rect x="524.125" y="517.5" width="43.75" height="43.75"/>
+<rect x="524.125" y="567.5" width="43.75" height="43.75"/>
+<rect x="674.125" y="367.5" width="43.75" height="43.75"/>
+<rect x="674.125" y="417.5" width="43.75" height="43.75"/>
+<rect x="674.125" y="467.5" width="43.75" height="43.75"/>
+<rect x="649.125" y="517.5" width="43.75" height="43.75"/>
+<rect x="649.125" y="567.5" width="43.75" height="43.75"/>
+<rect x="649.125" y="617.5" width="43.75" height="43.75"/>
+<rect x="649.125" y="667.5" width="43.75" height="43.75"/>
+<rect x="524.125" y="617.5" width="43.75" height="43.75"/>
+<rect x="524.125" y="667.5" width="43.75" height="43.75"/>
+<rect x="724.125" y="648.75" width="43.75" height="37.5"/>
+<rect x="686.625" y="740.938" width="43.75" height="37.5"/>
+<rect x="561.625" y="740.938" width="43.75" height="37.5"/>
+</g>
+<text x="795" y="117" class="section">物流与设备</text>
+<text x="795" y="144" class="legend">箭头　物流方向与设备朝向</text>
+<text x="795" y="165" class="legend">小圆点　建筑定位格</text>
+<text x="795" y="186" class="legend">罗马数字　传送带等级</text>
+<text x="795" y="207" class="legend">分 / 合　分流器 / 合并器</text>
+<text x="795" y="228" class="legend">入 / 出　地下带，虚线指向出口</text>
+<text x="795" y="249" class="legend">进 / 出　补货口 / 成品接出带</text>
+<text x="795" y="270" class="legend">机台填色框　逻辑端口格</text>
+<text x="795" y="291" class="legend">浅色虚线框　游戏碰撞范围</text>
+<path d="M795 318h18" stroke="#187467" stroke-width="3"/><text x="822" y="322" class="legend">初级工具</text>
+<path d="M795 340h18" stroke="#8c5231" stroke-width="3"/><text x="822" y="344" class="legend">原木</text>
+<path d="M795 362h18" stroke="#375d99" stroke-width="3"/><text x="822" y="366" class="legend">布</text>
+<path d="M795 384h18" stroke="#8b4672" stroke-width="3"/><text x="822" y="388" class="legend">木材</text>
+<path d="M795 406h18" stroke="#5c59a1" stroke-width="3"/><text x="822" y="410" class="legend">木棒</text>
+<path d="M795 428h18" stroke="#846007" stroke-width="3"/><text x="822" y="432" class="legend">木纤维</text>
+<path d="M795 450h18" stroke="#166b85" stroke-width="3"/><text x="822" y="454" class="legend">石头</text>
+<path d="M795 472h18" stroke="#536634" stroke-width="3"/><text x="822" y="476" class="legend">石材</text>
+<path d="M795 494h18" stroke="#a34839" stroke-width="3"/><text x="822" y="498" class="legend">线</text>
+<text x="46" y="817" class="section">电网 · 同一组坐标</text>
+<rect x="46" y="855" width="725" height="675" fill="#fffef9" stroke="#c4d0c6"/>
+<rect x="46" y="855" width="725" height="675" fill="url(#grid)"/>
+<text x="58.5" y="850" text-anchor="middle" class="tick">0</text>
+<text x="183.5" y="850" text-anchor="middle" class="tick">5</text>
+<text x="308.5" y="850" text-anchor="middle" class="tick">10</text>
+<text x="433.5" y="850" text-anchor="middle" class="tick">15</text>
+<text x="558.5" y="850" text-anchor="middle" class="tick">20</text>
+<text x="683.5" y="850" text-anchor="middle" class="tick">25</text>
+<text x="39" y="870.5" text-anchor="end" class="tick">0</text>
+<text x="39" y="995.5" text-anchor="end" class="tick">5</text>
+<text x="39" y="1120.5" text-anchor="end" class="tick">10</text>
+<text x="39" y="1245.5" text-anchor="end" class="tick">15</text>
+<text x="39" y="1370.5" text-anchor="end" class="tick">20</text>
+<text x="39" y="1495.5" text-anchor="end" class="tick">25</text>
+<rect x="48" y="882" width="71" height="46" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="48" y="957" width="71" height="46" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="273" y="1457" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="273" y="1407" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="273" y="1357" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="273" y="1307" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="248" y="982" width="71" height="46" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="248" y="1057" width="71" height="46" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="248" y="1132" width="71" height="46" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="248" y="1207" width="71" height="46" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="523" y="882" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="523" y="932" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="523" y="982" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="523" y="1032" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="523" y="1082" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="523" y="1132" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="523" y="1182" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="523" y="1232" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="523" y="1282" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="523" y="1332" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="673" y="1132" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="673" y="1182" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="673" y="1232" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="648" y="1282" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="648" y="1332" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="648" y="1382" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="648" y="1432" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="523" y="1382" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<rect x="523" y="1432" width="46" height="21" rx="3" fill="#e9eee5" stroke="#b4c4b8"/>
+<path d="M58.5 917.5L58.5 942.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="0" data-y="2" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="58.5" cy="917.5" r="2.5" fill="#947234"/>
+<path d="M58.5 942.5L58.5 967.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="0" data-y="3" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="58.5" cy="942.5" r="2.5" fill="#947234"/>
+<path d="M58.5 967.5L58.5 992.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="0" data-y="4" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="58.5" cy="967.5" r="2.5" fill="#947234"/>
+<path d="M58.5 992.5L58.5 1017.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="0" data-y="5" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="58.5" cy="992.5" r="2.5" fill="#947234"/>
+<path d="M58.5 1017.5L83.5 1017.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="0" data-y="6" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="58.5" cy="1017.5" r="2.5" fill="#947234"/>
+<path d="M83.5 1017.5L108.5 1017.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="1" data-y="6" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="83.5" cy="1017.5" r="2.5" fill="#947234"/>
+<path d="M108.5 1017.5L133.5 1017.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="2" data-y="6" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="108.5" cy="1017.5" r="2.5" fill="#947234"/>
+<path d="M133.5 1017.5L158.5 1017.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="3" data-y="6" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="133.5" cy="1017.5" r="2.5" fill="#947234"/>
+<path d="M158.5 1017.5L183.5 1017.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="4" data-y="6" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="158.5" cy="1017.5" r="2.5" fill="#947234"/>
+<path d="M183.5 1017.5L208.5 1017.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="5" data-y="6" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="183.5" cy="1017.5" r="2.5" fill="#947234"/>
+<path d="M208.5 1017.5L233.5 1017.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="6" data-y="6" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="208.5" cy="1017.5" r="2.5" fill="#947234"/>
+<path d="M233.5 1017.5L258.5 1017.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="7" data-y="6" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="233.5" cy="1017.5" r="2.5" fill="#947234"/>
+<path d="M258.5 1017.5L283.5 1017.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="8" data-y="6" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="258.5" cy="1017.5" r="2.5" fill="#947234"/>
+<path d="M283.5 1017.5L283.5 1042.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="9" data-y="6" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="283.5" cy="1017.5" r="2.5" fill="#947234"/>
+<path d="M283.5 1042.5L308.5 1042.5" stroke="#947234" stroke-width="2"/>
+<path d="M283.5 1042.5L283.5 1067.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="9" data-y="7" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="283.5" cy="1042.5" r="2.5" fill="#947234"/>
+<path d="M283.5 1067.5L283.5 1092.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="9" data-y="8" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="283.5" cy="1067.5" r="2.5" fill="#947234"/>
+<path d="M283.5 1092.5L283.5 1117.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="9" data-y="9" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="283.5" cy="1092.5" r="2.5" fill="#947234"/>
+<path d="M283.5 1117.5L283.5 1142.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="9" data-y="10" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="283.5" cy="1117.5" r="2.5" fill="#947234"/>
+<path d="M283.5 1142.5L283.5 1167.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="9" data-y="11" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="283.5" cy="1142.5" r="2.5" fill="#947234"/>
+<path d="M283.5 1167.5L283.5 1192.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="9" data-y="12" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="283.5" cy="1167.5" r="2.5" fill="#947234"/>
+<path d="M283.5 1192.5L283.5 1217.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="9" data-y="13" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="283.5" cy="1192.5" r="2.5" fill="#947234"/>
+<path d="M283.5 1217.5L283.5 1242.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="9" data-y="14" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="283.5" cy="1217.5" r="2.5" fill="#947234"/>
+<path d="M283.5 1242.5L283.5 1267.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="9" data-y="15" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="283.5" cy="1242.5" r="2.5" fill="#947234"/>
+<path d="M283.5 1267.5L283.5 1292.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="9" data-y="16" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="283.5" cy="1267.5" r="2.5" fill="#947234"/>
+<path d="M283.5 1292.5L283.5 1317.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="9" data-y="17" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="283.5" cy="1292.5" r="2.5" fill="#947234"/>
+<path d="M283.5 1317.5L283.5 1342.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="9" data-y="18" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="283.5" cy="1317.5" r="2.5" fill="#947234"/>
+<path d="M283.5 1342.5L283.5 1367.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="9" data-y="19" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="283.5" cy="1342.5" r="2.5" fill="#947234"/>
+<path d="M283.5 1367.5L283.5 1392.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="9" data-y="20" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="283.5" cy="1367.5" r="2.5" fill="#947234"/>
+<path d="M283.5 1392.5L283.5 1417.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="9" data-y="21" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="283.5" cy="1392.5" r="2.5" fill="#947234"/>
+<path d="M283.5 1417.5L283.5 1442.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="9" data-y="22" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="283.5" cy="1417.5" r="2.5" fill="#947234"/>
+<path d="M283.5 1442.5L283.5 1467.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="9" data-y="23" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="283.5" cy="1442.5" r="2.5" fill="#947234"/>
+<circle class="wire" data-x="9" data-y="24" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="283.5" cy="1467.5" r="2.5" fill="#947234"/>
+<path d="M308.5 1042.5L333.5 1042.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="10" data-y="7" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="308.5" cy="1042.5" r="2.5" fill="#947234"/>
+<path d="M333.5 1042.5L358.5 1042.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="11" data-y="7" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="333.5" cy="1042.5" r="2.5" fill="#947234"/>
+<path d="M358.5 1042.5L383.5 1042.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="12" data-y="7" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="358.5" cy="1042.5" r="2.5" fill="#947234"/>
+<path d="M383.5 1042.5L408.5 1042.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="13" data-y="7" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="383.5" cy="1042.5" r="2.5" fill="#947234"/>
+<path d="M408.5 1042.5L433.5 1042.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="14" data-y="7" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="408.5" cy="1042.5" r="2.5" fill="#947234"/>
+<path d="M433.5 1042.5L458.5 1042.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="15" data-y="7" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="433.5" cy="1042.5" r="2.5" fill="#947234"/>
+<path d="M458.5 1042.5L483.5 1042.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="16" data-y="7" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="458.5" cy="1042.5" r="2.5" fill="#947234"/>
+<path d="M483.5 1042.5L508.5 1042.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="17" data-y="7" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="483.5" cy="1042.5" r="2.5" fill="#947234"/>
+<path d="M508.5 1042.5L533.5 1042.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="18" data-y="7" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="508.5" cy="1042.5" r="2.5" fill="#947234"/>
+<path d="M533.5 892.5L533.5 917.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="19" data-y="1" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="533.5" cy="892.5" r="2.5" fill="#947234"/>
+<path d="M533.5 917.5L533.5 942.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="19" data-y="2" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="533.5" cy="917.5" r="2.5" fill="#947234"/>
+<path d="M533.5 942.5L533.5 967.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="19" data-y="3" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="533.5" cy="942.5" r="2.5" fill="#947234"/>
+<path d="M533.5 967.5L533.5 992.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="19" data-y="4" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="533.5" cy="967.5" r="2.5" fill="#947234"/>
+<path d="M533.5 992.5L533.5 1017.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="19" data-y="5" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="533.5" cy="992.5" r="2.5" fill="#947234"/>
+<path d="M533.5 1017.5L533.5 1042.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="19" data-y="6" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="533.5" cy="1017.5" r="2.5" fill="#947234"/>
+<path d="M533.5 1042.5L533.5 1067.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="19" data-y="7" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="533.5" cy="1042.5" r="2.5" fill="#947234"/>
+<path d="M533.5 1067.5L533.5 1092.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="19" data-y="8" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="533.5" cy="1067.5" r="2.5" fill="#947234"/>
+<path d="M533.5 1092.5L533.5 1117.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="19" data-y="9" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="533.5" cy="1092.5" r="2.5" fill="#947234"/>
+<path d="M533.5 1117.5L533.5 1142.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="19" data-y="10" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="533.5" cy="1117.5" r="2.5" fill="#947234"/>
+<path d="M533.5 1142.5L533.5 1167.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="19" data-y="11" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="533.5" cy="1142.5" r="2.5" fill="#947234"/>
+<path d="M533.5 1167.5L533.5 1192.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="19" data-y="12" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="533.5" cy="1167.5" r="2.5" fill="#947234"/>
+<path d="M533.5 1192.5L533.5 1217.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="19" data-y="13" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="533.5" cy="1192.5" r="2.5" fill="#947234"/>
+<path d="M533.5 1217.5L533.5 1242.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="19" data-y="14" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="533.5" cy="1217.5" r="2.5" fill="#947234"/>
+<path d="M533.5 1242.5L533.5 1267.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="19" data-y="15" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="533.5" cy="1242.5" r="2.5" fill="#947234"/>
+<path d="M533.5 1267.5L533.5 1292.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="19" data-y="16" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="533.5" cy="1267.5" r="2.5" fill="#947234"/>
+<path d="M533.5 1292.5L558.5 1292.5" stroke="#947234" stroke-width="2"/>
+<path d="M533.5 1292.5L533.5 1317.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="19" data-y="17" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="533.5" cy="1292.5" r="2.5" fill="#947234"/>
+<path d="M533.5 1317.5L533.5 1342.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="19" data-y="18" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="533.5" cy="1317.5" r="2.5" fill="#947234"/>
+<path d="M533.5 1342.5L533.5 1367.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="19" data-y="19" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="533.5" cy="1342.5" r="2.5" fill="#947234"/>
+<path d="M533.5 1367.5L533.5 1392.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="19" data-y="20" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="533.5" cy="1367.5" r="2.5" fill="#947234"/>
+<path d="M533.5 1392.5L533.5 1417.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="19" data-y="21" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="533.5" cy="1392.5" r="2.5" fill="#947234"/>
+<path d="M533.5 1417.5L533.5 1442.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="19" data-y="22" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="533.5" cy="1417.5" r="2.5" fill="#947234"/>
+<circle class="wire" data-x="19" data-y="23" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="533.5" cy="1442.5" r="2.5" fill="#947234"/>
+<path d="M558.5 1292.5L583.5 1292.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="20" data-y="17" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="558.5" cy="1292.5" r="2.5" fill="#947234"/>
+<path d="M583.5 1292.5L608.5 1292.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="21" data-y="17" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="583.5" cy="1292.5" r="2.5" fill="#947234"/>
+<path d="M608.5 1292.5L633.5 1292.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="22" data-y="17" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="608.5" cy="1292.5" r="2.5" fill="#947234"/>
+<path d="M633.5 1292.5L658.5 1292.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="23" data-y="17" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="633.5" cy="1292.5" r="2.5" fill="#947234"/>
+<path d="M658.5 1242.5L683.5 1242.5" stroke="#947234" stroke-width="2"/>
+<path d="M658.5 1242.5L658.5 1267.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="24" data-y="15" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="658.5" cy="1242.5" r="2.5" fill="#947234"/>
+<path d="M658.5 1267.5L658.5 1292.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="24" data-y="16" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="658.5" cy="1267.5" r="2.5" fill="#947234"/>
+<path d="M658.5 1292.5L658.5 1317.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="24" data-y="17" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="658.5" cy="1292.5" r="2.5" fill="#947234"/>
+<path d="M658.5 1317.5L658.5 1342.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="24" data-y="18" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="658.5" cy="1317.5" r="2.5" fill="#947234"/>
+<path d="M658.5 1342.5L658.5 1367.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="24" data-y="19" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="658.5" cy="1342.5" r="2.5" fill="#947234"/>
+<path d="M658.5 1367.5L658.5 1392.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="24" data-y="20" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="658.5" cy="1367.5" r="2.5" fill="#947234"/>
+<path d="M658.5 1392.5L658.5 1417.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="24" data-y="21" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="658.5" cy="1392.5" r="2.5" fill="#947234"/>
+<path d="M658.5 1417.5L658.5 1442.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="24" data-y="22" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="658.5" cy="1417.5" r="2.5" fill="#947234"/>
+<circle class="wire" data-x="24" data-y="23" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="658.5" cy="1442.5" r="2.5" fill="#947234"/>
+<path d="M683.5 1142.5L683.5 1167.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="25" data-y="11" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="683.5" cy="1142.5" r="2.5" fill="#947234"/>
+<path d="M683.5 1167.5L683.5 1192.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="25" data-y="12" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="683.5" cy="1167.5" r="2.5" fill="#947234"/>
+<path d="M683.5 1192.5L683.5 1217.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="25" data-y="13" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="683.5" cy="1192.5" r="2.5" fill="#947234"/>
+<path d="M683.5 1217.5L683.5 1242.5" stroke="#947234" stroke-width="2"/>
+<circle class="wire" data-x="25" data-y="14" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="683.5" cy="1217.5" r="2.5" fill="#947234"/>
+<circle class="wire" data-x="25" data-y="15" data-id="250" data-dir="0" data-shape="0" data-recipe="-1" cx="683.5" cy="1242.5" r="2.5" fill="#947234"/>
+<circle cx="58.5" cy="917.5" r="6" fill="#edba50" stroke="#77541c" stroke-width="2"/><text x="46" y="835" class="legend">电力接入 (0, 2) · 200 kW</text>
+</svg>

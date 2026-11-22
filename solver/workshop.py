@@ -245,10 +245,7 @@ def write_workshop_report(directory, problem, results, winner):
                      f"<td>{stats['components']}</td><td>{stats['transport']}</td><td>{stats['wires']}</td>"
                      f"<td>{sum(stats['materials'].values())}</td><td>{stats['buildings']['inlet']}</td><td>{stats['power']} kW</td>"
                      f"<td>{rate:g} 件/分钟</td></tr>")
-    parts.append("</tbody></table></section><section><h2>所用设备与物流</h2>"
-                 "<p>已按存档核对所用配方、设备和物流等级的解锁状态。</p><p>" + "、".join(
-        f"{escape(problem.buildings[key]['name'])} × {count}" for key, count in layout.statistics["buildings"].items()) +
-        f"、电线 × {layout.statistics['wires']}。</p>"
+    parts.append("</tbody></table><p>已按存档核对所用配方、设备和物流等级的解锁状态。</p>"
         "</section><section><h2>外供原料需求</h2><p>布局按外部持续供料计算。</p>"
         "<table><thead><tr><th>供给物料</th><th>每日备货量（逐口取整）</th></tr></thead><tbody>")
     delivery = Counter()

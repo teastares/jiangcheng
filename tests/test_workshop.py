@@ -9,8 +9,10 @@ from types import SimpleNamespace
 from unittest.mock import patch
 
 from solver.blueprint import Record, decode, encode_record, string
+from solver.geometry import MACHINE_DIRECTIONS
 from solver.layout import solve
 from solver.model import Infeasible
+from solver.rotation import ANGLES, rotated_direction
 from solver.save import SaveError, parse, read_save
 from solver.workshop import Workshop, write_workshop_report
 
@@ -121,15 +123,39 @@ class WorkshopTests(unittest.TestCase):
             self.assertIn("已按存档核对所用配方、设备和物流等级的解锁状态", html)
             header = html.split("</header>", 1)[0]
             self.assertIn(f'所需建造胶囊 <strong>{layout.statistics["components"]}</strong> 个', header)
+            self.assertIn('id="blueprint-download"', header)
+            self.assertIn('id="blueprint-copy"', header)
+            self.assertIn('id="blueprint-copy-status" role="status"', header)
             self.assertIn("<h2>建材</h2>", html)
+            self.assertIn("<h2>设施碰撞范围</h2>", html)
+            quotas = html.split("<h2>进货口与日配额</h2>", 1)[1].split("</section>", 1)[0]
+            self.assertIn("<td>石头</td>", quotas)
+            self.assertIn("<td>640</td>", quotas)
             self.assertIn("<td>石头</td><td>640 件/日</td>", html)
             self.assertNotIn("库存", html)
             self.assertIn(report.with_suffix(".svg").read_text(encoding="utf-8"), html)
-            payload = html.split("data:text/plain;charset=utf-8;base64,", 1)[1].split('"', 1)[0]
+            data_uri = "data:text/plain;charset=utf-8;base64,"
+            self.assertEqual(header.count(data_uri), 1)
+            payload = header.split(data_uri, 1)[1].split('"', 1)[0]
             self.assertEqual(b64decode(payload).decode(), text)
             _, _, _, size, buildings, _ = decode(text)
             self.assertEqual(size, (layout.width, layout.height))
             self.assertEqual(len(buildings), layout.statistics["components"])
+            self.assertIn('id="blueprint-rotation"', html)
+            for angle in ANGLES:
+                with self.subTest(angle=angle):
+                    stem = f"{report.stem}-{angle}deg"
+                    variant = html.split(f'<template id="blueprint-view-{angle}">', 1)[1].split("</template>", 1)[0]
+                    rotated_text = report.with_name(f"{stem}.txt").read_bytes()
+                    self.assertEqual(b64decode(variant.split(data_uri, 1)[1].split('"', 1)[0]), rotated_text)
+                    self.assertIn(report.with_name(f"{stem}.svg").read_text(encoding="utf-8"), variant)
+                    _, _, _, bounds, rotated_records, _ = decode(rotated_text.decode("ascii"))
+                    self.assertEqual(bounds, size[::-1] if angle in (90, 270) else size)
+                    facing = MACHINE_DIRECTIONS[rotated_direction(layout.machines[0][2].direction, angle)]
+                    self.assertEqual([r.direction for r in rotated_records if r.id == 50], [facing, facing])
+                    actual_inlet = next(r for r in rotated_records if r.id == 4)
+                    original_inlet = next(r for r in buildings if r.id == 4)
+                    self.assertEqual(actual_inlet.direction, rotated_direction(original_inlet.direction, angle))
             self.assertIn("设施方向核对", html)
             self.assertIn("额定输送在途量", html)
             self.assertEqual(save.read_bytes(), original)

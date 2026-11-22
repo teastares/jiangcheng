@@ -6,7 +6,8 @@ from heapq import heappop, heappush
 from itertools import count
 
 from .blueprint import tunnel_directions
-from .geometry import OFFSETS, OPPOSITE, offset, placement_ports
+from .collision import belt_obstacles, collision_error
+from .geometry import JUNCTIONS, OFFSETS, OPPOSITE, assigned_ports, direct_logistics_allowed, offset, placement_ports
 from .model import belt_options, belt_seconds
 
 
@@ -183,12 +184,16 @@ def travel_cost(price, *, tunnel_exit):
     return (*price[:-1], price[-1] / 2) if tunnel_exit else price
 
 
-def search_route(problem, layout, connection, blocked, existing, prices, ceiling=None):
+def search_route(problem, layout, connection, blocked, existing, prices, ceiling=None, *, terminal_kinds=None):
     source, sink = connection.start, connection.end
     first = step(source, connection.incoming)
     last = step(sink, connection.outgoing, -1)
     if first == sink and connection.incoming == connection.outgoing:
-        if all(layout.transport.get(point) in ("split", "merge") for point in (source, sink)):
+        if terminal_kinds is None:
+            allowed_direct = not all(layout.transport.get(point) in JUNCTIONS for point in (source, sink))
+        else:
+            allowed_direct = direct_logistics_allowed(terminal_kinds[source], terminal_kinds[sink])
+        if not allowed_direct:
             return None
         return [replace(connection.edges[0], start=source, end=sink)], {}
 
@@ -278,13 +283,16 @@ def placement_changes(problem, layout, placements):
     if len(placements) != len(layout.placements) or len(updated) != len(placements):
         return None
     inputs, outputs = {}, {}
+    incoming = defaultdict(list)
+    for segment in layout.segments:
+        incoming[segment.end].append(segment)
     for old in layout.placements:
         new = updated.get(old.node)
         if new is None or (new.building, new.item, new.rate) != (old.building, old.item, old.rate):
             return None
         if new == old:
             continue
-        old_inputs, old_output = placement_ports(problem, old)
+        old_inputs, old_output = assigned_ports(problem, old, incoming)
         new_inputs, new_output = placement_ports(problem, new)
         direction = OFFSETS[new.direction]
         inputs.update((a, (b, direction)) for a, b in zip(old_inputs, new_inputs))
@@ -293,12 +301,72 @@ def placement_changes(problem, layout, placements):
     return inputs, outputs
 
 
-def rerouted_layouts(problem, layout, *, placements=None, max_routes=24, objectives=None):
+def endpoint_leads(route):
+    first = step(route.start, route.incoming)
+    last = step(route.end, route.outgoing, -1)
+    # 设备或分合流直接相连时，中间没有需要保留的带格。
+    if first == route.end and last == route.start:
+        return set()
+    return {first, last}
+
+
+def remap_endpoint(point, direction, ports, junction_moves):
+    if point not in junction_moves:
+        return ports.get(point, (point, direction))
+    new_point, turns = junction_moves[point]
+    dx, dy = direction
+    for _ in range(turns % 4):
+        dx, dy = -dy, dx
+    return new_point, (dx, dy)
+
+
+def reroute_order(paths, mandatory, reroute_all):
+    ordered = sorted(mandatory, key=lambda i: (distance(paths[i].start, paths[i].end), len(paths[i].edges)), reverse=True)
+    yield ordered
+    if reroute_all and len(ordered) > 1:
+        yield ordered[::-1]
+        if ordered != list(mandatory) and ordered[::-1] != list(mandatory):
+            yield mandatory
+
+
+def reroute_paths(problem, layout, paths, remapped, order, optional, junctions, reserved, leads, prices, terminal_kinds):
+    route_types = {i: {p: layout.transport[p] for p in route.cells} for i, route in enumerate(paths) if i not in remapped}
+    edges = {i: list(route.edges) for i, route in enumerate(paths) if i not in remapped}
+    transport = {**junctions, **{point: kind for types in route_types.values() for point, kind in types.items()}}
+    for i in (*order, *optional):
+        route = remapped.get(i, paths[i])
+        old_types = route_types.get(i, {})
+        ceiling = None
+        if i not in remapped:
+            costs = [travel_cost(prices[old_types[edge.end]], tunnel_exit=distance(edge.start, edge.end) > 1)
+                     for edge in route.edges[:-1]]
+            ceiling = tuple(map(sum, zip(*costs)))
+            for point in old_types:
+                del transport[point]
+        jumps = [jump for j, segments in edges.items() if j != i for jump in tunnel_segments(segments, transport)]
+        blocked = reserved | transport.keys() | (leads.keys() - endpoint_leads(route))
+        result = search_route(problem, layout, route, blocked, jumps, prices, ceiling, terminal_kinds=terminal_kinds)
+        if result is None:
+            if i in remapped:
+                return None
+            transport.update(old_types)
+        else:
+            edges[i], types = result
+            transport.update(types)
+    segments = [segment for i in range(len(paths)) for segment in edges[i]]
+    return transport, segments
+
+
+def rerouted_layouts(problem, layout, *, placements=None, max_routes=24, objectives=None, port_changes=None,
+                     reroute_all=False, junction_moves=None):
     """返回保留工序、分合流及物料流量的重布候选，交由调用者校验并仿真。"""
     paths = connections(layout)
     if not paths:
         return
-    if placements is None:
+    if port_changes is not None:
+        inputs, outputs = port_changes
+        placements = layout.placements if placements is None else placements
+    elif placements is None:
         placements = layout.placements
         inputs, outputs = {}, {}
     else:
@@ -307,54 +375,61 @@ def rerouted_layouts(problem, layout, *, placements=None, max_routes=24, objecti
             return
         inputs, outputs = changes
     reserved = {step(p.anchor, OFFSETS[p.direction]) for p in placements if p.building == "outlet"}
-    cells = [point for p in placements for point in p.cells()]
-    junctions = {point: kind for point, kind in layout.transport.items() if kind in ("split", "merge")}
-    occupied = set(cells)
-    if len(occupied) != len(cells) or occupied & junctions.keys() or reserved & (occupied | junctions.keys()):
+    cells = [(point, p.building) for p in placements for point in p.cells()]
+    devices = dict(cells)
+    previous_junctions = {point: kind for point, kind in layout.transport.items() if kind in JUNCTIONS}
+    junction_moves = junction_moves or {}
+    if junction_moves.keys() - previous_junctions.keys():
         return
-    if any(not (0 <= x < layout.width and 0 <= y < layout.height) for x, y in occupied):
+    junctions = {junction_moves.get(point, (point, 0))[0]: kind for point, kind in previous_junctions.items()}
+    if len(devices) != len(cells) or len(junctions) != len(previous_junctions) or devices.keys() & junctions.keys():
         return
-    mandatory = [i for i, route in enumerate(paths)
-                 if route.start in outputs or route.end in inputs or (occupied | reserved).intersection(route.cells)]
-    remapped = {i: replace(paths[i], start=start, incoming=out, end=end, outgoing=into)
-                for i in mandatory
-                for start, out in (outputs.get(paths[i].start, (paths[i].start, paths[i].incoming)),)
-                for end, into in (inputs.get(paths[i].end, (paths[i].end, paths[i].outgoing)),)}
-    mandatory.sort(key=lambda i: (distance(remapped[i].start, remapped[i].end), len(paths[i].edges)), reverse=True)
+    if collision_error(problem, placements, junctions):
+        return
+    terminal_kinds = devices | junctions
+    if reserved & terminal_kinds.keys() or any(not (0 <= x < layout.width and 0 <= y < layout.height)
+                                               for x, y in terminal_kinds):
+        return
+    reserved_cells = reserved | devices.keys() | belt_obstacles(problem, placements)
+    fixed_cells = reserved_cells | junctions.keys()
+    mapped, leads = [], {}
+    for i, route in enumerate(paths):
+        start, out = remap_endpoint(route.start, route.incoming, outputs, junction_moves)
+        end, into = remap_endpoint(route.end, route.outgoing, inputs, junction_moves)
+        if start not in terminal_kinds or end not in terminal_kinds:
+            return
+        candidate = replace(route, start=start, incoming=out, end=end, outgoing=into)
+        for x, y in endpoint_leads(candidate):
+            lead = x, y
+            if lead in leads or lead in fixed_cells or not (0 <= x < layout.width and 0 <= y < layout.height):
+                return
+            leads[lead] = i
+        mapped.append(candidate)
+    remapped = {i: mapped[i] for i, route in enumerate(paths)
+                if reroute_all or mapped[i] != route or route.start in outputs or route.end in inputs or
+                fixed_cells.intersection(route.cells) or
+                any(point in leads and leads[point] != i for point in route.cells)}
     optional = sorted((i for i, route in enumerate(paths) if i not in remapped and len(route.edges) > 2),
                       key=lambda i: len(paths[i].edges), reverse=True)[:max_routes]
-
+    changed_placements = placements != layout.placements
+    if not remapped and not optional and not changed_placements:
+        return
+    seen = set()
     for objective in objectives or (problem.objective,):
         prices = route_costs(problem, objective)
-        reserved_cells = occupied | reserved
-        route_types = {i: {p: layout.transport[p] for p in route.cells} for i, route in enumerate(paths) if i not in remapped}
-        edges = {i: list(route.edges) for i, route in enumerate(paths) if i not in remapped}
-        transport = {**junctions, **{point: kind for types in route_types.values() for point, kind in types.items()}}
-        changed = False
-        for i in (*mandatory, *optional):
-            route = remapped.get(i, paths[i])
-            old_types = route_types.get(i, {})
-            ceiling = None
-            if i not in remapped:
-                costs = [travel_cost(prices[old_types[edge.end]], tunnel_exit=distance(edge.start, edge.end) > 1)
-                         for edge in route.edges[:-1]]
-                ceiling = tuple(map(sum, zip(*costs)))
-                for point in old_types:
-                    del transport[point]
-            jumps = [jump for j, segments in edges.items() if j != i for jump in tunnel_segments(segments, transport)]
-            result = search_route(problem, layout, route, reserved_cells | transport.keys(), jumps, prices, ceiling)
+        for order in reroute_order(mapped, tuple(remapped), reroute_all):
+            result = reroute_paths(problem, layout, paths, remapped, order, optional, junctions, reserved_cells, leads,
+                                   prices, terminal_kinds)
             if result is None:
-                if i in remapped:
-                    break
-                transport.update(old_types)
-            else:
-                edges[i], types = result
-                transport.update(types)
-                changed = True
-        else:
-            if changed:
-                machine_nodes = {p.node for _, _, p in layout.machines}
-                machines = [(p.item, p.rate, p) for p in placements if p.node in machine_nodes]
-                yield replace(layout, placements=placements, machines=machines, transport=transport,
-                              segments=[segment for i in range(len(paths)) for segment in edges[i]],
-                              statistics={}, profile=f"{layout.profile}／线路重布", row_optimal=False, baseline=False)
+                continue
+            transport, segments = result
+            if not remapped and not changed_placements and transport == layout.transport and set(segments) == set(layout.segments):
+                continue
+            signature = (frozenset(transport.items()), frozenset(segments))
+            if signature in seen:
+                continue
+            seen.add(signature)
+            machine_nodes = {p.node for _, _, p in layout.machines}
+            machines = [(p.item, p.rate, p) for p in placements if p.node in machine_nodes]
+            yield replace(layout, placements=placements, machines=machines, transport=transport, segments=segments,
+                          statistics={}, profile=f"{layout.profile}／线路重布", row_optimal=False, baseline=False)

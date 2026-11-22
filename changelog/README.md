@@ -1,8 +1,38 @@
 # 变更记录
 
+## 2026-11-22｜在 GitHub Releases 发布 Windows 版
+
+- **原因与范围**　将设备碰撞校验、四向蓝图及进出货优化同步到 `main`，把最新版 Windows x64 EXE 作为 `v2026.11.22` 的发布附件。项目首页和 Windows 指南均提供 Releases 下载入口。 [发布页面](https://github.com/teastares/jiangcheng/releases/tag/v2026.11.22)
+- **验证**　重新运行 49 项自动测试。核对 EXE 内置的 18 个模块和两份 JSON 均与源码一致，SHA-256 为 `815bbb413a160517a507226ab4e710665b1831b152a5587843b9860de1fabc83`。
+
+## 2026-11-22｜按实际设备碰撞范围排布
+
+- **原因与变更**　强力石砖旧 270° 图的北向制造机和组装机会在实际像素范围内相撞，进货箱也会占用相邻带段的放置空间。新增八类机台、进货箱与运输设施的 Steam 碰撞矩形，约束初排、布线、压紧、整图换向与导出。HTML、SVG 和 JSON 补充实际宽高和范围。 [设施四向尺寸表](../docs/device-footprints.md)
+- **范围与验证**　49 项自动测试通过。新版强力石砖 0° 为 22 × 9，270° 为 10 × 22，四向导入文本逐件回读无像素碰撞或越界，92 kW 下末段仿真均为每分钟 16 件。双绿瓶两案已重新生成并核对四向。已验证正式 Windows EXE 启动、包内代码及数据。游戏内放置和持续运行待实测。 [新版 Windows 程序](../dist/JiangCityBlueprint-logistics-fix.exe) · [强力石砖新版蓝图](../blueprints/optimized/powerful-stone-brick/README.md)
+
+## 2026-11-22｜缩短进出货动线并支持成组换位
+
+- **原因与变更**　强力石砖旧方案的进货箱被边缘候选限制，分合流和出口位置固定，原料端口顺序限制了近路。求解器新增就近进货、进货箱与分流器联动、相邻工位换位、配方进料口交错和贴近分合流接出，允许多轮组合。按安装版交接规则压紧直带，并拒绝缺少必要带段的直连接法。 [新版 Windows 程序](../dist/JiangCityBlueprint-logistics-fix.exe)
+- **范围与验证**　46 项自动测试通过。强力石砖由 26 × 7 压至 22 × 6 格、胶囊 63 降至 49 个、建材 500 降至 430 件，功耗仍为 92 kW，末段仿真每分钟 16 件。Windows EXE 已从正式路径启动，15 个内置模块及两份数据与源码一致。游戏内放置和持续生产待实测。 [强力石砖对照和蓝图](../blueprints/optimized/powerful-stone-brick/README.md) · [研究记录](../docs/research.md)
+
+## 2026-11-22｜蓝图报告支持整图换向
+
+- **原因与变更**　离线报告新增顺时针 0°、90°、180°、270° 方向切换。按目标方向旋转各台设备并核对实际端口，必要时重接物流。摆放图、进出料坐标、接电、胶囊、建材以及复制和下载均随所选方向更新。生成独立的方向 SVG 和 TXT。 [Windows 程序](../dist/JiangCityBlueprint-logistics-fix.exe)
+- **范围与验证**　40 项自动测试通过。两份双绿瓶报告的四个方向均保留 200 kW 与仿真末段每分钟 12 件。Edge 离线核对八种导入文本、摆放图、设备朝向与配额，验证切回原方向。新版 EXE 启动正常，包内代码和数据已复核。游戏内放置与持续运行待实测。 [双绿瓶方向对照](../blueprints/optimized/green-crystal-logistics/README.md) · [研究记录](../docs/research.md)
+
+## 2026-11-22｜记录精致皮革获取途径
+
+- **原因与变更**　查询 Wiki 的制作、购买和原料来源，将科技前置、设备和外供要求写入蓝图设计指南，并记录中英文配方差异。 [蓝图设计指南](../docs/blueprint-design.md#设计流程)
+- **范围与验证**　核对中文 Wiki 与 Steam Build `25121460` 的配方用料、自动加工时间和科技解锁。购买档期、售价和掉落依据 Wiki，待游戏内验证。 [研究记录](../docs/research.md#2026-11-22精致皮革获取途径)
+
+## 2026-11-22｜报告增加「复制蓝图」按钮
+
+- **原因与变更**　离线 HTML 在「导出游戏导入文本」旁增加「复制蓝图」。点击后可直接粘贴到游戏的蓝图导入界面。复制和 TXT 下载共用一份导入内容。同步更新双绿瓶的两份现行交付报告与 Windows 生成器。 [Windows 程序](../dist/JiangCityBlueprint-logistics-fix.exe) · [双绿瓶带级对照](../blueprints/optimized/green-crystal-logistics/README.md)
+- **范围与验证**　38 项自动测试通过。用 Edge 离线核对浏览器复制、兼容回退和失败提示。两份双绿瓶 HTML 的下载内容与独立 TXT 逐字节一致，内嵌摆放图与独立 SVG 一致。新版 Windows EXE 正常启动，包内报告代码及两份数据与源码一致。 [验收记录](../docs/research.md)
+
 ## 2026-11-22｜校正设施方向、物流选级和 Windows 路径
 
-- **原因与变更**　导出按钮直接打开本次报告目录，可从原始位置只读加载所选存档。修正东西向分流器的导入编号，逐项回读蓝图组件并在 HTML 列出方向。按实际带速、流量和跨度选择可用带级，比较低级与混用方案，按实际线路模拟首件和达产。更新 Windows x64 程序。 [最新版 Windows 程序](../dist/JiangCityBlueprint-logistics-fix.exe)
+- **原因与变更**　导出按钮直接打开本次报告目录，可从原始位置只读加载所选存档。修正东西向分流器的导入编号，逐项回读蓝图组件并在 HTML 列出方向。按实际带速、流量和跨度选择可用带级，比较低级与混用方案，按实际线路模拟首件和达产。更新 Windows x64 程序。 [当时的 Windows 程序](https://github.com/teastares/jiangcheng/blob/f0eefd69d279431bac85ec6a8617f79b3324b677/dist/JiangCityBlueprint-logistics-fix.exe)
 - **范围与验证**　38 项自动测试通过。以合成 Steam 117 存档验证原位置读取后内容和修改时间不变，并由 Windows 资源管理器打开带中文、空格和逗号的导出目录。双绿瓶在 200 kW 下达到每分钟 12 件，混用和仅三级均为 38 × 17 格、204 个胶囊。EXE 主窗口响应正常，14 个内置模块和两份数据与源码一致。新版 EXE 的 SHA-256 为 `8d04ed408adc5219f018ab6ed65b0ae4e5656063906ccce68060bdb4a93566b3`。游戏内放置与持续运行待实测。 [双绿瓶带级对照](../blueprints/optimized/green-crystal-logistics/README.md) · [研究记录](../docs/research.md)
 
 ## 2026-11-22｜首次公开发布到 GitHub

@@ -3,7 +3,9 @@ from dataclasses import replace
 from fractions import Fraction
 from types import SimpleNamespace
 
-from solver.geometry import WEST
+from solver.blueprint import FORMAT
+from solver.collision import collision_error
+from solver.geometry import NORTH, WEST
 from solver.layout import Layout, Placement, Segment, verify
 from solver.model import Infeasible, Problem
 from solver.reroute import Connection, compatible_tunnel, rerouted_layouts, route_costs, search_route, step, tunnel_pairing_valid
@@ -108,6 +110,53 @@ class RerouteTests(unittest.TestCase):
         self.problem.underground_spans["tunnel2"] = 2
         self.assertIsNone(search_route(self.problem, layout, connection, blocked, [], prices))
 
+    def test_direct_route_requires_compatible_terminals(self):
+        source, sink, east = (0, 0), (1, 0), (1, 0)
+        layout = Layout(2, 1, [], {}, [], set(), (0, 0), [])
+        edge = Segment(source, sink, "原木", Fraction(24), 0)
+        connection = Connection((edge,), source, east, sink, east)
+        prices = route_costs(self.problem, self.problem.objective)
+        self.assertEqual(search_route(self.problem, layout, connection, {source, sink}, [], prices), ([edge], {}))
+        self.assertIsNone(search_route(self.problem, layout, connection, {source, sink}, [], prices,
+                                       terminal_kinds={source: "inlet", sink: "maker"}))
+        self.assertEqual(search_route(self.problem, layout, connection, {source, sink}, [], prices,
+                                      terminal_kinds={source: "split", sink: "maker"}), ([edge], {}))
+
+    def test_move_split_rotates_each_branch_and_reconnects_flow(self):
+        old, new = (4, 4), (5, 4)
+        item = "原木"
+        paths = [
+            [(0, 4), (1, 4), (2, 4), (3, 4), old],
+            [old, (4, 3), *((x, 2) for x in range(4, 10))],
+            [old, (4, 5), (4, 6), *((x, 7) for x in range(4, 10))],
+        ]
+        rates = (Fraction(48), Fraction(24), Fraction(24))
+        transport = {point: "belt1" for path in paths for point in path[1:-1]}
+        transport[old] = "split"
+        segments = [Segment(a, b, item, rate, 0) for path, rate in zip(paths, rates) for a, b in zip(path, path[1:])]
+        terminals = (paths[0][0], paths[1][-1], paths[2][-1])
+        placements = [Placement(kind, *point, 1, 1, point, item, rate, i)
+                      for i, (point, rate, kind) in enumerate(zip(terminals, rates, ("inlet", "maker", "maker")))]
+        crossing = [(5, 6), (5, 5), new, (5, 1), (5, 0)]
+        crossing_rate = Fraction(12)
+        placements.extend(Placement(kind, *point, 1, 1, point, item, crossing_rate, i, NORTH)
+                          for i, (kind, point) in enumerate(zip(("inlet", "maker"), (crossing[0], crossing[-1])), 3))
+        transport.update({crossing[1]: "belt1", new: "tunnel1", crossing[-2]: "tunnel1"})
+        segments.extend(Segment(a, b, item, crossing_rate, 1) for a, b in zip(crossing, crossing[1:]))
+        original = Layout(11, 10, placements, transport, segments, set(), (0, 0), [])
+
+        (result,) = rerouted_layouts(self.problem, original, junction_moves={old: (new, 1)}, max_routes=0)
+        self.assertEqual({p for p, kind in result.transport.items() if kind == "split"}, {new})
+        self.assertEqual([(s.start, s.rate) for s in result.segments if s.end == new], [((5, 3), rates[0])])
+        self.assertEqual({(s.end, s.rate) for s in result.segments if s.start == new},
+                         {((6, 4), rates[1]), ((4, 4), rates[2])})
+        rerouted_crossing = [s for s in result.segments if s.bus == 1]
+        self.assertEqual((rerouted_crossing[0].start, rerouted_crossing[-1].end), (crossing[0], crossing[-1]))
+        self.assertTrue(all(new not in (s.start, s.end) and s.rate == crossing_rate for s in rerouted_crossing))
+        self.assertEqual(result.placements, placements)
+        for invalid in (terminals[0], (11, 4)):
+            self.assertEqual(list(rerouted_layouts(self.problem, original, junction_moves={old: (invalid, 1)})), [])
+
     def test_reroute_reduces_surface_pieces_and_preserves_flow(self):
         rate = Fraction(24)
         material = "原木"
@@ -123,6 +172,26 @@ class RerouteTests(unittest.TestCase):
         self.assertEqual(len(original.transport), 8)
         (cheaper,) = rerouted_layouts(self.problem, original, max_routes=1, objectives=(("materials", "buildings"),))
         self.assertEqual(cheaper.transport, {(x, 1): "belt1" for x in range(1, 7)})
+
+    def test_reroute_avoids_machine_body_beyond_its_grid_cells(self):
+        problem = SimpleNamespace(**vars(self.problem), catalog={"blueprint_format": FORMAT})
+        rate = Fraction(24)
+        source = Placement("inlet", 0, 1, 2, 1, (0, 1), "原木", rate, 0)
+        sink = Placement("maker", 8, 1, 2, 1, (8, 1), "木材", rate, 1)
+        neighbor = Placement("maker", 4, 2, 2, 1, (4, 2), "木材", rate, 2)
+        transport = dict.fromkeys(((x, 1) for x in range(2, 8)), "belt1")
+        segments = [Segment((x, 1), (x + 1, 1), "原木", rate, 0) for x in range(1, 8)]
+        original = Layout(10, 5, [source, sink, neighbor], transport, segments, set(), (0, 0), [])
+        self.assertTrue(transport.keys().isdisjoint(neighbor.cells()))
+        self.assertIsNotNone(collision_error(problem, original.placements, transport))
+
+        (result,) = rerouted_layouts(problem, original, max_routes=0)
+        self.assertEqual(result.transport, {(2, 1): "tunnel1", (7, 1): "tunnel1"})
+        self.assertIsNone(collision_error(problem, result.placements, result.transport))
+
+        neighbor = replace(neighbor, x=2, anchor=(2, 2))
+        blocked_entering_cell = replace(original, placements=[source, sink, neighbor])
+        self.assertEqual(list(rerouted_layouts(problem, blocked_entering_cell, max_routes=0)), [])
 
     def test_reconnect_rotated_machine_and_keep_production_target(self):
         rate = Fraction(24)

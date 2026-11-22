@@ -144,7 +144,7 @@ def verify_record_directions(problem, layout, records, wires):
         kind = belt_options(problem, p.rate)[0]["building"] if p.building == "outlet" else p.building
         if record is None or record.id != IDS[kind] or record_facing(record) != p.direction:
             raise ValueError(f"导入设备 {p.anchor} 的型号或朝向与布局不符")
-        inputs, output = placement_ports(problem, p)
+        inputs, output = placement_ports(problem, p, all_inputs=True)
         output_points = (p.anchor,) if p.building == "outlet" else (output,) if output is not None else ()
         check_ports(record, inputs, output_points)
 

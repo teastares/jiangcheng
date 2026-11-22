@@ -8,9 +8,11 @@ from math import gcd, lcm
 from pathlib import Path
 
 from .blueprint import FORMAT, IDS, export, record_facing
-from .geometry import DIRECTION_NAMES, OFFSETS
+from .collision import collision_error, footprint_bounds, uses_steam_geometry
+from .geometry import DIRECTION_NAMES, OFFSETS, STEAM_CELL_PIXELS, steam_collision_rect
 from .layout import distance, score_layout
-from .model import DAY, belt_options
+from .model import DAY, Infeasible, belt_options
+from .rotation import ANGLES, rotate_layout
 
 
 MODE_NAMES = {"shared": "共用上游", "separate": "独立供料"}
@@ -59,6 +61,24 @@ def direction_counts(problem, layout, buildings, wires):
     return {name: dict(counts) for name, counts in groups.items()}
 
 
+def _collision_dimensions(problem, layout, records):
+    names = {ident: kind for kind, ident in IDS.items()}
+    placed = {p.anchor: p for p in layout.placements}
+    sizes = Counter()
+    for record in records:
+        p = placed.get((record.x, record.y))
+        kind = p.building if p is not None else names[record.id]
+        facing = record_facing(record)
+        rect = steam_collision_rect(kind, facing=facing)
+        if rect is not None:
+            left, top, right, bottom = rect
+            logical = (p.width, p.height) if p is not None else (1, 1)
+            sizes[kind, facing, logical, (right - left, bottom - top)] += 1
+    return [{"name": problem.buildings[kind]["name"], "direction": DIRECTION_NAMES[facing],
+             "logical_cells": logical, "pixels": pixels, "count": count}
+            for (kind, facing, logical, pixels), count in sorted(sizes.items())]
+
+
 def render_svg(problem, layout, mode, game_records=None):
     cell = 25
     gx, gy = 46, 105
@@ -69,9 +89,16 @@ def render_svg(problem, layout, mode, game_records=None):
     panel_width = 278
     total_width = max(side_x + panel_width, 620)
     power_y = gy + grid_height + 75
-    total_height = max(power_y + grid_height + 35, gy + 184 + 22 * len(legends))
+    steam = uses_steam_geometry(problem)
+    keys = ["箭头　物流方向与设备朝向", "小圆点　建筑定位格", "罗马数字　传送带等级", "分 / 合　分流器 / 合并器", "入 / 出　地下带，虚线指向出口", "进 / 出　补货口 / 成品接出带"]
+    if steam:
+        keys.extend(("机台填色框　逻辑端口格", "浅色虚线框　游戏碰撞范围"))
+    legend_y = gy + 49 + 21 * len(keys)
+    total_height = max(power_y + grid_height + 35, legend_y + 10 + 22 * len(legends))
     title = f"{problem.target} · {MODE_NAMES[mode]}"
     description = f"{layout.width}列、{layout.height}行。左上角为(0,0)。上图为物流，下图为电网。"
+    if steam:
+        description += "机台和进货箱的浅色虚线框表示游戏像素碰撞范围。"
     parts = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{total_width}" height="{total_height}" viewBox="0 0 {total_width} {total_height}" role="img" aria-labelledby="title description">',
              f'<title id="title">{escape(title)}</title><desc id="description">{description}</desc>',
              '<defs><pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M25 0H0V25" fill="none" stroke="#d9e0d9"/></pattern></defs>',
@@ -142,11 +169,18 @@ def render_svg(problem, layout, mode, game_records=None):
 
     inputs = {p.node: f"进{i}" for i, p in enumerate(inlet_rows(layout), 1)}
     outputs = {p.node: f"出{i}" for i, p in enumerate(outlet_rows(layout), 1)}
+    outlines = []
     for p in layout.placements:
         x, y = gx + p.x * cell, gy + p.y * cell
         color = colors.get(p.item, "#187467")
         label = f"{inputs[p.node]} {p.item}" if p.building == "inlet" else outputs.get(p.node, p.item)
         title_text = f'{label}｜{problem.buildings[p.building]["name"]}｜定位格 {p.anchor}｜朝{DIRECTION_NAMES[p.direction]}｜{p.rate} 件/分钟'
+        if steam and p.building != "outlet" and (rect := steam_collision_rect(p.building, p.anchor, p.direction)) is not None:
+            left, top, right, bottom = rect
+            width, height = right - left, bottom - top
+            px = cell / STEAM_CELL_PIXELS
+            title_text += f"｜碰撞范围 {width} × {height} 像素"
+            outlines.append(f'<rect x="{gx+left*px:g}" y="{gy+top*px:g}" width="{width*px:g}" height="{height*px:g}"/>')
         ax, ay = center(p.anchor)
         fill = "#fff2d8" if p.building == "inlet" else "#e7f0e5"
         parts.append(f'<g data-kind="{p.building}" data-node="{p.node}" data-x="{p.anchor[0]}" data-y="{p.anchor[1]}"{attrs(buildings.get(p.anchor))}><title>{escape(title_text)}</title>'
@@ -161,12 +195,16 @@ def render_svg(problem, layout, mode, game_records=None):
         parts.append(f'<polygon points="{arrow}" fill="{color}"/>')
         parts.append('</g>')
 
+    if outlines:
+        parts.append('<g class="collision-outlines" aria-hidden="true" pointer-events="none" fill="none" '
+                     'stroke="#527384" stroke-opacity=".72" stroke-width="1.1" stroke-dasharray="3 2">')
+        parts.extend(outlines)
+        parts.append('</g>')
     parts.append(f'<text x="{side_x}" y="{gy+12}" class="section">物流与设备</text>')
-    keys = ["箭头　物流方向与设备朝向", "小圆点　建筑定位格", "罗马数字　传送带等级", "分 / 合　分流器 / 合并器", "入 / 出　地下带，虚线指向出口", "进 / 出　补货口 / 成品接出带"]
     for i, label in enumerate(keys):
         parts.append(f'<text x="{side_x}" y="{gy+39+21*i}" class="legend">{label}</text>')
     for i, item in enumerate(legends):
-        y = gy + 175 + i * 22
+        y = legend_y + i * 22
         parts.append(f'<path d="M{side_x} {y-4}h18" stroke="{colors[item]}" stroke-width="3"/>'
                      f'<text x="{side_x+27}" y="{y}" class="legend">{escape(item)}</text>')
 
@@ -204,6 +242,13 @@ def data_for(problem, layout, mode):
     buildings = [{**asdict(p), "facing": p.direction, "direction": ("下", "左", "右", "上")[p.direction],
                   "recipe": problem.recipes[p.item].get("id") if p.node in machine_nodes else None}
                  for p in layout.placements]
+    if uses_steam_geometry(problem):
+        for p, building in zip(layout.placements, buildings):
+            rect = steam_collision_rect(p.building, p.anchor, p.direction)
+            if rect is not None:
+                left, top, right, bottom = rect
+                building["collision_rect_px"] = rect
+                building["collision_size_px"] = right - left, bottom - top
     return {"target": problem.target, "mode": mode, "size": [layout.width, layout.height], "effective_minutes": DAY,
             "target_per_minute": problem.rate, "theoretical_per_day": problem.rate * DAY, "raw_ratio": ratio(problem.raw),
             "inlets": inputs, "outlets": outputs, "power_entry": layout.power_entry if layout.wires else None,
@@ -227,23 +272,120 @@ def choose(problem, results):
     return min((mode for mode, (layout, _) in results.items() if layout is not None), key=key, default=None)
 
 
-def render_html(data, svg, title, filename, text, checks=""):
+BLUEPRINT_ACTIONS_STYLE = """.blueprint-actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.blueprint-copy{border:1px solid #187467;border-radius:6px;padding:7px 14px;background:#fffef9;color:#187467;font:inherit;cursor:pointer}
+"""
+BLUEPRINT_INSTRUCTIONS = "复制蓝图后，在 Steam 游戏蓝图界面粘贴导入。也可下载 TXT 并复制全文。自动建造还需备齐下方建材。"
+BLUEPRINT_ACTIONS_SCRIPT = '''<script>
+(() => {
+  const view = document.getElementById("blueprint-view");
+  const report = view || document;
+  const rotation = document.getElementById("blueprint-rotation");
+
+  function enableCopy() {
+    const button = report.querySelector("#blueprint-copy");
+    if (button) button.hidden = false;
+  }
+
+  function copyFromSelection(text, button) {
+    const field = document.createElement("textarea");
+    field.value = text;
+    field.readOnly = true;
+    field.style.cssText = "position:fixed;top:0;left:0;opacity:0;pointer-events:none";
+    document.body.append(field);
+    try {
+      field.focus({preventScroll: true});
+      field.select();
+      return document.execCommand("copy");
+    } finally {
+      field.remove();
+      if (button.isConnected) button.focus({preventScroll: true});
+    }
+  }
+
+  report.addEventListener("click", async event => {
+    const button = event.target.closest?.("#blueprint-copy");
+    if (!button) return;
+    const actions = button.parentElement;
+    const download = actions.querySelector("#blueprint-download");
+    const status = actions.querySelector("#blueprint-copy-status");
+    status.textContent = "";
+    try {
+      const url = download.getAttribute("href");
+      const text = atob(url.slice(url.indexOf(",") + 1));
+      try {
+        await navigator.clipboard.writeText(text);
+      } catch {
+        if (!copyFromSelection(text, button)) throw new Error();
+      }
+      status.textContent = "已复制蓝图。";
+    } catch {
+      status.textContent = "复制失败，请下载 TXT。";
+    }
+  });
+
+  if (view && rotation) {
+    const original = view.cloneNode(true);
+    rotation.addEventListener("change", () => {
+      const template = document.getElementById(`blueprint-view-${rotation.value}`);
+      const source = rotation.value === "0" ? original : template?.content;
+      if (source) {
+        view.replaceChildren(...source.cloneNode(true).childNodes);
+        enableCopy();
+      }
+    });
+    rotation.closest("p").hidden = false;
+  }
+  enableCopy();
+})();
+</script>'''
+
+
+def render_blueprint_actions(filename, text, *, include_script=True):
+    payload = b64encode(text.encode("ascii")).decode("ascii")
+    return f'''<p class="blueprint-actions">
+<a id="blueprint-download" class="download" download="{escape(filename)}" href="data:text/plain;charset=utf-8;base64,{payload}">导出游戏导入文本</a>
+<button type="button" id="blueprint-copy" class="blueprint-copy" hidden>复制蓝图</button>
+<span id="blueprint-copy-status" role="status"></span>
+</p>''' + (BLUEPRINT_ACTIONS_SCRIPT if include_script else "")
+
+
+def _render_report_view(data, svg, filename, text):
     stats = data["statistics"]
     columns = ("id", "position", "item", "direction", "per_minute", "per_day")
     rows = "".join("<tr>" + "".join(f"<td>{escape(str(r[key]))}</td>" for key in columns) + "</tr>" for r in data["inlets"])
     materials = "".join(f"<li>{escape(item)} {amount}</li>" for item, amount in stats["materials"].items())
+    equipment = ""
+    if data.get("equipment"):
+        counts = "、".join(f"{escape(name)} × {count}" for name, count in data["equipment"])
+        equipment = f"<section><h2>所用设备与物流</h2><p>{counts}。</p></section>"
     power = f"电网接入口 {data['power_entry']}，预留 {stats['power']} kW。" if data["power_entry"] else ""
     output = ("成品按这些定位格的朝向接出。" + "、".join(f"{r['position']} 朝{r['direction']}" for r in data["outlets"]) + "。"
               if data["outlets"] else "产物直接入账。")
-    capsules, link = "", ""
+    capsules, actions = "", ""
     instructions = "按摆放图和坐标手动建造。"
     if text is not None:
         capsules = f'<p class="capsules">所需建造胶囊 <strong>{stats["components"]}</strong> 个</p>'
-        href = b64encode(text.encode("ascii")).decode("ascii")
-        link = f'<p><a class="download" download="{escape(filename)}" href="data:text/plain;charset=utf-8;base64,{href}">导出游戏导入文本</a></p>'
-        instructions = "导出并复制整段文本，在 Steam 游戏蓝图界面粘贴导入。自动建造还需备齐下方建材。"
+        actions = render_blueprint_actions(filename, text, include_script=False)
+        instructions = BLUEPRINT_INSTRUCTIONS
+    footprints = ""
+    if data.get("collision_dimensions"):
+        sizes = []
+        for entry in data["collision_dimensions"]:
+            width, height = entry["pixels"]
+            logical_width, logical_height = entry["logical_cells"]
+            span = f"{width / STEAM_CELL_PIXELS:g} × {height / STEAM_CELL_PIXELS:g}"
+            cols = (entry["name"], entry["direction"], entry["count"],
+                    f"{logical_width} × {logical_height}", f"{width} × {height}", span)
+            sizes.append("<tr>" + "".join(f"<td>{escape(str(value))}</td>" for value in cols) + "</tr>")
+        footprints = (f"<section><h2>设施碰撞范围</h2><p>游戏一格为 {STEAM_CELL_PIXELS} × {STEAM_CELL_PIXELS} 像素。"
+                      "摆放图的浅色虚线是机台与进货箱的碰撞外框，按安装版放置规则计算。"
+                      "贴图和逻辑端口格各有独立尺寸。表中分流按主进料方向，合并及传送带按出料方向列出。</p>"
+                      "<table><thead><tr><th>设施</th><th>朝向</th><th>数量</th><th>逻辑格（宽 × 高）</th>"
+                      f"<th>碰撞宽 × 高（像素）</th><th>换算格距</th></tr></thead><tbody>{''.join(sizes)}</tbody></table></section>")
     sim = stats.get("simulation")
     simulation = "" if sim is None else f"<p>空线仿真在前 16 分钟产出 {sim['first_day']} 件，末 4 分钟平均 {sim['last_four_per_minute']:g} 件/分钟。</p>"
+    plot_note = "<p>该方向超出原配置的可建净空，请按此方向的宽高核对地块。</p>" if data.get("exceeds_plot") else ""
     logistics = ""
     if "belt_counts" in stats:
         actual = {kind: "、".join(f"{level} 级 {count} 格" for level, count in counts.items()) or "无"
@@ -267,33 +409,98 @@ def render_html(data, svg, title, filename, text, checks=""):
             audit_rows.append(f"<tr><td>{escape(kind)}</td>{cells}</tr>")
         audit = (f"<section><h2>设施方向核对</h2><p>以下记录已与导入文本回读核对。分流按货物进入时的方向统计，合并和地面带按出货方向统计。</p>"
                  f"<table><thead><tr><th>设施</th>{headings}</tr></thead><tbody>{''.join(audit_rows)}</tbody></table></section>")
+    return f'''<header>
+<p>{data['size'][0]} × {data['size'][1]} 格 · {data['target_per_minute']} 件/分钟 · 稳态理论日产 {data['theoretical_per_day']} 件</p>{plot_note}{capsules}{actions}</header>
+<section><h2>建造与接入</h2><p>{instructions}</p><p>{power}{output}</p></section>{footprints}
+<section><h2>进货口与日配额</h2><p>每日有效生产 16 分钟。{escape(data['raw_ratio'])}。</p>
+<table><thead><tr><th>口</th><th>定位格</th><th>物料</th><th>朝向</th><th>件/分钟</th><th>日配额</th></tr></thead><tbody>{rows}</tbody></table></section>
+<section><h2>摆放图</h2><div class="drawing">{svg}</div></section>
+<section><h2>建材</h2><ul>{materials}</ul></section>{equipment}{logistics}{audit}{simulation}'''
+
+
+def render_html(data, svg, title, filename, text, checks="", rotations=(), *, show_rotation=False):
+    variants = {angle: (detail, drawing, blueprint) for angle, detail, drawing, blueprint in rotations}
+    controls, templates = "", ""
+    if show_rotation or variants:
+        options = ['<option value="0">0°（原方向）</option>']
+        options.extend(f'<option value="{angle}">{angle}°</option>' if angle in variants else
+                       f'<option value="{angle}" disabled>{angle}°（不可用）</option>' for angle in ANGLES)
+        unavailable = "<small>标为不可用的方向未通过布局核验。</small>" if len(variants) < len(ANGLES) else ""
+        controls = ('<p class="rotation-controls" hidden><label for="blueprint-rotation">整体方向（顺时针）</label> '
+                    f'<select id="blueprint-rotation">{"".join(options)}</select> {unavailable}</p>')
+        name = Path(filename)
+        for angle in ANGLES:
+            if angle in variants:
+                detail, drawing, blueprint = variants[angle]
+                view = _render_report_view(detail, drawing, f"{name.stem}-{angle}deg{name.suffix}", blueprint)
+                templates += f'<template id="blueprint-view-{angle}">{view}</template>\n'
+        if checks:
+            checks = f'<p>方案比较表按原方向显示。</p>{checks}'
+    has_actions = text is not None or any(blueprint is not None for _, _, blueprint in variants.values())
+    style = BLUEPRINT_ACTIONS_STYLE if has_actions else ""
+    script = BLUEPRINT_ACTIONS_SCRIPT if has_actions or controls else ""
+    view = _render_report_view(data, svg, filename, text)
     return f'''<!doctype html>
 <html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{escape(title)}</title><style>
 body{{margin:0;background:#f5f7f2;color:#19362e;font:15px/1.6 "Microsoft YaHei",sans-serif}}main{{max-width:1340px;margin:auto;padding:32px 24px}}h1{{font-size:30px;margin:0}}h2{{font-size:20px;margin:0 0 10px}}section{{margin:24px 0}}p{{margin:8px 0}}.capsules{{font-size:17px}}.capsules strong{{font-size:24px;font-variant-numeric:tabular-nums}}.download{{display:inline-block;border-radius:6px;padding:8px 14px;background:#187467;color:white;text-decoration:none}}.drawing{{overflow:auto;border:1px solid #c4d0c6}}.drawing svg{{display:block;max-width:none}}table{{border-collapse:collapse;width:min(100%,720px);background:#fffef9}}th,td{{padding:6px 12px;text-align:left;border-bottom:1px solid #ccd8cd}}ul{{padding-left:1.4em;columns:3;max-width:700px}}footer{{color:#455f55}}
-</style><main><header><h1>{escape(title)}</h1>
-<p>{data['size'][0]} × {data['size'][1]} 格 · {data['target_per_minute']} 件/分钟 · 稳态理论日产 {data['theoretical_per_day']} 件</p>{capsules}{link}</header>
-<section><h2>建造与接入</h2><p>{instructions}</p><p>{power}{output}</p></section>
-<section><h2>进货口与日配额</h2><p>每日有效生产 16 分钟。{escape(data['raw_ratio'])}。</p>
-<table><thead><tr><th>口</th><th>定位格</th><th>物料</th><th>朝向</th><th>件/分钟</th><th>日配额</th></tr></thead><tbody>{rows}</tbody></table></section>
-<section><h2>摆放图</h2><div class="drawing">{svg}</div></section>
-<section><h2>建材</h2><ul>{materials}</ul></section>{logistics}{audit}{checks}{simulation}<footer>已离线检查。游戏内导入、放置与持续生产待实测。</footer></main></html>'''
+.rotation-controls select{{font:inherit;padding:5px 9px;border:1px solid #b7ccc1;border-radius:6px;background:#fffef9;color:inherit}}.rotation-controls small{{margin-left:8px;color:#455f55}}
+{style}</style><main><h1>{escape(title)}</h1>{controls}
+<div id="blueprint-view">{view}</div>
+{checks}<footer>已离线检查。游戏内导入、放置与持续生产待实测。</footer>
+{templates}{script}</main></html>'''
 
 
-def write_layout(directory, name, problem, layout, mode, checks=""):
-    directory.mkdir(parents=True, exist_ok=True)
-    title = f"{problem.target} · {MODE_NAMES[mode]}"
+def layout_view(problem, layout, mode, title):
+    steam = uses_steam_geometry(problem)
+    if steam:
+        if error := collision_error(problem, layout.placements, layout.transport):
+            raise Infeasible(error)
+        if footprint_bounds(layout) != (0, 0, layout.width, layout.height):
+            raise Infeasible("设施碰撞范围超出蓝图的外接地块")
     data = data_for(problem, layout, mode)
+    data["equipment"] = [(problem.buildings[kind]["name"], count)
+                         for kind, count in layout.statistics["buildings"].items()]
+    if layout.wires:
+        data["equipment"].append((problem.buildings["wire"]["name"], len(layout.wires)))
     text, game_records = None, None
     if problem.catalog.get("blueprint_format") == FORMAT:
         description = f"{problem.rate} 件/分钟，16 分钟理论产量 {problem.rate * DAY}，额定功耗 {layout.statistics['power']} kW。"
         text, buildings, wires = export(problem, layout, title, description)
         game_records = buildings, wires
         data["direction_counts"] = direction_counts(problem, layout, buildings, wires)
-        (directory / f"{name}.txt").write_text(text, encoding="ascii")
-    svg = render_svg(problem, layout, mode, game_records)
-    (directory / f"{name}.svg").write_text(svg, encoding="utf-8")
-    (directory / f"{name}.html").write_text(render_html(data, svg, title, f"{name}.txt", text, checks), encoding="utf-8")
+        if steam:
+            data["collision_dimensions"] = _collision_dimensions(problem, layout, buildings)
+    return data, render_svg(problem, layout, mode, game_records), text
+
+
+def write_layout(directory, name, problem, layout, mode, checks=""):
+    title = f"{problem.target} · {MODE_NAMES[mode]}"
+    data, svg, text = layout_view(problem, layout, mode, title)
+    directory.mkdir(parents=True, exist_ok=True)
+    rotations = []
+
+    def write_files(stem, drawing, blueprint):
+        (directory / f"{stem}.svg").write_text(drawing, encoding="utf-8")
+        if blueprint is not None:
+            (directory / f"{stem}.txt").write_text(blueprint, encoding="ascii")
+
+    write_files(name, svg, text)
+    for angle in ANGLES:
+        rotated = rotate_layout(problem, layout, angle)
+        if rotated is None:
+            continue
+        try:
+            detail, drawing, blueprint = layout_view(problem, rotated, mode, f"{title} · {angle}°")
+        except Infeasible:
+            continue
+        detail["exceeds_plot"] = any(limit is not None and length > limit
+                                     for length, limit in zip(detail["size"], problem.plot_limits))
+        rotations.append((angle, detail, drawing, blueprint))
+        write_files(f"{name}-{angle}deg", drawing, blueprint)
+
+    html = render_html(data, svg, title, f"{name}.txt", text, checks, rotations, show_rotation=True)
+    (directory / f"{name}.html").write_text(html, encoding="utf-8")
     (directory / f"{name}.json").write_text(json.dumps(data, ensure_ascii=False, indent=2, default=str) + "\n", encoding="utf-8")
     return data, text is not None
 
