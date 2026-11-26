@@ -12,8 +12,9 @@ from scipy.sparse import coo_matrix
 from .blueprint import EAST
 from .collision import belt_obstacles, collision_error, enclose_footprints, footprint_bounds, uses_steam_geometry
 from .compact import seam_compactions
-from .geometry import JUNCTIONS, STEAM_CELL_PIXELS, direct_logistics_allowed, steam_collision_rect
+from .geometry import INLET_KINDS, JUNCTIONS, STEAM_CELL_PIXELS, direct_logistics_allowed, steam_collision_rect
 from .model import Infeasible, Problem, belt_options, make_network, transport_time
+from .optimization import faster_belt_layout, production_plan
 from .orient import outlet_trials, placement_trials
 from .power import refine_power_grid
 from .rearrange import neighboring_supply_swaps, reordered_inputs, short_supply_trials
@@ -68,6 +69,8 @@ class Layout:
     baseline: bool = False
     extended: bool = False
     search_belt_levels: tuple[int, ...] = ()
+    production_milp: dict = field(default_factory=dict)
+    logistics_milp: dict = field(default_factory=dict)
 
 
 def aisle_positions(problem, network, tracks):
@@ -472,11 +475,25 @@ def assess(problem, layout):
 def score_layout(problem, layout):
     s = layout.statistics
     values = {"area": layout.width * layout.height, "buildings": s["components"], "lines": s["transport"] + s["wires"],
-              "materials": sum(s["materials"].values()), "power": s["power"], "inlets": s["buildings"].get("inlet", 0),
-              "machines": s["machines"], "transport_time": s["transport_time"]}
+              "materials": sum(s["materials"].values()), "power": s["power"],
+              "inlets": sum(s["buildings"].get(kind, 0) for kind in INLET_KINDS),
+              "machines": s["machines"], "transport_time": s["transport_time"], "cadence": cadence_score(layout)}
     levels = sorted((belt["level"] for belt in problem.belts), reverse=True)
     tier_counts = tuple(sum(counts.get(level, 0) for counts in s["belt_counts"].values()) for level in levels)
     return tuple(values[key] for key in problem.objective) + tier_counts + (s["transport_time"],)
+
+
+def cadence_score(layout):
+    timing = layout.statistics.get("simulation", {}).get("timing", {})
+    return (round(timing.get("worst_machine_delay_seconds", 0), 1),
+            round(timing.get("machine_delay_seconds", 0), 1),
+            round(timing.get("max_excess_gap_seconds", 0), 1))
+
+
+def layout_rank(problem, layout):
+    simulated = layout.statistics.get("simulation")
+    shortfall = max(0, float(problem.rate) - simulated["last_four_per_minute"]) if simulated is not None else 0
+    return round(shortfall, 8), score_layout(problem, layout)
 
 
 def placement_networks(network):
@@ -594,7 +611,7 @@ def routed_layouts(problem, network, tracks, candidates, profile):
                     yield direct, False
 
 
-def layout_candidates(problem, count, time_limit):
+def layout_candidates(problem, count, time_limit, plan=None):
     tried, layouts_seen = set(), {}
     wiring = lru_cache(maxsize=256)(power_grid)
     limits = sorted({*(Fraction(belt["capacity"]) for belt in problem.belts),
@@ -602,11 +619,13 @@ def layout_candidates(problem, count, time_limit):
     profiles = [(limit, strategy, reverse, None) for limit in limits
                 for strategy, reverse in (("balanced", False), ("balanced", True), ("local", False))]
     profiles.extend((problem.capacity, strategy, False, None) for strategy in ("direct", "distributed"))
+    if plan is not None:
+        profiles.append((problem.capacity, "pooled", False, None))
     if problem.catalog.get("blueprint_format") and problem.case.get("orientation_search", True):
         profiles.extend((problem.capacity, "direct", False, ordering) for ordering in range(3))
     for limit, strategy, reverse, ordering in profiles:
         try:
-            network = make_network(problem, count, strategy, limit, reverse)
+            network = make_network(problem, count, strategy, limit, reverse, plan=plan)
         except Infeasible:
             continue
         if ordering is not None:
@@ -786,8 +805,12 @@ def _solve_belt_scope(problem, time_limit, simulation, accept):
             yield from reductions(candidate)
 
     def find(count, repeat, mode):
+        try:
+            plan = production_plan(problem, count)
+        except Infeasible:
+            return None, 0
         pending, outside = [], []
-        for module in layout_candidates(problem, count, time_limit):
+        for module in layout_candidates(problem, count, time_limit, plan=plan):
             options = (repeat_layout(module, repeat, cols) for cols in range(1, repeat + 1)) if repeat > 1 else (module,)
             for layout in options:
                 over = excess(layout)
@@ -827,24 +850,32 @@ def _solve_belt_scope(problem, time_limit, simulation, accept):
             return None, 0
         winner = ranked[0][1]
         if simulation:
+            checked_rank = None
             for index in simulation_indices(ranked, problem.simulation_candidates):
                 _, layout = ranked[index]
                 layout.statistics["simulation"] = simulation(problem, layout)
-                if finish(layout):
+                rank = layout_rank(problem, layout)
+                if checked_rank is None or rank < checked_rank:
                     winner = layout
+                    checked_rank = rank
+                if finish(layout) and not any(cadence_score(layout)):
                     break
-        best = (not finish(winner), score_layout(problem, winner))
+        best = layout_rank(problem, winner)
         validated_count = len(ranked)
+        additional_simulations = 0
 
         def consider(candidates):
-            nonlocal winner, best, validated_count
+            nonlocal winner, best, validated_count, additional_simulations
             for metrics, candidate in candidates:
                 validated_count += 1
                 if not best[0] and metrics >= best[1]:
                     continue
+                if not best[0] and additional_simulations >= max(24, problem.simulation_candidates * 2):
+                    continue
                 if simulation:
                     candidate.statistics["simulation"] = simulation(problem, candidate)
-                rank = (not finish(candidate), metrics)
+                    additional_simulations += 1
+                rank = layout_rank(problem, candidate)
                 if rank < best:
                     winner, best = candidate, rank
 
@@ -875,9 +906,20 @@ def _solve_belt_scope(problem, time_limit, simulation, accept):
             validated_count += 1
             if simulation:
                 lower.statistics["simulation"] = simulation(problem, lower)
-            if finish(lower):
+            if finish(lower) and (not finish(winner) or cadence_score(lower) <= cadence_score(winner)):
                 winner = lower
+        if simulation:
+            faster = faster_belt_layout(problem, winner)
+            if faster is not None:
+                if check(faster) is not None:
+                    validated_count += 1
+                    faster.statistics["simulation"] = simulation(problem, faster)
+                    if finish(faster) and (not finish(winner) or cadence_score(faster) < cadence_score(winner)):
+                        winner = faster
+                if winner is not faster:
+                    winner.logistics_milp = {**faster.logistics_milp, "selected": False}
         winner.search_belt_levels = tuple(belt["level"] for belt in problem.belts)
+        winner.production_milp = plan.details(repeat)
         return winner, validated_count
 
     modes = problem.case.get("modes", ("shared", "separate"))
@@ -890,11 +932,6 @@ def solve(problem, time_limit, simulation=None, accept=None):
     levels = tuple(belt["level"] for belt in problem.belts)
     results = {"shared": (None, 0), "separate": (None, 0)}
 
-    def rank(layout):
-        simulated = layout.statistics.get("simulation")
-        below = simulated is not None and simulated["last_four_per_minute"] < float(problem.rate) - 1e-8
-        return below, score_layout(problem, layout)
-
     for stop in range(1, len(levels) + 1):
         if stop == len(levels):
             scope = problem
@@ -905,14 +942,14 @@ def solve(problem, time_limit, simulation=None, accept=None):
                 continue
         for mode, (candidate, count) in _solve_belt_scope(scope, time_limit, simulation, accept).items():
             incumbent, searched = results[mode]
-            if candidate is not None and (incumbent is None or rank(candidate) < rank(incumbent)):
+            if candidate is not None and (incumbent is None or layout_rank(problem, candidate) < layout_rank(problem, incumbent)):
                 incumbent = candidate
             results[mode] = incumbent, searched + count
     return results
 
 
 def verify(problem, layout):
-    from .geometry import OFFSETS, OPPOSITE, assigned_ports, offset, oriented_geometry, placement_ports
+    from .geometry import OFFSETS, OPPOSITE, assigned_ports, inlet_output_ports, offset, oriented_geometry, placement_ports
 
     incoming, outgoing = defaultdict(list), defaultdict(list)
     belt_capacity = {b["building"]: b["capacity"] for b in problem.belts}
@@ -1007,10 +1044,14 @@ def verify(problem, layout):
         require(tuple(oriented["size"]) == (p.width, p.height) and
                 (p.x + oriented["anchor"][0], p.y + oriented["anchor"][1]) == p.anchor, f"{p.item}的朝向或定位格错误")
         expected_in, expected_out = {}, {}
-        if p.building == "inlet":
-            expected_out[output_cell] = (p.item, p.rate)
-            inlet_cells.add(output_cell)
-            require(p.rate <= problem.box_capacity, "进货口超出供料速率")
+        if p.building in INLET_KINDS:
+            ports = inlet_output_ports(problem, p)
+            for port in ports:
+                require(len(outgoing[port]) == 1 and outgoing[port][0].rate <= problem.box_capacity,
+                        "进货口缺少出货路线或超出单口供料速率")
+                expected_out[port] = (p.item, outgoing[port][0].rate)
+            require(sum(rate for _, rate in expected_out.values()) == p.rate, "进货箱日配额与各出口流量不符")
+            inlet_cells.update(ports)
             consumed[p.item] += p.rate
         elif p.building == "outlet":
             expected_in[input_cells[0]] = (p.item, p.rate)

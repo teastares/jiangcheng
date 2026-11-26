@@ -5,8 +5,8 @@ from math import ceil, isfinite
 
 
 DAY = 16
-DEFAULT_OBJECTIVE = ("area", "buildings", "lines", "materials", "power")
-OBJECTIVES = {"area", "buildings", "lines", "materials", "power", "inlets", "machines", "transport_time"}
+DEFAULT_OBJECTIVE = ("area", "buildings", "lines", "cadence", "materials", "power")
+OBJECTIVES = {*DEFAULT_OBJECTIVE, "inlets", "machines", "transport_time"}
 
 
 class Infeasible(ValueError):
@@ -87,8 +87,10 @@ def transport_time(problem, layout):
         seconds = durations.get(layout.transport.get(edge.end), outlet_seconds.get(edge.end, 0))
         if seconds:
             span = abs(edge.start[0] - edge.end[0]) + abs(edge.start[1] - edge.end[1])
-            # 地下跳段直接移到出口中心，出口只剩半格，跨度不增加运输时间。
-            total += edge.rate * seconds / (120 if span > 1 else 60)
+            # Steam 入口和出口各走半格，地下跨度不再重复计时。
+            half = span > 1 or (problem.catalog.get("steam_belt_timing") and
+                                layout.transport.get(edge.end, "").startswith("tunnel"))
+            total += edge.rate * seconds / (120 if half else 60)
     return total
 
 
@@ -180,6 +182,7 @@ class Problem:
             recipe = self.recipes[item]
             for material, count in recipe["inputs"].items():
                 demand[material] += demand[item] * count / recipe["quantity"]
+        self.demand = demand
         self.raw = {item: demand[item] for item in sorted(self.external & demand.keys())}
         for item, maximum in case.get("daily_supply", {}).items():
             if DAY * self.raw.get(item, 0) > Fraction(str(maximum)):
@@ -232,7 +235,7 @@ def partition(ports, bus_limit, unit_limit, junction_limit, objective, raw=False
     return best[-1][4]
 
 
-def make_network(problem, count, strategy, limit, reverse=False):
+def make_network(problem, count, strategy, limit, reverse=False, plan=None):
     nodes, buses = [], []
     required = defaultdict(list)
 
@@ -272,7 +275,15 @@ def make_network(problem, count, strategy, limit, reverse=False):
                 bus_limit *= 2
                 junction_limit *= 2
         families = [nodes[p.node].item for p in consumers] if raw and tactic == "direct" else None
-        groups = partition(consumers, bus_limit, unit, junction_limit, tactic, raw, families)
+        total = sum(port.rate for port in consumers)
+        if (strategy == "pooled" and plan is not None and plan.units[item] == 1 and
+                total <= bus_limit and (len(consumers) == 1 or total <= junction_limit)):
+            groups = [(0, len(consumers), total, plan.units[item])]
+        elif (strategy == "pooled" and plan is not None and not raw and total <= bus_limit and
+              total <= junction_limit and total <= unit * plan.units[item]):
+            groups = [(0, len(consumers), total, plan.units[item])]
+        else:
+            groups = partition(consumers, bus_limit, unit, junction_limit, tactic, raw, families)
         for start, end, rate, number in groups:
             sources = []
             for _ in range(number):

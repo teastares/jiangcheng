@@ -1,5 +1,8 @@
 """设备朝向、占位、锚点和物流端口的公用几何。"""
 
+from .device_catalog import LARGE_INLET_OUTPUT_OFFSETS
+
+
 SOUTH, WEST, EAST, NORTH = range(4)
 OFFSETS = {SOUTH: (0, 1), WEST: (-1, 0), EAST: (1, 0), NORTH: (0, -1)}
 OPPOSITE = {SOUTH: NORTH, WEST: EAST, EAST: WEST, NORTH: SOUTH}
@@ -9,6 +12,7 @@ DIRECTION_NAMES = {SOUTH: "南", WEST: "西", EAST: "东", NORTH: "北"}
 MACHINE_DIRECTIONS = {NORTH: 0, EAST: 1, WEST: 2, SOUTH: 3}
 
 JUNCTIONS = {"split", "merge"}
+INLET_KINDS = {"inlet", "inlet_large"}
 STEAM_CELL_PIXELS = 16
 
 
@@ -22,6 +26,7 @@ _MAKER_RECTS = _axis_rects((2, -8, 30, 20), (-6, -13, 22, 15))
 _ASSEMBLER_RECTS = _axis_rects((-14, -20, 30, 20), (-6, -25, 38, 15))
 _STEAM_COLLISION_RECTS = {
     "inlet": _axis_rects((2, -4, 30, 20), (-6, -9, 22, 15)),
+    "inlet_large": _axis_rects((-14, -16, 30, 20), (-6, -21, 38, 15)),
     "maker": _MAKER_RECTS,
     "smelter": _MAKER_RECTS,
     "assembler": _ASSEMBLER_RECTS,
@@ -145,6 +150,11 @@ def observed_directions(building):
 
 def oriented_geometry(building, geometry, facing):
     """按配方顺序给出输入坐标，以及相对于占位左上角的输出和锚点。"""
+    if building == "inlet_large":
+        size, anchor = ((3, 2), (1, 1)) if facing in (EAST, WEST) else ((2, 3), (0, 2))
+        x, y = LARGE_INLET_OUTPUT_OFFSETS[facing][0]
+        output = offset((anchor[0] + x, anchor[1] + y), OPPOSITE[facing])
+        return {"size": size, "anchor": anchor, "inputs": (), "output": output}
     w, h = geometry["size"]
     anchor = tuple(geometry["anchor"])
     input_rows = tuple(geometry.get("inputs", ()))
@@ -188,7 +198,7 @@ def placement_ports(problem, placement, *, all_inputs=False):
     building = placement.building
     geometry = oriented_geometry(building, problem.buildings[building], placement.direction)
     inputs, output = geometry["inputs"], geometry["output"]
-    if building not in ("inlet", "outlet"):
+    if building not in INLET_KINDS and building != "outlet":
         recipe = problem.recipes[placement.item]
         if not all_inputs:
             inputs = inputs[:len(recipe["inputs"])]
@@ -201,9 +211,19 @@ def placement_ports(problem, placement, *, all_inputs=False):
     return tuple(absolute(point) for point in inputs), None if output is None else absolute(output)
 
 
+def inlet_output_ports(problem, placement):
+    """返回与实际外部出带格相邻的两个或一个箱内出货格。"""
+    if placement.building == "inlet_large":
+        facing = placement.direction
+        x, y = placement.anchor
+        return tuple(offset((x + dx, y + dy), OPPOSITE[facing])
+                     for dx, dy in LARGE_INLET_OUTPUT_OFFSETS[facing])
+    return (placement_ports(problem, placement)[1],)
+
+
 def assigned_ports(problem, placement, incoming):
     """依真实入料物品匹配 Steam 机台的物理入口，返回配方顺序。"""
-    if (placement.building in ("inlet", "outlet") or
+    if (placement.building in INLET_KINDS or placement.building == "outlet" or
             getattr(problem, "catalog", {}).get("blueprint_format") != "steam-25121460"):
         return placement_ports(problem, placement)
     inputs, output = placement_ports(problem, placement, all_inputs=True)

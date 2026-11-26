@@ -1,0 +1,1472 @@
+{
+  "target": "石材",
+  "mode": "shared",
+  "size": [
+    9,
+    9
+  ],
+  "effective_minutes": 16,
+  "target_per_minute": "80",
+  "theoretical_per_day": "1280",
+  "raw_ratio": "石头 = 1",
+  "inlets": [
+    {
+      "id": "进1",
+      "position": [
+        1,
+        4
+      ],
+      "item": "石头",
+      "direction": "东",
+      "per_minute": "80",
+      "per_day": "1280",
+      "feed_ports": [
+        {
+          "position": [
+            2,
+            4
+          ],
+          "per_minute": "20",
+          "per_day": "320"
+        },
+        {
+          "position": [
+            2,
+            3
+          ],
+          "per_minute": "60",
+          "per_day": "960"
+        }
+      ]
+    }
+  ],
+  "outlets": [
+    {
+      "id": "出1",
+      "position": [
+        8,
+        3
+      ],
+      "item": "石材",
+      "per_minute": "60",
+      "direction": "东",
+      "belt": 1
+    },
+    {
+      "id": "出2",
+      "position": [
+        8,
+        7
+      ],
+      "item": "石材",
+      "per_minute": "20",
+      "direction": "东",
+      "belt": 1
+    }
+  ],
+  "power_entry": [
+    5,
+    0
+  ],
+  "platform": "Steam Build 25121460",
+  "profile": "60／balanced／线路重布／双口进货",
+  "rows_optimal_before_compaction": false,
+  "requested_belt_levels": [
+    1
+  ],
+  "allowed_belt_levels": [
+    1
+  ],
+  "search_belt_levels": [
+    1
+  ],
+  "solve_seconds": 1.3130837000207976,
+  "statistics": {
+    "buildings": {
+      "belt1": 17,
+      "inlet_large": 1,
+      "maker": 4,
+      "merge": 1,
+      "split": 1
+    },
+    "materials": {
+      "加强木板": 10,
+      "工业结构体": 2,
+      "木板": 17,
+      "木棒": 34,
+      "玻璃": 5,
+      "石材": 40,
+      "铁板": 3,
+      "铁棒": 2,
+      "铁锭": 20,
+      "铜板": 3,
+      "铜线": 20,
+      "铜锭": 20
+    },
+    "components": 24,
+    "transport": 19,
+    "power": 16,
+    "wires": 8,
+    "machines": 4,
+    "belt_counts": {
+      "building": {
+        "1": 17
+      },
+      "underground": {}
+    },
+    "transport_time": "121/9",
+    "simulation": {
+      "first_seconds": 10.25,
+      "first_day": 1261,
+      "last_four_per_minute": 80.0,
+      "timing": {
+        "measurement_seconds": 240.0,
+        "machine_rows": [
+          {
+            "item": "石材",
+            "position": [
+              5,
+              1
+            ],
+            "recipe_seconds": 3.0,
+            "planned_period_seconds": 3.0,
+            "mean_start_interval_seconds": 3.0,
+            "max_start_interval_seconds": 3.0,
+            "excess_gap_seconds": 0.0,
+            "start_jitter_rms_seconds": 0.0,
+            "actual_started_items_per_minute": 20.0,
+            "idle_input_seconds": 0.0,
+            "blocked_output_seconds": 0.0,
+            "extra_starved_seconds": 0.0,
+            "extra_blocked_seconds": 0.0,
+            "inputs": [
+              {
+                "item": "石头",
+                "planned_items_per_minute": 20.0,
+                "actual_items_per_minute": 20.0,
+                "max_arrival_gap_seconds": 3.0,
+                "seconds": 0.0,
+                "feeder": null
+              }
+            ],
+            "starved_inputs": []
+          },
+          {
+            "item": "石材",
+            "position": [
+              5,
+              3
+            ],
+            "recipe_seconds": 3.0,
+            "planned_period_seconds": 3.0,
+            "mean_start_interval_seconds": 3.0,
+            "max_start_interval_seconds": 3.0,
+            "excess_gap_seconds": 0.0,
+            "start_jitter_rms_seconds": 0.0,
+            "actual_started_items_per_minute": 20.0,
+            "idle_input_seconds": 0.0,
+            "blocked_output_seconds": 0.0,
+            "extra_starved_seconds": 0.0,
+            "extra_blocked_seconds": 0.0,
+            "inputs": [
+              {
+                "item": "石头",
+                "planned_items_per_minute": 20.0,
+                "actual_items_per_minute": 20.0,
+                "max_arrival_gap_seconds": 3.0,
+                "seconds": 0.0,
+                "feeder": null
+              }
+            ],
+            "starved_inputs": []
+          },
+          {
+            "item": "石材",
+            "position": [
+              5,
+              5
+            ],
+            "recipe_seconds": 3.0,
+            "planned_period_seconds": 3.0,
+            "mean_start_interval_seconds": 3.0,
+            "max_start_interval_seconds": 3.0,
+            "excess_gap_seconds": 0.0,
+            "start_jitter_rms_seconds": 0.0,
+            "actual_started_items_per_minute": 20.0,
+            "idle_input_seconds": 0.0,
+            "blocked_output_seconds": 0.0,
+            "extra_starved_seconds": 0.0,
+            "extra_blocked_seconds": 0.0,
+            "inputs": [
+              {
+                "item": "石头",
+                "planned_items_per_minute": 20.0,
+                "actual_items_per_minute": 20.0,
+                "max_arrival_gap_seconds": 3.0,
+                "seconds": 0.0,
+                "feeder": null
+              }
+            ],
+            "starved_inputs": []
+          },
+          {
+            "item": "石材",
+            "position": [
+              5,
+              7
+            ],
+            "recipe_seconds": 3.0,
+            "planned_period_seconds": 3.0,
+            "mean_start_interval_seconds": 3.0,
+            "max_start_interval_seconds": 3.0,
+            "excess_gap_seconds": 0.0,
+            "start_jitter_rms_seconds": 0.0,
+            "actual_started_items_per_minute": 20.0,
+            "idle_input_seconds": 0.0,
+            "blocked_output_seconds": 0.0,
+            "extra_starved_seconds": 0.0,
+            "extra_blocked_seconds": 0.0,
+            "inputs": [
+              {
+                "item": "石头",
+                "planned_items_per_minute": 20.0,
+                "actual_items_per_minute": 20.0,
+                "max_arrival_gap_seconds": 3.0,
+                "seconds": 0.0,
+                "feeder": null
+              }
+            ],
+            "starved_inputs": []
+          }
+        ],
+        "machine_delay_seconds": 0.0,
+        "worst_machine_delay_seconds": 0.0,
+        "max_excess_gap_seconds": 0.0,
+        "max_start_jitter_seconds": 0,
+        "max_belt_load": 1.0,
+        "bottlenecks": [
+          {
+            "position": [
+              3,
+              3
+            ],
+            "kind": "belt1",
+            "item": "石头",
+            "planned_items_per_minute": 60.0,
+            "rated_items_per_minute": 60.0,
+            "actual_items_per_minute": 60.0,
+            "load": 1.0,
+            "actual_load": 1.0,
+            "blocked_seconds": 0.0,
+            "travel_seconds": 2.0
+          },
+          {
+            "position": [
+              8,
+              3
+            ],
+            "kind": "outlet",
+            "item": "石材",
+            "planned_items_per_minute": 60.0,
+            "rated_items_per_minute": 60.0,
+            "actual_items_per_minute": 60.0,
+            "load": 1.0,
+            "actual_load": 1.0,
+            "blocked_seconds": 0,
+            "travel_seconds": 2.0
+          },
+          {
+            "position": [
+              7,
+              3
+            ],
+            "kind": "merge",
+            "item": "石材",
+            "planned_items_per_minute": 60.0,
+            "rated_items_per_minute": 120.0,
+            "actual_items_per_minute": 60.0,
+            "load": 0.5,
+            "actual_load": 0.5,
+            "blocked_seconds": 80.0,
+            "travel_seconds": 0.5
+          },
+          {
+            "position": [
+              4,
+              3
+            ],
+            "kind": "split",
+            "item": "石头",
+            "planned_items_per_minute": 60.0,
+            "rated_items_per_minute": 120.0,
+            "actual_items_per_minute": 60.0,
+            "load": 0.5,
+            "actual_load": 0.5,
+            "blocked_seconds": 0.0,
+            "travel_seconds": 0.5
+          },
+          {
+            "position": [
+              3,
+              4
+            ],
+            "kind": "belt1",
+            "item": "石头",
+            "planned_items_per_minute": 20.0,
+            "rated_items_per_minute": 60.0,
+            "actual_items_per_minute": 20.0,
+            "load": 0.3333333333333333,
+            "actual_load": 0.3333333333333333,
+            "blocked_seconds": 160.0,
+            "travel_seconds": 2.0
+          },
+          {
+            "position": [
+              3,
+              5
+            ],
+            "kind": "belt1",
+            "item": "石头",
+            "planned_items_per_minute": 20.0,
+            "rated_items_per_minute": 60.0,
+            "actual_items_per_minute": 20.0,
+            "load": 0.3333333333333333,
+            "actual_load": 0.3333333333333333,
+            "blocked_seconds": 160.0,
+            "travel_seconds": 2.0
+          },
+          {
+            "position": [
+              3,
+              6
+            ],
+            "kind": "belt1",
+            "item": "石头",
+            "planned_items_per_minute": 20.0,
+            "rated_items_per_minute": 60.0,
+            "actual_items_per_minute": 20.0,
+            "load": 0.3333333333333333,
+            "actual_load": 0.3333333333333333,
+            "blocked_seconds": 160.0,
+            "travel_seconds": 2.0
+          },
+          {
+            "position": [
+              4,
+              6
+            ],
+            "kind": "belt1",
+            "item": "石头",
+            "planned_items_per_minute": 20.0,
+            "rated_items_per_minute": 60.0,
+            "actual_items_per_minute": 20.0,
+            "load": 0.3333333333333333,
+            "actual_load": 0.3333333333333333,
+            "blocked_seconds": 160.0,
+            "travel_seconds": 2.0
+          }
+        ]
+      }
+    }
+  },
+  "placements": [
+    {
+      "building": "maker",
+      "x": 5,
+      "y": 1,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        5,
+        1
+      ],
+      "item": "石材",
+      "rate": "20",
+      "node": 0,
+      "direction": "右",
+      "facing": 2,
+      "recipe": 9,
+      "collision_rect_px": [
+        82,
+        8,
+        110,
+        36
+      ],
+      "collision_size_px": [
+        28,
+        28
+      ]
+    },
+    {
+      "building": "maker",
+      "x": 5,
+      "y": 3,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        5,
+        3
+      ],
+      "item": "石材",
+      "rate": "20",
+      "node": 1,
+      "direction": "右",
+      "facing": 2,
+      "recipe": 9,
+      "collision_rect_px": [
+        82,
+        40,
+        110,
+        68
+      ],
+      "collision_size_px": [
+        28,
+        28
+      ]
+    },
+    {
+      "building": "maker",
+      "x": 5,
+      "y": 5,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        5,
+        5
+      ],
+      "item": "石材",
+      "rate": "20",
+      "node": 2,
+      "direction": "右",
+      "facing": 2,
+      "recipe": 9,
+      "collision_rect_px": [
+        82,
+        72,
+        110,
+        100
+      ],
+      "collision_size_px": [
+        28,
+        28
+      ]
+    },
+    {
+      "building": "maker",
+      "x": 5,
+      "y": 7,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        5,
+        7
+      ],
+      "item": "石材",
+      "rate": "20",
+      "node": 3,
+      "direction": "右",
+      "facing": 2,
+      "recipe": 9,
+      "collision_rect_px": [
+        82,
+        104,
+        110,
+        132
+      ],
+      "collision_size_px": [
+        28,
+        28
+      ]
+    },
+    {
+      "building": "outlet",
+      "x": 8,
+      "y": 3,
+      "width": 1,
+      "height": 1,
+      "anchor": [
+        8,
+        3
+      ],
+      "item": "石材",
+      "rate": "60",
+      "node": 4,
+      "direction": "右",
+      "facing": 2,
+      "recipe": null,
+      "collision_rect_px": [
+        129,
+        57,
+        142,
+        62
+      ],
+      "collision_size_px": [
+        13,
+        5
+      ]
+    },
+    {
+      "building": "outlet",
+      "x": 8,
+      "y": 7,
+      "width": 1,
+      "height": 1,
+      "anchor": [
+        8,
+        7
+      ],
+      "item": "石材",
+      "rate": "20",
+      "node": 5,
+      "direction": "右",
+      "facing": 2,
+      "recipe": null,
+      "collision_rect_px": [
+        129,
+        121,
+        142,
+        126
+      ],
+      "collision_size_px": [
+        13,
+        5
+      ]
+    },
+    {
+      "building": "inlet_large",
+      "x": 0,
+      "y": 3,
+      "width": 3,
+      "height": 2,
+      "anchor": [
+        1,
+        4
+      ],
+      "item": "石头",
+      "rate": "80",
+      "node": 6,
+      "direction": "右",
+      "facing": 2,
+      "recipe": null,
+      "collision_rect_px": [
+        2,
+        48,
+        46,
+        84
+      ],
+      "collision_size_px": [
+        44,
+        36
+      ]
+    }
+  ],
+  "optimization": {
+    "production": {
+      "status": 0,
+      "mip_gap": 0.0,
+      "minimum_power_kw": 16.0,
+      "units": {
+        "石材": 4,
+        "石头": 2
+      },
+      "rates": {
+        "石材": "80",
+        "石头": "80"
+      }
+    },
+    "logistics": {}
+  },
+  "transport": [
+    {
+      "position": [
+        3,
+        3
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          2,
+          3
+        ]
+      ],
+      "outgoing": [
+        [
+          4,
+          3
+        ]
+      ]
+    },
+    {
+      "position": [
+        3,
+        4
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          2,
+          4
+        ]
+      ],
+      "outgoing": [
+        [
+          3,
+          5
+        ]
+      ]
+    },
+    {
+      "position": [
+        3,
+        5
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          3,
+          4
+        ]
+      ],
+      "outgoing": [
+        [
+          3,
+          6
+        ]
+      ]
+    },
+    {
+      "position": [
+        3,
+        6
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          3,
+          5
+        ]
+      ],
+      "outgoing": [
+        [
+          4,
+          6
+        ]
+      ]
+    },
+    {
+      "position": [
+        4,
+        1
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          4,
+          2
+        ]
+      ],
+      "outgoing": [
+        [
+          5,
+          1
+        ]
+      ]
+    },
+    {
+      "position": [
+        4,
+        2
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          4,
+          3
+        ]
+      ],
+      "outgoing": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "position": [
+        4,
+        3
+      ],
+      "kind": "split",
+      "incoming": [
+        [
+          3,
+          3
+        ]
+      ],
+      "outgoing": [
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          3
+        ]
+      ]
+    },
+    {
+      "position": [
+        4,
+        4
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          4,
+          3
+        ]
+      ],
+      "outgoing": [
+        [
+          4,
+          5
+        ]
+      ]
+    },
+    {
+      "position": [
+        4,
+        5
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          4,
+          4
+        ]
+      ],
+      "outgoing": [
+        [
+          5,
+          5
+        ]
+      ]
+    },
+    {
+      "position": [
+        4,
+        6
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          3,
+          6
+        ]
+      ],
+      "outgoing": [
+        [
+          4,
+          7
+        ]
+      ]
+    },
+    {
+      "position": [
+        4,
+        7
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          4,
+          6
+        ]
+      ],
+      "outgoing": [
+        [
+          5,
+          7
+        ]
+      ]
+    },
+    {
+      "position": [
+        7,
+        1
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          6,
+          1
+        ]
+      ],
+      "outgoing": [
+        [
+          7,
+          2
+        ]
+      ]
+    },
+    {
+      "position": [
+        7,
+        2
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          7,
+          1
+        ]
+      ],
+      "outgoing": [
+        [
+          7,
+          3
+        ]
+      ]
+    },
+    {
+      "position": [
+        7,
+        3
+      ],
+      "kind": "merge",
+      "incoming": [
+        [
+          7,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          4
+        ]
+      ],
+      "outgoing": [
+        [
+          8,
+          3
+        ]
+      ]
+    },
+    {
+      "position": [
+        7,
+        4
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          7,
+          5
+        ]
+      ],
+      "outgoing": [
+        [
+          7,
+          3
+        ]
+      ]
+    },
+    {
+      "position": [
+        7,
+        5
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          6,
+          5
+        ]
+      ],
+      "outgoing": [
+        [
+          7,
+          4
+        ]
+      ]
+    },
+    {
+      "position": [
+        7,
+        7
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          6,
+          7
+        ]
+      ],
+      "outgoing": [
+        [
+          8,
+          7
+        ]
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "start": [
+        4,
+        3
+      ],
+      "end": [
+        4,
+        2
+      ],
+      "item": "石头",
+      "rate": "20",
+      "bus": 2
+    },
+    {
+      "start": [
+        4,
+        2
+      ],
+      "end": [
+        4,
+        1
+      ],
+      "item": "石头",
+      "rate": "20",
+      "bus": 2
+    },
+    {
+      "start": [
+        4,
+        1
+      ],
+      "end": [
+        5,
+        1
+      ],
+      "item": "石头",
+      "rate": "20",
+      "bus": 2
+    },
+    {
+      "start": [
+        4,
+        3
+      ],
+      "end": [
+        4,
+        4
+      ],
+      "item": "石头",
+      "rate": "20",
+      "bus": 2
+    },
+    {
+      "start": [
+        4,
+        4
+      ],
+      "end": [
+        4,
+        5
+      ],
+      "item": "石头",
+      "rate": "20",
+      "bus": 2
+    },
+    {
+      "start": [
+        4,
+        5
+      ],
+      "end": [
+        5,
+        5
+      ],
+      "item": "石头",
+      "rate": "20",
+      "bus": 2
+    },
+    {
+      "start": [
+        4,
+        3
+      ],
+      "end": [
+        5,
+        3
+      ],
+      "item": "石头",
+      "rate": "20",
+      "bus": 2
+    },
+    {
+      "start": [
+        6,
+        1
+      ],
+      "end": [
+        7,
+        1
+      ],
+      "item": "石材",
+      "rate": "20",
+      "bus": 0
+    },
+    {
+      "start": [
+        7,
+        1
+      ],
+      "end": [
+        7,
+        2
+      ],
+      "item": "石材",
+      "rate": "20",
+      "bus": 0
+    },
+    {
+      "start": [
+        7,
+        2
+      ],
+      "end": [
+        7,
+        3
+      ],
+      "item": "石材",
+      "rate": "20",
+      "bus": 0
+    },
+    {
+      "start": [
+        6,
+        3
+      ],
+      "end": [
+        7,
+        3
+      ],
+      "item": "石材",
+      "rate": "20",
+      "bus": 0
+    },
+    {
+      "start": [
+        6,
+        5
+      ],
+      "end": [
+        7,
+        5
+      ],
+      "item": "石材",
+      "rate": "20",
+      "bus": 0
+    },
+    {
+      "start": [
+        7,
+        5
+      ],
+      "end": [
+        7,
+        4
+      ],
+      "item": "石材",
+      "rate": "20",
+      "bus": 0
+    },
+    {
+      "start": [
+        7,
+        4
+      ],
+      "end": [
+        7,
+        3
+      ],
+      "item": "石材",
+      "rate": "20",
+      "bus": 0
+    },
+    {
+      "start": [
+        6,
+        7
+      ],
+      "end": [
+        7,
+        7
+      ],
+      "item": "石材",
+      "rate": "20",
+      "bus": 1
+    },
+    {
+      "start": [
+        7,
+        7
+      ],
+      "end": [
+        8,
+        7
+      ],
+      "item": "石材",
+      "rate": "20",
+      "bus": 1
+    },
+    {
+      "start": [
+        7,
+        3
+      ],
+      "end": [
+        8,
+        3
+      ],
+      "item": "石材",
+      "rate": "60",
+      "bus": 0
+    },
+    {
+      "start": [
+        2,
+        3
+      ],
+      "end": [
+        3,
+        3
+      ],
+      "item": "石头",
+      "rate": "60",
+      "bus": 2
+    },
+    {
+      "start": [
+        3,
+        3
+      ],
+      "end": [
+        4,
+        3
+      ],
+      "item": "石头",
+      "rate": "60",
+      "bus": 2
+    },
+    {
+      "start": [
+        2,
+        4
+      ],
+      "end": [
+        3,
+        4
+      ],
+      "item": "石头",
+      "rate": "20",
+      "bus": 3
+    },
+    {
+      "start": [
+        3,
+        4
+      ],
+      "end": [
+        3,
+        5
+      ],
+      "item": "石头",
+      "rate": "20",
+      "bus": 3
+    },
+    {
+      "start": [
+        3,
+        5
+      ],
+      "end": [
+        3,
+        6
+      ],
+      "item": "石头",
+      "rate": "20",
+      "bus": 3
+    },
+    {
+      "start": [
+        3,
+        6
+      ],
+      "end": [
+        4,
+        6
+      ],
+      "item": "石头",
+      "rate": "20",
+      "bus": 3
+    },
+    {
+      "start": [
+        4,
+        6
+      ],
+      "end": [
+        4,
+        7
+      ],
+      "item": "石头",
+      "rate": "20",
+      "bus": 3
+    },
+    {
+      "start": [
+        4,
+        7
+      ],
+      "end": [
+        5,
+        7
+      ],
+      "item": "石头",
+      "rate": "20",
+      "bus": 3
+    }
+  ],
+  "wires": [
+    [
+      5,
+      0
+    ],
+    [
+      5,
+      1
+    ],
+    [
+      5,
+      2
+    ],
+    [
+      5,
+      3
+    ],
+    [
+      5,
+      4
+    ],
+    [
+      5,
+      5
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      5,
+      7
+    ]
+  ],
+  "equipment": [
+    [
+      "1级传送带",
+      17
+    ],
+    [
+      "大型进货箱",
+      1
+    ],
+    [
+      "制造机",
+      4
+    ],
+    [
+      "合并器",
+      1
+    ],
+    [
+      "分流器",
+      1
+    ],
+    [
+      "电线",
+      8
+    ]
+  ],
+  "direction_counts": {
+    "制造机": {
+      "东": 4
+    },
+    "成品接出带": {
+      "东": 2
+    },
+    "大型进货箱": {
+      "东": 1
+    },
+    "地面直带": {
+      "东": 2,
+      "南": 3,
+      "北": 2
+    },
+    "地面弯带": {
+      "南": 3,
+      "东": 4,
+      "北": 1
+    },
+    "分流器主进料": {
+      "东": 1
+    },
+    "合并器主出料": {
+      "东": 1
+    },
+    "电线": {
+      "无": 8
+    }
+  },
+  "collision_dimensions": [
+    {
+      "name": "1级传送带",
+      "direction": "南",
+      "logical_cells": [
+        1,
+        1
+      ],
+      "pixels": [
+        13,
+        5
+      ],
+      "count": 6
+    },
+    {
+      "name": "1级传送带",
+      "direction": "东",
+      "logical_cells": [
+        1,
+        1
+      ],
+      "pixels": [
+        13,
+        5
+      ],
+      "count": 6
+    },
+    {
+      "name": "1级传送带",
+      "direction": "北",
+      "logical_cells": [
+        1,
+        1
+      ],
+      "pixels": [
+        13,
+        5
+      ],
+      "count": 3
+    },
+    {
+      "name": "大型进货箱",
+      "direction": "东",
+      "logical_cells": [
+        3,
+        2
+      ],
+      "pixels": [
+        44,
+        36
+      ],
+      "count": 1
+    },
+    {
+      "name": "制造机",
+      "direction": "东",
+      "logical_cells": [
+        2,
+        1
+      ],
+      "pixels": [
+        28,
+        28
+      ],
+      "count": 4
+    },
+    {
+      "name": "合并器",
+      "direction": "东",
+      "logical_cells": [
+        1,
+        1
+      ],
+      "pixels": [
+        12,
+        14
+      ],
+      "count": 1
+    },
+    {
+      "name": "成品接出带",
+      "direction": "东",
+      "logical_cells": [
+        1,
+        1
+      ],
+      "pixels": [
+        13,
+        5
+      ],
+      "count": 2
+    },
+    {
+      "name": "分流器",
+      "direction": "东",
+      "logical_cells": [
+        1,
+        1
+      ],
+      "pixels": [
+        12,
+        14
+      ],
+      "count": 1
+    }
+  ],
+  "rotations": {
+    "90": {
+      "method": "rewired",
+      "reason": "已按实际端口、机体范围或电线接点重布，胶囊 24 → 24 个。",
+      "size": [
+        9,
+        9
+      ],
+      "capsules": 24
+    },
+    "180": {
+      "method": "rewired",
+      "reason": "已按实际端口、机体范围或电线接点重布，胶囊 24 → 24 个。",
+      "size": [
+        9,
+        9
+      ],
+      "capsules": 24
+    },
+    "270": {
+      "method": "rigid",
+      "reason": "沿同一格网旋转，设备、输送带、电线和胶囊数量全部保留。",
+      "size": [
+        9,
+        9
+      ],
+      "capsules": 24
+    }
+  }
+}

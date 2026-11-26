@@ -16,6 +16,7 @@ Windows 蓝图生成器从用户选定的 Steam 存档只读提取科技、节�
 | [Windows 蓝图生成器](docs/windows-gui.md) | EXE、存档读取、77 个产物预设、配置与 HTML 导出 |
 | [蓝图设计指南](docs/blueprint-design.md) | 按存档核对解锁，计算机器、供料、能耗和物流，编制摆放图 |
 | [设施四向尺寸表](docs/device-footprints.md) | 安装版各设施的逻辑格、定位格与实际碰撞宽高 |
+| [工坊设备功能与支持范围](docs/device-capabilities.md) | 232 项安装版设备的功能分类、解锁和自动规划范围 |
 | [产线求解器](docs/solver.md) | 安装、输入格式、排布搜索、空线仿真与验证范围 |
 | [求解算例](blueprints/solved/README.md) | 多种产物的共用与独立方案、SVG、建材和日配额 |
 | [绿瓶全链蓝图](docs/green-crystal-blueprint.md) | 24 × 22 格的紧凑导入文本、SVG 摆放图、建造清单和 16 分钟日进货量 |

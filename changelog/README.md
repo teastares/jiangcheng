@@ -1,5 +1,13 @@
 # 变更记录
 
+## 2026-11-26｜按生产节拍优化带速和设备，限制换向胶囊
+
+- **节拍与运筹求解**　原有 HiGHS 行位模型之外，新增机台与进货配置、带级选择两个混合整数子问题。按安装版带速、机器缓存和生产周期逐件仿真。Windows 增加「稳产优先」，HTML 记录计划开工间隔、缺料、堵料和高负荷物流格。 [建模说明](../docs/solver.md)
+- **建筑与换向**　整理 Steam Build `25121460` 的 232 项建筑，界面可查询已解锁设备的功能和适用范围。共用上游新增一箱同料双出口候选，支持智能分流器的空过滤状态。先验证纯旋转，能够重布的旋转方案也须保持在原胶囊预算内。 [设备目录](../docs/device-capabilities.md) · [研究记录](../docs/research.md#2026-11-26生产节拍物流和换向)
+- **验证**　61 项自动测试通过。强力石砖四向胶囊为 51、50、51、50，各达 16 件/分钟。双绿瓶新方案 200 kW、末段 12 件/分钟、202 胶囊，两台末端每 10 秒开工。270° 需 201 胶囊，90° 和 180° 暂无同预算可行解。一级带双口石材案例达到 80 件/分钟，箱内同种物料的日配额为 1280 件。用合成存档、仿真与离线导入文本回读验证。游戏内运行待实测。 [强力石砖报告](../blueprints/optimized/production-cadence/powerful-stone-brick/blueprint.html) · [双绿瓶报告](../blueprints/optimized/production-cadence/green-crystal-mixed/blueprint.html) · [双口进货箱报告](../blueprints/optimized/production-cadence/large-inlet-stone/blueprint.html)
+- **Windows 构建**　本地 x64 EXE 正常启动和退出。核对包内 22 个求解器模块、GUI 入口及两份数据文件与当前源码一致。SHA-256 为 `a4545c93371897c35ca5d5593e3808ed2ef2e47191c0e37337333f85a95bf36e`。 [发布页面](https://github.com/teastares/jiangcheng/releases/tag/v2026.11.26) · [仓库内 EXE](../dist/JiangCityBlueprint-cadence.exe)
+- **发布范围**　同步源码、文档和三组节拍算例，核对十个可用方向的 HTML 下载载荷及内嵌 SVG 与独立 TXT、SVG 一致。Windows EXE 同步到 `dist/`，并作为 GitHub Release 附件发布。
+
 ## 2026-11-22｜在 GitHub Releases 发布 Windows 版
 
 - **原因与范围**　将设备碰撞校验、四向蓝图及进出货优化同步到 `main`，把最新版 Windows x64 EXE 作为 `v2026.11.22` 的发布附件。项目首页和 Windows 指南均提供 Releases 下载入口。 [发布页面](https://github.com/teastares/jiangcheng/releases/tag/v2026.11.22)

@@ -21,12 +21,13 @@ from .workshop import BLUEPRINT_NODE, Workshop, configured_external_items, read_
 
 
 OBJECTIVE_PRESETS = {
-    "占地优先": ("area", "buildings", "lines", "materials", "power"),
+    "占地优先": ("area", "buildings", "lines", "cadence", "materials", "power"),
+    "稳产优先": ("cadence", "buildings", "lines", "area", "materials", "power"),
     "共用原料优先": ("inlets", "machines", "area", "materials", "power"),
     "少胶囊优先": ("buildings", "materials", "lines", "area", "power"),
     "建材优先": ("materials", "buildings", "area", "lines", "power"),
     "省电优先": ("power", "machines", "area", "materials", "buildings"),
-    "输送优先": ("transport_time", "lines", "buildings", "area", "materials", "power"),
+    "输送优先": ("cadence", "transport_time", "lines", "buildings", "area", "materials", "power"),
 }
 MODE_PRESETS = {"自动比较两种方案": ("shared", "separate"), "只搜索共用上游": ("shared",), "只搜索独立供料": ("separate",)}
 
@@ -211,7 +212,26 @@ class BlueprintWindow:
         tech.grid(row=0, column=0, sticky="nsew", padx=5, pady=5)
         build.grid(row=0, column=1, sticky="nsew", padx=5, pady=5)
         self.technologies = self.table(tech, (("kind", "来源"), ("item", "名称")))
-        self.buildings = self.table(build, (("id", "ID"), ("item", "名称")))
+        self.buildings = self.table(build, (("id", "ID"), ("item", "名称"), ("status", "自动规划")))
+        self.buildings.column("id", width=45, stretch=False)
+        self.buildings.column("status", width=85, stretch=False)
+        self.building_detail = ttk.Label(build, text="选择建筑可查看用途和科技来源。", wraplength=445, justify="left")
+        self.building_detail.pack(fill="x", pady=(8, 0))
+        self.buildings.bind("<<TreeviewSelect>>", self.show_building_detail)
+
+    def show_building_detail(self, _event):
+        selected = self.buildings.selection()
+        if not selected or not self.workshop:
+            self.building_detail.config(text="选择建筑可查看用途和科技来源。")
+            return
+        ident = int(self.buildings.item(selected[0], "values")[0])
+        device = self.device_info.get(ident)
+        if device is None:
+            self.building_detail.config(text="此 ID 未收录在当前安装版建筑表。")
+            return
+        technology = "、".join(f"{name}（{tech_id}）" for tech_id, name in device["technologies"])
+        source = f"关联科技 {technology}。" if technology else "安装科技表无直接条目。"
+        self.building_detail.config(text=f"{device['category']} · {device['function']}\n{source}")
 
     def make_library(self):
         ttk.Label(self.library, text="双击产物填入设计。状态依据当前存档的配方和末端设备。",
@@ -300,6 +320,7 @@ class BlueprintWindow:
         profile = read_save(resolved)
         self.backup_path = resolved
         self.workshop = Workshop(profile, self.db)
+        self.device_info = self.workshop.device_capabilities()
         self.fields["backup"].set(resolved.name)
         belts = [str(i) for i in range(1, 6) if i + 19 in profile.buildings]
         blueprint = "蓝图已解锁" if BLUEPRINT_NODE in profile.nodes else "蓝图未解锁"
@@ -315,7 +336,8 @@ class BlueprintWindow:
             node = self.db["nodes"].get(str(ident), {"name": f"节点 {ident}", "tier": "?", "index": "?"})
             self.technologies.insert("", "end", values=(f"T{node['tier']}-{node['index']}", node["name"]))
         for ident in sorted(profile.buildings):
-            self.buildings.insert("", "end", values=(ident, self.workshop.building_name(ident)))
+            status = self.device_info.get(ident, {}).get("status", "待核对")
+            self.buildings.insert("", "end", values=(ident, self.workshop.building_name(ident), status))
         self.apply_loaded_device()
         self.refresh_library()
         self.fields["status"].set("已只读加载存档的解锁进度。可在右上角开始求解。")

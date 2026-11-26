@@ -358,9 +358,9 @@ def reroute_paths(problem, layout, paths, remapped, order, optional, junctions, 
 
 
 def rerouted_layouts(problem, layout, *, placements=None, max_routes=24, objectives=None, port_changes=None,
-                     reroute_all=False, junction_moves=None):
+                     reroute_all=False, junction_moves=None, paths=None):
     """返回保留工序、分合流及物料流量的重布候选，交由调用者校验并仿真。"""
-    paths = connections(layout)
+    paths = connections(layout) if paths is None else paths
     if not paths:
         return
     if port_changes is not None:

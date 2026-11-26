@@ -5,18 +5,21 @@ from io import BytesIO
 from struct import pack, unpack
 from uuid import NAMESPACE_URL, uuid5
 
-from .geometry import EAST, NORTH, SOUTH, WEST, MACHINE_DIRECTIONS, OPPOSITE, direction, offset, placement_ports
+from .device_catalog import BASIC_SPLITTER, LARGE_INLET, LARGE_INLET_OUTPUT_OFFSETS, SMART_SPLITTER
+from .geometry import (EAST, INLET_KINDS, NORTH, SOUTH, WEST, MACHINE_DIRECTIONS, OPPOSITE,
+                       direction, inlet_output_ports, offset, placement_ports)
 from .model import belt_options
 
 
 FORMAT = "steam-25121460"
-IDS = {"inlet": 4, "split": 40, "merge": 41, "maker": 50, "assembler": 51, "synthesizer": 52,
+IDS = {"inlet": 4, "inlet_large": LARGE_INLET, "split": BASIC_SPLITTER, "merge": 41, "maker": 50, "assembler": 51, "synthesizer": 52,
        "smelter": 55, "forge": 56, "charger": 60, "exchanger": 61, "grain_mill": 62, "wire": 250}
 IDS.update({f"belt{tier}": 19 + tier for tier in range(1, 6)})
 IDS.update({f"tunnel{tier}": 29 + tier for tier in range(1, 6)})
 MACHINE_SETTINGS = {50: (4, 1), 51: (18, 2), 52: (64, 3), 55: (5, 1), 56: (16, 2),
                     60: (20, 2), 61: (18, 2), 62: (8, 1)}
-RECORD_BYTES = {4: 331, 40: 76, 41: 76, 250: 80, **{i: 80 for i in range(20, 25)},
+INLET_SETTINGS = {4: (56, "自动进货箱"), LARGE_INLET: (120, "大型进货箱")}
+RECORD_BYTES = {4: 331, LARGE_INLET: 587, BASIC_SPLITTER: 76, SMART_SPLITTER: 89, 41: 76, 250: 80, **{i: 80 for i in range(20, 25)},
                 **{i: 84 for i in range(30, 35)}, **{i: 108 + 4 * settings[1] for i, settings in MACHINE_SETTINGS.items()}}
 TURN = {(EAST, SOUTH): 4, (NORTH, WEST): 5, (EAST, NORTH): 6, (SOUTH, WEST): 7,
         (SOUTH, EAST): 8, (WEST, NORTH): 9, (NORTH, EAST): 10, (WEST, SOUTH): 11}
@@ -36,6 +39,15 @@ class Record:
     recipe: int = -1
 
 
+def blueprint_id(problem, kind):
+    """保留布局的设施功能，按求解所选型号写入安装版建筑 ID。"""
+    return problem.buildings.get(kind, {}).get("blueprint_id", IDS[kind])
+
+
+def is_split_id(ident):
+    return ident in (BASIC_SPLITTER, SMART_SPLITTER)
+
+
 def split_direction(facing):
     """分流器东西朝向在游戏记录中的编号，与实际行进方向可逆转换。"""
     return {EAST: WEST, WEST: EAST}.get(facing, facing)
@@ -50,7 +62,7 @@ def tunnel_directions(start, end):
 def record_directions(record):
     """按安装版端口规则回读一条建筑记录的输入和输出行进方向。"""
     kind, raw, shape = record.id, record.direction, record.shape
-    if kind == IDS["split"]:
+    if is_split_id(kind):
         incoming = split_direction(raw)
         return (incoming,), SPLIT_OUTPUTS[incoming]
     if kind == IDS["merge"]:
@@ -63,7 +75,7 @@ def record_directions(record):
         incoming = OPPOSITE[shape] if shape < 4 else shape - 4
         outgoing = OPPOSITE[raw] if raw < 4 else raw - 4
         return (incoming,), (outgoing,)
-    if kind == IDS["inlet"]:
+    if kind in INLET_SETTINGS:
         return (), (raw,)
     if kind in MACHINE_SETTINGS:
         heading = MACHINE_HEADINGS[raw]
@@ -74,7 +86,7 @@ def record_directions(record):
 def record_facing(record):
     """返回直带、设备和分合流主口的实际行进方向。"""
     incoming, outgoing = record_directions(record)
-    if record.id == IDS["split"]:
+    if is_split_id(record.id):
         return incoming[0]
     return next(iter(outgoing or incoming), None)
 
@@ -86,13 +98,13 @@ def records_for(problem, layout):
         outputs[segment.start].append(segment.end)
     buildings = []
     for p in layout.placements:
-        if p.building == "inlet":
-            buildings.append(Record(IDS[p.building], *p.anchor, p.direction, p.direction))
+        if p.building in INLET_KINDS:
+            buildings.append(Record(blueprint_id(problem, p.building), *p.anchor, p.direction, p.direction))
         elif p.building == "outlet":
             kind = belt_options(problem, p.rate)[0]["building"]
-            buildings.append(Record(IDS[kind], *p.anchor, p.direction, p.direction))
+            buildings.append(Record(blueprint_id(problem, kind), *p.anchor, p.direction, p.direction))
         else:
-            buildings.append(Record(IDS[p.building], *p.anchor, MACHINE_DIRECTIONS[p.direction], 0,
+            buildings.append(Record(blueprint_id(problem, p.building), *p.anchor, MACHINE_DIRECTIONS[p.direction], 0,
                                     problem.recipes[p.item]["id"]))
 
     for point, kind in sorted(layout.transport.items()):
@@ -113,7 +125,7 @@ def records_for(problem, layout):
             incoming = direction(inputs[point][0], point)
             facing = direction(point, outputs[point][0])
             shape = facing if facing == incoming else TURN[incoming, facing]
-        buildings.append(Record(IDS[kind], *point, facing, shape))
+        buildings.append(Record(blueprint_id(problem, kind), *point, facing, shape))
     wires = [Record(IDS["wire"], *point, 0, 0) for point in sorted(layout.wires)]
     return buildings, wires
 
@@ -142,15 +154,24 @@ def verify_record_directions(problem, layout, records, wires):
     for p in layout.placements:
         record = by_position.get(p.anchor)
         kind = belt_options(problem, p.rate)[0]["building"] if p.building == "outlet" else p.building
-        if record is None or record.id != IDS[kind] or record_facing(record) != p.direction:
+        if record is None or record.id != blueprint_id(problem, kind) or record_facing(record) != p.direction:
             raise ValueError(f"导入设备 {p.anchor} 的型号或朝向与布局不符")
         inputs, output = placement_ports(problem, p, all_inputs=True)
-        output_points = (p.anchor,) if p.building == "outlet" else (output,) if output is not None else ()
+        if p.building in INLET_KINDS:
+            output_points = inlet_output_ports(problem, p)
+        else:
+            output_points = (p.anchor,) if p.building == "outlet" else (output,) if output is not None else ()
+        if record.id == LARGE_INLET:
+            directions = LARGE_INLET_OUTPUT_OFFSETS[record.direction]
+            expected = {(record.x + dx, record.y + dy) for dx, dy in directions}
+            connected = {offset(point, record.direction) for point in output_points if outgoing[point]}
+            if connected != expected:
+                raise ValueError(f"大型进货箱 {p.anchor} 没有正确连接两条出带")
         check_ports(record, inputs, output_points)
 
     for point, kind in layout.transport.items():
         record = by_position.get(point)
-        if record is None or record.id != IDS[kind]:
+        if record is None or record.id != blueprint_id(problem, kind):
             raise ValueError(f"导入物流件 {point} 的型号与布局不符")
         check_ports(record, (point,), (point,))
         if kind.startswith("tunnel"):
@@ -171,12 +192,16 @@ def encode_record(r):
     power, slots = MACHINE_SETTINGS.get(r.id, (0, 0))
     result = (pack("<iiiiiiiiiiBBii", r.id, r.x, r.y, r.direction, r.shape, -power, -power, 0, 0,
                    100 if power else -1, 1, 0, -1, -1) + string("pNull") + string("wNull") + pack("<i", -1))
-    if r.id == IDS["inlet"]:
-        result += pack("<i", 56) + bytes(57 * 4) + string("自动进货箱") + bytes(8)
+    if r.id in INLET_SETTINGS:
+        count, name = INLET_SETTINGS[r.id]
+        result += pack("<i", count) + bytes((count + 1) * 4) + string(name) + bytes(8)
     elif slots:
         result += pack("<i", slots) + bytes(slots * 4) + pack("<8i", 1, 0, 1, 0, 0, r.recipe, 0, 0)
     elif 20 <= r.id <= 24 or 30 <= r.id <= 34:
         result += pack("<ii", r.id % 10, 0) + (bytes(4) if r.id >= 30 else b"")
+    elif r.id == SMART_SPLITTER:
+        # 无缓存物品，三个出口均未配置过滤，且允许任意物料。
+        result += pack("<4i?", 0, 0, 0, 0, True)
     else:
         result += bytes(8 if r.id == IDS["wire"] else 4)
     if len(result) != RECORD_BYTES[r.id]:

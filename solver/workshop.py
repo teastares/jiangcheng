@@ -8,7 +8,10 @@ from math import ceil
 from pathlib import Path
 from time import perf_counter
 
-from .blueprint import FORMAT, IDS
+from .blueprint import FORMAT, IDS, blueprint_id
+from .device_catalog import BELT_SPEEDS, LARGE_INLET, SMART_SPLITTER, UNDERGROUND_SPANS, device_catalog
+from .geometry import INLET_KINDS
+from .large_inlet import improve_large_inlets
 from .layout import solve
 from .model import DAY, Infeasible, Problem
 from .report import MODE_NAMES, OBJECTIVE_NAMES, choose, write_layout
@@ -17,6 +20,7 @@ from .simulate import simulate
 
 GEOMETRY = {
     "inlet": ((2, 1), (0, 0), (), 0),
+    "inlet_large": ((3, 2), (1, 1), (), 1),
     "outlet": ((1, 1), (0, 0), (0,), None),
     "maker": ((2, 1), (0, 0), (0,), 0),
     "assembler": ((3, 2), (1, 1), (0, 1), 0),
@@ -27,9 +31,8 @@ GEOMETRY = {
     "exchanger": ((3, 2), (0, 1), (0, 1), None),
     "grain_mill": ((2, 3), (1, 2), (0,), 2),
 }
-DEVICES = {IDS[k]: k for k in GEOMETRY if k not in ("inlet", "outlet")}
-BELT_SPEEDS = (1, 2, 4, 8, 12)
-UNDERGROUND_SPANS = (5, 6, 7, 8, 8)
+DEVICES = {IDS[k]: k for k in GEOMETRY if k not in INLET_KINDS and k != "outlet"}
+BELT_PIXELS_PER_TICK = tuple(Fraction(value, 20) for value in (3, 6, 12, 24, 36))
 BLUEPRINT_NODE = 15
 DATABASE = Path(__file__).with_name("steam_database.json")
 
@@ -72,6 +75,9 @@ class Workshop:
     def building_name(self, ident):
         return self.db["buildings"].get(str(ident), {}).get("name", f"建筑 {ident}")
 
+    def device_capabilities(self):
+        return device_catalog(self.db, self.profile.buildings)
+
     def alternatives(self, item):
         for formula in self.variants.get(self.item_ids.get(item), []):
             if formula["id"] not in self.profile.recipes or formula["ticks"] <= 0:
@@ -95,12 +101,19 @@ class Workshop:
 
     def catalog(self, target, terminal):
         buildings = {}
-        for key, ident in IDS.items():
+        selected_ids = IDS.copy()
+        if LARGE_INLET not in self.profile.buildings:
+            del selected_ids["inlet_large"]
+        if IDS["split"] not in self.profile.buildings and SMART_SPLITTER in self.profile.buildings:
+            selected_ids["split"] = SMART_SPLITTER
+        for key, ident in selected_ids.items():
             data = self.db["buildings"].get(str(ident))
             if data is not None:
-                buildings[key] = {"name": data["name"], "power": data["power"],
+                buildings[key] = {"name": data["name"], "blueprint_id": ident, "power": data["power"],
                                   "materials": {self.name(i): n for i, n in data["materials"]}}
         for key, (size, anchor, inputs, output) in GEOMETRY.items():
+            if key == "inlet_large" and LARGE_INLET not in self.profile.buildings:
+                continue
             definition = buildings.setdefault(key, {"name": "成品接出带"})
             definition.update(size=size, anchor=anchor, inputs=inputs)
             if output is not None:
@@ -109,7 +122,8 @@ class Workshop:
         for tier, speed in enumerate(BELT_SPEEDS, 1):
             key, underground = f"belt{tier}", f"tunnel{tier}"
             if IDS[key] in self.profile.buildings:
-                spec = {"level": tier, "capacity": speed * 60, "seconds_per_cell": str(Fraction(1, speed)), "building": key}
+                seconds = 16 / (60 * BELT_PIXELS_PER_TICK[tier - 1])
+                spec = {"level": tier, "capacity": speed * 60, "seconds_per_cell": str(seconds), "building": key}
                 if IDS[underground] in self.profile.buildings:
                     spec["underground"] = underground
                     spec["underground_span"] = UNDERGROUND_SPANS[tier - 1]
@@ -135,6 +149,7 @@ class Workshop:
                              "quantity": formula["outputs"][0][1], "inputs": {self.name(i): n for i, n in formula["inputs"]},
                              "virtual": ident == 61}
         return {"platform": f"Steam Build {self.db['steam_build']}", "blueprint_format": FORMAT,
+                "steam_belt_timing": True, "item_stacks": {item["name"]: item["stack"] for item in self.items.values()},
                 "buildings": buildings, "belts": belts, "junction_capacity": 120, "junction_ports": 3,
                 "recipes": recipes}
 
@@ -196,7 +211,7 @@ class Workshop:
         def accept(layout):
             nonlocal closest_locked
             locked = [(key, count) for key, count in layout.statistics["buildings"].items()
-                      if IDS[key] not in self.profile.buildings]
+                      if blueprint_id(problem, key) not in self.profile.buildings]
             if not locked:
                 return True
             if closest_locked is None or len(locked) < len(closest_locked):
@@ -211,6 +226,14 @@ class Workshop:
                 except Infeasible:
                     continue
             results = solve(problem, row_seconds, simulate, accept)
+            if LARGE_INLET in self.profile.buildings:
+                layout, count = results["shared"]
+                if layout is not None:
+                    scope = problem
+                    if layout.search_belt_levels and layout.search_belt_levels != tuple(belt["level"] for belt in problem.belts):
+                        scope = Problem(problem.catalog, {**problem.case, "belt_levels": layout.search_belt_levels})
+                    improved, checked = improve_large_inlets(scope, layout, accept)
+                    results["shared"] = improved, count + checked
             winner = choose(problem, results)
             if winner is not None:
                 if results[winner][0].statistics["simulation"]["last_four_per_minute"] >= float(problem.rate):
@@ -220,7 +243,7 @@ class Workshop:
         if below_target:
             raise Infeasible("通过静态检查的方案在空线仿真末段未达目标产速。可增加仿真候选数或调整地块与产量")
         if closest_locked:
-            missing = "、".join(f"{self.building_name(IDS[key])} × {count}" for key, count in closest_locked)
+            missing = "、".join(f"{self.building_name(blueprint_id(problem, key))} × {count}" for key, count in closest_locked)
             raise Infeasible(f"最接近的候选布局仍需要 {missing}，这些建筑尚未解锁。")
         raise Infeasible("当前搜索范围内未找到满足地块、电力和物流上限的布局")
 
@@ -243,14 +266,14 @@ def write_workshop_report(directory, problem, results, winner):
         rate = stats["simulation"]["last_four_per_minute"]
         parts.append(f"<tr><td>{MODE_NAMES[mode]}</td><td>{candidate.width} × {candidate.height}</td><td>{stats['machines']}</td>"
                      f"<td>{stats['components']}</td><td>{stats['transport']}</td><td>{stats['wires']}</td>"
-                     f"<td>{sum(stats['materials'].values())}</td><td>{stats['buildings']['inlet']}</td><td>{stats['power']} kW</td>"
+                     f"<td>{sum(stats['materials'].values())}</td><td>{sum(stats['buildings'].get(key, 0) for key in INLET_KINDS)}</td><td>{stats['power']} kW</td>"
                      f"<td>{rate:g} 件/分钟</td></tr>")
     parts.append("</tbody></table><p>已按存档核对所用配方、设备和物流等级的解锁状态。</p>"
         "</section><section><h2>外供原料需求</h2><p>布局按外部持续供料计算。</p>"
         "<table><thead><tr><th>供给物料</th><th>每日备货量（逐口取整）</th></tr></thead><tbody>")
     delivery = Counter()
     for p in layout.placements:
-        if p.building == "inlet":
+        if p.building in INLET_KINDS:
             delivery[p.item] += ceil(p.rate * DAY)
     parts.extend(f"<tr><td>{escape(item)}</td><td>{amount} 件/日</td></tr>"
                  for item, amount in sorted(delivery.items()))

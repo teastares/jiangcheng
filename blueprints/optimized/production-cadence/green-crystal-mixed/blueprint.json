@@ -1,0 +1,9418 @@
+{
+  "target": "绿色晶能",
+  "mode": "shared",
+  "size": [
+    38,
+    20
+  ],
+  "effective_minutes": 16,
+  "target_per_minute": "12",
+  "theoretical_per_day": "192",
+  "raw_ratio": "原木 ∶ 石头 = 16 ∶ 3",
+  "inlets": [
+    {
+      "id": "进1",
+      "position": [
+        1,
+        9
+      ],
+      "item": "原木",
+      "direction": "东",
+      "per_minute": "96",
+      "per_day": "1536",
+      "feed_ports": [
+        {
+          "position": [
+            2,
+            9
+          ],
+          "per_minute": "96",
+          "per_day": "1536"
+        }
+      ]
+    },
+    {
+      "id": "进2",
+      "position": [
+        35,
+        9
+      ],
+      "item": "原木",
+      "direction": "西",
+      "per_minute": "32",
+      "per_day": "512",
+      "feed_ports": [
+        {
+          "position": [
+            35,
+            9
+          ],
+          "per_minute": "32",
+          "per_day": "512"
+        }
+      ]
+    },
+    {
+      "id": "进3",
+      "position": [
+        29,
+        12
+      ],
+      "item": "石头",
+      "direction": "北",
+      "per_minute": "24",
+      "per_day": "384",
+      "feed_ports": [
+        {
+          "position": [
+            29,
+            11
+          ],
+          "per_minute": "24",
+          "per_day": "384"
+        }
+      ]
+    }
+  ],
+  "outlets": [],
+  "power_entry": [
+    12,
+    0
+  ],
+  "platform": "Steam Build 25121460",
+  "profile": "图2手工布置起点／局部压紧／线路重布／局部压紧／进货与分流联动／就近进货／就近进货",
+  "rows_optimal_before_compaction": false,
+  "requested_belt_levels": [
+    1,
+    2,
+    3
+  ],
+  "allowed_belt_levels": [
+    1,
+    2,
+    3
+  ],
+  "search_belt_levels": [
+    1,
+    2,
+    3
+  ],
+  "solve_seconds": 252.9690649000113,
+  "statistics": {
+    "buildings": {
+      "assembler": 4,
+      "belt1": 118,
+      "belt2": 2,
+      "exchanger": 2,
+      "inlet": 3,
+      "maker": 23,
+      "merge": 10,
+      "split": 16,
+      "tunnel1": 20,
+      "tunnel2": 2,
+      "tunnel3": 2
+    },
+    "materials": {
+      "初级工具": 30,
+      "加固铁板": 42,
+      "木材": 9,
+      "木板": 198,
+      "木棒": 356,
+      "石材": 230,
+      "石砖": 40,
+      "钢板": 2,
+      "钢管": 4,
+      "铁板": 48,
+      "铁棒": 38,
+      "铁锭": 130,
+      "铜板": 30,
+      "铜线": 272,
+      "铜锭": 115
+    },
+    "components": 202,
+    "transport": 170,
+    "power": 200,
+    "wires": 104,
+    "machines": 29,
+    "belt_counts": {
+      "building": {
+        "1": 118,
+        "2": 2
+      },
+      "underground": {
+        "1": 20,
+        "2": 2,
+        "3": 2
+      }
+    },
+    "transport_time": "2023/30",
+    "simulation": {
+      "first_seconds": 70.5,
+      "first_day": 178,
+      "last_four_per_minute": 12.0,
+      "timing": {
+        "measurement_seconds": 240.0,
+        "machine_rows": [
+          {
+            "item": "木纤维",
+            "position": [
+              5,
+              3
+            ],
+            "recipe_seconds": 6.0,
+            "planned_period_seconds": 6.0,
+            "mean_start_interval_seconds": 6.0,
+            "max_start_interval_seconds": 6.0,
+            "excess_gap_seconds": 0.0,
+            "start_jitter_rms_seconds": 0.0,
+            "actual_started_items_per_minute": 30.0,
+            "idle_input_seconds": 0.0,
+            "blocked_output_seconds": 0.0,
+            "extra_starved_seconds": 0.0,
+            "extra_blocked_seconds": 0.0,
+            "inputs": [
+              {
+                "item": "原木",
+                "planned_items_per_minute": 20.0,
+                "actual_items_per_minute": 20.0,
+                "max_arrival_gap_seconds": 5.0,
+                "seconds": 0.0,
+                "feeder": null
+              }
+            ],
+            "starved_inputs": []
+          },
+          {
+            "item": "木纤维",
+            "position": [
+              5,
+              5
+            ],
+            "recipe_seconds": 6.0,
+            "planned_period_seconds": 6.0,
+            "mean_start_interval_seconds": 6.0,
+            "max_start_interval_seconds": 6.0,
+            "excess_gap_seconds": 0.0,
+            "start_jitter_rms_seconds": 0.0,
+            "actual_started_items_per_minute": 30.0,
+            "idle_input_seconds": 0.0,
+            "blocked_output_seconds": 0.0,
+            "extra_starved_seconds": 0.0,
+            "extra_blocked_seconds": 0.0,
+            "inputs": [
+              {
+                "item": "原木",
+                "planned_items_per_minute": 20.0,
+                "actual_items_per_minute": 20.0,
+                "max_arrival_gap_seconds": 5.0,
+                "seconds": 0.0,
+                "feeder": null
+              }
+            ],
+            "starved_inputs": []
+          },
+          {
+            "item": "木纤维",
+            "position": [
+              5,
+              9
+            ],
+            "recipe_seconds": 6.0,
+            "planned_period_seconds": 7.5,
+            "mean_start_interval_seconds": 6.0,
+            "max_start_interval_seconds": 6.0,
+            "excess_gap_seconds": 0.0,
+            "start_jitter_rms_seconds": 1.5,
+            "actual_started_items_per_minute": 30.0,
+            "idle_input_seconds": 0.0,
+            "blocked_output_seconds": 0.0,
+            "extra_starved_seconds": 0.0,
+            "extra_blocked_seconds": 0.0,
+            "inputs": [
+              {
+                "item": "原木",
+                "planned_items_per_minute": 16.0,
+                "actual_items_per_minute": 20.0,
+                "max_arrival_gap_seconds": 5.0,
+                "seconds": 0.0,
+                "feeder": null
+              }
+            ],
+            "starved_inputs": []
+          },
+          {
+            "item": "木纤维",
+            "position": [
+              5,
+              13
+            ],
+            "recipe_seconds": 6.0,
+            "planned_period_seconds": 6.0,
+            "mean_start_interval_seconds": 6.0,
+            "max_start_interval_seconds": 6.0,
+            "excess_gap_seconds": 0.0,
+            "start_jitter_rms_seconds": 0.0,
+            "actual_started_items_per_minute": 30.0,
+            "idle_input_seconds": 0.0,
+            "blocked_output_seconds": 0.0,
+            "extra_starved_seconds": 0.0,
+            "extra_blocked_seconds": 0.0,
+            "inputs": [
+              {
+                "item": "原木",
+                "planned_items_per_minute": 20.0,
+                "actual_items_per_minute": 20.0,
+                "max_arrival_gap_seconds": 5.0,
+                "seconds": 0.0,
+                "feeder": null
+              }
+            ],
+            "starved_inputs": []
+          },
+          {
+            "item": "木纤维",
+            "position": [
+              5,
+              16
+            ],
+            "recipe_seconds": 6.0,
+            "planned_period_seconds": 6.0,
+            "mean_start_interval_seconds": 6.0,
+            "max_start_interval_seconds": 6.0,
+            "excess_gap_seconds": 0.0,
+            "start_jitter_rms_seconds": 0.0,
+            "actual_started_items_per_minute": 30.0,
+            "idle_input_seconds": 0.0,
+            "blocked_output_seconds": 0.0,
+            "extra_starved_seconds": 0.0,
+            "extra_blocked_seconds": 0.0,
+            "inputs": [
+              {
+                "item": "原木",
+                "planned_items_per_minute": 20.0,
+                "actual_items_per_minute": 20.0,
+                "max_arrival_gap_seconds": 5.0,
+                "seconds": 0.0,
+                "feeder": null
+              }
+            ],
+            "starved_inputs": []
+          },
+          {
+            "item": "线",
+            "position": [
+              12,
+              1
+            ],
+            "recipe_seconds": 6.0,
+            "planned_period_seconds": 10.0,
+            "mean_start_interval_seconds": 6.4324324324324325,
+            "max_start_interval_seconds": 8.0,
+            "excess_gap_seconds": 0.0,
+            "start_jitter_rms_seconds": 3.6111688607070898,
+            "actual_started_items_per_minute": 9.5,
+            "idle_input_seconds": 16.0,
+            "blocked_output_seconds": 0.0,
+            "extra_starved_seconds": 0.0,
+            "extra_blocked_seconds": 0.0,
+            "inputs": [
+              {
+                "item": "木纤维",
+                "planned_items_per_minute": 12.0,
+                "actual_items_per_minute": 18.75,
+                "max_arrival_gap_seconds": 4.5,
+                "seconds": 0.0,
+                "feeder": null
+              }
+            ],
+            "starved_inputs": []
+          },
+          {
+            "item": "线",
+            "position": [
+              12,
+              3
+            ],
+            "recipe_seconds": 6.0,
+            "planned_period_seconds": 6.0,
+            "mean_start_interval_seconds": 6.388888888888889,
+            "max_start_interval_seconds": 8.0,
+            "excess_gap_seconds": 2.0,
+            "start_jitter_rms_seconds": 0.6346477588219923,
+            "actual_started_items_per_minute": 9.25,
+            "idle_input_seconds": 16.0,
+            "blocked_output_seconds": 0.0,
+            "extra_starved_seconds": 16.0,
+            "extra_blocked_seconds": 0.0,
+            "inputs": [
+              {
+                "item": "木纤维",
+                "planned_items_per_minute": 20.0,
+                "actual_items_per_minute": 18.75,
+                "max_arrival_gap_seconds": 4.5,
+                "seconds": 16.0,
+                "feeder": {
+                  "position": [
+                    10,
+                    4
+                  ],
+                  "kind": "split",
+                  "item": "木纤维",
+                  "planned_items_per_minute": 72.0,
+                  "rated_items_per_minute": 120.0,
+                  "actual_items_per_minute": 75.0,
+                  "load": 0.6,
+                  "actual_load": 0.625,
+                  "blocked_seconds": 0.0,
+                  "travel_seconds": 0.5
+                }
+              }
+            ],
+            "starved_inputs": [
+              {
+                "item": "木纤维",
+                "planned_items_per_minute": 20.0,
+                "actual_items_per_minute": 18.75,
+                "max_arrival_gap_seconds": 4.5,
+                "seconds": 16.0,
+                "feeder": {
+                  "position": [
+                    10,
+                    4
+                  ],
+                  "kind": "split",
+                  "item": "木纤维",
+                  "planned_items_per_minute": 72.0,
+                  "rated_items_per_minute": 120.0,
+                  "actual_items_per_minute": 75.0,
+                  "load": 0.6,
+                  "actual_load": 0.625,
+                  "blocked_seconds": 0.0,
+                  "travel_seconds": 0.5
+                }
+              }
+            ]
+          },
+          {
+            "item": "线",
+            "position": [
+              12,
+              6
+            ],
+            "recipe_seconds": 6.0,
+            "planned_period_seconds": 6.0,
+            "mean_start_interval_seconds": 6.444444444444445,
+            "max_start_interval_seconds": 8.0,
+            "excess_gap_seconds": 2.0,
+            "start_jitter_rms_seconds": 0.7168604389202189,
+            "actual_started_items_per_minute": 9.25,
+            "idle_input_seconds": 16.0,
+            "blocked_output_seconds": 0.0,
+            "extra_starved_seconds": 16.0,
+            "extra_blocked_seconds": 0.0,
+            "inputs": [
+              {
+                "item": "木纤维",
+                "planned_items_per_minute": 20.0,
+                "actual_items_per_minute": 18.75,
+                "max_arrival_gap_seconds": 4.5,
+                "seconds": 16.0,
+                "feeder": {
+                  "position": [
+                    10,
+                    6
+                  ],
+                  "kind": "belt1",
+                  "item": "木纤维",
+                  "planned_items_per_minute": 40.0,
+                  "rated_items_per_minute": 60.0,
+                  "actual_items_per_minute": 37.5,
+                  "load": 0.6666666666666666,
+                  "actual_load": 0.625,
+                  "blocked_seconds": 0.0,
+                  "travel_seconds": 1.875
+                }
+              }
+            ],
+            "starved_inputs": [
+              {
+                "item": "木纤维",
+                "planned_items_per_minute": 20.0,
+                "actual_items_per_minute": 18.75,
+                "max_arrival_gap_seconds": 4.5,
+                "seconds": 16.0,
+                "feeder": {
+                  "position": [
+                    10,
+                    6
+                  ],
+                  "kind": "belt1",
+                  "item": "木纤维",
+                  "planned_items_per_minute": 40.0,
+                  "rated_items_per_minute": 60.0,
+                  "actual_items_per_minute": 37.5,
+                  "load": 0.6666666666666666,
+                  "actual_load": 0.625,
+                  "blocked_seconds": 0.0,
+                  "travel_seconds": 1.875
+                }
+              }
+            ]
+          },
+          {
+            "item": "线",
+            "position": [
+              12,
+              8
+            ],
+            "recipe_seconds": 6.0,
+            "planned_period_seconds": 6.0,
+            "mean_start_interval_seconds": 6.430555555555555,
+            "max_start_interval_seconds": 8.0,
+            "excess_gap_seconds": 2.0,
+            "start_jitter_rms_seconds": 0.7021791477646966,
+            "actual_started_items_per_minute": 9.25,
+            "idle_input_seconds": 15.5,
+            "blocked_output_seconds": 0.0,
+            "extra_starved_seconds": 15.5,
+            "extra_blocked_seconds": 0.0,
+            "inputs": [
+              {
+                "item": "木纤维",
+                "planned_items_per_minute": 20.0,
+                "actual_items_per_minute": 18.75,
+                "max_arrival_gap_seconds": 4.5,
+                "seconds": 15.5,
+                "feeder": {
+                  "position": [
+                    10,
+                    6
+                  ],
+                  "kind": "belt1",
+                  "item": "木纤维",
+                  "planned_items_per_minute": 40.0,
+                  "rated_items_per_minute": 60.0,
+                  "actual_items_per_minute": 37.5,
+                  "load": 0.6666666666666666,
+                  "actual_load": 0.625,
+                  "blocked_seconds": 0.0,
+                  "travel_seconds": 1.875
+                }
+              }
+            ],
+            "starved_inputs": [
+              {
+                "item": "木纤维",
+                "planned_items_per_minute": 20.0,
+                "actual_items_per_minute": 18.75,
+                "max_arrival_gap_seconds": 4.5,
+                "seconds": 15.5,
+                "feeder": {
+                  "position": [
+                    10,
+                    6
+                  ],
+                  "kind": "belt1",
+                  "item": "木纤维",
+                  "planned_items_per_minute": 40.0,
+                  "rated_items_per_minute": 60.0,
+                  "actual_items_per_minute": 37.5,
+                  "load": 0.6666666666666666,
+                  "actual_load": 0.625,
+                  "blocked_seconds": 0.0,
+                  "travel_seconds": 1.875
+                }
+              }
+            ]
+          },
+          {
+            "item": "线",
+            "position": [
+              12,
+              11
+            ],
+            "recipe_seconds": 6.0,
+            "planned_period_seconds": 10.0,
+            "mean_start_interval_seconds": 6.381944444444445,
+            "max_start_interval_seconds": 7.5,
+            "excess_gap_seconds": 0.0,
+            "start_jitter_rms_seconds": 3.641247115420149,
+            "actual_started_items_per_minute": 9.25,
+            "idle_input_seconds": 13.75,
+            "blocked_output_seconds": 0.0,
+            "extra_starved_seconds": 0.0,
+            "extra_blocked_seconds": 0.0,
+            "inputs": [
+              {
+                "item": "木纤维",
+                "planned_items_per_minute": 12.0,
+                "actual_items_per_minute": 18.75,
+                "max_arrival_gap_seconds": 4.5,
+                "seconds": 0.0,
+                "feeder": null
+              }
+            ],
+            "starved_inputs": []
+          },
+          {
+            "item": "线",
+            "position": [
+              12,
+              13
+            ],
+            "recipe_seconds": 6.0,
+            "planned_period_seconds": 6.0,
+            "mean_start_interval_seconds": 6.364864864864865,
+            "max_start_interval_seconds": 7.5,
+            "excess_gap_seconds": 1.5,
+            "start_jitter_rms_seconds": 0.5452497568062706,
+            "actual_started_items_per_minute": 9.5,
+            "idle_input_seconds": 13.625,
+            "blocked_output_seconds": 0.0,
+            "extra_starved_seconds": 13.625,
+            "extra_blocked_seconds": 0.0,
+            "inputs": [
+              {
+                "item": "木纤维",
+                "planned_items_per_minute": 20.0,
+                "actual_items_per_minute": 18.75,
+                "max_arrival_gap_seconds": 4.5,
+                "seconds": 13.625,
+                "feeder": {
+                  "position": [
+                    10,
+                    15
+                  ],
+                  "kind": "split",
+                  "item": "木纤维",
+                  "planned_items_per_minute": 72.0,
+                  "rated_items_per_minute": 120.0,
+                  "actual_items_per_minute": 75.0,
+                  "load": 0.6,
+                  "actual_load": 0.625,
+                  "blocked_seconds": 0.0,
+                  "travel_seconds": 0.5
+                }
+              }
+            ],
+            "starved_inputs": [
+              {
+                "item": "木纤维",
+                "planned_items_per_minute": 20.0,
+                "actual_items_per_minute": 18.75,
+                "max_arrival_gap_seconds": 4.5,
+                "seconds": 13.625,
+                "feeder": {
+                  "position": [
+                    10,
+                    15
+                  ],
+                  "kind": "split",
+                  "item": "木纤维",
+                  "planned_items_per_minute": 72.0,
+                  "rated_items_per_minute": 120.0,
+                  "actual_items_per_minute": 75.0,
+                  "load": 0.6,
+                  "actual_load": 0.625,
+                  "blocked_seconds": 0.0,
+                  "travel_seconds": 0.5
+                }
+              }
+            ]
+          },
+          {
+            "item": "线",
+            "position": [
+              12,
+              16
+            ],
+            "recipe_seconds": 6.0,
+            "planned_period_seconds": 6.0,
+            "mean_start_interval_seconds": 6.378378378378378,
+            "max_start_interval_seconds": 7.5,
+            "excess_gap_seconds": 1.5,
+            "start_jitter_rms_seconds": 0.5514109665703558,
+            "actual_started_items_per_minute": 9.5,
+            "idle_input_seconds": 14.0,
+            "blocked_output_seconds": 0.0,
+            "extra_starved_seconds": 14.0,
+            "extra_blocked_seconds": 0.0,
+            "inputs": [
+              {
+                "item": "木纤维",
+                "planned_items_per_minute": 20.0,
+                "actual_items_per_minute": 18.75,
+                "max_arrival_gap_seconds": 4.5,
+                "seconds": 14.0,
+                "feeder": {
+                  "position": [
+                    10,
+                    16
+                  ],
+                  "kind": "belt1",
+                  "item": "木纤维",
+                  "planned_items_per_minute": 40.0,
+                  "rated_items_per_minute": 60.0,
+                  "actual_items_per_minute": 37.5,
+                  "load": 0.6666666666666666,
+                  "actual_load": 0.625,
+                  "blocked_seconds": 0.0,
+                  "travel_seconds": 1.875
+                }
+              }
+            ],
+            "starved_inputs": [
+              {
+                "item": "木纤维",
+                "planned_items_per_minute": 20.0,
+                "actual_items_per_minute": 18.75,
+                "max_arrival_gap_seconds": 4.5,
+                "seconds": 14.0,
+                "feeder": {
+                  "position": [
+                    10,
+                    16
+                  ],
+                  "kind": "belt1",
+                  "item": "木纤维",
+                  "planned_items_per_minute": 40.0,
+                  "rated_items_per_minute": 60.0,
+                  "actual_items_per_minute": 37.5,
+                  "load": 0.6666666666666666,
+                  "actual_load": 0.625,
+                  "blocked_seconds": 0.0,
+                  "travel_seconds": 1.875
+                }
+              }
+            ]
+          },
+          {
+            "item": "线",
+            "position": [
+              12,
+              18
+            ],
+            "recipe_seconds": 6.0,
+            "planned_period_seconds": 6.0,
+            "mean_start_interval_seconds": 6.412162162162162,
+            "max_start_interval_seconds": 7.5,
+            "excess_gap_seconds": 1.5,
+            "start_jitter_rms_seconds": 0.6054370768742645,
+            "actual_started_items_per_minute": 9.5,
+            "idle_input_seconds": 16.25,
+            "blocked_output_seconds": 0.0,
+            "extra_starved_seconds": 16.25,
+            "extra_blocked_seconds": 0.0,
+            "inputs": [
+              {
+                "item": "木纤维",
+                "planned_items_per_minute": 20.0,
+                "actual_items_per_minute": 18.75,
+                "max_arrival_gap_seconds": 4.5,
+                "seconds": 16.25,
+                "feeder": {
+                  "position": [
+                    10,
+                    16
+                  ],
+                  "kind": "belt1",
+                  "item": "木纤维",
+                  "planned_items_per_minute": 40.0,
+                  "rated_items_per_minute": 60.0,
+                  "actual_items_per_minute": 37.5,
+                  "load": 0.6666666666666666,
+                  "actual_load": 0.625,
+                  "blocked_seconds": 0.0,
+                  "travel_seconds": 1.875
+                }
+              }
+            ],
+            "starved_inputs": [
+              {
+                "item": "木纤维",
+                "planned_items_per_minute": 20.0,
+                "actual_items_per_minute": 18.75,
+                "max_arrival_gap_seconds": 4.5,
+                "seconds": 16.25,
+                "feeder": {
+                  "position": [
+                    10,
+                    16
+                  ],
+                  "kind": "belt1",
+                  "item": "木纤维",
+                  "planned_items_per_minute": 40.0,
+                  "rated_items_per_minute": 60.0,
+                  "actual_items_per_minute": 37.5,
+                  "load": 0.6666666666666666,
+                  "actual_load": 0.625,
+                  "blocked_seconds": 0.0,
+                  "travel_seconds": 1.875
+                }
+              }
+            ]
+          },
+          {
+            "item": "布",
+            "position": [
+              15,
+              2
+            ],
+            "recipe_seconds": 6.0,
+            "planned_period_seconds": 7.5,
+            "mean_start_interval_seconds": 6.430555555555555,
+            "max_start_interval_seconds": 8.0,
+            "excess_gap_seconds": 0.5,
+            "start_jitter_rms_seconds": 1.2104865871944959,
+            "actual_started_items_per_minute": 9.25,
+            "idle_input_seconds": 16.0,
+            "blocked_output_seconds": 0.0,
+            "extra_starved_seconds": 1.5,
+            "extra_blocked_seconds": 0.0,
+            "inputs": [
+              {
+                "item": "线",
+                "planned_items_per_minute": 16.0,
+                "actual_items_per_minute": 18.5,
+                "max_arrival_gap_seconds": 5.5,
+                "seconds": 1.5,
+                "feeder": {
+                  "position": [
+                    14,
+                    3
+                  ],
+                  "kind": "belt1",
+                  "item": "线",
+                  "planned_items_per_minute": 10.0,
+                  "rated_items_per_minute": 60.0,
+                  "actual_items_per_minute": 9.25,
+                  "load": 0.16666666666666666,
+                  "actual_load": 0.15416666666666667,
+                  "blocked_seconds": 0.0,
+                  "travel_seconds": 1.875
+                }
+              }
+            ],
+            "starved_inputs": [
+              {
+                "item": "线",
+                "planned_items_per_minute": 16.0,
+                "actual_items_per_minute": 18.5,
+                "max_arrival_gap_seconds": 5.5,
+                "seconds": 1.5,
+                "feeder": {
+                  "position": [
+                    14,
+                    3
+                  ],
+                  "kind": "belt1",
+                  "item": "线",
+                  "planned_items_per_minute": 10.0,
+                  "rated_items_per_minute": 60.0,
+                  "actual_items_per_minute": 9.25,
+                  "load": 0.16666666666666666,
+                  "actual_load": 0.15416666666666667,
+                  "blocked_seconds": 0.0,
+                  "travel_seconds": 1.875
+                }
+              }
+            ]
+          },
+          {
+            "item": "布",
+            "position": [
+              15,
+              7
+            ],
+            "recipe_seconds": 6.0,
+            "planned_period_seconds": 6.0,
+            "mean_start_interval_seconds": 6.430555555555555,
+            "max_start_interval_seconds": 8.0,
+            "excess_gap_seconds": 2.0,
+            "start_jitter_rms_seconds": 0.7120003121097942,
+            "actual_started_items_per_minute": 9.25,
+            "idle_input_seconds": 16.0,
+            "blocked_output_seconds": 0.0,
+            "extra_starved_seconds": 16.0,
+            "extra_blocked_seconds": 0.0,
+            "inputs": [
+              {
+                "item": "线",
+                "planned_items_per_minute": 20.0,
+                "actual_items_per_minute": 18.5,
+                "max_arrival_gap_seconds": 5.5,
+                "seconds": 16.0,
+                "feeder": {
+                  "position": [
+                    14,
+                    7
+                  ],
+                  "kind": "merge",
+                  "item": "线",
+                  "planned_items_per_minute": 20.0,
+                  "rated_items_per_minute": 120.0,
+                  "actual_items_per_minute": 18.5,
+                  "load": 0.16666666666666666,
+                  "actual_load": 0.15416666666666667,
+                  "blocked_seconds": 0.0,
+                  "travel_seconds": 0.5
+                }
+              }
+            ],
+            "starved_inputs": [
+              {
+                "item": "线",
+                "planned_items_per_minute": 20.0,
+                "actual_items_per_minute": 18.5,
+                "max_arrival_gap_seconds": 5.5,
+                "seconds": 16.0,
+                "feeder": {
+                  "position": [
+                    14,
+                    7
+                  ],
+                  "kind": "merge",
+                  "item": "线",
+                  "planned_items_per_minute": 20.0,
+                  "rated_items_per_minute": 120.0,
+                  "actual_items_per_minute": 18.5,
+                  "load": 0.16666666666666666,
+                  "actual_load": 0.15416666666666667,
+                  "blocked_seconds": 0.0,
+                  "travel_seconds": 0.5
+                }
+              }
+            ]
+          },
+          {
+            "item": "布",
+            "position": [
+              15,
+              12
+            ],
+            "recipe_seconds": 6.0,
+            "planned_period_seconds": 7.5,
+            "mean_start_interval_seconds": 6.378378378378378,
+            "max_start_interval_seconds": 7.5,
+            "excess_gap_seconds": 0.0,
+            "start_jitter_rms_seconds": 1.1911838308669735,
+            "actual_started_items_per_minute": 9.5,
+            "idle_input_seconds": 14.0,
+            "blocked_output_seconds": 0.0,
+            "extra_starved_seconds": 0.0,
+            "extra_blocked_seconds": 0.0,
+            "inputs": [
+              {
+                "item": "线",
+                "planned_items_per_minute": 16.0,
+                "actual_items_per_minute": 18.75,
+                "max_arrival_gap_seconds": 5.5,
+                "seconds": 0.0,
+                "feeder": null
+              }
+            ],
+            "starved_inputs": []
+          },
+          {
+            "item": "布",
+            "position": [
+              15,
+              17
+            ],
+            "recipe_seconds": 6.0,
+            "planned_period_seconds": 6.0,
+            "mean_start_interval_seconds": 6.375,
+            "max_start_interval_seconds": 7.5,
+            "excess_gap_seconds": 1.5,
+            "start_jitter_rms_seconds": 0.5527707983925667,
+            "actual_started_items_per_minute": 9.25,
+            "idle_input_seconds": 14.25,
+            "blocked_output_seconds": 0.0,
+            "extra_starved_seconds": 14.25,
+            "extra_blocked_seconds": 0.0,
+            "inputs": [
+              {
+                "item": "线",
+                "planned_items_per_minute": 20.0,
+                "actual_items_per_minute": 18.5,
+                "max_arrival_gap_seconds": 5.5,
+                "seconds": 14.25,
+                "feeder": {
+                  "position": [
+                    14,
+                    17
+                  ],
+                  "kind": "merge",
+                  "item": "线",
+                  "planned_items_per_minute": 20.0,
+                  "rated_items_per_minute": 120.0,
+                  "actual_items_per_minute": 18.5,
+                  "load": 0.16666666666666666,
+                  "actual_load": 0.15416666666666667,
+                  "blocked_seconds": 0.0,
+                  "travel_seconds": 0.5
+                }
+              }
+            ],
+            "starved_inputs": [
+              {
+                "item": "线",
+                "planned_items_per_minute": 20.0,
+                "actual_items_per_minute": 18.5,
+                "max_arrival_gap_seconds": 5.5,
+                "seconds": 14.25,
+                "feeder": {
+                  "position": [
+                    14,
+                    17
+                  ],
+                  "kind": "merge",
+                  "item": "线",
+                  "planned_items_per_minute": 20.0,
+                  "rated_items_per_minute": 120.0,
+                  "actual_items_per_minute": 18.5,
+                  "load": 0.16666666666666666,
+                  "actual_load": 0.15416666666666667,
+                  "blocked_seconds": 0.0,
+                  "travel_seconds": 0.5
+                }
+              }
+            ]
+          },
+          {
+            "item": "绿色晶能",
+            "position": [
+              19,
+              3
+            ],
+            "recipe_seconds": 10.0,
+            "planned_period_seconds": 10.0,
+            "mean_start_interval_seconds": 10.0,
+            "max_start_interval_seconds": 10.0,
+            "excess_gap_seconds": 0.0,
+            "start_jitter_rms_seconds": 0.0,
+            "actual_started_items_per_minute": 6.0,
+            "idle_input_seconds": 0.0,
+            "blocked_output_seconds": 0.0,
+            "extra_starved_seconds": 0.0,
+            "extra_blocked_seconds": 0.0,
+            "inputs": [
+              {
+                "item": "布",
+                "planned_items_per_minute": 18.0,
+                "actual_items_per_minute": 18.0,
+                "max_arrival_gap_seconds": 8.0,
+                "seconds": 0.0,
+                "feeder": null
+              },
+              {
+                "item": "初级工具",
+                "planned_items_per_minute": 12.0,
+                "actual_items_per_minute": 12.0,
+                "max_arrival_gap_seconds": 6.0,
+                "seconds": 0.0,
+                "feeder": null
+              }
+            ],
+            "starved_inputs": []
+          },
+          {
+            "item": "绿色晶能",
+            "position": [
+              19,
+              14
+            ],
+            "recipe_seconds": 10.0,
+            "planned_period_seconds": 10.0,
+            "mean_start_interval_seconds": 10.0,
+            "max_start_interval_seconds": 10.0,
+            "excess_gap_seconds": 0.0,
+            "start_jitter_rms_seconds": 0.0,
+            "actual_started_items_per_minute": 6.0,
+            "idle_input_seconds": 0.0,
+            "blocked_output_seconds": 0.0,
+            "extra_starved_seconds": 0.0,
+            "extra_blocked_seconds": 0.0,
+            "inputs": [
+              {
+                "item": "布",
+                "planned_items_per_minute": 18.0,
+                "actual_items_per_minute": 18.0,
+                "max_arrival_gap_seconds": 8.0,
+                "seconds": 0.0,
+                "feeder": null
+              },
+              {
+                "item": "初级工具",
+                "planned_items_per_minute": 12.0,
+                "actual_items_per_minute": 12.0,
+                "max_arrival_gap_seconds": 6.0,
+                "seconds": 0.0,
+                "feeder": null
+              }
+            ],
+            "starved_inputs": []
+          },
+          {
+            "item": "初级工具",
+            "position": [
+              24,
+              2
+            ],
+            "recipe_seconds": 10.0,
+            "planned_period_seconds": 10.0,
+            "mean_start_interval_seconds": 10.0,
+            "max_start_interval_seconds": 10.0,
+            "excess_gap_seconds": 0.0,
+            "start_jitter_rms_seconds": 0.0,
+            "actual_started_items_per_minute": 6.0,
+            "idle_input_seconds": 0.0,
+            "blocked_output_seconds": 0.0,
+            "extra_starved_seconds": 0.0,
+            "extra_blocked_seconds": 0.0,
+            "inputs": [
+              {
+                "item": "木棒",
+                "planned_items_per_minute": 12.0,
+                "actual_items_per_minute": 12.0,
+                "max_arrival_gap_seconds": 9.0,
+                "seconds": 0.0,
+                "feeder": null
+              },
+              {
+                "item": "石材",
+                "planned_items_per_minute": 6.0,
+                "actual_items_per_minute": 6.0,
+                "max_arrival_gap_seconds": 10.0,
+                "seconds": 0.0,
+                "feeder": null
+              }
+            ],
+            "starved_inputs": []
+          },
+          {
+            "item": "初级工具",
+            "position": [
+              24,
+              7
+            ],
+            "recipe_seconds": 10.0,
+            "planned_period_seconds": 10.0,
+            "mean_start_interval_seconds": 10.0,
+            "max_start_interval_seconds": 10.0,
+            "excess_gap_seconds": 0.0,
+            "start_jitter_rms_seconds": 0.0,
+            "actual_started_items_per_minute": 6.0,
+            "idle_input_seconds": 0.0,
+            "blocked_output_seconds": 0.0,
+            "extra_starved_seconds": 0.0,
+            "extra_blocked_seconds": 0.0,
+            "inputs": [
+              {
+                "item": "木棒",
+                "planned_items_per_minute": 12.0,
+                "actual_items_per_minute": 12.0,
+                "max_arrival_gap_seconds": 9.0,
+                "seconds": 0.0,
+                "feeder": null
+              },
+              {
+                "item": "石材",
+                "planned_items_per_minute": 6.0,
+                "actual_items_per_minute": 6.0,
+                "max_arrival_gap_seconds": 10.0,
+                "seconds": 0.0,
+                "feeder": null
+              }
+            ],
+            "starved_inputs": []
+          },
+          {
+            "item": "初级工具",
+            "position": [
+              24,
+              13
+            ],
+            "recipe_seconds": 10.0,
+            "planned_period_seconds": 10.0,
+            "mean_start_interval_seconds": 10.0,
+            "max_start_interval_seconds": 10.0,
+            "excess_gap_seconds": 0.0,
+            "start_jitter_rms_seconds": 0.0,
+            "actual_started_items_per_minute": 6.0,
+            "idle_input_seconds": 0.0,
+            "blocked_output_seconds": 0.0,
+            "extra_starved_seconds": 0.0,
+            "extra_blocked_seconds": 0.0,
+            "inputs": [
+              {
+                "item": "木棒",
+                "planned_items_per_minute": 12.0,
+                "actual_items_per_minute": 12.0,
+                "max_arrival_gap_seconds": 9.0,
+                "seconds": 0.0,
+                "feeder": null
+              },
+              {
+                "item": "石材",
+                "planned_items_per_minute": 6.0,
+                "actual_items_per_minute": 6.0,
+                "max_arrival_gap_seconds": 10.0,
+                "seconds": 0.0,
+                "feeder": null
+              }
+            ],
+            "starved_inputs": []
+          },
+          {
+            "item": "初级工具",
+            "position": [
+              24,
+              18
+            ],
+            "recipe_seconds": 10.0,
+            "planned_period_seconds": 10.0,
+            "mean_start_interval_seconds": 10.0,
+            "max_start_interval_seconds": 10.0,
+            "excess_gap_seconds": 0.0,
+            "start_jitter_rms_seconds": 0.0,
+            "actual_started_items_per_minute": 6.0,
+            "idle_input_seconds": 0.0,
+            "blocked_output_seconds": 0.0,
+            "extra_starved_seconds": 0.0,
+            "extra_blocked_seconds": 0.0,
+            "inputs": [
+              {
+                "item": "木棒",
+                "planned_items_per_minute": 12.0,
+                "actual_items_per_minute": 12.0,
+                "max_arrival_gap_seconds": 9.0,
+                "seconds": 0.0,
+                "feeder": null
+              },
+              {
+                "item": "石材",
+                "planned_items_per_minute": 6.0,
+                "actual_items_per_minute": 6.0,
+                "max_arrival_gap_seconds": 10.0,
+                "seconds": 0.0,
+                "feeder": null
+              }
+            ],
+            "starved_inputs": []
+          },
+          {
+            "item": "木棒",
+            "position": [
+              29,
+              4
+            ],
+            "recipe_seconds": 6.0,
+            "planned_period_seconds": 7.5,
+            "mean_start_interval_seconds": 6.0,
+            "max_start_interval_seconds": 6.0,
+            "excess_gap_seconds": 0.0,
+            "start_jitter_rms_seconds": 1.5,
+            "actual_started_items_per_minute": 30.0,
+            "idle_input_seconds": 0.0,
+            "blocked_output_seconds": 0.0,
+            "extra_starved_seconds": 0.0,
+            "extra_blocked_seconds": 0.0,
+            "inputs": [
+              {
+                "item": "木材",
+                "planned_items_per_minute": 16.0,
+                "actual_items_per_minute": 20.0,
+                "max_arrival_gap_seconds": 3.0,
+                "seconds": 0.0,
+                "feeder": null
+              }
+            ],
+            "starved_inputs": []
+          },
+          {
+            "item": "石材",
+            "position": [
+              29,
+              8
+            ],
+            "recipe_seconds": 3.0,
+            "planned_period_seconds": 5.0,
+            "mean_start_interval_seconds": 3.0,
+            "max_start_interval_seconds": 3.0,
+            "excess_gap_seconds": 0.0,
+            "start_jitter_rms_seconds": 2.0,
+            "actual_started_items_per_minute": 20.0,
+            "idle_input_seconds": 0.0,
+            "blocked_output_seconds": 0.0,
+            "extra_starved_seconds": 0.0,
+            "extra_blocked_seconds": 0.0,
+            "inputs": [
+              {
+                "item": "石头",
+                "planned_items_per_minute": 12.0,
+                "actual_items_per_minute": 20.0,
+                "max_arrival_gap_seconds": 3.0,
+                "seconds": 0.0,
+                "feeder": null
+              }
+            ],
+            "starved_inputs": []
+          },
+          {
+            "item": "木棒",
+            "position": [
+              29,
+              15
+            ],
+            "recipe_seconds": 6.0,
+            "planned_period_seconds": 7.5,
+            "mean_start_interval_seconds": 6.0,
+            "max_start_interval_seconds": 6.0,
+            "excess_gap_seconds": 0.0,
+            "start_jitter_rms_seconds": 1.5,
+            "actual_started_items_per_minute": 30.0,
+            "idle_input_seconds": 0.0,
+            "blocked_output_seconds": 0.0,
+            "extra_starved_seconds": 0.0,
+            "extra_blocked_seconds": 0.0,
+            "inputs": [
+              {
+                "item": "木材",
+                "planned_items_per_minute": 16.0,
+                "actual_items_per_minute": 20.0,
+                "max_arrival_gap_seconds": 3.0,
+                "seconds": 0.0,
+                "feeder": null
+              }
+            ],
+            "starved_inputs": []
+          },
+          {
+            "item": "石材",
+            "position": [
+              30,
+              10
+            ],
+            "recipe_seconds": 3.0,
+            "planned_period_seconds": 5.0,
+            "mean_start_interval_seconds": 3.0,
+            "max_start_interval_seconds": 3.0,
+            "excess_gap_seconds": 0.0,
+            "start_jitter_rms_seconds": 2.0,
+            "actual_started_items_per_minute": 20.0,
+            "idle_input_seconds": 0.0,
+            "blocked_output_seconds": 0.0,
+            "extra_starved_seconds": 0.0,
+            "extra_blocked_seconds": 0.0,
+            "inputs": [
+              {
+                "item": "石头",
+                "planned_items_per_minute": 12.0,
+                "actual_items_per_minute": 20.0,
+                "max_arrival_gap_seconds": 3.0,
+                "seconds": 0.0,
+                "feeder": null
+              }
+            ],
+            "starved_inputs": []
+          },
+          {
+            "item": "木材",
+            "position": [
+              32,
+              4
+            ],
+            "recipe_seconds": 3.0,
+            "planned_period_seconds": 3.75,
+            "mean_start_interval_seconds": 3.0,
+            "max_start_interval_seconds": 3.0,
+            "excess_gap_seconds": 0.0,
+            "start_jitter_rms_seconds": 0.75,
+            "actual_started_items_per_minute": 20.0,
+            "idle_input_seconds": 0.0,
+            "blocked_output_seconds": 0.0,
+            "extra_starved_seconds": 0.0,
+            "extra_blocked_seconds": 0.0,
+            "inputs": [
+              {
+                "item": "原木",
+                "planned_items_per_minute": 16.0,
+                "actual_items_per_minute": 20.0,
+                "max_arrival_gap_seconds": 3.0,
+                "seconds": 0.0,
+                "feeder": null
+              }
+            ],
+            "starved_inputs": []
+          },
+          {
+            "item": "木材",
+            "position": [
+              32,
+              15
+            ],
+            "recipe_seconds": 3.0,
+            "planned_period_seconds": 3.75,
+            "mean_start_interval_seconds": 3.0,
+            "max_start_interval_seconds": 3.0,
+            "excess_gap_seconds": 0.0,
+            "start_jitter_rms_seconds": 0.75,
+            "actual_started_items_per_minute": 20.0,
+            "idle_input_seconds": 0.0,
+            "blocked_output_seconds": 0.0,
+            "extra_starved_seconds": 0.0,
+            "extra_blocked_seconds": 0.0,
+            "inputs": [
+              {
+                "item": "原木",
+                "planned_items_per_minute": 16.0,
+                "actual_items_per_minute": 20.0,
+                "max_arrival_gap_seconds": 3.0,
+                "seconds": 0.0,
+                "feeder": null
+              }
+            ],
+            "starved_inputs": []
+          }
+        ],
+        "machine_delay_seconds": 123.125,
+        "worst_machine_delay_seconds": 16.25,
+        "max_excess_gap_seconds": 2.0,
+        "max_start_jitter_seconds": 3.641247115420149,
+        "max_belt_load": 0.6666666666666666,
+        "bottlenecks": [
+          {
+            "position": [
+              3,
+              9
+            ],
+            "kind": "split",
+            "item": "原木",
+            "planned_items_per_minute": 96.0,
+            "rated_items_per_minute": 120.0,
+            "actual_items_per_minute": 100.0,
+            "load": 0.8,
+            "actual_load": 0.8333333333333334,
+            "blocked_seconds": 40.0,
+            "travel_seconds": 0.5
+          },
+          {
+            "position": [
+              3,
+              14
+            ],
+            "kind": "tunnel1",
+            "item": "原木",
+            "planned_items_per_minute": 40.0,
+            "rated_items_per_minute": 60.0,
+            "actual_items_per_minute": 40.0,
+            "load": 0.6666666666666666,
+            "actual_load": 0.6666666666666666,
+            "blocked_seconds": 75.0,
+            "travel_seconds": 1.0
+          },
+          {
+            "position": [
+              3,
+              5
+            ],
+            "kind": "tunnel1",
+            "item": "原木",
+            "planned_items_per_minute": 40.0,
+            "rated_items_per_minute": 60.0,
+            "actual_items_per_minute": 40.0,
+            "load": 0.6666666666666666,
+            "actual_load": 0.6666666666666666,
+            "blocked_seconds": 60.0,
+            "travel_seconds": 1.0
+          },
+          {
+            "position": [
+              3,
+              8
+            ],
+            "kind": "tunnel1",
+            "item": "原木",
+            "planned_items_per_minute": 40.0,
+            "rated_items_per_minute": 60.0,
+            "actual_items_per_minute": 40.0,
+            "load": 0.6666666666666666,
+            "actual_load": 0.6666666666666666,
+            "blocked_seconds": 60.0,
+            "travel_seconds": 1.0
+          },
+          {
+            "position": [
+              3,
+              10
+            ],
+            "kind": "tunnel1",
+            "item": "原木",
+            "planned_items_per_minute": 40.0,
+            "rated_items_per_minute": 60.0,
+            "actual_items_per_minute": 40.0,
+            "load": 0.6666666666666666,
+            "actual_load": 0.6666666666666666,
+            "blocked_seconds": 45.0,
+            "travel_seconds": 1.0
+          },
+          {
+            "position": [
+              10,
+              5
+            ],
+            "kind": "belt1",
+            "item": "木纤维",
+            "planned_items_per_minute": 40.0,
+            "rated_items_per_minute": 60.0,
+            "actual_items_per_minute": 37.5,
+            "load": 0.6666666666666666,
+            "actual_load": 0.625,
+            "blocked_seconds": 0.0,
+            "travel_seconds": 1.875
+          },
+          {
+            "position": [
+              10,
+              6
+            ],
+            "kind": "belt1",
+            "item": "木纤维",
+            "planned_items_per_minute": 40.0,
+            "rated_items_per_minute": 60.0,
+            "actual_items_per_minute": 37.5,
+            "load": 0.6666666666666666,
+            "actual_load": 0.625,
+            "blocked_seconds": 0.0,
+            "travel_seconds": 1.875
+          },
+          {
+            "position": [
+              10,
+              16
+            ],
+            "kind": "belt1",
+            "item": "木纤维",
+            "planned_items_per_minute": 40.0,
+            "rated_items_per_minute": 60.0,
+            "actual_items_per_minute": 37.5,
+            "load": 0.6666666666666666,
+            "actual_load": 0.625,
+            "blocked_seconds": 0.0,
+            "travel_seconds": 1.875
+          }
+        ]
+      }
+    }
+  },
+  "placements": [
+    {
+      "building": "inlet",
+      "x": 1,
+      "y": 9,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        1,
+        9
+      ],
+      "item": "原木",
+      "rate": "96",
+      "node": 0,
+      "direction": "右",
+      "facing": 2,
+      "recipe": null,
+      "collision_rect_px": [
+        18,
+        140,
+        46,
+        164
+      ],
+      "collision_size_px": [
+        28,
+        24
+      ]
+    },
+    {
+      "building": "maker",
+      "x": 5,
+      "y": 3,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        5,
+        3
+      ],
+      "item": "木纤维",
+      "rate": "30",
+      "node": 1,
+      "direction": "右",
+      "facing": 2,
+      "recipe": 50,
+      "collision_rect_px": [
+        82,
+        40,
+        110,
+        68
+      ],
+      "collision_size_px": [
+        28,
+        28
+      ]
+    },
+    {
+      "building": "maker",
+      "x": 5,
+      "y": 5,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        5,
+        5
+      ],
+      "item": "木纤维",
+      "rate": "30",
+      "node": 2,
+      "direction": "右",
+      "facing": 2,
+      "recipe": 50,
+      "collision_rect_px": [
+        82,
+        72,
+        110,
+        100
+      ],
+      "collision_size_px": [
+        28,
+        28
+      ]
+    },
+    {
+      "building": "maker",
+      "x": 5,
+      "y": 9,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        5,
+        9
+      ],
+      "item": "木纤维",
+      "rate": "24",
+      "node": 3,
+      "direction": "右",
+      "facing": 2,
+      "recipe": 50,
+      "collision_rect_px": [
+        82,
+        136,
+        110,
+        164
+      ],
+      "collision_size_px": [
+        28,
+        28
+      ]
+    },
+    {
+      "building": "maker",
+      "x": 5,
+      "y": 13,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        5,
+        13
+      ],
+      "item": "木纤维",
+      "rate": "30",
+      "node": 4,
+      "direction": "右",
+      "facing": 2,
+      "recipe": 50,
+      "collision_rect_px": [
+        82,
+        200,
+        110,
+        228
+      ],
+      "collision_size_px": [
+        28,
+        28
+      ]
+    },
+    {
+      "building": "maker",
+      "x": 5,
+      "y": 16,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        5,
+        16
+      ],
+      "item": "木纤维",
+      "rate": "30",
+      "node": 5,
+      "direction": "右",
+      "facing": 2,
+      "recipe": 50,
+      "collision_rect_px": [
+        82,
+        248,
+        110,
+        276
+      ],
+      "collision_size_px": [
+        28,
+        28
+      ]
+    },
+    {
+      "building": "maker",
+      "x": 12,
+      "y": 1,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        12,
+        1
+      ],
+      "item": "线",
+      "rate": "6",
+      "node": 6,
+      "direction": "右",
+      "facing": 2,
+      "recipe": 51,
+      "collision_rect_px": [
+        194,
+        8,
+        222,
+        36
+      ],
+      "collision_size_px": [
+        28,
+        28
+      ]
+    },
+    {
+      "building": "maker",
+      "x": 12,
+      "y": 3,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        12,
+        3
+      ],
+      "item": "线",
+      "rate": "10",
+      "node": 7,
+      "direction": "右",
+      "facing": 2,
+      "recipe": 51,
+      "collision_rect_px": [
+        194,
+        40,
+        222,
+        68
+      ],
+      "collision_size_px": [
+        28,
+        28
+      ]
+    },
+    {
+      "building": "maker",
+      "x": 12,
+      "y": 6,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        12,
+        6
+      ],
+      "item": "线",
+      "rate": "10",
+      "node": 8,
+      "direction": "右",
+      "facing": 2,
+      "recipe": 51,
+      "collision_rect_px": [
+        194,
+        88,
+        222,
+        116
+      ],
+      "collision_size_px": [
+        28,
+        28
+      ]
+    },
+    {
+      "building": "maker",
+      "x": 12,
+      "y": 8,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        12,
+        8
+      ],
+      "item": "线",
+      "rate": "10",
+      "node": 9,
+      "direction": "右",
+      "facing": 2,
+      "recipe": 51,
+      "collision_rect_px": [
+        194,
+        120,
+        222,
+        148
+      ],
+      "collision_size_px": [
+        28,
+        28
+      ]
+    },
+    {
+      "building": "maker",
+      "x": 15,
+      "y": 2,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        15,
+        2
+      ],
+      "item": "布",
+      "rate": "8",
+      "node": 10,
+      "direction": "右",
+      "facing": 2,
+      "recipe": 52,
+      "collision_rect_px": [
+        242,
+        24,
+        270,
+        52
+      ],
+      "collision_size_px": [
+        28,
+        28
+      ]
+    },
+    {
+      "building": "maker",
+      "x": 15,
+      "y": 7,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        15,
+        7
+      ],
+      "item": "布",
+      "rate": "10",
+      "node": 11,
+      "direction": "右",
+      "facing": 2,
+      "recipe": 52,
+      "collision_rect_px": [
+        242,
+        104,
+        270,
+        132
+      ],
+      "collision_size_px": [
+        28,
+        28
+      ]
+    },
+    {
+      "building": "exchanger",
+      "x": 19,
+      "y": 2,
+      "width": 2,
+      "height": 2,
+      "anchor": [
+        19,
+        3
+      ],
+      "item": "绿色晶能",
+      "rate": "6",
+      "node": 12,
+      "direction": "上",
+      "facing": 3,
+      "recipe": 101,
+      "collision_rect_px": [
+        301,
+        28,
+        339,
+        63
+      ],
+      "collision_size_px": [
+        38,
+        35
+      ]
+    },
+    {
+      "building": "maker",
+      "x": 12,
+      "y": 11,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        12,
+        11
+      ],
+      "item": "线",
+      "rate": "6",
+      "node": 13,
+      "direction": "右",
+      "facing": 2,
+      "recipe": 51,
+      "collision_rect_px": [
+        194,
+        168,
+        222,
+        196
+      ],
+      "collision_size_px": [
+        28,
+        28
+      ]
+    },
+    {
+      "building": "maker",
+      "x": 12,
+      "y": 13,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        12,
+        13
+      ],
+      "item": "线",
+      "rate": "10",
+      "node": 14,
+      "direction": "右",
+      "facing": 2,
+      "recipe": 51,
+      "collision_rect_px": [
+        194,
+        200,
+        222,
+        228
+      ],
+      "collision_size_px": [
+        28,
+        28
+      ]
+    },
+    {
+      "building": "maker",
+      "x": 12,
+      "y": 16,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        12,
+        16
+      ],
+      "item": "线",
+      "rate": "10",
+      "node": 15,
+      "direction": "右",
+      "facing": 2,
+      "recipe": 51,
+      "collision_rect_px": [
+        194,
+        248,
+        222,
+        276
+      ],
+      "collision_size_px": [
+        28,
+        28
+      ]
+    },
+    {
+      "building": "maker",
+      "x": 12,
+      "y": 18,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        12,
+        18
+      ],
+      "item": "线",
+      "rate": "10",
+      "node": 16,
+      "direction": "右",
+      "facing": 2,
+      "recipe": 51,
+      "collision_rect_px": [
+        194,
+        280,
+        222,
+        308
+      ],
+      "collision_size_px": [
+        28,
+        28
+      ]
+    },
+    {
+      "building": "maker",
+      "x": 15,
+      "y": 12,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        15,
+        12
+      ],
+      "item": "布",
+      "rate": "8",
+      "node": 17,
+      "direction": "右",
+      "facing": 2,
+      "recipe": 52,
+      "collision_rect_px": [
+        242,
+        184,
+        270,
+        212
+      ],
+      "collision_size_px": [
+        28,
+        28
+      ]
+    },
+    {
+      "building": "maker",
+      "x": 15,
+      "y": 17,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        15,
+        17
+      ],
+      "item": "布",
+      "rate": "10",
+      "node": 18,
+      "direction": "右",
+      "facing": 2,
+      "recipe": 52,
+      "collision_rect_px": [
+        242,
+        264,
+        270,
+        292
+      ],
+      "collision_size_px": [
+        28,
+        28
+      ]
+    },
+    {
+      "building": "exchanger",
+      "x": 19,
+      "y": 13,
+      "width": 2,
+      "height": 2,
+      "anchor": [
+        19,
+        14
+      ],
+      "item": "绿色晶能",
+      "rate": "6",
+      "node": 19,
+      "direction": "上",
+      "facing": 3,
+      "recipe": 101,
+      "collision_rect_px": [
+        301,
+        204,
+        339,
+        239
+      ],
+      "collision_size_px": [
+        38,
+        35
+      ]
+    },
+    {
+      "building": "inlet",
+      "x": 35,
+      "y": 9,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        35,
+        9
+      ],
+      "item": "原木",
+      "rate": "32",
+      "node": 20,
+      "direction": "左",
+      "facing": 1,
+      "recipe": null,
+      "collision_rect_px": [
+        562,
+        140,
+        590,
+        164
+      ],
+      "collision_size_px": [
+        28,
+        24
+      ]
+    },
+    {
+      "building": "maker",
+      "x": 32,
+      "y": 4,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        32,
+        4
+      ],
+      "item": "木材",
+      "rate": "16",
+      "node": 21,
+      "direction": "左",
+      "facing": 1,
+      "recipe": 1,
+      "collision_rect_px": [
+        514,
+        56,
+        542,
+        84
+      ],
+      "collision_size_px": [
+        28,
+        28
+      ]
+    },
+    {
+      "building": "maker",
+      "x": 29,
+      "y": 4,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        29,
+        4
+      ],
+      "item": "木棒",
+      "rate": "24",
+      "node": 22,
+      "direction": "左",
+      "facing": 1,
+      "recipe": 6,
+      "collision_rect_px": [
+        466,
+        56,
+        494,
+        84
+      ],
+      "collision_size_px": [
+        28,
+        28
+      ]
+    },
+    {
+      "building": "assembler",
+      "x": 23,
+      "y": 1,
+      "width": 3,
+      "height": 2,
+      "anchor": [
+        24,
+        2
+      ],
+      "item": "初级工具",
+      "rate": "6",
+      "node": 23,
+      "direction": "左",
+      "facing": 1,
+      "recipe": 60,
+      "collision_rect_px": [
+        370,
+        12,
+        414,
+        52
+      ],
+      "collision_size_px": [
+        44,
+        40
+      ]
+    },
+    {
+      "building": "assembler",
+      "x": 23,
+      "y": 6,
+      "width": 3,
+      "height": 2,
+      "anchor": [
+        24,
+        7
+      ],
+      "item": "初级工具",
+      "rate": "6",
+      "node": 24,
+      "direction": "左",
+      "facing": 1,
+      "recipe": 60,
+      "collision_rect_px": [
+        370,
+        92,
+        414,
+        132
+      ],
+      "collision_size_px": [
+        44,
+        40
+      ]
+    },
+    {
+      "building": "maker",
+      "x": 32,
+      "y": 15,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        32,
+        15
+      ],
+      "item": "木材",
+      "rate": "16",
+      "node": 25,
+      "direction": "左",
+      "facing": 1,
+      "recipe": 1,
+      "collision_rect_px": [
+        514,
+        232,
+        542,
+        260
+      ],
+      "collision_size_px": [
+        28,
+        28
+      ]
+    },
+    {
+      "building": "maker",
+      "x": 29,
+      "y": 15,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        29,
+        15
+      ],
+      "item": "木棒",
+      "rate": "24",
+      "node": 26,
+      "direction": "左",
+      "facing": 1,
+      "recipe": 6,
+      "collision_rect_px": [
+        466,
+        232,
+        494,
+        260
+      ],
+      "collision_size_px": [
+        28,
+        28
+      ]
+    },
+    {
+      "building": "assembler",
+      "x": 23,
+      "y": 12,
+      "width": 3,
+      "height": 2,
+      "anchor": [
+        24,
+        13
+      ],
+      "item": "初级工具",
+      "rate": "6",
+      "node": 27,
+      "direction": "左",
+      "facing": 1,
+      "recipe": 60,
+      "collision_rect_px": [
+        370,
+        188,
+        414,
+        228
+      ],
+      "collision_size_px": [
+        44,
+        40
+      ]
+    },
+    {
+      "building": "assembler",
+      "x": 23,
+      "y": 17,
+      "width": 3,
+      "height": 2,
+      "anchor": [
+        24,
+        18
+      ],
+      "item": "初级工具",
+      "rate": "6",
+      "node": 28,
+      "direction": "左",
+      "facing": 1,
+      "recipe": 60,
+      "collision_rect_px": [
+        370,
+        268,
+        414,
+        308
+      ],
+      "collision_size_px": [
+        44,
+        40
+      ]
+    },
+    {
+      "building": "inlet",
+      "x": 29,
+      "y": 11,
+      "width": 1,
+      "height": 2,
+      "anchor": [
+        29,
+        12
+      ],
+      "item": "石头",
+      "rate": "24",
+      "node": 29,
+      "direction": "上",
+      "facing": 3,
+      "recipe": null,
+      "collision_rect_px": [
+        458,
+        183,
+        486,
+        207
+      ],
+      "collision_size_px": [
+        28,
+        24
+      ]
+    },
+    {
+      "building": "maker",
+      "x": 29,
+      "y": 8,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        29,
+        8
+      ],
+      "item": "石材",
+      "rate": "12",
+      "node": 30,
+      "direction": "左",
+      "facing": 1,
+      "recipe": 9,
+      "collision_rect_px": [
+        466,
+        120,
+        494,
+        148
+      ],
+      "collision_size_px": [
+        28,
+        28
+      ]
+    },
+    {
+      "building": "maker",
+      "x": 30,
+      "y": 10,
+      "width": 2,
+      "height": 1,
+      "anchor": [
+        30,
+        10
+      ],
+      "item": "石材",
+      "rate": "12",
+      "node": 31,
+      "direction": "右",
+      "facing": 2,
+      "recipe": 9,
+      "collision_rect_px": [
+        482,
+        152,
+        510,
+        180
+      ],
+      "collision_size_px": [
+        28,
+        28
+      ]
+    }
+  ],
+  "optimization": {
+    "production": {
+      "status": 0,
+      "mip_gap": 0.0,
+      "minimum_power_kw": 200.0,
+      "units": {
+        "绿色晶能": 2,
+        "布": 4,
+        "初级工具": 4,
+        "线": 8,
+        "木棒": 2,
+        "木纤维": 5,
+        "木材": 2,
+        "石材": 2,
+        "原木": 1,
+        "石头": 1
+      },
+      "rates": {
+        "绿色晶能": "12",
+        "布": "36",
+        "初级工具": "24",
+        "线": "72",
+        "木棒": "48",
+        "木纤维": "144",
+        "木材": "32",
+        "石材": "24",
+        "原木": "128",
+        "石头": "24"
+      }
+    },
+    "logistics": {}
+  },
+  "transport": [
+    {
+      "position": [
+        3,
+        3
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          3,
+          4
+        ]
+      ],
+      "outgoing": [
+        [
+          4,
+          3
+        ]
+      ]
+    },
+    {
+      "position": [
+        3,
+        4
+      ],
+      "kind": "split",
+      "incoming": [
+        [
+          3,
+          5
+        ]
+      ],
+      "outgoing": [
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          3
+        ]
+      ]
+    },
+    {
+      "position": [
+        3,
+        5
+      ],
+      "kind": "tunnel1",
+      "incoming": [
+        [
+          3,
+          8
+        ]
+      ],
+      "outgoing": [
+        [
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "position": [
+        3,
+        8
+      ],
+      "kind": "tunnel1",
+      "incoming": [
+        [
+          3,
+          9
+        ]
+      ],
+      "outgoing": [
+        [
+          3,
+          5
+        ]
+      ]
+    },
+    {
+      "position": [
+        3,
+        9
+      ],
+      "kind": "split",
+      "incoming": [
+        [
+          2,
+          9
+        ]
+      ],
+      "outgoing": [
+        [
+          3,
+          10
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          3,
+          8
+        ]
+      ]
+    },
+    {
+      "position": [
+        3,
+        10
+      ],
+      "kind": "tunnel1",
+      "incoming": [
+        [
+          3,
+          9
+        ]
+      ],
+      "outgoing": [
+        [
+          3,
+          14
+        ]
+      ]
+    },
+    {
+      "position": [
+        3,
+        14
+      ],
+      "kind": "tunnel1",
+      "incoming": [
+        [
+          3,
+          10
+        ]
+      ],
+      "outgoing": [
+        [
+          3,
+          15
+        ]
+      ]
+    },
+    {
+      "position": [
+        3,
+        15
+      ],
+      "kind": "split",
+      "incoming": [
+        [
+          3,
+          14
+        ]
+      ],
+      "outgoing": [
+        [
+          4,
+          15
+        ],
+        [
+          3,
+          16
+        ]
+      ]
+    },
+    {
+      "position": [
+        3,
+        16
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          3,
+          15
+        ]
+      ],
+      "outgoing": [
+        [
+          4,
+          16
+        ]
+      ]
+    },
+    {
+      "position": [
+        4,
+        3
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          3,
+          3
+        ]
+      ],
+      "outgoing": [
+        [
+          5,
+          3
+        ]
+      ]
+    },
+    {
+      "position": [
+        4,
+        4
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          3,
+          4
+        ]
+      ],
+      "outgoing": [
+        [
+          4,
+          5
+        ]
+      ]
+    },
+    {
+      "position": [
+        4,
+        5
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          4,
+          4
+        ]
+      ],
+      "outgoing": [
+        [
+          5,
+          5
+        ]
+      ]
+    },
+    {
+      "position": [
+        4,
+        9
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          3,
+          9
+        ]
+      ],
+      "outgoing": [
+        [
+          5,
+          9
+        ]
+      ]
+    },
+    {
+      "position": [
+        4,
+        13
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          4,
+          14
+        ]
+      ],
+      "outgoing": [
+        [
+          5,
+          13
+        ]
+      ]
+    },
+    {
+      "position": [
+        4,
+        14
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          4,
+          15
+        ]
+      ],
+      "outgoing": [
+        [
+          4,
+          13
+        ]
+      ]
+    },
+    {
+      "position": [
+        4,
+        15
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          3,
+          15
+        ]
+      ],
+      "outgoing": [
+        [
+          4,
+          14
+        ]
+      ]
+    },
+    {
+      "position": [
+        4,
+        16
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          3,
+          16
+        ]
+      ],
+      "outgoing": [
+        [
+          5,
+          16
+        ]
+      ]
+    },
+    {
+      "position": [
+        7,
+        3
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          6,
+          3
+        ]
+      ],
+      "outgoing": [
+        [
+          8,
+          3
+        ]
+      ]
+    },
+    {
+      "position": [
+        7,
+        4
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          7,
+          5
+        ]
+      ],
+      "outgoing": [
+        [
+          8,
+          4
+        ]
+      ]
+    },
+    {
+      "position": [
+        7,
+        5
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          6,
+          5
+        ]
+      ],
+      "outgoing": [
+        [
+          7,
+          4
+        ]
+      ]
+    },
+    {
+      "position": [
+        7,
+        9
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          6,
+          9
+        ]
+      ],
+      "outgoing": [
+        [
+          8,
+          9
+        ]
+      ]
+    },
+    {
+      "position": [
+        7,
+        13
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          6,
+          13
+        ]
+      ],
+      "outgoing": [
+        [
+          7,
+          14
+        ]
+      ]
+    },
+    {
+      "position": [
+        7,
+        14
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          7,
+          13
+        ]
+      ],
+      "outgoing": [
+        [
+          7,
+          15
+        ]
+      ]
+    },
+    {
+      "position": [
+        7,
+        15
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          7,
+          14
+        ]
+      ],
+      "outgoing": [
+        [
+          8,
+          15
+        ]
+      ]
+    },
+    {
+      "position": [
+        7,
+        16
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          6,
+          16
+        ]
+      ],
+      "outgoing": [
+        [
+          8,
+          16
+        ]
+      ]
+    },
+    {
+      "position": [
+        8,
+        3
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          7,
+          3
+        ]
+      ],
+      "outgoing": [
+        [
+          8,
+          4
+        ]
+      ]
+    },
+    {
+      "position": [
+        8,
+        4
+      ],
+      "kind": "merge",
+      "incoming": [
+        [
+          8,
+          5
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          7,
+          4
+        ]
+      ],
+      "outgoing": [
+        [
+          9,
+          4
+        ]
+      ]
+    },
+    {
+      "position": [
+        8,
+        5
+      ],
+      "kind": "tunnel1",
+      "incoming": [
+        [
+          8,
+          8
+        ]
+      ],
+      "outgoing": [
+        [
+          8,
+          4
+        ]
+      ]
+    },
+    {
+      "position": [
+        8,
+        8
+      ],
+      "kind": "tunnel1",
+      "incoming": [
+        [
+          8,
+          9
+        ]
+      ],
+      "outgoing": [
+        [
+          8,
+          5
+        ]
+      ]
+    },
+    {
+      "position": [
+        8,
+        9
+      ],
+      "kind": "split",
+      "incoming": [
+        [
+          7,
+          9
+        ]
+      ],
+      "outgoing": [
+        [
+          8,
+          10
+        ],
+        [
+          8,
+          8
+        ]
+      ]
+    },
+    {
+      "position": [
+        8,
+        10
+      ],
+      "kind": "tunnel1",
+      "incoming": [
+        [
+          8,
+          9
+        ]
+      ],
+      "outgoing": [
+        [
+          8,
+          14
+        ]
+      ]
+    },
+    {
+      "position": [
+        8,
+        14
+      ],
+      "kind": "tunnel1",
+      "incoming": [
+        [
+          8,
+          10
+        ]
+      ],
+      "outgoing": [
+        [
+          8,
+          15
+        ]
+      ]
+    },
+    {
+      "position": [
+        8,
+        15
+      ],
+      "kind": "merge",
+      "incoming": [
+        [
+          8,
+          14
+        ],
+        [
+          7,
+          15
+        ],
+        [
+          8,
+          16
+        ]
+      ],
+      "outgoing": [
+        [
+          9,
+          15
+        ]
+      ]
+    },
+    {
+      "position": [
+        8,
+        16
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          7,
+          16
+        ]
+      ],
+      "outgoing": [
+        [
+          8,
+          15
+        ]
+      ]
+    },
+    {
+      "position": [
+        9,
+        4
+      ],
+      "kind": "belt2",
+      "incoming": [
+        [
+          8,
+          4
+        ]
+      ],
+      "outgoing": [
+        [
+          10,
+          4
+        ]
+      ]
+    },
+    {
+      "position": [
+        9,
+        15
+      ],
+      "kind": "belt2",
+      "incoming": [
+        [
+          8,
+          15
+        ]
+      ],
+      "outgoing": [
+        [
+          10,
+          15
+        ]
+      ]
+    },
+    {
+      "position": [
+        10,
+        1
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          10,
+          2
+        ]
+      ],
+      "outgoing": [
+        [
+          11,
+          1
+        ]
+      ]
+    },
+    {
+      "position": [
+        10,
+        2
+      ],
+      "kind": "split",
+      "incoming": [
+        [
+          10,
+          3
+        ]
+      ],
+      "outgoing": [
+        [
+          11,
+          2
+        ],
+        [
+          10,
+          1
+        ]
+      ]
+    },
+    {
+      "position": [
+        10,
+        3
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          10,
+          4
+        ]
+      ],
+      "outgoing": [
+        [
+          10,
+          2
+        ]
+      ]
+    },
+    {
+      "position": [
+        10,
+        4
+      ],
+      "kind": "split",
+      "incoming": [
+        [
+          9,
+          4
+        ]
+      ],
+      "outgoing": [
+        [
+          10,
+          5
+        ],
+        [
+          10,
+          3
+        ]
+      ]
+    },
+    {
+      "position": [
+        10,
+        5
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          10,
+          4
+        ]
+      ],
+      "outgoing": [
+        [
+          10,
+          6
+        ]
+      ]
+    },
+    {
+      "position": [
+        10,
+        6
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          10,
+          5
+        ]
+      ],
+      "outgoing": [
+        [
+          10,
+          7
+        ]
+      ]
+    },
+    {
+      "position": [
+        10,
+        7
+      ],
+      "kind": "split",
+      "incoming": [
+        [
+          10,
+          6
+        ]
+      ],
+      "outgoing": [
+        [
+          10,
+          8
+        ],
+        [
+          11,
+          7
+        ]
+      ]
+    },
+    {
+      "position": [
+        10,
+        8
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          10,
+          7
+        ]
+      ],
+      "outgoing": [
+        [
+          11,
+          8
+        ]
+      ]
+    },
+    {
+      "position": [
+        10,
+        11
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          10,
+          12
+        ]
+      ],
+      "outgoing": [
+        [
+          11,
+          11
+        ]
+      ]
+    },
+    {
+      "position": [
+        10,
+        12
+      ],
+      "kind": "split",
+      "incoming": [
+        [
+          10,
+          13
+        ]
+      ],
+      "outgoing": [
+        [
+          11,
+          12
+        ],
+        [
+          10,
+          11
+        ]
+      ]
+    },
+    {
+      "position": [
+        10,
+        13
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          10,
+          14
+        ]
+      ],
+      "outgoing": [
+        [
+          10,
+          12
+        ]
+      ]
+    },
+    {
+      "position": [
+        10,
+        14
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          10,
+          15
+        ]
+      ],
+      "outgoing": [
+        [
+          10,
+          13
+        ]
+      ]
+    },
+    {
+      "position": [
+        10,
+        15
+      ],
+      "kind": "split",
+      "incoming": [
+        [
+          9,
+          15
+        ]
+      ],
+      "outgoing": [
+        [
+          10,
+          14
+        ],
+        [
+          10,
+          16
+        ]
+      ]
+    },
+    {
+      "position": [
+        10,
+        16
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          10,
+          15
+        ]
+      ],
+      "outgoing": [
+        [
+          10,
+          17
+        ]
+      ]
+    },
+    {
+      "position": [
+        10,
+        17
+      ],
+      "kind": "split",
+      "incoming": [
+        [
+          10,
+          16
+        ]
+      ],
+      "outgoing": [
+        [
+          10,
+          18
+        ],
+        [
+          11,
+          17
+        ]
+      ]
+    },
+    {
+      "position": [
+        10,
+        18
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          10,
+          17
+        ]
+      ],
+      "outgoing": [
+        [
+          11,
+          18
+        ]
+      ]
+    },
+    {
+      "position": [
+        11,
+        1
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          10,
+          1
+        ]
+      ],
+      "outgoing": [
+        [
+          12,
+          1
+        ]
+      ]
+    },
+    {
+      "position": [
+        11,
+        2
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          10,
+          2
+        ]
+      ],
+      "outgoing": [
+        [
+          11,
+          3
+        ]
+      ]
+    },
+    {
+      "position": [
+        11,
+        3
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          11,
+          2
+        ]
+      ],
+      "outgoing": [
+        [
+          12,
+          3
+        ]
+      ]
+    },
+    {
+      "position": [
+        11,
+        6
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          11,
+          7
+        ]
+      ],
+      "outgoing": [
+        [
+          12,
+          6
+        ]
+      ]
+    },
+    {
+      "position": [
+        11,
+        7
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          10,
+          7
+        ]
+      ],
+      "outgoing": [
+        [
+          11,
+          6
+        ]
+      ]
+    },
+    {
+      "position": [
+        11,
+        8
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          10,
+          8
+        ]
+      ],
+      "outgoing": [
+        [
+          12,
+          8
+        ]
+      ]
+    },
+    {
+      "position": [
+        11,
+        11
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          10,
+          11
+        ]
+      ],
+      "outgoing": [
+        [
+          12,
+          11
+        ]
+      ]
+    },
+    {
+      "position": [
+        11,
+        12
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          10,
+          12
+        ]
+      ],
+      "outgoing": [
+        [
+          11,
+          13
+        ]
+      ]
+    },
+    {
+      "position": [
+        11,
+        13
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          11,
+          12
+        ]
+      ],
+      "outgoing": [
+        [
+          12,
+          13
+        ]
+      ]
+    },
+    {
+      "position": [
+        11,
+        16
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          11,
+          17
+        ]
+      ],
+      "outgoing": [
+        [
+          12,
+          16
+        ]
+      ]
+    },
+    {
+      "position": [
+        11,
+        17
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          10,
+          17
+        ]
+      ],
+      "outgoing": [
+        [
+          11,
+          16
+        ]
+      ]
+    },
+    {
+      "position": [
+        11,
+        18
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          10,
+          18
+        ]
+      ],
+      "outgoing": [
+        [
+          12,
+          18
+        ]
+      ]
+    },
+    {
+      "position": [
+        14,
+        1
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          13,
+          1
+        ]
+      ],
+      "outgoing": [
+        [
+          14,
+          2
+        ]
+      ]
+    },
+    {
+      "position": [
+        14,
+        2
+      ],
+      "kind": "merge",
+      "incoming": [
+        [
+          14,
+          1
+        ],
+        [
+          14,
+          3
+        ]
+      ],
+      "outgoing": [
+        [
+          15,
+          2
+        ]
+      ]
+    },
+    {
+      "position": [
+        14,
+        3
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          13,
+          3
+        ]
+      ],
+      "outgoing": [
+        [
+          14,
+          2
+        ]
+      ]
+    },
+    {
+      "position": [
+        14,
+        6
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          13,
+          6
+        ]
+      ],
+      "outgoing": [
+        [
+          14,
+          7
+        ]
+      ]
+    },
+    {
+      "position": [
+        14,
+        7
+      ],
+      "kind": "merge",
+      "incoming": [
+        [
+          14,
+          6
+        ],
+        [
+          14,
+          8
+        ]
+      ],
+      "outgoing": [
+        [
+          15,
+          7
+        ]
+      ]
+    },
+    {
+      "position": [
+        14,
+        8
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          13,
+          8
+        ]
+      ],
+      "outgoing": [
+        [
+          14,
+          7
+        ]
+      ]
+    },
+    {
+      "position": [
+        14,
+        11
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          13,
+          11
+        ]
+      ],
+      "outgoing": [
+        [
+          14,
+          12
+        ]
+      ]
+    },
+    {
+      "position": [
+        14,
+        12
+      ],
+      "kind": "merge",
+      "incoming": [
+        [
+          14,
+          11
+        ],
+        [
+          14,
+          13
+        ]
+      ],
+      "outgoing": [
+        [
+          15,
+          12
+        ]
+      ]
+    },
+    {
+      "position": [
+        14,
+        13
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          13,
+          13
+        ]
+      ],
+      "outgoing": [
+        [
+          14,
+          12
+        ]
+      ]
+    },
+    {
+      "position": [
+        14,
+        16
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          13,
+          16
+        ]
+      ],
+      "outgoing": [
+        [
+          14,
+          17
+        ]
+      ]
+    },
+    {
+      "position": [
+        14,
+        17
+      ],
+      "kind": "merge",
+      "incoming": [
+        [
+          14,
+          16
+        ],
+        [
+          14,
+          18
+        ]
+      ],
+      "outgoing": [
+        [
+          15,
+          17
+        ]
+      ]
+    },
+    {
+      "position": [
+        14,
+        18
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          13,
+          18
+        ]
+      ],
+      "outgoing": [
+        [
+          14,
+          17
+        ]
+      ]
+    },
+    {
+      "position": [
+        17,
+        2
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          16,
+          2
+        ]
+      ],
+      "outgoing": [
+        [
+          17,
+          3
+        ]
+      ]
+    },
+    {
+      "position": [
+        17,
+        3
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          17,
+          2
+        ]
+      ],
+      "outgoing": [
+        [
+          17,
+          4
+        ]
+      ]
+    },
+    {
+      "position": [
+        17,
+        4
+      ],
+      "kind": "merge",
+      "incoming": [
+        [
+          17,
+          3
+        ],
+        [
+          17,
+          5
+        ]
+      ],
+      "outgoing": [
+        [
+          18,
+          4
+        ]
+      ]
+    },
+    {
+      "position": [
+        17,
+        5
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          17,
+          6
+        ]
+      ],
+      "outgoing": [
+        [
+          17,
+          4
+        ]
+      ]
+    },
+    {
+      "position": [
+        17,
+        6
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          17,
+          7
+        ]
+      ],
+      "outgoing": [
+        [
+          17,
+          5
+        ]
+      ]
+    },
+    {
+      "position": [
+        17,
+        7
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          16,
+          7
+        ]
+      ],
+      "outgoing": [
+        [
+          17,
+          6
+        ]
+      ]
+    },
+    {
+      "position": [
+        17,
+        12
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          16,
+          12
+        ]
+      ],
+      "outgoing": [
+        [
+          17,
+          13
+        ]
+      ]
+    },
+    {
+      "position": [
+        17,
+        13
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          17,
+          12
+        ]
+      ],
+      "outgoing": [
+        [
+          17,
+          14
+        ]
+      ]
+    },
+    {
+      "position": [
+        17,
+        14
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          17,
+          13
+        ]
+      ],
+      "outgoing": [
+        [
+          17,
+          15
+        ]
+      ]
+    },
+    {
+      "position": [
+        17,
+        15
+      ],
+      "kind": "merge",
+      "incoming": [
+        [
+          17,
+          14
+        ],
+        [
+          17,
+          16
+        ]
+      ],
+      "outgoing": [
+        [
+          18,
+          15
+        ]
+      ]
+    },
+    {
+      "position": [
+        17,
+        16
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          17,
+          17
+        ]
+      ],
+      "outgoing": [
+        [
+          17,
+          15
+        ]
+      ]
+    },
+    {
+      "position": [
+        17,
+        17
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          16,
+          17
+        ]
+      ],
+      "outgoing": [
+        [
+          17,
+          16
+        ]
+      ]
+    },
+    {
+      "position": [
+        18,
+        4
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          17,
+          4
+        ]
+      ],
+      "outgoing": [
+        [
+          19,
+          4
+        ]
+      ]
+    },
+    {
+      "position": [
+        18,
+        15
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          17,
+          15
+        ]
+      ],
+      "outgoing": [
+        [
+          19,
+          15
+        ]
+      ]
+    },
+    {
+      "position": [
+        19,
+        4
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          18,
+          4
+        ]
+      ],
+      "outgoing": [
+        [
+          19,
+          3
+        ]
+      ]
+    },
+    {
+      "position": [
+        19,
+        15
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          18,
+          15
+        ]
+      ],
+      "outgoing": [
+        [
+          19,
+          14
+        ]
+      ]
+    },
+    {
+      "position": [
+        20,
+        4
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          21,
+          4
+        ]
+      ],
+      "outgoing": [
+        [
+          20,
+          3
+        ]
+      ]
+    },
+    {
+      "position": [
+        20,
+        15
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          21,
+          15
+        ]
+      ],
+      "outgoing": [
+        [
+          20,
+          14
+        ]
+      ]
+    },
+    {
+      "position": [
+        21,
+        4
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          22,
+          4
+        ]
+      ],
+      "outgoing": [
+        [
+          20,
+          4
+        ]
+      ]
+    },
+    {
+      "position": [
+        21,
+        15
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          22,
+          15
+        ]
+      ],
+      "outgoing": [
+        [
+          20,
+          15
+        ]
+      ]
+    },
+    {
+      "position": [
+        22,
+        2
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          23,
+          2
+        ]
+      ],
+      "outgoing": [
+        [
+          22,
+          3
+        ]
+      ]
+    },
+    {
+      "position": [
+        22,
+        3
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          22,
+          2
+        ]
+      ],
+      "outgoing": [
+        [
+          22,
+          4
+        ]
+      ]
+    },
+    {
+      "position": [
+        22,
+        4
+      ],
+      "kind": "merge",
+      "incoming": [
+        [
+          22,
+          3
+        ],
+        [
+          22,
+          5
+        ]
+      ],
+      "outgoing": [
+        [
+          21,
+          4
+        ]
+      ]
+    },
+    {
+      "position": [
+        22,
+        5
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          22,
+          6
+        ]
+      ],
+      "outgoing": [
+        [
+          22,
+          4
+        ]
+      ]
+    },
+    {
+      "position": [
+        22,
+        6
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          22,
+          7
+        ]
+      ],
+      "outgoing": [
+        [
+          22,
+          5
+        ]
+      ]
+    },
+    {
+      "position": [
+        22,
+        7
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          23,
+          7
+        ]
+      ],
+      "outgoing": [
+        [
+          22,
+          6
+        ]
+      ]
+    },
+    {
+      "position": [
+        22,
+        13
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          23,
+          13
+        ]
+      ],
+      "outgoing": [
+        [
+          22,
+          14
+        ]
+      ]
+    },
+    {
+      "position": [
+        22,
+        14
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          22,
+          13
+        ]
+      ],
+      "outgoing": [
+        [
+          22,
+          15
+        ]
+      ]
+    },
+    {
+      "position": [
+        22,
+        15
+      ],
+      "kind": "merge",
+      "incoming": [
+        [
+          22,
+          14
+        ],
+        [
+          22,
+          16
+        ]
+      ],
+      "outgoing": [
+        [
+          21,
+          15
+        ]
+      ]
+    },
+    {
+      "position": [
+        22,
+        16
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          22,
+          17
+        ]
+      ],
+      "outgoing": [
+        [
+          22,
+          15
+        ]
+      ]
+    },
+    {
+      "position": [
+        22,
+        17
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          22,
+          18
+        ]
+      ],
+      "outgoing": [
+        [
+          22,
+          16
+        ]
+      ]
+    },
+    {
+      "position": [
+        22,
+        18
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          23,
+          18
+        ]
+      ],
+      "outgoing": [
+        [
+          22,
+          17
+        ]
+      ]
+    },
+    {
+      "position": [
+        26,
+        1
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          27,
+          1
+        ]
+      ],
+      "outgoing": [
+        [
+          25,
+          1
+        ]
+      ]
+    },
+    {
+      "position": [
+        26,
+        2
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          26,
+          3
+        ]
+      ],
+      "outgoing": [
+        [
+          25,
+          2
+        ]
+      ]
+    },
+    {
+      "position": [
+        26,
+        3
+      ],
+      "kind": "tunnel1",
+      "incoming": [
+        [
+          26,
+          8
+        ]
+      ],
+      "outgoing": [
+        [
+          26,
+          2
+        ]
+      ]
+    },
+    {
+      "position": [
+        26,
+        6
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          27,
+          6
+        ]
+      ],
+      "outgoing": [
+        [
+          25,
+          6
+        ]
+      ]
+    },
+    {
+      "position": [
+        26,
+        7
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          27,
+          7
+        ]
+      ],
+      "outgoing": [
+        [
+          25,
+          7
+        ]
+      ]
+    },
+    {
+      "position": [
+        26,
+        8
+      ],
+      "kind": "tunnel1",
+      "incoming": [
+        [
+          26,
+          9
+        ]
+      ],
+      "outgoing": [
+        [
+          26,
+          3
+        ]
+      ]
+    },
+    {
+      "position": [
+        26,
+        9
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          27,
+          9
+        ]
+      ],
+      "outgoing": [
+        [
+          26,
+          8
+        ]
+      ]
+    },
+    {
+      "position": [
+        26,
+        12
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          27,
+          12
+        ]
+      ],
+      "outgoing": [
+        [
+          25,
+          12
+        ]
+      ]
+    },
+    {
+      "position": [
+        26,
+        13
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          26,
+          14
+        ]
+      ],
+      "outgoing": [
+        [
+          25,
+          13
+        ]
+      ]
+    },
+    {
+      "position": [
+        26,
+        14
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          26,
+          15
+        ]
+      ],
+      "outgoing": [
+        [
+          26,
+          13
+        ]
+      ]
+    },
+    {
+      "position": [
+        26,
+        15
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          26,
+          16
+        ]
+      ],
+      "outgoing": [
+        [
+          26,
+          14
+        ]
+      ]
+    },
+    {
+      "position": [
+        26,
+        16
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          27,
+          16
+        ]
+      ],
+      "outgoing": [
+        [
+          26,
+          15
+        ]
+      ]
+    },
+    {
+      "position": [
+        26,
+        17
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          27,
+          17
+        ]
+      ],
+      "outgoing": [
+        [
+          25,
+          17
+        ]
+      ]
+    },
+    {
+      "position": [
+        26,
+        18
+      ],
+      "kind": "tunnel1",
+      "incoming": [
+        [
+          30,
+          18
+        ]
+      ],
+      "outgoing": [
+        [
+          25,
+          18
+        ]
+      ]
+    },
+    {
+      "position": [
+        27,
+        1
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          27,
+          2
+        ]
+      ],
+      "outgoing": [
+        [
+          26,
+          1
+        ]
+      ]
+    },
+    {
+      "position": [
+        27,
+        2
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          27,
+          3
+        ]
+      ],
+      "outgoing": [
+        [
+          27,
+          1
+        ]
+      ]
+    },
+    {
+      "position": [
+        27,
+        3
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          27,
+          4
+        ]
+      ],
+      "outgoing": [
+        [
+          27,
+          2
+        ]
+      ]
+    },
+    {
+      "position": [
+        27,
+        4
+      ],
+      "kind": "split",
+      "incoming": [
+        [
+          28,
+          4
+        ]
+      ],
+      "outgoing": [
+        [
+          27,
+          5
+        ],
+        [
+          27,
+          3
+        ]
+      ]
+    },
+    {
+      "position": [
+        27,
+        5
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          27,
+          4
+        ]
+      ],
+      "outgoing": [
+        [
+          27,
+          6
+        ]
+      ]
+    },
+    {
+      "position": [
+        27,
+        6
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          27,
+          5
+        ]
+      ],
+      "outgoing": [
+        [
+          26,
+          6
+        ]
+      ]
+    },
+    {
+      "position": [
+        27,
+        7
+      ],
+      "kind": "split",
+      "incoming": [
+        [
+          28,
+          7
+        ]
+      ],
+      "outgoing": [
+        [
+          27,
+          8
+        ],
+        [
+          26,
+          7
+        ]
+      ]
+    },
+    {
+      "position": [
+        27,
+        8
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          27,
+          7
+        ]
+      ],
+      "outgoing": [
+        [
+          27,
+          9
+        ]
+      ]
+    },
+    {
+      "position": [
+        27,
+        9
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          27,
+          8
+        ]
+      ],
+      "outgoing": [
+        [
+          26,
+          9
+        ]
+      ]
+    },
+    {
+      "position": [
+        27,
+        12
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          27,
+          13
+        ]
+      ],
+      "outgoing": [
+        [
+          26,
+          12
+        ]
+      ]
+    },
+    {
+      "position": [
+        27,
+        13
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          27,
+          14
+        ]
+      ],
+      "outgoing": [
+        [
+          27,
+          12
+        ]
+      ]
+    },
+    {
+      "position": [
+        27,
+        14
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          28,
+          14
+        ]
+      ],
+      "outgoing": [
+        [
+          27,
+          13
+        ]
+      ]
+    },
+    {
+      "position": [
+        27,
+        16
+      ],
+      "kind": "tunnel1",
+      "incoming": [
+        [
+          30,
+          16
+        ]
+      ],
+      "outgoing": [
+        [
+          26,
+          16
+        ]
+      ]
+    },
+    {
+      "position": [
+        27,
+        17
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          28,
+          17
+        ]
+      ],
+      "outgoing": [
+        [
+          26,
+          17
+        ]
+      ]
+    },
+    {
+      "position": [
+        28,
+        4
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          29,
+          4
+        ]
+      ],
+      "outgoing": [
+        [
+          27,
+          4
+        ]
+      ]
+    },
+    {
+      "position": [
+        28,
+        7
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          28,
+          8
+        ]
+      ],
+      "outgoing": [
+        [
+          27,
+          7
+        ]
+      ]
+    },
+    {
+      "position": [
+        28,
+        8
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          29,
+          8
+        ]
+      ],
+      "outgoing": [
+        [
+          28,
+          7
+        ]
+      ]
+    },
+    {
+      "position": [
+        28,
+        14
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          28,
+          15
+        ]
+      ],
+      "outgoing": [
+        [
+          27,
+          14
+        ]
+      ]
+    },
+    {
+      "position": [
+        28,
+        15
+      ],
+      "kind": "split",
+      "incoming": [
+        [
+          29,
+          15
+        ]
+      ],
+      "outgoing": [
+        [
+          28,
+          16
+        ],
+        [
+          28,
+          14
+        ]
+      ]
+    },
+    {
+      "position": [
+        28,
+        16
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          28,
+          15
+        ]
+      ],
+      "outgoing": [
+        [
+          28,
+          17
+        ]
+      ]
+    },
+    {
+      "position": [
+        28,
+        17
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          28,
+          16
+        ]
+      ],
+      "outgoing": [
+        [
+          27,
+          17
+        ]
+      ]
+    },
+    {
+      "position": [
+        29,
+        1
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          29,
+          2
+        ]
+      ],
+      "outgoing": [
+        [
+          30,
+          1
+        ]
+      ]
+    },
+    {
+      "position": [
+        29,
+        2
+      ],
+      "kind": "tunnel3",
+      "incoming": [
+        [
+          29,
+          9
+        ]
+      ],
+      "outgoing": [
+        [
+          29,
+          1
+        ]
+      ]
+    },
+    {
+      "position": [
+        29,
+        9
+      ],
+      "kind": "tunnel3",
+      "incoming": [
+        [
+          29,
+          10
+        ]
+      ],
+      "outgoing": [
+        [
+          29,
+          2
+        ]
+      ]
+    },
+    {
+      "position": [
+        29,
+        10
+      ],
+      "kind": "split",
+      "incoming": [
+        [
+          29,
+          11
+        ]
+      ],
+      "outgoing": [
+        [
+          30,
+          10
+        ],
+        [
+          29,
+          9
+        ]
+      ]
+    },
+    {
+      "position": [
+        30,
+        1
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          29,
+          1
+        ]
+      ],
+      "outgoing": [
+        [
+          31,
+          1
+        ]
+      ]
+    },
+    {
+      "position": [
+        30,
+        16
+      ],
+      "kind": "tunnel1",
+      "incoming": [
+        [
+          31,
+          16
+        ]
+      ],
+      "outgoing": [
+        [
+          27,
+          16
+        ]
+      ]
+    },
+    {
+      "position": [
+        30,
+        18
+      ],
+      "kind": "tunnel1",
+      "incoming": [
+        [
+          31,
+          18
+        ]
+      ],
+      "outgoing": [
+        [
+          26,
+          18
+        ]
+      ]
+    },
+    {
+      "position": [
+        31,
+        1
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          30,
+          1
+        ]
+      ],
+      "outgoing": [
+        [
+          31,
+          2
+        ]
+      ]
+    },
+    {
+      "position": [
+        31,
+        2
+      ],
+      "kind": "tunnel1",
+      "incoming": [
+        [
+          31,
+          1
+        ]
+      ],
+      "outgoing": [
+        [
+          31,
+          7
+        ]
+      ]
+    },
+    {
+      "position": [
+        31,
+        4
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          32,
+          4
+        ]
+      ],
+      "outgoing": [
+        [
+          30,
+          4
+        ]
+      ]
+    },
+    {
+      "position": [
+        31,
+        7
+      ],
+      "kind": "tunnel1",
+      "incoming": [
+        [
+          31,
+          2
+        ]
+      ],
+      "outgoing": [
+        [
+          31,
+          8
+        ]
+      ]
+    },
+    {
+      "position": [
+        31,
+        8
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          31,
+          7
+        ]
+      ],
+      "outgoing": [
+        [
+          30,
+          8
+        ]
+      ]
+    },
+    {
+      "position": [
+        31,
+        15
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          32,
+          15
+        ]
+      ],
+      "outgoing": [
+        [
+          30,
+          15
+        ]
+      ]
+    },
+    {
+      "position": [
+        31,
+        16
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          31,
+          17
+        ]
+      ],
+      "outgoing": [
+        [
+          30,
+          16
+        ]
+      ]
+    },
+    {
+      "position": [
+        31,
+        17
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          31,
+          18
+        ]
+      ],
+      "outgoing": [
+        [
+          31,
+          16
+        ]
+      ]
+    },
+    {
+      "position": [
+        31,
+        18
+      ],
+      "kind": "split",
+      "incoming": [
+        [
+          32,
+          18
+        ]
+      ],
+      "outgoing": [
+        [
+          30,
+          18
+        ],
+        [
+          31,
+          17
+        ]
+      ]
+    },
+    {
+      "position": [
+        32,
+        10
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          31,
+          10
+        ]
+      ],
+      "outgoing": [
+        [
+          32,
+          11
+        ]
+      ]
+    },
+    {
+      "position": [
+        32,
+        11
+      ],
+      "kind": "tunnel2",
+      "incoming": [
+        [
+          32,
+          10
+        ]
+      ],
+      "outgoing": [
+        [
+          32,
+          17
+        ]
+      ]
+    },
+    {
+      "position": [
+        32,
+        17
+      ],
+      "kind": "tunnel2",
+      "incoming": [
+        [
+          32,
+          11
+        ]
+      ],
+      "outgoing": [
+        [
+          32,
+          18
+        ]
+      ]
+    },
+    {
+      "position": [
+        32,
+        18
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          32,
+          17
+        ]
+      ],
+      "outgoing": [
+        [
+          31,
+          18
+        ]
+      ]
+    },
+    {
+      "position": [
+        34,
+        4
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          34,
+          5
+        ]
+      ],
+      "outgoing": [
+        [
+          33,
+          4
+        ]
+      ]
+    },
+    {
+      "position": [
+        34,
+        5
+      ],
+      "kind": "tunnel1",
+      "incoming": [
+        [
+          34,
+          8
+        ]
+      ],
+      "outgoing": [
+        [
+          34,
+          4
+        ]
+      ]
+    },
+    {
+      "position": [
+        34,
+        8
+      ],
+      "kind": "tunnel1",
+      "incoming": [
+        [
+          34,
+          9
+        ]
+      ],
+      "outgoing": [
+        [
+          34,
+          5
+        ]
+      ]
+    },
+    {
+      "position": [
+        34,
+        9
+      ],
+      "kind": "split",
+      "incoming": [
+        [
+          35,
+          9
+        ]
+      ],
+      "outgoing": [
+        [
+          34,
+          10
+        ],
+        [
+          34,
+          8
+        ]
+      ]
+    },
+    {
+      "position": [
+        34,
+        10
+      ],
+      "kind": "tunnel1",
+      "incoming": [
+        [
+          34,
+          9
+        ]
+      ],
+      "outgoing": [
+        [
+          34,
+          14
+        ]
+      ]
+    },
+    {
+      "position": [
+        34,
+        14
+      ],
+      "kind": "tunnel1",
+      "incoming": [
+        [
+          34,
+          10
+        ]
+      ],
+      "outgoing": [
+        [
+          34,
+          15
+        ]
+      ]
+    },
+    {
+      "position": [
+        34,
+        15
+      ],
+      "kind": "belt1",
+      "incoming": [
+        [
+          34,
+          14
+        ]
+      ],
+      "outgoing": [
+        [
+          33,
+          15
+        ]
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "start": [
+        2,
+        9
+      ],
+      "end": [
+        3,
+        9
+      ],
+      "item": "原木",
+      "rate": "96",
+      "bus": 0
+    },
+    {
+      "start": [
+        3,
+        9
+      ],
+      "end": [
+        3,
+        10
+      ],
+      "item": "原木",
+      "rate": "40",
+      "bus": 0
+    },
+    {
+      "start": [
+        3,
+        10
+      ],
+      "end": [
+        3,
+        14
+      ],
+      "item": "原木",
+      "rate": "40",
+      "bus": 0
+    },
+    {
+      "start": [
+        3,
+        14
+      ],
+      "end": [
+        3,
+        15
+      ],
+      "item": "原木",
+      "rate": "40",
+      "bus": 0
+    },
+    {
+      "start": [
+        3,
+        9
+      ],
+      "end": [
+        4,
+        9
+      ],
+      "item": "原木",
+      "rate": "16",
+      "bus": 0
+    },
+    {
+      "start": [
+        4,
+        9
+      ],
+      "end": [
+        5,
+        9
+      ],
+      "item": "原木",
+      "rate": "16",
+      "bus": 0
+    },
+    {
+      "start": [
+        3,
+        9
+      ],
+      "end": [
+        3,
+        8
+      ],
+      "item": "原木",
+      "rate": "40",
+      "bus": 0
+    },
+    {
+      "start": [
+        3,
+        8
+      ],
+      "end": [
+        3,
+        5
+      ],
+      "item": "原木",
+      "rate": "40",
+      "bus": 0
+    },
+    {
+      "start": [
+        3,
+        5
+      ],
+      "end": [
+        3,
+        4
+      ],
+      "item": "原木",
+      "rate": "40",
+      "bus": 0
+    },
+    {
+      "start": [
+        3,
+        4
+      ],
+      "end": [
+        4,
+        4
+      ],
+      "item": "原木",
+      "rate": "20",
+      "bus": 0
+    },
+    {
+      "start": [
+        4,
+        4
+      ],
+      "end": [
+        4,
+        5
+      ],
+      "item": "原木",
+      "rate": "20",
+      "bus": 0
+    },
+    {
+      "start": [
+        4,
+        5
+      ],
+      "end": [
+        5,
+        5
+      ],
+      "item": "原木",
+      "rate": "20",
+      "bus": 0
+    },
+    {
+      "start": [
+        3,
+        15
+      ],
+      "end": [
+        4,
+        15
+      ],
+      "item": "原木",
+      "rate": "20",
+      "bus": 0
+    },
+    {
+      "start": [
+        4,
+        15
+      ],
+      "end": [
+        4,
+        14
+      ],
+      "item": "原木",
+      "rate": "20",
+      "bus": 0
+    },
+    {
+      "start": [
+        4,
+        14
+      ],
+      "end": [
+        4,
+        13
+      ],
+      "item": "原木",
+      "rate": "20",
+      "bus": 0
+    },
+    {
+      "start": [
+        4,
+        13
+      ],
+      "end": [
+        5,
+        13
+      ],
+      "item": "原木",
+      "rate": "20",
+      "bus": 0
+    },
+    {
+      "start": [
+        8,
+        4
+      ],
+      "end": [
+        9,
+        4
+      ],
+      "item": "木纤维",
+      "rate": "72",
+      "bus": 32
+    },
+    {
+      "start": [
+        9,
+        4
+      ],
+      "end": [
+        10,
+        4
+      ],
+      "item": "木纤维",
+      "rate": "72",
+      "bus": 32
+    },
+    {
+      "start": [
+        8,
+        15
+      ],
+      "end": [
+        9,
+        15
+      ],
+      "item": "木纤维",
+      "rate": "72",
+      "bus": 32
+    },
+    {
+      "start": [
+        9,
+        15
+      ],
+      "end": [
+        10,
+        15
+      ],
+      "item": "木纤维",
+      "rate": "72",
+      "bus": 32
+    },
+    {
+      "start": [
+        8,
+        9
+      ],
+      "end": [
+        8,
+        10
+      ],
+      "item": "木纤维",
+      "rate": "12",
+      "bus": 32
+    },
+    {
+      "start": [
+        8,
+        10
+      ],
+      "end": [
+        8,
+        14
+      ],
+      "item": "木纤维",
+      "rate": "12",
+      "bus": 32
+    },
+    {
+      "start": [
+        8,
+        14
+      ],
+      "end": [
+        8,
+        15
+      ],
+      "item": "木纤维",
+      "rate": "12",
+      "bus": 32
+    },
+    {
+      "start": [
+        8,
+        9
+      ],
+      "end": [
+        8,
+        8
+      ],
+      "item": "木纤维",
+      "rate": "12",
+      "bus": 32
+    },
+    {
+      "start": [
+        8,
+        8
+      ],
+      "end": [
+        8,
+        5
+      ],
+      "item": "木纤维",
+      "rate": "12",
+      "bus": 32
+    },
+    {
+      "start": [
+        8,
+        5
+      ],
+      "end": [
+        8,
+        4
+      ],
+      "item": "木纤维",
+      "rate": "12",
+      "bus": 32
+    },
+    {
+      "start": [
+        10,
+        4
+      ],
+      "end": [
+        10,
+        5
+      ],
+      "item": "木纤维",
+      "rate": "40",
+      "bus": 32
+    },
+    {
+      "start": [
+        10,
+        5
+      ],
+      "end": [
+        10,
+        6
+      ],
+      "item": "木纤维",
+      "rate": "40",
+      "bus": 32
+    },
+    {
+      "start": [
+        10,
+        6
+      ],
+      "end": [
+        10,
+        7
+      ],
+      "item": "木纤维",
+      "rate": "40",
+      "bus": 32
+    },
+    {
+      "start": [
+        10,
+        2
+      ],
+      "end": [
+        11,
+        2
+      ],
+      "item": "木纤维",
+      "rate": "20",
+      "bus": 32
+    },
+    {
+      "start": [
+        11,
+        2
+      ],
+      "end": [
+        11,
+        3
+      ],
+      "item": "木纤维",
+      "rate": "20",
+      "bus": 32
+    },
+    {
+      "start": [
+        11,
+        3
+      ],
+      "end": [
+        12,
+        3
+      ],
+      "item": "木纤维",
+      "rate": "20",
+      "bus": 32
+    },
+    {
+      "start": [
+        10,
+        2
+      ],
+      "end": [
+        10,
+        1
+      ],
+      "item": "木纤维",
+      "rate": "12",
+      "bus": 32
+    },
+    {
+      "start": [
+        10,
+        1
+      ],
+      "end": [
+        11,
+        1
+      ],
+      "item": "木纤维",
+      "rate": "12",
+      "bus": 32
+    },
+    {
+      "start": [
+        11,
+        1
+      ],
+      "end": [
+        12,
+        1
+      ],
+      "item": "木纤维",
+      "rate": "12",
+      "bus": 32
+    },
+    {
+      "start": [
+        10,
+        7
+      ],
+      "end": [
+        10,
+        8
+      ],
+      "item": "木纤维",
+      "rate": "20",
+      "bus": 32
+    },
+    {
+      "start": [
+        10,
+        8
+      ],
+      "end": [
+        11,
+        8
+      ],
+      "item": "木纤维",
+      "rate": "20",
+      "bus": 32
+    },
+    {
+      "start": [
+        11,
+        8
+      ],
+      "end": [
+        12,
+        8
+      ],
+      "item": "木纤维",
+      "rate": "20",
+      "bus": 32
+    },
+    {
+      "start": [
+        10,
+        7
+      ],
+      "end": [
+        11,
+        7
+      ],
+      "item": "木纤维",
+      "rate": "20",
+      "bus": 32
+    },
+    {
+      "start": [
+        11,
+        7
+      ],
+      "end": [
+        11,
+        6
+      ],
+      "item": "木纤维",
+      "rate": "20",
+      "bus": 32
+    },
+    {
+      "start": [
+        11,
+        6
+      ],
+      "end": [
+        12,
+        6
+      ],
+      "item": "木纤维",
+      "rate": "20",
+      "bus": 32
+    },
+    {
+      "start": [
+        13,
+        1
+      ],
+      "end": [
+        14,
+        1
+      ],
+      "item": "线",
+      "rate": "6",
+      "bus": 88
+    },
+    {
+      "start": [
+        14,
+        1
+      ],
+      "end": [
+        14,
+        2
+      ],
+      "item": "线",
+      "rate": "6",
+      "bus": 88
+    },
+    {
+      "start": [
+        13,
+        3
+      ],
+      "end": [
+        14,
+        3
+      ],
+      "item": "线",
+      "rate": "10",
+      "bus": 88
+    },
+    {
+      "start": [
+        14,
+        3
+      ],
+      "end": [
+        14,
+        2
+      ],
+      "item": "线",
+      "rate": "10",
+      "bus": 88
+    },
+    {
+      "start": [
+        13,
+        6
+      ],
+      "end": [
+        14,
+        6
+      ],
+      "item": "线",
+      "rate": "10",
+      "bus": 90
+    },
+    {
+      "start": [
+        14,
+        6
+      ],
+      "end": [
+        14,
+        7
+      ],
+      "item": "线",
+      "rate": "10",
+      "bus": 90
+    },
+    {
+      "start": [
+        13,
+        8
+      ],
+      "end": [
+        14,
+        8
+      ],
+      "item": "线",
+      "rate": "10",
+      "bus": 90
+    },
+    {
+      "start": [
+        14,
+        8
+      ],
+      "end": [
+        14,
+        7
+      ],
+      "item": "线",
+      "rate": "10",
+      "bus": 90
+    },
+    {
+      "start": [
+        17,
+        4
+      ],
+      "end": [
+        18,
+        4
+      ],
+      "item": "布",
+      "rate": "18",
+      "bus": 93
+    },
+    {
+      "start": [
+        18,
+        4
+      ],
+      "end": [
+        19,
+        4
+      ],
+      "item": "布",
+      "rate": "18",
+      "bus": 93
+    },
+    {
+      "start": [
+        19,
+        4
+      ],
+      "end": [
+        19,
+        3
+      ],
+      "item": "布",
+      "rate": "18",
+      "bus": 93
+    },
+    {
+      "start": [
+        10,
+        15
+      ],
+      "end": [
+        10,
+        14
+      ],
+      "item": "木纤维",
+      "rate": "32",
+      "bus": 32
+    },
+    {
+      "start": [
+        10,
+        14
+      ],
+      "end": [
+        10,
+        13
+      ],
+      "item": "木纤维",
+      "rate": "32",
+      "bus": 32
+    },
+    {
+      "start": [
+        10,
+        13
+      ],
+      "end": [
+        10,
+        12
+      ],
+      "item": "木纤维",
+      "rate": "32",
+      "bus": 32
+    },
+    {
+      "start": [
+        10,
+        12
+      ],
+      "end": [
+        11,
+        12
+      ],
+      "item": "木纤维",
+      "rate": "20",
+      "bus": 32
+    },
+    {
+      "start": [
+        11,
+        12
+      ],
+      "end": [
+        11,
+        13
+      ],
+      "item": "木纤维",
+      "rate": "20",
+      "bus": 32
+    },
+    {
+      "start": [
+        11,
+        13
+      ],
+      "end": [
+        12,
+        13
+      ],
+      "item": "木纤维",
+      "rate": "20",
+      "bus": 32
+    },
+    {
+      "start": [
+        10,
+        12
+      ],
+      "end": [
+        10,
+        11
+      ],
+      "item": "木纤维",
+      "rate": "12",
+      "bus": 32
+    },
+    {
+      "start": [
+        10,
+        11
+      ],
+      "end": [
+        11,
+        11
+      ],
+      "item": "木纤维",
+      "rate": "12",
+      "bus": 32
+    },
+    {
+      "start": [
+        11,
+        11
+      ],
+      "end": [
+        12,
+        11
+      ],
+      "item": "木纤维",
+      "rate": "12",
+      "bus": 32
+    },
+    {
+      "start": [
+        10,
+        17
+      ],
+      "end": [
+        10,
+        18
+      ],
+      "item": "木纤维",
+      "rate": "20",
+      "bus": 32
+    },
+    {
+      "start": [
+        10,
+        18
+      ],
+      "end": [
+        11,
+        18
+      ],
+      "item": "木纤维",
+      "rate": "20",
+      "bus": 32
+    },
+    {
+      "start": [
+        11,
+        18
+      ],
+      "end": [
+        12,
+        18
+      ],
+      "item": "木纤维",
+      "rate": "20",
+      "bus": 32
+    },
+    {
+      "start": [
+        10,
+        17
+      ],
+      "end": [
+        11,
+        17
+      ],
+      "item": "木纤维",
+      "rate": "20",
+      "bus": 32
+    },
+    {
+      "start": [
+        11,
+        17
+      ],
+      "end": [
+        11,
+        16
+      ],
+      "item": "木纤维",
+      "rate": "20",
+      "bus": 32
+    },
+    {
+      "start": [
+        11,
+        16
+      ],
+      "end": [
+        12,
+        16
+      ],
+      "item": "木纤维",
+      "rate": "20",
+      "bus": 32
+    },
+    {
+      "start": [
+        13,
+        11
+      ],
+      "end": [
+        14,
+        11
+      ],
+      "item": "线",
+      "rate": "6",
+      "bus": 132
+    },
+    {
+      "start": [
+        14,
+        11
+      ],
+      "end": [
+        14,
+        12
+      ],
+      "item": "线",
+      "rate": "6",
+      "bus": 132
+    },
+    {
+      "start": [
+        13,
+        13
+      ],
+      "end": [
+        14,
+        13
+      ],
+      "item": "线",
+      "rate": "10",
+      "bus": 132
+    },
+    {
+      "start": [
+        14,
+        13
+      ],
+      "end": [
+        14,
+        12
+      ],
+      "item": "线",
+      "rate": "10",
+      "bus": 132
+    },
+    {
+      "start": [
+        13,
+        16
+      ],
+      "end": [
+        14,
+        16
+      ],
+      "item": "线",
+      "rate": "10",
+      "bus": 134
+    },
+    {
+      "start": [
+        14,
+        16
+      ],
+      "end": [
+        14,
+        17
+      ],
+      "item": "线",
+      "rate": "10",
+      "bus": 134
+    },
+    {
+      "start": [
+        13,
+        18
+      ],
+      "end": [
+        14,
+        18
+      ],
+      "item": "线",
+      "rate": "10",
+      "bus": 134
+    },
+    {
+      "start": [
+        14,
+        18
+      ],
+      "end": [
+        14,
+        17
+      ],
+      "item": "线",
+      "rate": "10",
+      "bus": 134
+    },
+    {
+      "start": [
+        17,
+        15
+      ],
+      "end": [
+        18,
+        15
+      ],
+      "item": "布",
+      "rate": "18",
+      "bus": 137
+    },
+    {
+      "start": [
+        18,
+        15
+      ],
+      "end": [
+        19,
+        15
+      ],
+      "item": "布",
+      "rate": "18",
+      "bus": 137
+    },
+    {
+      "start": [
+        19,
+        15
+      ],
+      "end": [
+        19,
+        14
+      ],
+      "item": "布",
+      "rate": "18",
+      "bus": 137
+    },
+    {
+      "start": [
+        35,
+        9
+      ],
+      "end": [
+        34,
+        9
+      ],
+      "item": "原木",
+      "rate": "32",
+      "bus": 157
+    },
+    {
+      "start": [
+        34,
+        9
+      ],
+      "end": [
+        34,
+        10
+      ],
+      "item": "原木",
+      "rate": "16",
+      "bus": 157
+    },
+    {
+      "start": [
+        34,
+        10
+      ],
+      "end": [
+        34,
+        14
+      ],
+      "item": "原木",
+      "rate": "16",
+      "bus": 157
+    },
+    {
+      "start": [
+        34,
+        14
+      ],
+      "end": [
+        34,
+        15
+      ],
+      "item": "原木",
+      "rate": "16",
+      "bus": 157
+    },
+    {
+      "start": [
+        34,
+        15
+      ],
+      "end": [
+        33,
+        15
+      ],
+      "item": "原木",
+      "rate": "16",
+      "bus": 157
+    },
+    {
+      "start": [
+        34,
+        9
+      ],
+      "end": [
+        34,
+        8
+      ],
+      "item": "原木",
+      "rate": "16",
+      "bus": 157
+    },
+    {
+      "start": [
+        34,
+        8
+      ],
+      "end": [
+        34,
+        5
+      ],
+      "item": "原木",
+      "rate": "16",
+      "bus": 157
+    },
+    {
+      "start": [
+        34,
+        5
+      ],
+      "end": [
+        34,
+        4
+      ],
+      "item": "原木",
+      "rate": "16",
+      "bus": 157
+    },
+    {
+      "start": [
+        34,
+        4
+      ],
+      "end": [
+        33,
+        4
+      ],
+      "item": "原木",
+      "rate": "16",
+      "bus": 157
+    },
+    {
+      "start": [
+        32,
+        4
+      ],
+      "end": [
+        31,
+        4
+      ],
+      "item": "木材",
+      "rate": "16",
+      "bus": 161
+    },
+    {
+      "start": [
+        31,
+        4
+      ],
+      "end": [
+        30,
+        4
+      ],
+      "item": "木材",
+      "rate": "16",
+      "bus": 161
+    },
+    {
+      "start": [
+        29,
+        4
+      ],
+      "end": [
+        28,
+        4
+      ],
+      "item": "木棒",
+      "rate": "24",
+      "bus": 162
+    },
+    {
+      "start": [
+        28,
+        4
+      ],
+      "end": [
+        27,
+        4
+      ],
+      "item": "木棒",
+      "rate": "24",
+      "bus": 162
+    },
+    {
+      "start": [
+        27,
+        4
+      ],
+      "end": [
+        27,
+        5
+      ],
+      "item": "木棒",
+      "rate": "12",
+      "bus": 162
+    },
+    {
+      "start": [
+        27,
+        5
+      ],
+      "end": [
+        27,
+        6
+      ],
+      "item": "木棒",
+      "rate": "12",
+      "bus": 162
+    },
+    {
+      "start": [
+        27,
+        6
+      ],
+      "end": [
+        26,
+        6
+      ],
+      "item": "木棒",
+      "rate": "12",
+      "bus": 162
+    },
+    {
+      "start": [
+        26,
+        6
+      ],
+      "end": [
+        25,
+        6
+      ],
+      "item": "木棒",
+      "rate": "12",
+      "bus": 162
+    },
+    {
+      "start": [
+        27,
+        4
+      ],
+      "end": [
+        27,
+        3
+      ],
+      "item": "木棒",
+      "rate": "12",
+      "bus": 162
+    },
+    {
+      "start": [
+        27,
+        3
+      ],
+      "end": [
+        27,
+        2
+      ],
+      "item": "木棒",
+      "rate": "12",
+      "bus": 162
+    },
+    {
+      "start": [
+        27,
+        2
+      ],
+      "end": [
+        27,
+        1
+      ],
+      "item": "木棒",
+      "rate": "12",
+      "bus": 162
+    },
+    {
+      "start": [
+        27,
+        1
+      ],
+      "end": [
+        26,
+        1
+      ],
+      "item": "木棒",
+      "rate": "12",
+      "bus": 162
+    },
+    {
+      "start": [
+        26,
+        1
+      ],
+      "end": [
+        25,
+        1
+      ],
+      "item": "木棒",
+      "rate": "12",
+      "bus": 162
+    },
+    {
+      "start": [
+        22,
+        4
+      ],
+      "end": [
+        21,
+        4
+      ],
+      "item": "初级工具",
+      "rate": "12",
+      "bus": 172
+    },
+    {
+      "start": [
+        21,
+        4
+      ],
+      "end": [
+        20,
+        4
+      ],
+      "item": "初级工具",
+      "rate": "12",
+      "bus": 172
+    },
+    {
+      "start": [
+        20,
+        4
+      ],
+      "end": [
+        20,
+        3
+      ],
+      "item": "初级工具",
+      "rate": "12",
+      "bus": 172
+    },
+    {
+      "start": [
+        32,
+        15
+      ],
+      "end": [
+        31,
+        15
+      ],
+      "item": "木材",
+      "rate": "16",
+      "bus": 193
+    },
+    {
+      "start": [
+        31,
+        15
+      ],
+      "end": [
+        30,
+        15
+      ],
+      "item": "木材",
+      "rate": "16",
+      "bus": 193
+    },
+    {
+      "start": [
+        28,
+        15
+      ],
+      "end": [
+        28,
+        16
+      ],
+      "item": "木棒",
+      "rate": "12",
+      "bus": 194
+    },
+    {
+      "start": [
+        28,
+        16
+      ],
+      "end": [
+        28,
+        17
+      ],
+      "item": "木棒",
+      "rate": "12",
+      "bus": 194
+    },
+    {
+      "start": [
+        28,
+        17
+      ],
+      "end": [
+        27,
+        17
+      ],
+      "item": "木棒",
+      "rate": "12",
+      "bus": 194
+    },
+    {
+      "start": [
+        27,
+        17
+      ],
+      "end": [
+        26,
+        17
+      ],
+      "item": "木棒",
+      "rate": "12",
+      "bus": 194
+    },
+    {
+      "start": [
+        26,
+        17
+      ],
+      "end": [
+        25,
+        17
+      ],
+      "item": "木棒",
+      "rate": "12",
+      "bus": 194
+    },
+    {
+      "start": [
+        28,
+        15
+      ],
+      "end": [
+        28,
+        14
+      ],
+      "item": "木棒",
+      "rate": "12",
+      "bus": 194
+    },
+    {
+      "start": [
+        28,
+        14
+      ],
+      "end": [
+        27,
+        14
+      ],
+      "item": "木棒",
+      "rate": "12",
+      "bus": 194
+    },
+    {
+      "start": [
+        27,
+        14
+      ],
+      "end": [
+        27,
+        13
+      ],
+      "item": "木棒",
+      "rate": "12",
+      "bus": 194
+    },
+    {
+      "start": [
+        27,
+        13
+      ],
+      "end": [
+        27,
+        12
+      ],
+      "item": "木棒",
+      "rate": "12",
+      "bus": 194
+    },
+    {
+      "start": [
+        27,
+        12
+      ],
+      "end": [
+        26,
+        12
+      ],
+      "item": "木棒",
+      "rate": "12",
+      "bus": 194
+    },
+    {
+      "start": [
+        26,
+        12
+      ],
+      "end": [
+        25,
+        12
+      ],
+      "item": "木棒",
+      "rate": "12",
+      "bus": 194
+    },
+    {
+      "start": [
+        22,
+        15
+      ],
+      "end": [
+        21,
+        15
+      ],
+      "item": "初级工具",
+      "rate": "12",
+      "bus": 205
+    },
+    {
+      "start": [
+        21,
+        15
+      ],
+      "end": [
+        20,
+        15
+      ],
+      "item": "初级工具",
+      "rate": "12",
+      "bus": 205
+    },
+    {
+      "start": [
+        20,
+        15
+      ],
+      "end": [
+        20,
+        14
+      ],
+      "item": "初级工具",
+      "rate": "12",
+      "bus": 205
+    },
+    {
+      "start": [
+        29,
+        11
+      ],
+      "end": [
+        29,
+        10
+      ],
+      "item": "石头",
+      "rate": "24",
+      "bus": 226
+    },
+    {
+      "start": [
+        29,
+        10
+      ],
+      "end": [
+        30,
+        10
+      ],
+      "item": "石头",
+      "rate": "12",
+      "bus": 226
+    },
+    {
+      "start": [
+        29,
+        10
+      ],
+      "end": [
+        29,
+        9
+      ],
+      "item": "石头",
+      "rate": "12",
+      "bus": 226
+    },
+    {
+      "start": [
+        29,
+        9
+      ],
+      "end": [
+        29,
+        2
+      ],
+      "item": "石头",
+      "rate": "12",
+      "bus": 226
+    },
+    {
+      "start": [
+        29,
+        2
+      ],
+      "end": [
+        29,
+        1
+      ],
+      "item": "石头",
+      "rate": "12",
+      "bus": 226
+    },
+    {
+      "start": [
+        29,
+        1
+      ],
+      "end": [
+        30,
+        1
+      ],
+      "item": "石头",
+      "rate": "12",
+      "bus": 226
+    },
+    {
+      "start": [
+        30,
+        1
+      ],
+      "end": [
+        31,
+        1
+      ],
+      "item": "石头",
+      "rate": "12",
+      "bus": 226
+    },
+    {
+      "start": [
+        31,
+        1
+      ],
+      "end": [
+        31,
+        2
+      ],
+      "item": "石头",
+      "rate": "12",
+      "bus": 226
+    },
+    {
+      "start": [
+        31,
+        2
+      ],
+      "end": [
+        31,
+        7
+      ],
+      "item": "石头",
+      "rate": "12",
+      "bus": 226
+    },
+    {
+      "start": [
+        31,
+        7
+      ],
+      "end": [
+        31,
+        8
+      ],
+      "item": "石头",
+      "rate": "12",
+      "bus": 226
+    },
+    {
+      "start": [
+        31,
+        8
+      ],
+      "end": [
+        30,
+        8
+      ],
+      "item": "石头",
+      "rate": "12",
+      "bus": 226
+    },
+    {
+      "start": [
+        29,
+        8
+      ],
+      "end": [
+        28,
+        8
+      ],
+      "item": "石材",
+      "rate": "12",
+      "bus": 229
+    },
+    {
+      "start": [
+        28,
+        8
+      ],
+      "end": [
+        28,
+        7
+      ],
+      "item": "石材",
+      "rate": "12",
+      "bus": 229
+    },
+    {
+      "start": [
+        28,
+        7
+      ],
+      "end": [
+        27,
+        7
+      ],
+      "item": "石材",
+      "rate": "12",
+      "bus": 229
+    },
+    {
+      "start": [
+        31,
+        10
+      ],
+      "end": [
+        32,
+        10
+      ],
+      "item": "石材",
+      "rate": "12",
+      "bus": 230
+    },
+    {
+      "start": [
+        32,
+        10
+      ],
+      "end": [
+        32,
+        11
+      ],
+      "item": "石材",
+      "rate": "12",
+      "bus": 230
+    },
+    {
+      "start": [
+        32,
+        11
+      ],
+      "end": [
+        32,
+        17
+      ],
+      "item": "石材",
+      "rate": "12",
+      "bus": 230
+    },
+    {
+      "start": [
+        32,
+        17
+      ],
+      "end": [
+        32,
+        18
+      ],
+      "item": "石材",
+      "rate": "12",
+      "bus": 230
+    },
+    {
+      "start": [
+        32,
+        18
+      ],
+      "end": [
+        31,
+        18
+      ],
+      "item": "石材",
+      "rate": "12",
+      "bus": 230
+    },
+    {
+      "start": [
+        27,
+        7
+      ],
+      "end": [
+        27,
+        8
+      ],
+      "item": "石材",
+      "rate": "6",
+      "bus": 229
+    },
+    {
+      "start": [
+        27,
+        8
+      ],
+      "end": [
+        27,
+        9
+      ],
+      "item": "石材",
+      "rate": "6",
+      "bus": 229
+    },
+    {
+      "start": [
+        27,
+        9
+      ],
+      "end": [
+        26,
+        9
+      ],
+      "item": "石材",
+      "rate": "6",
+      "bus": 229
+    },
+    {
+      "start": [
+        26,
+        9
+      ],
+      "end": [
+        26,
+        8
+      ],
+      "item": "石材",
+      "rate": "6",
+      "bus": 229
+    },
+    {
+      "start": [
+        26,
+        8
+      ],
+      "end": [
+        26,
+        3
+      ],
+      "item": "石材",
+      "rate": "6",
+      "bus": 229
+    },
+    {
+      "start": [
+        26,
+        3
+      ],
+      "end": [
+        26,
+        2
+      ],
+      "item": "石材",
+      "rate": "6",
+      "bus": 229
+    },
+    {
+      "start": [
+        26,
+        2
+      ],
+      "end": [
+        25,
+        2
+      ],
+      "item": "石材",
+      "rate": "6",
+      "bus": 229
+    },
+    {
+      "start": [
+        27,
+        7
+      ],
+      "end": [
+        26,
+        7
+      ],
+      "item": "石材",
+      "rate": "6",
+      "bus": 229
+    },
+    {
+      "start": [
+        26,
+        7
+      ],
+      "end": [
+        25,
+        7
+      ],
+      "item": "石材",
+      "rate": "6",
+      "bus": 229
+    },
+    {
+      "start": [
+        31,
+        18
+      ],
+      "end": [
+        30,
+        18
+      ],
+      "item": "石材",
+      "rate": "6",
+      "bus": 230
+    },
+    {
+      "start": [
+        30,
+        18
+      ],
+      "end": [
+        26,
+        18
+      ],
+      "item": "石材",
+      "rate": "6",
+      "bus": 230
+    },
+    {
+      "start": [
+        26,
+        18
+      ],
+      "end": [
+        25,
+        18
+      ],
+      "item": "石材",
+      "rate": "6",
+      "bus": 230
+    },
+    {
+      "start": [
+        31,
+        18
+      ],
+      "end": [
+        31,
+        17
+      ],
+      "item": "石材",
+      "rate": "6",
+      "bus": 230
+    },
+    {
+      "start": [
+        31,
+        17
+      ],
+      "end": [
+        31,
+        16
+      ],
+      "item": "石材",
+      "rate": "6",
+      "bus": 230
+    },
+    {
+      "start": [
+        31,
+        16
+      ],
+      "end": [
+        30,
+        16
+      ],
+      "item": "石材",
+      "rate": "6",
+      "bus": 230
+    },
+    {
+      "start": [
+        30,
+        16
+      ],
+      "end": [
+        27,
+        16
+      ],
+      "item": "石材",
+      "rate": "6",
+      "bus": 230
+    },
+    {
+      "start": [
+        27,
+        16
+      ],
+      "end": [
+        26,
+        16
+      ],
+      "item": "石材",
+      "rate": "6",
+      "bus": 230
+    },
+    {
+      "start": [
+        26,
+        16
+      ],
+      "end": [
+        26,
+        15
+      ],
+      "item": "石材",
+      "rate": "6",
+      "bus": 230
+    },
+    {
+      "start": [
+        26,
+        15
+      ],
+      "end": [
+        26,
+        14
+      ],
+      "item": "石材",
+      "rate": "6",
+      "bus": 230
+    },
+    {
+      "start": [
+        26,
+        14
+      ],
+      "end": [
+        26,
+        13
+      ],
+      "item": "石材",
+      "rate": "6",
+      "bus": 230
+    },
+    {
+      "start": [
+        26,
+        13
+      ],
+      "end": [
+        25,
+        13
+      ],
+      "item": "石材",
+      "rate": "6",
+      "bus": 230
+    },
+    {
+      "start": [
+        29,
+        15
+      ],
+      "end": [
+        28,
+        15
+      ],
+      "item": "木棒",
+      "rate": "24",
+      "bus": 194
+    },
+    {
+      "start": [
+        6,
+        3
+      ],
+      "end": [
+        7,
+        3
+      ],
+      "item": "木纤维",
+      "rate": "30",
+      "bus": 32
+    },
+    {
+      "start": [
+        7,
+        3
+      ],
+      "end": [
+        8,
+        3
+      ],
+      "item": "木纤维",
+      "rate": "30",
+      "bus": 32
+    },
+    {
+      "start": [
+        8,
+        3
+      ],
+      "end": [
+        8,
+        4
+      ],
+      "item": "木纤维",
+      "rate": "30",
+      "bus": 32
+    },
+    {
+      "start": [
+        6,
+        5
+      ],
+      "end": [
+        7,
+        5
+      ],
+      "item": "木纤维",
+      "rate": "30",
+      "bus": 32
+    },
+    {
+      "start": [
+        7,
+        5
+      ],
+      "end": [
+        7,
+        4
+      ],
+      "item": "木纤维",
+      "rate": "30",
+      "bus": 32
+    },
+    {
+      "start": [
+        7,
+        4
+      ],
+      "end": [
+        8,
+        4
+      ],
+      "item": "木纤维",
+      "rate": "30",
+      "bus": 32
+    },
+    {
+      "start": [
+        6,
+        9
+      ],
+      "end": [
+        7,
+        9
+      ],
+      "item": "木纤维",
+      "rate": "24",
+      "bus": 32
+    },
+    {
+      "start": [
+        7,
+        9
+      ],
+      "end": [
+        8,
+        9
+      ],
+      "item": "木纤维",
+      "rate": "24",
+      "bus": 32
+    },
+    {
+      "start": [
+        6,
+        13
+      ],
+      "end": [
+        7,
+        13
+      ],
+      "item": "木纤维",
+      "rate": "30",
+      "bus": 32
+    },
+    {
+      "start": [
+        7,
+        13
+      ],
+      "end": [
+        7,
+        14
+      ],
+      "item": "木纤维",
+      "rate": "30",
+      "bus": 32
+    },
+    {
+      "start": [
+        7,
+        14
+      ],
+      "end": [
+        7,
+        15
+      ],
+      "item": "木纤维",
+      "rate": "30",
+      "bus": 32
+    },
+    {
+      "start": [
+        7,
+        15
+      ],
+      "end": [
+        8,
+        15
+      ],
+      "item": "木纤维",
+      "rate": "30",
+      "bus": 32
+    },
+    {
+      "start": [
+        6,
+        16
+      ],
+      "end": [
+        7,
+        16
+      ],
+      "item": "木纤维",
+      "rate": "30",
+      "bus": 32
+    },
+    {
+      "start": [
+        7,
+        16
+      ],
+      "end": [
+        8,
+        16
+      ],
+      "item": "木纤维",
+      "rate": "30",
+      "bus": 32
+    },
+    {
+      "start": [
+        8,
+        16
+      ],
+      "end": [
+        8,
+        15
+      ],
+      "item": "木纤维",
+      "rate": "30",
+      "bus": 32
+    },
+    {
+      "start": [
+        23,
+        2
+      ],
+      "end": [
+        22,
+        2
+      ],
+      "item": "初级工具",
+      "rate": "6",
+      "bus": 172
+    },
+    {
+      "start": [
+        22,
+        2
+      ],
+      "end": [
+        22,
+        3
+      ],
+      "item": "初级工具",
+      "rate": "6",
+      "bus": 172
+    },
+    {
+      "start": [
+        22,
+        3
+      ],
+      "end": [
+        22,
+        4
+      ],
+      "item": "初级工具",
+      "rate": "6",
+      "bus": 172
+    },
+    {
+      "start": [
+        23,
+        7
+      ],
+      "end": [
+        22,
+        7
+      ],
+      "item": "初级工具",
+      "rate": "6",
+      "bus": 172
+    },
+    {
+      "start": [
+        22,
+        7
+      ],
+      "end": [
+        22,
+        6
+      ],
+      "item": "初级工具",
+      "rate": "6",
+      "bus": 172
+    },
+    {
+      "start": [
+        22,
+        6
+      ],
+      "end": [
+        22,
+        5
+      ],
+      "item": "初级工具",
+      "rate": "6",
+      "bus": 172
+    },
+    {
+      "start": [
+        22,
+        5
+      ],
+      "end": [
+        22,
+        4
+      ],
+      "item": "初级工具",
+      "rate": "6",
+      "bus": 172
+    },
+    {
+      "start": [
+        23,
+        13
+      ],
+      "end": [
+        22,
+        13
+      ],
+      "item": "初级工具",
+      "rate": "6",
+      "bus": 205
+    },
+    {
+      "start": [
+        22,
+        13
+      ],
+      "end": [
+        22,
+        14
+      ],
+      "item": "初级工具",
+      "rate": "6",
+      "bus": 205
+    },
+    {
+      "start": [
+        22,
+        14
+      ],
+      "end": [
+        22,
+        15
+      ],
+      "item": "初级工具",
+      "rate": "6",
+      "bus": 205
+    },
+    {
+      "start": [
+        23,
+        18
+      ],
+      "end": [
+        22,
+        18
+      ],
+      "item": "初级工具",
+      "rate": "6",
+      "bus": 205
+    },
+    {
+      "start": [
+        22,
+        18
+      ],
+      "end": [
+        22,
+        17
+      ],
+      "item": "初级工具",
+      "rate": "6",
+      "bus": 205
+    },
+    {
+      "start": [
+        22,
+        17
+      ],
+      "end": [
+        22,
+        16
+      ],
+      "item": "初级工具",
+      "rate": "6",
+      "bus": 205
+    },
+    {
+      "start": [
+        22,
+        16
+      ],
+      "end": [
+        22,
+        15
+      ],
+      "item": "初级工具",
+      "rate": "6",
+      "bus": 205
+    },
+    {
+      "start": [
+        10,
+        15
+      ],
+      "end": [
+        10,
+        16
+      ],
+      "item": "木纤维",
+      "rate": "40",
+      "bus": 32
+    },
+    {
+      "start": [
+        10,
+        16
+      ],
+      "end": [
+        10,
+        17
+      ],
+      "item": "木纤维",
+      "rate": "40",
+      "bus": 32
+    },
+    {
+      "start": [
+        16,
+        2
+      ],
+      "end": [
+        17,
+        2
+      ],
+      "item": "布",
+      "rate": "8",
+      "bus": 93
+    },
+    {
+      "start": [
+        17,
+        2
+      ],
+      "end": [
+        17,
+        3
+      ],
+      "item": "布",
+      "rate": "8",
+      "bus": 93
+    },
+    {
+      "start": [
+        17,
+        3
+      ],
+      "end": [
+        17,
+        4
+      ],
+      "item": "布",
+      "rate": "8",
+      "bus": 93
+    },
+    {
+      "start": [
+        16,
+        7
+      ],
+      "end": [
+        17,
+        7
+      ],
+      "item": "布",
+      "rate": "10",
+      "bus": 93
+    },
+    {
+      "start": [
+        17,
+        7
+      ],
+      "end": [
+        17,
+        6
+      ],
+      "item": "布",
+      "rate": "10",
+      "bus": 93
+    },
+    {
+      "start": [
+        17,
+        6
+      ],
+      "end": [
+        17,
+        5
+      ],
+      "item": "布",
+      "rate": "10",
+      "bus": 93
+    },
+    {
+      "start": [
+        17,
+        5
+      ],
+      "end": [
+        17,
+        4
+      ],
+      "item": "布",
+      "rate": "10",
+      "bus": 93
+    },
+    {
+      "start": [
+        16,
+        12
+      ],
+      "end": [
+        17,
+        12
+      ],
+      "item": "布",
+      "rate": "8",
+      "bus": 137
+    },
+    {
+      "start": [
+        17,
+        12
+      ],
+      "end": [
+        17,
+        13
+      ],
+      "item": "布",
+      "rate": "8",
+      "bus": 137
+    },
+    {
+      "start": [
+        17,
+        13
+      ],
+      "end": [
+        17,
+        14
+      ],
+      "item": "布",
+      "rate": "8",
+      "bus": 137
+    },
+    {
+      "start": [
+        17,
+        14
+      ],
+      "end": [
+        17,
+        15
+      ],
+      "item": "布",
+      "rate": "8",
+      "bus": 137
+    },
+    {
+      "start": [
+        16,
+        17
+      ],
+      "end": [
+        17,
+        17
+      ],
+      "item": "布",
+      "rate": "10",
+      "bus": 137
+    },
+    {
+      "start": [
+        17,
+        17
+      ],
+      "end": [
+        17,
+        16
+      ],
+      "item": "布",
+      "rate": "10",
+      "bus": 137
+    },
+    {
+      "start": [
+        17,
+        16
+      ],
+      "end": [
+        17,
+        15
+      ],
+      "item": "布",
+      "rate": "10",
+      "bus": 137
+    },
+    {
+      "start": [
+        10,
+        4
+      ],
+      "end": [
+        10,
+        3
+      ],
+      "item": "木纤维",
+      "rate": "32",
+      "bus": 32
+    },
+    {
+      "start": [
+        10,
+        3
+      ],
+      "end": [
+        10,
+        2
+      ],
+      "item": "木纤维",
+      "rate": "32",
+      "bus": 32
+    },
+    {
+      "start": [
+        14,
+        2
+      ],
+      "end": [
+        15,
+        2
+      ],
+      "item": "线",
+      "rate": "16",
+      "bus": 88
+    },
+    {
+      "start": [
+        14,
+        7
+      ],
+      "end": [
+        15,
+        7
+      ],
+      "item": "线",
+      "rate": "20",
+      "bus": 90
+    },
+    {
+      "start": [
+        14,
+        12
+      ],
+      "end": [
+        15,
+        12
+      ],
+      "item": "线",
+      "rate": "16",
+      "bus": 132
+    },
+    {
+      "start": [
+        14,
+        17
+      ],
+      "end": [
+        15,
+        17
+      ],
+      "item": "线",
+      "rate": "20",
+      "bus": 134
+    },
+    {
+      "start": [
+        3,
+        15
+      ],
+      "end": [
+        3,
+        16
+      ],
+      "item": "原木",
+      "rate": "20",
+      "bus": 0
+    },
+    {
+      "start": [
+        3,
+        16
+      ],
+      "end": [
+        4,
+        16
+      ],
+      "item": "原木",
+      "rate": "20",
+      "bus": 0
+    },
+    {
+      "start": [
+        4,
+        16
+      ],
+      "end": [
+        5,
+        16
+      ],
+      "item": "原木",
+      "rate": "20",
+      "bus": 0
+    },
+    {
+      "start": [
+        3,
+        4
+      ],
+      "end": [
+        3,
+        3
+      ],
+      "item": "原木",
+      "rate": "20",
+      "bus": 0
+    },
+    {
+      "start": [
+        3,
+        3
+      ],
+      "end": [
+        4,
+        3
+      ],
+      "item": "原木",
+      "rate": "20",
+      "bus": 0
+    },
+    {
+      "start": [
+        4,
+        3
+      ],
+      "end": [
+        5,
+        3
+      ],
+      "item": "原木",
+      "rate": "20",
+      "bus": 0
+    }
+  ],
+  "wires": [
+    [
+      5,
+      3
+    ],
+    [
+      5,
+      4
+    ],
+    [
+      5,
+      5
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      5,
+      7
+    ],
+    [
+      5,
+      8
+    ],
+    [
+      5,
+      9
+    ],
+    [
+      5,
+      10
+    ],
+    [
+      5,
+      11
+    ],
+    [
+      5,
+      12
+    ],
+    [
+      5,
+      13
+    ],
+    [
+      5,
+      14
+    ],
+    [
+      5,
+      15
+    ],
+    [
+      5,
+      16
+    ],
+    [
+      6,
+      5
+    ],
+    [
+      7,
+      5
+    ],
+    [
+      8,
+      5
+    ],
+    [
+      9,
+      5
+    ],
+    [
+      10,
+      5
+    ],
+    [
+      11,
+      5
+    ],
+    [
+      12,
+      0
+    ],
+    [
+      12,
+      1
+    ],
+    [
+      12,
+      2
+    ],
+    [
+      12,
+      3
+    ],
+    [
+      12,
+      4
+    ],
+    [
+      12,
+      5
+    ],
+    [
+      12,
+      6
+    ],
+    [
+      12,
+      7
+    ],
+    [
+      12,
+      8
+    ],
+    [
+      12,
+      9
+    ],
+    [
+      12,
+      10
+    ],
+    [
+      12,
+      11
+    ],
+    [
+      12,
+      12
+    ],
+    [
+      12,
+      13
+    ],
+    [
+      12,
+      14
+    ],
+    [
+      12,
+      15
+    ],
+    [
+      12,
+      16
+    ],
+    [
+      12,
+      17
+    ],
+    [
+      12,
+      18
+    ],
+    [
+      13,
+      2
+    ],
+    [
+      13,
+      7
+    ],
+    [
+      13,
+      12
+    ],
+    [
+      13,
+      17
+    ],
+    [
+      14,
+      2
+    ],
+    [
+      14,
+      7
+    ],
+    [
+      14,
+      12
+    ],
+    [
+      14,
+      17
+    ],
+    [
+      15,
+      2
+    ],
+    [
+      15,
+      7
+    ],
+    [
+      15,
+      12
+    ],
+    [
+      15,
+      17
+    ],
+    [
+      16,
+      2
+    ],
+    [
+      17,
+      2
+    ],
+    [
+      18,
+      2
+    ],
+    [
+      19,
+      2
+    ],
+    [
+      19,
+      3
+    ],
+    [
+      19,
+      14
+    ],
+    [
+      20,
+      2
+    ],
+    [
+      20,
+      14
+    ],
+    [
+      21,
+      2
+    ],
+    [
+      21,
+      14
+    ],
+    [
+      22,
+      2
+    ],
+    [
+      22,
+      14
+    ],
+    [
+      23,
+      2
+    ],
+    [
+      23,
+      14
+    ],
+    [
+      24,
+      2
+    ],
+    [
+      24,
+      3
+    ],
+    [
+      24,
+      4
+    ],
+    [
+      24,
+      5
+    ],
+    [
+      24,
+      6
+    ],
+    [
+      24,
+      7
+    ],
+    [
+      24,
+      13
+    ],
+    [
+      24,
+      14
+    ],
+    [
+      24,
+      15
+    ],
+    [
+      24,
+      16
+    ],
+    [
+      24,
+      17
+    ],
+    [
+      24,
+      18
+    ],
+    [
+      25,
+      4
+    ],
+    [
+      25,
+      13
+    ],
+    [
+      26,
+      4
+    ],
+    [
+      26,
+      13
+    ],
+    [
+      27,
+      4
+    ],
+    [
+      27,
+      13
+    ],
+    [
+      28,
+      4
+    ],
+    [
+      28,
+      13
+    ],
+    [
+      29,
+      4
+    ],
+    [
+      29,
+      5
+    ],
+    [
+      29,
+      6
+    ],
+    [
+      29,
+      7
+    ],
+    [
+      29,
+      8
+    ],
+    [
+      29,
+      9
+    ],
+    [
+      29,
+      10
+    ],
+    [
+      29,
+      11
+    ],
+    [
+      29,
+      12
+    ],
+    [
+      29,
+      13
+    ],
+    [
+      29,
+      14
+    ],
+    [
+      29,
+      15
+    ],
+    [
+      30,
+      4
+    ],
+    [
+      30,
+      10
+    ],
+    [
+      30,
+      15
+    ],
+    [
+      31,
+      4
+    ],
+    [
+      31,
+      15
+    ],
+    [
+      32,
+      4
+    ],
+    [
+      32,
+      15
+    ]
+  ],
+  "equipment": [
+    [
+      "组装机",
+      4
+    ],
+    [
+      "1级传送带",
+      118
+    ],
+    [
+      "2级传送带",
+      2
+    ],
+    [
+      "晶体置换机",
+      2
+    ],
+    [
+      "自动进货箱",
+      3
+    ],
+    [
+      "制造机",
+      23
+    ],
+    [
+      "合并器",
+      10
+    ],
+    [
+      "分流器",
+      16
+    ],
+    [
+      "1级地下传送带",
+      20
+    ],
+    [
+      "2级地下传送带",
+      2
+    ],
+    [
+      "3级地下传送带",
+      2
+    ],
+    [
+      "电线",
+      104
+    ]
+  ],
+  "direction_counts": {
+    "进货箱": {
+      "东": 1,
+      "西": 1,
+      "北": 1
+    },
+    "制造机": {
+      "东": 18,
+      "西": 5
+    },
+    "晶体置换机": {
+      "北": 2
+    },
+    "组装机": {
+      "西": 4
+    },
+    "地面弯带": {
+      "东": 15,
+      "南": 15,
+      "北": 21,
+      "西": 14
+    },
+    "分流器主进料": {
+      "北": 4,
+      "东": 4,
+      "南": 3,
+      "西": 5
+    },
+    "地下带出口": {
+      "北": 5,
+      "南": 5,
+      "西": 2
+    },
+    "地下带入口": {
+      "北": 5,
+      "南": 5,
+      "西": 2
+    },
+    "地面直带": {
+      "东": 15,
+      "北": 17,
+      "南": 12,
+      "西": 11
+    },
+    "合并器主出料": {
+      "东": 8,
+      "西": 2
+    },
+    "电线": {
+      "无": 104
+    }
+  },
+  "collision_dimensions": [
+    {
+      "name": "组装机",
+      "direction": "西",
+      "logical_cells": [
+        3,
+        2
+      ],
+      "pixels": [
+        44,
+        40
+      ],
+      "count": 4
+    },
+    {
+      "name": "1级传送带",
+      "direction": "南",
+      "logical_cells": [
+        1,
+        1
+      ],
+      "pixels": [
+        13,
+        5
+      ],
+      "count": 27
+    },
+    {
+      "name": "1级传送带",
+      "direction": "西",
+      "logical_cells": [
+        1,
+        1
+      ],
+      "pixels": [
+        13,
+        5
+      ],
+      "count": 25
+    },
+    {
+      "name": "1级传送带",
+      "direction": "东",
+      "logical_cells": [
+        1,
+        1
+      ],
+      "pixels": [
+        13,
+        5
+      ],
+      "count": 28
+    },
+    {
+      "name": "1级传送带",
+      "direction": "北",
+      "logical_cells": [
+        1,
+        1
+      ],
+      "pixels": [
+        13,
+        5
+      ],
+      "count": 38
+    },
+    {
+      "name": "2级传送带",
+      "direction": "东",
+      "logical_cells": [
+        1,
+        1
+      ],
+      "pixels": [
+        13,
+        5
+      ],
+      "count": 2
+    },
+    {
+      "name": "晶体置换机",
+      "direction": "北",
+      "logical_cells": [
+        2,
+        2
+      ],
+      "pixels": [
+        38,
+        35
+      ],
+      "count": 2
+    },
+    {
+      "name": "自动进货箱",
+      "direction": "西",
+      "logical_cells": [
+        2,
+        1
+      ],
+      "pixels": [
+        28,
+        24
+      ],
+      "count": 1
+    },
+    {
+      "name": "自动进货箱",
+      "direction": "东",
+      "logical_cells": [
+        2,
+        1
+      ],
+      "pixels": [
+        28,
+        24
+      ],
+      "count": 1
+    },
+    {
+      "name": "自动进货箱",
+      "direction": "北",
+      "logical_cells": [
+        1,
+        2
+      ],
+      "pixels": [
+        28,
+        24
+      ],
+      "count": 1
+    },
+    {
+      "name": "制造机",
+      "direction": "西",
+      "logical_cells": [
+        2,
+        1
+      ],
+      "pixels": [
+        28,
+        28
+      ],
+      "count": 5
+    },
+    {
+      "name": "制造机",
+      "direction": "东",
+      "logical_cells": [
+        2,
+        1
+      ],
+      "pixels": [
+        28,
+        28
+      ],
+      "count": 18
+    },
+    {
+      "name": "合并器",
+      "direction": "西",
+      "logical_cells": [
+        1,
+        1
+      ],
+      "pixels": [
+        12,
+        14
+      ],
+      "count": 2
+    },
+    {
+      "name": "合并器",
+      "direction": "东",
+      "logical_cells": [
+        1,
+        1
+      ],
+      "pixels": [
+        12,
+        14
+      ],
+      "count": 8
+    },
+    {
+      "name": "分流器",
+      "direction": "南",
+      "logical_cells": [
+        1,
+        1
+      ],
+      "pixels": [
+        12,
+        14
+      ],
+      "count": 3
+    },
+    {
+      "name": "分流器",
+      "direction": "西",
+      "logical_cells": [
+        1,
+        1
+      ],
+      "pixels": [
+        12,
+        14
+      ],
+      "count": 5
+    },
+    {
+      "name": "分流器",
+      "direction": "东",
+      "logical_cells": [
+        1,
+        1
+      ],
+      "pixels": [
+        12,
+        14
+      ],
+      "count": 4
+    },
+    {
+      "name": "分流器",
+      "direction": "北",
+      "logical_cells": [
+        1,
+        1
+      ],
+      "pixels": [
+        12,
+        14
+      ],
+      "count": 4
+    },
+    {
+      "name": "1级地下传送带",
+      "direction": "南",
+      "logical_cells": [
+        1,
+        1
+      ],
+      "pixels": [
+        13,
+        5
+      ],
+      "count": 8
+    },
+    {
+      "name": "1级地下传送带",
+      "direction": "西",
+      "logical_cells": [
+        1,
+        1
+      ],
+      "pixels": [
+        13,
+        5
+      ],
+      "count": 4
+    },
+    {
+      "name": "1级地下传送带",
+      "direction": "北",
+      "logical_cells": [
+        1,
+        1
+      ],
+      "pixels": [
+        13,
+        5
+      ],
+      "count": 8
+    },
+    {
+      "name": "2级地下传送带",
+      "direction": "南",
+      "logical_cells": [
+        1,
+        1
+      ],
+      "pixels": [
+        13,
+        5
+      ],
+      "count": 2
+    },
+    {
+      "name": "3级地下传送带",
+      "direction": "北",
+      "logical_cells": [
+        1,
+        1
+      ],
+      "pixels": [
+        13,
+        5
+      ],
+      "count": 2
+    }
+  ],
+  "rotations": {
+    "270": {
+      "method": "rewired",
+      "reason": "已按实际端口、机体范围或电线接点重布，胶囊 202 → 201 个。",
+      "size": [
+        20,
+        39
+      ],
+      "capsules": 201
+    },
+    "90": {
+      "method": "unavailable",
+      "reason": "设备旋转后的端口、碰撞范围或电线接点发生变化，未找到不增加胶囊且通过核验的方案。"
+    },
+    "180": {
+      "method": "unavailable",
+      "reason": "设备旋转后的端口、碰撞范围或电线接点发生变化，未找到不增加胶囊且通过核验的方案。"
+    }
+  }
+}

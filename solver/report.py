@@ -7,22 +7,23 @@ from html import escape
 from math import gcd, lcm
 from pathlib import Path
 
-from .blueprint import FORMAT, IDS, export, record_facing
+from .blueprint import FORMAT, IDS, blueprint_id, export, is_split_id, record_facing
 from .collision import collision_error, footprint_bounds, uses_steam_geometry
-from .geometry import DIRECTION_NAMES, OFFSETS, STEAM_CELL_PIXELS, steam_collision_rect
-from .layout import distance, score_layout
+from .geometry import DIRECTION_NAMES, INLET_KINDS, OFFSETS, STEAM_CELL_PIXELS, inlet_output_ports, steam_collision_rect
+from .layout import distance, layout_rank
 from .model import DAY, Infeasible, belt_options
-from .rotation import ANGLES, rotate_layout
+from .rotation import ANGLES, rotation_result
 
 
 MODE_NAMES = {"shared": "共用上游", "separate": "独立供料"}
 OBJECTIVE_NAMES = {"area": "占地面积", "buildings": "建筑数", "lines": "走线格数", "materials": "建材总件数",
-                   "power": "额定功耗", "inlets": "进货口数量", "machines": "加工设备数", "transport_time": "输送在途量"}
+                   "power": "额定功耗", "inlets": "进货口数量", "machines": "加工设备数", "transport_time": "输送在途量",
+                   "cadence": "生产节拍"}
 COLORS = ("#187467", "#8c5231", "#375d99", "#8b4672", "#5c59a1", "#846007", "#166b85", "#536634", "#a34839")
 
 
 def inlet_rows(layout):
-    return sorted((p for p in layout.placements if p.building == "inlet"), key=lambda p: (p.y, p.x))
+    return sorted((p for p in layout.placements if p.building in INLET_KINDS), key=lambda p: (p.y, p.x))
 
 
 def outlet_rows(layout):
@@ -39,14 +40,14 @@ def ratio(raw):
 def direction_counts(problem, layout, buildings, wires):
     groups = defaultdict(Counter)
     outlets = {p.anchor for p in outlet_rows(layout)}
-    facility_names = {ident: problem.buildings[key]["name"] for key, ident in IDS.items() if key in problem.buildings}
+    facility_names = {blueprint_id(problem, key): problem.buildings[key]["name"] for key in IDS if key in problem.buildings}
     for record in buildings:
         if (record.x, record.y) in outlets:
             group = "成品接出带"
-        elif record.id == IDS["inlet"]:
-            group = "进货箱"
-        elif record.id == IDS["split"]:
-            group = "分流器主进料"
+        elif record.id in (IDS["inlet"], IDS["inlet_large"]):
+            group = "进货箱" if record.id == IDS["inlet"] else problem.buildings["inlet_large"]["name"]
+        elif is_split_id(record.id):
+            group = f"{problem.buildings['split']['name']}主进料" if record.id != IDS["split"] else "分流器主进料"
         elif record.id == IDS["merge"]:
             group = "合并器主出料"
         elif 20 <= record.id <= 24:
@@ -62,7 +63,7 @@ def direction_counts(problem, layout, buildings, wires):
 
 
 def _collision_dimensions(problem, layout, records):
-    names = {ident: kind for kind, ident in IDS.items()}
+    names = {blueprint_id(problem, kind): kind for kind in IDS if kind in problem.buildings}
     placed = {p.anchor: p for p in layout.placements}
     sizes = Counter()
     for record in records:
@@ -173,7 +174,7 @@ def render_svg(problem, layout, mode, game_records=None):
     for p in layout.placements:
         x, y = gx + p.x * cell, gy + p.y * cell
         color = colors.get(p.item, "#187467")
-        label = f"{inputs[p.node]} {p.item}" if p.building == "inlet" else outputs.get(p.node, p.item)
+        label = f"{inputs[p.node]} {p.item}" if p.building in INLET_KINDS else outputs.get(p.node, p.item)
         title_text = f'{label}｜{problem.buildings[p.building]["name"]}｜定位格 {p.anchor}｜朝{DIRECTION_NAMES[p.direction]}｜{p.rate} 件/分钟'
         if steam and p.building != "outlet" and (rect := steam_collision_rect(p.building, p.anchor, p.direction)) is not None:
             left, top, right, bottom = rect
@@ -182,7 +183,7 @@ def render_svg(problem, layout, mode, game_records=None):
             title_text += f"｜碰撞范围 {width} × {height} 像素"
             outlines.append(f'<rect x="{gx+left*px:g}" y="{gy+top*px:g}" width="{width*px:g}" height="{height*px:g}"/>')
         ax, ay = center(p.anchor)
-        fill = "#fff2d8" if p.building == "inlet" else "#e7f0e5"
+        fill = "#fff2d8" if p.building in INLET_KINDS else "#e7f0e5"
         parts.append(f'<g data-kind="{p.building}" data-node="{p.node}" data-x="{p.anchor[0]}" data-y="{p.anchor[1]}"{attrs(buildings.get(p.anchor))}><title>{escape(title_text)}</title>'
                      f'<rect x="{x+2}" y="{y+2}" width="{p.width*cell-4}" height="{p.height*cell-4}" rx="4" fill="{fill}" stroke="{color}"/>'
                      f'<circle cx="{ax-cell*.30}" cy="{ay+cell*.31}" r="2" fill="{color}"/>'
@@ -228,8 +229,13 @@ def render_svg(problem, layout, mode, game_records=None):
 
 
 def data_for(problem, layout, mode):
+    inlet_rates = Counter()
+    for segment in layout.segments:
+        inlet_rates[segment.start] += segment.rate
     inputs = [{"id": f"进{i}", "position": p.anchor, "item": p.item, "direction": DIRECTION_NAMES[p.direction],
-               "per_minute": p.rate, "per_day": p.rate * DAY}
+               "per_minute": p.rate, "per_day": p.rate * DAY,
+               "feed_ports": [{"position": port, "per_minute": inlet_rates[port], "per_day": inlet_rates[port] * DAY}
+                              for port in inlet_output_ports(problem, p) if inlet_rates[port]]}
               for i, p in enumerate(inlet_rows(layout), 1)]
     outputs = [{"id": f"出{i}", "position": p.anchor, "item": p.item, "per_minute": p.rate, "direction": DIRECTION_NAMES[p.direction],
                 "belt": belt_options(problem, p.rate)[0]["level"]}
@@ -258,18 +264,14 @@ def data_for(problem, layout, mode):
             "search_belt_levels": layout.search_belt_levels or tuple(belt["level"] for belt in problem.belts),
             "solve_seconds": problem.case.get("solve_seconds"),
             "statistics": layout.statistics, "placements": buildings,
+            "optimization": {"production": layout.production_milp, "logistics": layout.logistics_milp},
             "transport": [{"position": pos, "kind": kind, **directions[pos]} for pos, kind in sorted(layout.transport.items())],
             "segments": [asdict(s) for s in layout.segments], "wires": sorted(layout.wires)}
 
 
 def choose(problem, results):
-    def key(mode):
-        layout, _ = results[mode]
-        simulated = layout.statistics.get("simulation")
-        below = simulated is not None and simulated["last_four_per_minute"] < float(problem.rate)
-        return below, score_layout(problem, layout)
-
-    return min((mode for mode, (layout, _) in results.items() if layout is not None), key=key, default=None)
+    return min((mode for mode, (layout, _) in results.items() if layout is not None),
+               key=lambda mode: layout_rank(problem, results[mode][0]), default=None)
 
 
 BLUEPRINT_ACTIONS_STYLE = """.blueprint-actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
@@ -350,10 +352,71 @@ def render_blueprint_actions(filename, text, *, include_script=True):
 </p>''' + (BLUEPRINT_ACTIONS_SCRIPT if include_script else "")
 
 
+def _render_timing(simulation):
+    timing = simulation.get("timing") if simulation else None
+    if timing is None:
+        return ""
+
+    def number(value):
+        return "—" if value is None else f"{value:.2f}"
+
+    def table(headings, rows):
+        header = "".join(f"<th>{value}</th>" for value in headings)
+        body = "".join("<tr>" + "".join(f"<td>{escape(str(value))}</td>" for value in row) + "</tr>" for row in rows)
+        return f"<table><thead><tr>{header}</tr></thead><tbody>{body}</tbody></table>"
+
+    machines = []
+    for row in timing["machine_rows"]:
+        missing = "、".join(f"{entry['item']} {entry['seconds']:.2f} 秒" for entry in row["starved_inputs"])
+        machines.append((row["position"], row["item"], number(row["recipe_seconds"]),
+                         number(row["planned_period_seconds"]), number(row["mean_start_interval_seconds"]),
+                         number(row["max_start_interval_seconds"]), missing or "—", number(row["extra_blocked_seconds"])))
+    belts = []
+    for row in timing["bottlenecks"]:
+        belts.append((row["position"], row["item"], number(row["planned_items_per_minute"]),
+                      number(row["actual_items_per_minute"]), number(row["rated_items_per_minute"]),
+                      f"{row['load']:.0%}", number(row["travel_seconds"])))
+    machine_table = table(("定位格", "产物", "加工周期", "计划开工间隔", "平均开工间隔", "最长开工间隔", "超计划缺料", "超计划堵料"), machines)
+    belt_table = table(("物流格", "物料", "计划件/分", "仿真件/分", "设计上限件/分", "计划负荷", "通过秒数"), belts)
+    return (f"<section><h2>生产节拍</h2><p>统计空线仿真末 {timing['measurement_seconds']:g} 秒。"
+            "开工间隔按秒计，计划值由分配给该机器的目标产量确定。"
+            f"单台最长累计超计划停顿 {timing['worst_machine_delay_seconds']:.2f} 秒，"
+            f"开工间隔最大超出计划 {timing['max_excess_gap_seconds']:.2f} 秒。"
+            f"传送带最高计划负荷 {timing['max_belt_load']:.0%}。</p>{machine_table}"
+            f"<h3>高负荷物流格</h3>{belt_table}</section>")
+
+
+def _render_optimization(data):
+    optimization = data.get("optimization", {})
+    production = optimization.get("production")
+    if not production:
+        return ""
+    statuses = {0: "最优", 1: "在时间限制内找到可行解", -1: "使用精确供需配平复核值"}
+    status = statuses.get(production["status"], "使用复核后的候选")
+    bottleneck = optimization.get("logistics")
+    grade = ""
+    if bottleneck:
+        belt_status = statuses.get(bottleneck["status"], "已找到候选")
+        changed = bottleneck["changed_cells"]
+        outcome = f"采用调整 {changed} 格的方案" if bottleneck["selected"] else f"比较调整 {changed} 格的方案后保留原带级"
+        grade = f"带级分配子问题{belt_status}，{outcome}。"
+    units = "、".join(f"{escape(name)} × {count}" for name, count in production["units"].items())
+    return (f"<section><h2>HiGHS 混合整数求解</h2><p>固定配方链的产能配置子问题{status}，"
+            f"机台与进货口功率下界为 {production['minimum_power_kw']:g} kW。{grade}</p>"
+            f"<p>固定配方与单出口供料模型的设备数量下界为 {units}。"
+            "布局从通过占位、物流和仿真校验的候选中选出。</p></section>")
+
+
 def _render_report_view(data, svg, filename, text):
     stats = data["statistics"]
     columns = ("id", "position", "item", "direction", "per_minute", "per_day")
     rows = "".join("<tr>" + "".join(f"<td>{escape(str(r[key]))}</td>" for key in columns) + "</tr>" for r in data["inlets"])
+    dual_notes = []
+    for row in data["inlets"]:
+        ports = row.get("feed_ports", ())
+        if len(ports) > 1:
+            flows = "、".join(f"接口 {port['position']} 每分钟 {port['per_minute']} 件，每日 {port['per_day']} 件" for port in ports)
+            dual_notes.append(f"<p>{row['id']} 共用一箱库存。{flows}。</p>")
     materials = "".join(f"<li>{escape(item)} {amount}</li>" for item, amount in stats["materials"].items())
     equipment = ""
     if data.get("equipment"):
@@ -413,19 +476,27 @@ def _render_report_view(data, svg, filename, text):
 <p>{data['size'][0]} × {data['size'][1]} 格 · {data['target_per_minute']} 件/分钟 · 稳态理论日产 {data['theoretical_per_day']} 件</p>{plot_note}{capsules}{actions}</header>
 <section><h2>建造与接入</h2><p>{instructions}</p><p>{power}{output}</p></section>{footprints}
 <section><h2>进货口与日配额</h2><p>每日有效生产 16 分钟。{escape(data['raw_ratio'])}。</p>
-<table><thead><tr><th>口</th><th>定位格</th><th>物料</th><th>朝向</th><th>件/分钟</th><th>日配额</th></tr></thead><tbody>{rows}</tbody></table></section>
+<table><thead><tr><th>口</th><th>定位格</th><th>物料</th><th>朝向</th><th>件/分钟</th><th>日配额</th></tr></thead><tbody>{rows}</tbody></table>{''.join(dual_notes)}</section>
 <section><h2>摆放图</h2><div class="drawing">{svg}</div></section>
-<section><h2>建材</h2><ul>{materials}</ul></section>{equipment}{logistics}{audit}{simulation}'''
+<section><h2>建材</h2><ul>{materials}</ul></section>{equipment}{logistics}{_render_optimization(data)}{audit}{simulation}{_render_timing(sim)}'''
 
 
-def render_html(data, svg, title, filename, text, checks="", rotations=(), *, show_rotation=False):
+def render_html(data, svg, title, filename, text, checks="", rotations=(), *, show_rotation=False, unavailable_reasons=None):
     variants = {angle: (detail, drawing, blueprint) for angle, detail, drawing, blueprint in rotations}
     controls, templates = "", ""
     if show_rotation or variants:
+        unavailable_reasons = unavailable_reasons or {}
+        labels = {"rigid": "纯旋转", "rewired": "同预算重布"}
         options = ['<option value="0">0°（原方向）</option>']
-        options.extend(f'<option value="{angle}">{angle}°</option>' if angle in variants else
-                       f'<option value="{angle}" disabled>{angle}°（不可用）</option>' for angle in ANGLES)
-        unavailable = "<small>标为不可用的方向未通过布局核验。</small>" if len(variants) < len(ANGLES) else ""
+        for angle in ANGLES:
+            if angle in variants:
+                method = variants[angle][0].get("rotation_method", "rigid")
+                options.append(f'<option value="{angle}">{angle}°（{labels[method]}）</option>')
+            else:
+                reason = escape(unavailable_reasons.get(angle, "未通过布局核验"))
+                options.append(f'<option value="{angle}" title="{reason}" disabled>{angle}°（未通过）</option>')
+        directions = "、".join(f"{angle}°" for angle in ANGLES if angle not in variants)
+        unavailable = (f"<small>{directions} 未找到通过核验且不增加胶囊的布局。</small>" if directions else "")
         controls = ('<p class="rotation-controls" hidden><label for="blueprint-rotation">整体方向（顺时针）</label> '
                     f'<select id="blueprint-rotation">{"".join(options)}</select> {unavailable}</p>')
         name = Path(filename)
@@ -433,7 +504,8 @@ def render_html(data, svg, title, filename, text, checks="", rotations=(), *, sh
             if angle in variants:
                 detail, drawing, blueprint = variants[angle]
                 view = _render_report_view(detail, drawing, f"{name.stem}-{angle}deg{name.suffix}", blueprint)
-                templates += f'<template id="blueprint-view-{angle}">{view}</template>\n'
+                note = escape(detail.get("rotation_note", ""))
+                templates += f'<template id="blueprint-view-{angle}"><p role="status">{note}</p>{view}</template>\n'
         if checks:
             checks = f'<p>方案比较表按原方向显示。</p>{checks}'
     has_actions = text is not None or any(blueprint is not None for _, _, blueprint in variants.values())
@@ -479,6 +551,8 @@ def write_layout(directory, name, problem, layout, mode, checks=""):
     data, svg, text = layout_view(problem, layout, mode, title)
     directory.mkdir(parents=True, exist_ok=True)
     rotations = []
+    unavailable_reasons = {}
+    direction_details = {}
 
     def write_files(stem, drawing, blueprint):
         (directory / f"{stem}.svg").write_text(drawing, encoding="utf-8")
@@ -487,19 +561,30 @@ def write_layout(directory, name, problem, layout, mode, checks=""):
 
     write_files(name, svg, text)
     for angle in ANGLES:
-        rotated = rotate_layout(problem, layout, angle)
+        rotation = rotation_result(problem, layout, angle)
+        rotated = rotation.layout
         if rotated is None:
+            unavailable_reasons[angle] = rotation.reason
             continue
         try:
             detail, drawing, blueprint = layout_view(problem, rotated, mode, f"{title} · {angle}°")
-        except Infeasible:
+        except Infeasible as error:
+            unavailable_reasons[angle] = str(error)
             continue
+        detail["rotation_method"] = rotation.method
+        detail["rotation_note"] = rotation.reason
         detail["exceeds_plot"] = any(limit is not None and length > limit
                                      for length, limit in zip(detail["size"], problem.plot_limits))
+        direction_details[str(angle)] = {"method": rotation.method, "reason": rotation.reason,
+                                         "size": detail["size"], "capsules": rotated.statistics["components"]}
         rotations.append((angle, detail, drawing, blueprint))
         write_files(f"{name}-{angle}deg", drawing, blueprint)
 
-    html = render_html(data, svg, title, f"{name}.txt", text, checks, rotations, show_rotation=True)
+    direction_details.update((str(angle), {"method": "unavailable", "reason": reason})
+                             for angle, reason in unavailable_reasons.items())
+    data["rotations"] = direction_details
+    html = render_html(data, svg, title, f"{name}.txt", text, checks, rotations, show_rotation=True,
+                       unavailable_reasons=unavailable_reasons)
     (directory / f"{name}.html").write_text(html, encoding="utf-8")
     (directory / f"{name}.json").write_text(json.dumps(data, ensure_ascii=False, indent=2, default=str) + "\n", encoding="utf-8")
     return data, text is not None

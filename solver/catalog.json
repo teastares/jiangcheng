@@ -1,11 +1,18 @@
 {
   "platform": "Steam Build 25121460",
   "blueprint_format": "steam-25121460",
+  "steam_belt_timing": true,
+  "item_stacks": {
+    "原木": 200, "木材": 200, "石头": 200, "石材": 200, "木纤维": 200, "线": 200, "布": 200,
+    "木板": 200, "木棒": 300, "加强木板": 100, "木质框架": 100, "石砖": 200, "初级工具": 100,
+    "铁锭": 200, "铁板": 200, "铁棒": 200, "螺丝": 400, "加固铁板": 200, "钢板": 200,
+    "钢筋混凝土": 200, "绿色晶能": 9999, "建造胶囊": 300
+  },
   "junction_capacity": 120,
   "junction_ports": 3,
   "belts": [
-    {"level": 1, "capacity": 60, "seconds_per_cell": 1, "building": "belt1", "underground": "tunnel1", "underground_span": 5},
-    {"level": 2, "capacity": 120, "seconds_per_cell": 0.5, "building": "belt2", "underground": "tunnel2", "underground_span": 6}
+    {"level": 1, "capacity": 60, "seconds_per_cell": "16/9", "building": "belt1", "underground": "tunnel1", "underground_span": 5},
+    {"level": 2, "capacity": 120, "seconds_per_cell": "8/9", "building": "belt2", "underground": "tunnel2", "underground_span": 6}
   ],
   "buildings": {
     "inlet": {"name": "自动进货箱", "size": [2, 1], "anchor": [0, 0], "output": 0, "materials": {"木材": 3, "铁锭": 5}},

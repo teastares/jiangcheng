@@ -9,7 +9,8 @@ from types import SimpleNamespace
 from unittest.mock import patch
 
 from solver.blueprint import Record, decode, encode_record, string
-from solver.geometry import MACHINE_DIRECTIONS
+from solver.device_catalog import BASIC_SPLITTER, LARGE_INLET, SMART_SPLITTER
+from solver.geometry import MACHINE_DIRECTIONS, inlet_output_ports
 from solver.layout import solve
 from solver.model import Infeasible
 from solver.rotation import ANGLES, rotated_direction
@@ -72,6 +73,65 @@ def fixture(buildings=None, nodes=(15,), inventory=True, optional_map_materials=
 
 
 class WorkshopTests(unittest.TestCase):
+    def test_device_catalog_and_unfiltered_smart_splitter(self):
+        state = parse(fixture())
+        state = replace(state, buildings=(state.buildings - {BASIC_SPLITTER}) | {SMART_SPLITTER})
+        workshop = Workshop(state)
+        devices = workshop.device_capabilities()
+        self.assertEqual(set(devices), {int(ident) for ident in workshop.db["buildings"]})
+        self.assertFalse(devices[LARGE_INLET]["unlocked"])
+        self.assertEqual(devices[LARGE_INLET]["technologies"][0][0], 271)
+        self.assertEqual(devices[LARGE_INLET]["status"], "部分支持")
+        self.assertEqual(devices[SMART_SPLITTER]["status"], "部分支持")
+        self.assertFalse(devices[BASIC_SPLITTER]["unlocked"])
+        config = {"target": "石材", "machines": 2, "belt_levels": [3], "modes": ["shared"],
+                  "objective": ["inlets", "area"]}
+        problem, results, winner = workshop.run(config, 0)
+        self.assertEqual(problem.buildings["split"]["blueprint_id"], SMART_SPLITTER)
+        self.assertEqual(problem.buildings["split"]["materials"], {"钢板": 4, "C级能量块": 1})
+        with tempfile.TemporaryDirectory() as folder:
+            report = write_workshop_report(Path(folder), problem, results, winner)
+            for suffix in ("", *(f"-{angle}deg" for angle in ANGLES)):
+                path = report.with_name(report.stem + suffix + ".txt")
+                records = decode(path.read_text(encoding="ascii"))[-2]
+                splitter = next(r for r in records if r.id == SMART_SPLITTER)
+                self.assertEqual(encode_record(splitter)[-17:], bytes(16) + b"\x01")
+            self.assertIn("智能分流器主进料", report.read_text(encoding="utf-8"))
+        standard = Workshop(replace(state, buildings=state.buildings | {BASIC_SPLITTER}))
+        self.assertEqual(standard.configure(config).buildings["split"]["blueprint_id"], BASIC_SPLITTER)
+
+    def test_large_inlet_consolidates_two_same_material_sources(self):
+        state = parse(fixture())
+        unlocked = Workshop(replace(state, buildings=state.buildings | {LARGE_INLET}))
+        config = {"target": "石材", "machines": 4, "belt_levels": [1], "modes": ["shared"],
+                  "objective": ["inlets", "buildings", "area"]}
+        problem, results, winner = unlocked.run(config, 0)
+        layout = results[winner][0]
+        self.assertEqual(layout.statistics["buildings"]["inlet_large"], 1)
+        self.assertNotIn("inlet", layout.statistics["buildings"])
+        inlet = next(p for p in layout.placements if p.building == "inlet_large")
+        ports = inlet_output_ports(problem, inlet)
+        flows = [s.rate for s in layout.segments if s.start in ports]
+        self.assertEqual(len(flows), 2)
+        self.assertTrue(all(0 < flow <= 60 for flow in flows))
+        self.assertEqual(sum(flows), 80)
+        self.assertEqual(inlet.rate, 80)
+        self.assertEqual(layout.statistics["simulation"]["last_four_per_minute"], 80)
+        with tempfile.TemporaryDirectory() as folder:
+            report = write_workshop_report(Path(folder), problem, results, winner)
+            data = json.loads(report.with_suffix(".json").read_text(encoding="utf-8"))
+            self.assertEqual(len(data["inlets"]), 1)
+            self.assertEqual(data["inlets"][0]["per_day"], "1280")
+            self.assertEqual(len(data["inlets"][0]["feed_ports"]), 2)
+            for suffix in ("", *(f"-{angle}deg" for angle in ANGLES)):
+                path = report.with_name(report.stem + suffix + ".txt")
+                if path.exists():
+                    records = decode(path.read_text(encoding="ascii"))[-2]
+                    large = [r for r in records if r.id == LARGE_INLET]
+                    self.assertEqual(len(large), 1)
+                    self.assertEqual(len(encode_record(large[0])), 587)
+                    self.assertEqual(len(records), layout.statistics["components"])
+
     def test_optional_map_materials_at_reported_offset(self):
         data = fixture(optional_map_materials=True)
         self.assertEqual(data[215006:215010], ints(-1))
